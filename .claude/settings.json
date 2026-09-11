@@ -6,12 +6,20 @@
         "hooks": [
           {
             "type": "command",
-            "command": "jq -Rs '{suppressOutput:true,hookSpecificOutput:{hookEventName:\"SessionStart\",additionalContext:.}}' /home/morgan/.claude/skills/unslop/SKILL.md",
-            "statusMessage": "Loading unslop"
+            "command": "cat /home/morgan/.claude/skills/unslop/SKILL.md /home/morgan/.claude/skills/concise-writing/SKILL.md | jq -Rs '{suppressOutput:true,hookSpecificOutput:{hookEventName:\"SessionStart\",additionalContext:.}}'",
+            "statusMessage": "Loading writing skills"
           }
         ]
       }
     ]
+  },
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "medium"
+    },
+    "claude-opus-5": {
+      "effortLevel": "high"
+    }
   },
   "autoMemoryEnabled": false,
   "autoDreamEnabled": false,

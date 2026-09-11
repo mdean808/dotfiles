@@ -25,7 +25,7 @@ alias cd="z"
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
 # gaurded neovim for custom installation
-sed -i 's|^export PATH="$PATH:/opt/nvim-linux-x86_64/bin"$|[ -d /opt/nvim-linux-x86_64/bin ] \&\& export PATH="$PATH:/opt/nvim-linux-x86_64/bin"|' ~/.zshrc
+[ -d /opt/nvim-linux-x86_64/bin ] && export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 # Tool Init
 

@@ -1,5 +1,7 @@
+font-size = 10
 theme = TokyoNight Moon
 window-decoration = none
+resize-overlay = never
 keybind = alt+t=new_tab
 keybind = alt+ctrl+backslash=new_split:right
 keybind = alt+ctrl+minus=new_split:down
@@ -7,3 +9,7 @@ keybind = alt+ctrl+h=goto_split:left
 keybind = alt+ctrl+l=goto_split:right
 keybind = alt+ctrl+k=goto_split:up
 keybind = alt+ctrl+j=goto_split:down
+keybind = alt+ctrl+arrow_left=resize_split:left,30
+keybind = alt+ctrl+arrow_right=resize_split:right,30
+keybind = alt+ctrl+arrow_up=resize_split:up,30
+keybind = alt+ctrl+arrow_down=resize_split:down,30

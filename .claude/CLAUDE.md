@@ -6,6 +6,12 @@ Do not make changes to a file or system unless explicitly asked to.
 
 Do not commit or push your changes unless specifically requested to.
 
+## File Backups
+
+Do not automatically create file backups for simple configuration changes.
+If you feel a backup is prudent, as the user before creating it.
+Otherwise, only create backups if explicitly asked.
+
 ## Comments
 
 **Do not write comments.** Assume every comment you are about to add is unnecessary,
