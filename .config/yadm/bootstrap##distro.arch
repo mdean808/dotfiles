@@ -1,0 +1,30 @@
+#!/bin/sh
+set -e
+
+sudo pacman -S --needed --noconfirm \
+  zsh git curl openssh base-devel \
+  neovim lazygit ghostty zoxide ripgrep fd htop \
+  ttf-firacode-nerd noto-fonts noto-fonts-emoji noto-fonts-cjk
+
+[ -d "$HOME/.oh-my-zsh" ] || \
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
+
+[ -d "$HOME/.zsh/zsh-defer" ] || \
+  git clone --depth 1 https://github.com/romkatv/zsh-defer.git "$HOME/.zsh/zsh-defer"
+
+[ -d "$HOME/.config/nvim" ] || \
+  git clone https://github.com/mdean808/nvim-config "$HOME/.config/nvim"
+
+[ -d "$HOME/.nvm" ] || \
+  PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash'
+
+command -v bun >/dev/null 2>&1 || curl -fsSL https://bun.sh/install | bash
+
+command -v claude >/dev/null 2>&1 || curl -fsSL https://claude.ai/install.sh | bash
+
+if [ -f "$HOME/.local/share/yadm/archive" ]; then
+  yadm decrypt
+fi
+
+fc-cache -f
+yadm checkout -- "$HOME/.zshrc"

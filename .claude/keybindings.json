@@ -1,0 +1,11 @@
+{
+  "bindings": [
+    {
+      "context": "Scroll",
+      "bindings": {
+        "ctrl+j": "scroll:lineDown",
+        "ctrl+k": "scroll:lineUp"
+      }
+    }
+  ]
+}

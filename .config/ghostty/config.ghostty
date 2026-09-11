@@ -1,0 +1,9 @@
+theme = TokyoNight Moon
+window-decoration = none
+keybind = alt+t=new_tab
+keybind = alt+ctrl+backslash=new_split:right
+keybind = alt+ctrl+minus=new_split:down
+keybind = alt+ctrl+h=goto_split:left
+keybind = alt+ctrl+l=goto_split:right
+keybind = alt+ctrl+k=goto_split:up
+keybind = alt+ctrl+j=goto_split:down

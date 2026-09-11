@@ -1,0 +1,9 @@
+[user]
+	name = Morgan Dean
+	email = modean@groundedai.com
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+[init]
+	defaultBranch = main

@@ -1,0 +1,58 @@
+#!/bin/sh
+set -e
+
+sudo apt-get update
+sudo apt-get install -y \
+  zsh git curl wget ca-certificates openssh-client build-essential \
+  lazygit zoxide ripgrep fd-find htop fontconfig unzip \
+  fonts-noto-core fonts-noto-color-emoji fonts-noto-cjk
+
+if ! command -v nvim >/dev/null 2>&1; then
+  tmp=$(mktemp -d)
+  curl -fsSL -o "$tmp/nvim.tar.gz" \
+    https://github.com/neovim/neovim/releases/download/stable/nvim-linux-x86_64.tar.gz
+  sudo tar -C /opt -xzf "$tmp/nvim.tar.gz"
+  sudo ln -sfn /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
+  rm -rf "$tmp"
+fi
+
+if ! command -v ghostty >/dev/null 2>&1; then
+  if apt-cache show ghostty >/dev/null 2>&1; then
+    sudo apt-get install -y ghostty
+  else
+    echo "ghostty is not in this archive. It ships in Ubuntu 26.04 and later." >&2
+    echo "See https://ghostty.org/docs/install/binary for other routes." >&2
+  fi
+fi
+
+if ! fc-list | grep -qi 'FiraCode Nerd Font'; then
+  mkdir -p "$HOME/.local/share/fonts/FiraCode"
+  tmp=$(mktemp -d)
+  curl -fsSL -o "$tmp/FiraCode.zip" \
+    https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
+  unzip -o -q "$tmp/FiraCode.zip" -d "$HOME/.local/share/fonts/FiraCode"
+  rm -rf "$tmp"
+fi
+
+[ -d "$HOME/.oh-my-zsh" ] || \
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
+
+[ -d "$HOME/.zsh/zsh-defer" ] || \
+  git clone --depth 1 https://github.com/romkatv/zsh-defer.git "$HOME/.zsh/zsh-defer"
+
+[ -d "$HOME/.config/nvim" ] || \
+  git clone https://github.com/mdean808/nvim-config "$HOME/.config/nvim"
+
+[ -d "$HOME/.nvm" ] || \
+  PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash'
+
+command -v bun >/dev/null 2>&1 || curl -fsSL https://bun.sh/install | bash
+
+command -v claude >/dev/null 2>&1 || curl -fsSL https://claude.ai/install.sh | bash
+
+if [ -f "$HOME/.local/share/yadm/archive" ]; then
+  yadm decrypt
+fi
+
+fc-cache -f
+yadm checkout -- "$HOME/.zshrc"

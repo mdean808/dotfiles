@@ -1,0 +1,20 @@
+{
+  "model": "opus[1m]",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -Rs '{suppressOutput:true,hookSpecificOutput:{hookEventName:\"SessionStart\",additionalContext:.}}' /home/morgan/.claude/skills/unslop/SKILL.md",
+            "statusMessage": "Loading unslop"
+          }
+        ]
+      }
+    ]
+  },
+  "autoMemoryEnabled": false,
+  "autoDreamEnabled": false,
+  "theme": "auto",
+  "preferredNotifChannel": "notifications_disabled"
+}
