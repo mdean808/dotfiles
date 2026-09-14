@@ -6,12 +6,24 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cat /home/morgan/.claude/skills/unslop/SKILL.md /home/morgan/.claude/skills/concise-writing/SKILL.md | jq -Rs '{suppressOutput:true,hookSpecificOutput:{hookEventName:\"SessionStart\",additionalContext:.}}'",
+            "command": "CLAUDE_DIR=\"${CLAUDE_CONFIG_DIR:-$HOME/.claude}\"; cat \"$CLAUDE_DIR/skills/unslop/SKILL.md\" | jq -Rs '{suppressOutput:true,hookSpecificOutput:{hookEventName:\"SessionStart\",additionalContext:.}}'",
             "statusMessage": "Loading writing skills"
           }
         ]
       }
     ]
+  },
+  "enabledPlugins": {
+    "mattpocock-skills@claude-plugins-official": true,
+    "i-have-adhd@i-have-adhd": true
+  },
+  "extraKnownMarketplaces": {
+    "i-have-adhd": {
+      "source": {
+        "source": "github",
+        "repo": "ayghri/i-have-adhd"
+      }
+    }
   },
   "modelSettings": {
     "claude-sonnet-5": {

@@ -39,33 +39,3 @@ name the source (ticket, RFC, issue URL). If you find yourself writing more than
 one line, or explaining your own code rather than someone else's, delete it.
 
 When in doubt: delete the comment.
-
-## Output
-
-Every response is the shortest thing that does the job. This covers everything you
-write: answers, analyses, reports, reviews, plans, summaries, commit messages, PR
-descriptions.
-
-- Lead with the conclusion. If it fits in one line, it is one line. Supporting
-  detail comes after, and only what is needed to act on or trust the conclusion.
-- Length follows the work, not the effort spent. A long investigation can end in
-  one sentence. Never pad a short result to look thorough, and never compress a
-  genuinely multi-part result into a fragment.
-- The test for a sentence is whether it changes what the reader knows or does,
-  not whether it is obvious. An obvious fact the reader needs is worth stating.
-  A subtle one they cannot act on is not.
-- Cite files, lines, commands, versions, and numbers freely. Those are content.
-  What to cut is the tour around them: the code walkthrough, the restatement of
-  what the code plainly does, the "where this lives" preamble before the point.
-- Say a thing once. If a later paragraph restates an earlier one in different
-  words, cut the later one.
-- One section per real point, and only when there is more than one. A heading
-  over two sentences is padding. Use prose when the points connect and a list
-  when they do not.
-- For a yes/no or which-one question, the first word answers it.
-- Report what is broken, what changed, and what you are unsure of. Do not
-  inventory what already worked unless assessing it was the task, and then one
-  line covers it.
-- No preamble and no wrap-up. Do not restate the request, do not summarise the
-  summary, do not offer further help.
-- Cut every sentence that would survive unchanged in a different project.

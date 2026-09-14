@@ -1,0 +1,17 @@
+*
+!*/
+
+!.gitignore
+!.i-have-adhd-always
+!CLAUDE.md
+!settings.json
+!keybindings.json
+!skills/**
+!agents/**
+!commands/**
+!hooks/**
+!output-styles/**
+
+settings.local.json
+.credentials.json
+plugins/**

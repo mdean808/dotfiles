@@ -6,7 +6,7 @@ set -e
 step_packages() {
   sudo pacman -S --needed --noconfirm \
     zsh git curl openssh base-devel \
-    neovim lazygit ghostty zoxide ripgrep fd htop keyd \
+    neovim lazygit github-cli ghostty zoxide ripgrep fd htop keyd \
     ttf-firacode-nerd noto-fonts noto-fonts-emoji noto-fonts-cjk
 }
 
