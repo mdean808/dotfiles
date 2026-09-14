@@ -1,0 +1,76 @@
+#!/bin/sh
+
+have() { command -v "$1" >/dev/null 2>&1; }
+
+run() {
+  printf '\n==> %s\n' "$1"
+  "step_$1"
+}
+
+step_omz() {
+  if [ -d "$HOME/.oh-my-zsh" ]; then return 0; fi
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" \
+    "" --unattended --keep-zshrc
+}
+
+step_zsh_defer() {
+  if [ -d "$HOME/.zsh/zsh-defer" ]; then return 0; fi
+  git clone --depth 1 https://github.com/romkatv/zsh-defer.git "$HOME/.zsh/zsh-defer"
+}
+
+step_nvim_config() {
+  if [ -d "$HOME/.config/nvim" ]; then return 0; fi
+  git clone https://github.com/mdean808/nvim-config "$HOME/.config/nvim"
+}
+
+step_nvm() {
+  if [ -d "$HOME/.nvm" ]; then return 0; fi
+  PROFILE=/dev/null bash -c 'curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash'
+}
+
+step_bun() {
+  if have bun; then return 0; fi
+  curl -fsSL https://bun.sh/install | bash
+}
+
+step_claude() {
+  if have claude; then return 0; fi
+  curl -fsSL https://claude.ai/install.sh | bash
+}
+
+step_keyd() {
+  sudo install -D -m 644 "$HOME/.config/keyd/default.conf" /etc/keyd/default.conf
+  sudo systemctl enable keyd
+  sudo systemctl restart keyd
+}
+
+step_login_shell() {
+  _zsh=$(command -v zsh)
+  _me=$(id -un)
+  if [ "$(getent passwd "$_me" | cut -d: -f7)" = "$_zsh" ]; then return 0; fi
+  if ! grep -qxF "$_zsh" /etc/shells; then
+    echo "$_zsh" | sudo tee -a /etc/shells >/dev/null
+  fi
+  sudo chsh -s "$_zsh" "$_me"
+}
+
+step_decrypt() {
+  if [ ! -f "$HOME/.local/share/yadm/archive" ]; then return 0; fi
+  yadm decrypt
+}
+
+step_font_cache() { fc-cache -f; }
+
+common_steps() {
+  run omz
+  run zsh_defer
+  run nvim_config
+  run nvm
+  run bun
+  run claude
+  run keyd
+  run login_shell
+  run decrypt
+  run font_cache
+  printf '\nBootstrap complete. Log out and back in for the login shell to take effect.\n'
+}
