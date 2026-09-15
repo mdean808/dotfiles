@@ -14,17 +14,9 @@
     ]
   },
   "enabledPlugins": {
-    "mattpocock-skills@claude-plugins-official": true,
-    "i-have-adhd@i-have-adhd": true
+    "mattpocock-skills@claude-plugins-official": true
   },
-  "extraKnownMarketplaces": {
-    "i-have-adhd": {
-      "source": {
-        "source": "github",
-        "repo": "ayghri/i-have-adhd"
-      }
-    }
-  },
+  "extraKnownMarketplaces": {},
   "modelSettings": {
     "claude-sonnet-5": {
       "effortLevel": "medium"
