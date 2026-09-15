@@ -39,6 +39,23 @@ step_gh() {
   	&& sudo apt install gh -y
 }
 
+step_glab() {
+  if have glab; then return 0; fi
+  case "$(dpkg --print-architecture)" in
+    amd64) asset=amd64 ;;
+    arm64) asset=arm64 ;;
+    *) echo "no glab build for $(dpkg --print-architecture)" >&2; return 1 ;;
+  esac
+  ver=$(curl -fsSL "https://gitlab.com/api/v4/projects/gitlab-org%2Fcli/releases/permalink/latest" \
+    | tr ',' '\n' | grep '"tag_name"' | cut -d'"' -f4 | sed 's/^v//')
+  enc=$(echo "$ver" | sed 's/\./%2E/g')
+  tmp=$(mktemp -d)
+  curl -fsSL -o "$tmp/glab.deb" \
+    "https://gitlab.com/api/v4/projects/gitlab-org%2Fcli/packages/generic/glab/$enc/glab_${enc}_linux_${asset}%2Edeb"
+  sudo apt-get install -y "$tmp/glab.deb"
+  rm -rf "$tmp"
+}
+
 step_nerd_font() {
   if fc-list | grep -qi 'FiraCode Nerd Font'; then return 0; fi
   tmp=$(mktemp -d)
@@ -58,6 +75,7 @@ step_fd() {
 run packages
 run neovim
 run gh
+run glab
 run nerd_font
 run fd
 common_steps
