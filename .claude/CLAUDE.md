@@ -12,6 +12,10 @@ Do not automatically create file backups for simple configuration changes.
 If you feel a backup is prudent, ask the user before creating it.
 Otherwise, only create backups if explicitly asked.
 
+## Time
+
+Never estimate time. You are an LLM, you have no sense of time.
+
 ## Comments
 
 **Do not write comments.** Assume every comment you are about to add is unnecessary,
