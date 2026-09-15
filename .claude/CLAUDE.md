@@ -2,9 +2,15 @@
 
 ## Making Changes
 
-Do not make changes to a file or system unless explicitly asked to.
+Do not make changes to a file or system unless explicitly asked to by the user.
 
-Do not commit or push your changes unless specifically requested to.
+Do not commit or push your changes unless specifically requested to by the user.
+
+## External Tools
+
+Do not write to external tools unless specifically asked by the user to.
+
+Do read from external tools to keep your information up-to-date.
 
 ## File Backups
 
