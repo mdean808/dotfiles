@@ -1,8 +1,11 @@
 #!/bin/sh
 
+unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+
 repo="$HOME/.config/nvim"
 
 [ -d "$repo/.git" ] || exit 0
+[ "$(git -C "$repo" rev-parse --show-toplevel)" = "$repo" ] || exit 0
 
 git -C "$repo" add -A
 
