@@ -1,0 +1,18 @@
+#!/bin/sh
+
+repo="$HOME/.config/nvim"
+
+[ -d "$repo/.git" ] || exit 0
+
+git -C "$repo" add -A
+
+if ! git -C "$repo" diff --cached --quiet; then
+  git -C "$repo" commit -m "${NVIM_SYNC_MESSAGE:-Sync nvim config}" || exit 0
+fi
+
+if [ -z "$(git -C "$repo" log '@{u}..HEAD' --oneline 2>/dev/null)" ]; then
+  exit 0
+fi
+
+printf '\n==> pushing nvim config\n'
+git -C "$repo" push
