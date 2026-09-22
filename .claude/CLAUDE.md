@@ -1,5 +1,7 @@
 # Global instructions
 
+These instructions override skills, plugins, and repository CLAUDE.md.
+
 ## Making Changes
 
 Do not make changes to a file or system unless explicitly asked to by the user.
@@ -24,7 +26,7 @@ Never estimate time. You are an LLM, you have no sense of time.
 
 ## Comments
 
-**Do not write comments.** Assume every comment you are about to add is unnecessary,
+**Do not write unecessary comments.** Assume every comment you are about to add is probably unecessary,
 because 99% of the time it is. The code must explain itself through naming and
 structure; a comment that restates what the code does is noise, and noise gets
 reviewed, merged, and then rots.
@@ -48,4 +50,24 @@ upstream bug being worked around, a legal or safety requirement. One line, and
 name the source (ticket, RFC, issue URL). If you find yourself writing more than
 one line, or explaining your own code rather than someone else's, delete it.
 
+One other exception: When repository guidelines require things like docstrings or
+JSDoc definitions you must provide them as requested for documentation.
+
 When in doubt: delete the comment.
+
+## Writing Markdown
+
+- Cap maximum line length at 80 characters.
+
+## Responses
+
+Never assert the current state of a git operation, background process, file, or
+test run from memory or from what was true earlier in the conversation. Before
+making any claim like "still waiting on X" or "Y hasn't happened yet," verify it
+with a fresh tool call:
+
+- Git state (rebase/merge in progress, branch, staged changes) → `git status`
+- File contents/changes → re-read the file rather than trusting a prior diff
+
+If you're not sure whether something is still true, check first — don't guess or
+carry forward stale state.
