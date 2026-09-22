@@ -26,7 +26,7 @@ Never estimate time. You are an LLM, you have no sense of time.
 
 ## Comments
 
-**Do not write unecessary comments.** Assume every comment you are about to add is probably unecessary,
+**Do not write unnecessary comments.** Assume every comment you are about to add is probably unnecessary,
 because 99% of the time it is. The code must explain itself through naming and
 structure; a comment that restates what the code does is noise, and noise gets
 reviewed, merged, and then rots.
