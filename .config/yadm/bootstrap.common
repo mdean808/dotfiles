@@ -48,6 +48,13 @@ step_go() {
   rm -rf "$tmp"
 }
 
+step_pnpm() {
+  if [ -x "$HOME/.local/share/pnpm/bin/pnpm" ]; then return 0; fi
+  tmp=$(mktemp -d)
+  curl -fsSL https://get.pnpm.io/install.sh | SHELL="$(command -v zsh)" ZDOTDIR="$tmp" sh -
+  rm -rf "$tmp"
+}
+
 step_claude() {
   if have claude; then return 0; fi
   curl -fsSL https://claude.ai/install.sh | bash
@@ -83,6 +90,7 @@ common_steps() {
   run nvm
   run bun
   run go
+  run pnpm
   run claude
   run keyd
   run login_shell
