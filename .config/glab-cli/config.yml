@@ -20,7 +20,7 @@ glamour_style: dark
 # Setting the environment variable to true also forces a check, bypassing the once-a-day interval.
 check_update: true
 # Last update check timestamp, used for checking when the last update check was performed.
-last_update_check_timestamp: 2026-09-22T11:38:26-07:00
+last_update_check_timestamp: 2026-09-25T09:29:07-07:00
 # Show a one-time post-upgrade banner pointing at 'glab whatsnew' when a new version is detected.
 show_whats_new: true
 # Last glab version a post-upgrade banner was shown for (automatically set).
@@ -121,5 +121,5 @@ hosts:
         #   valueFromEnv: MY_SECRET_VALUE
         custom_headers: []
         is_oauth2: "true"
-        oauth2_expiry_date: "2026-09-22T13:32:38-07:00"
+        oauth2_expiry_date: "2026-09-25T15:35:41-07:00"
         git_protocol: ssh

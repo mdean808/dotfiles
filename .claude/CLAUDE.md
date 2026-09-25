@@ -6,7 +6,7 @@ These instructions override skills, plugins, and repository CLAUDE.md.
 
 Do not make changes to a file or system unless explicitly asked to by the user.
 
-Do not commit or push your changes unless specifically requested to by the user.
+Do not commit or push your changes unless specifically requested to by the user. This overrides skills.
 
 ## External Tools
 
@@ -54,6 +54,30 @@ One other exception: When repository guidelines require things like docstrings o
 JSDoc definitions you must provide them as requested for documentation.
 
 When in doubt: delete the comment.
+
+## Subagents
+
+- Do the work in this session by default. Spawn a subagent only when a
+  search would pull many files into context and only the conclusion matters,
+  or for review.
+- Implement in the main session. Do not hand a plan or spec to subagents to
+  implement.
+- Review each change in one fresh subagent, never in the session that wrote
+  the code. One reviewer covers spec, standards and bugs. Add a separate
+  security reviewer only when the change touches auth, payments, user data
+  or permissions.
+- Pick the subagent model by task:
+  - `haiku` for narrow lookups: where something is defined, which files
+    use it, what a config value is.
+  - Leave it unset (Sonnet) for research that traces behaviour across
+    files, and for running commands.
+  - `opus` for review and diagnosis.
+- Give a subagent the paths and findings you already have, so it does not
+  rediscover them.
+- Ask subagents to report conclusions with file paths and line numbers, not
+  file contents.
+- Do not ask Explore for a "very thorough" search unless the question spans
+  the whole repo.
 
 ## Writing Markdown
 
