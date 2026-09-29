@@ -19,8 +19,12 @@ step_zsh_defer() {
 }
 
 step_nvim_config() {
-  if [ -d "$HOME/.config/nvim" ]; then return 0; fi
-  git clone https://github.com/mdean808/nvim-config "$HOME/.config/nvim"
+  if [ ! -d "$HOME/.config/nvim" ]; then
+    git clone https://github.com/mdean808/nvim-config "$HOME/.config/nvim"
+  fi
+  if [ "$(git -C "$HOME/.config/nvim" remote get-url origin 2>/dev/null)" = https://github.com/mdean808/nvim-config ]; then
+    git -C "$HOME/.config/nvim" remote set-url origin git@github.com:mdean808/nvim-config.git
+  fi
 }
 
 step_nvm() {
