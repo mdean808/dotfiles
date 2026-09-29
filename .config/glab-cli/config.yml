@@ -121,5 +121,5 @@ hosts:
         #   valueFromEnv: MY_SECRET_VALUE
         custom_headers: []
         is_oauth2: "true"
-        oauth2_expiry_date: "2026-09-25T15:35:41-07:00"
+        oauth2_expiry_date: "2026-09-29T11:06:12-07:00"
         git_protocol: ssh
