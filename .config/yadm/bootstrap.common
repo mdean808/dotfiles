@@ -28,6 +28,16 @@ step_nvm() {
   PROFILE=/dev/null bash -c 'curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash'
 }
 
+step_node() {
+  if [ -n "$(ls -A "$HOME/.nvm/versions/node" 2>/dev/null)" ]; then return 0; fi
+  bash -c '. "$HOME/.nvm/nvm.sh" --no-use && nvm install node'
+}
+
+step_uv() {
+  if have uv || [ -x "$HOME/.local/bin/uv" ]; then return 0; fi
+  curl -LsSf https://astral.sh/uv/install.sh | UV_NO_MODIFY_PATH=1 sh
+}
+
 step_bun() {
   if have bun; then return 0; fi
   curl -fsSL https://bun.sh/install | bash
@@ -89,6 +99,8 @@ common_steps() {
   run zsh_defer
   run nvim_config
   run nvm
+  run node
+  run uv
   run bun
   run go
   run pnpm
@@ -98,4 +110,7 @@ common_steps() {
   run login_shell
   run font_cache
   printf '\nBootstrap complete. Log out and back in for the login shell and docker group to take effect.\n'
+  printf '\nStill to do by hand:\n'
+  printf '  - Set api_key under [settings] in ~/.wakatime.cfg\n'
+  printf '  - Set up SSH keys in ~/.ssh\n'
 }
