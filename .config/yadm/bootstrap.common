@@ -66,6 +66,12 @@ step_keyd() {
   sudo systemctl restart keyd
 }
 
+step_docker_service() {
+  sudo systemctl enable --now docker
+  if id -nG "$(id -un)" | tr ' ' '\n' | grep -qx docker; then return 0; fi
+  sudo usermod -aG docker "$(id -un)"
+}
+
 step_login_shell() {
   _zsh=$(command -v zsh)
   _me=$(id -un)
@@ -74,11 +80,6 @@ step_login_shell() {
     echo "$_zsh" | sudo tee -a /etc/shells >/dev/null
   fi
   sudo chsh -s "$_zsh" "$_me"
-}
-
-step_decrypt() {
-  if [ ! -f "$HOME/.local/share/yadm/archive" ]; then return 0; fi
-  yadm decrypt
 }
 
 step_font_cache() { fc-cache -f; }
@@ -93,8 +94,8 @@ common_steps() {
   run pnpm
   run claude
   run keyd
+  run docker_service
   run login_shell
-  run decrypt
   run font_cache
-  printf '\nBootstrap complete. Log out and back in for the login shell to take effect.\n'
+  printf '\nBootstrap complete. Log out and back in for the login shell and docker group to take effect.\n'
 }
