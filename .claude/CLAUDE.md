@@ -58,14 +58,15 @@ When in doubt: delete the comment.
 ## Subagents
 
 - Do the work in this session by default. Spawn a subagent only when a
-  search would pull many files into context and only the conclusion matters,
-  or for review.
+  search would pull many files into context and only the conclusion matters.
 - Implement in the main session. Do not hand a plan or spec to subagents to
   implement.
-- Review each change in one fresh subagent, never in the session that wrote
-  the code. One reviewer covers spec, standards and bugs. Add a separate
-  security reviewer only when the change touches auth, payments, user data
-  or permissions.
+- Do not review changes unless the user asks for a review or a skill calls
+  for one.
+- When a review happens, run it in one fresh subagent, never in the session
+  that wrote the code. One reviewer covers spec, standards and bugs. Add a
+  separate security reviewer only when the change touches auth, payments,
+  user data or permissions.
 - Pick the subagent model by task:
   - `haiku` for narrow lookups: where something is defined, which files
     use it, what a config value is.

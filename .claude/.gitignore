@@ -10,6 +10,7 @@
 !commands/**
 !hooks/**
 !output-styles/**
+!rules/**
 
 settings.local.json
 .credentials.json
