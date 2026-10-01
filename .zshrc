@@ -20,7 +20,7 @@ export LC_ALL=en_US.UTF-8
 # Aliases
 alias vim="nvim"
 alias vi="nvim"
-alias cd="z"
+[[ -n $CLAUDECODE ]] || alias cd="z"
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"

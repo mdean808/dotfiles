@@ -6,7 +6,7 @@ set -e
 step_packages() {
   sudo pacman -S --needed --noconfirm \
     zsh git curl openssh base-devel python \
-    neovim lazygit github-cli glab ghostty zoxide ripgrep fd htop keyd \
+    neovim tmux lazygit github-cli glab ghostty zoxide ripgrep fd htop keyd \
     docker docker-buildx docker-compose \
     ttf-firacode-nerd noto-fonts noto-fonts-emoji noto-fonts-cjk
 }
