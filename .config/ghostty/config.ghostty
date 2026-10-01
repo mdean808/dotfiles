@@ -33,3 +33,6 @@ keybind = ctrl+digit_8=goto_tab:8
 keybind = ctrl+8=goto_tab:8
 keybind = ctrl+digit_9=last_tab
 keybind = ctrl+9=last_tab
+
+window-padding-y = 0
+window-padding-balance = true
