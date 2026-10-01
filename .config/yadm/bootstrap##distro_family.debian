@@ -8,7 +8,7 @@ step_packages() {
   sudo apt-get install -y \
     zsh git curl wget ca-certificates openssh-client build-essential python3 \
     tmux lazygit zoxide ripgrep fd-find htop fontconfig unzip keyd ghostty \
-    fonts-noto-core fonts-noto-color-emoji fonts-noto-cjk
+    fonts-noto-core fonts-noto-color-emoji fonts-noto-cjk libopengl0
 }
 
 step_neovim() {

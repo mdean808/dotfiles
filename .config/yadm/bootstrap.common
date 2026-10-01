@@ -81,6 +81,7 @@ step_claude() {
 step_vicinae() {
   if ! have vicinae; then
     curl -fsSL https://vicinae.com/install.sh | sudo bash
+    sudo chmod -R a+rX /usr/local/lib/vicinae
   fi
   systemctl --user enable vicinae
 }
