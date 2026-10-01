@@ -28,8 +28,8 @@ step_nvim_config() {
 }
 
 step_scratch() {
-  "$HOME/.local/bin/scratch-sync" pull \
-    || echo "scratch clone failed; run scratch-sync pull once SSH keys are set up" >&2
+  "$HOME/.config/yadm/scratch.sh" pull \
+    || echo "scratch clone failed; run ~/.config/yadm/scratch.sh pull once SSH keys are set up" >&2
 }
 
 step_nvm() {
@@ -126,5 +126,5 @@ common_steps() {
   printf '\nStill to do by hand:\n'
   printf '  - Set api_key under [settings] in ~/.wakatime.cfg\n'
   printf '  - Set up SSH keys in ~/.ssh\n'
-  printf '  - Run scratch-sync pull if the scratch clone failed\n'
+  printf '  - Run ~/.config/yadm/scratch.sh pull if the scratch clone failed\n'
 }

@@ -33,8 +33,8 @@ committed `CLAUDE.md` silently replaced a personal one.
 ## Setting up a repo
 
 Run `scratch-sync link` in the repo root. It moves the three personal paths into
-`~/.scratch/<repo>/`, a private git repo synced by yadm's push and pull hooks,
-symlinks them back, and adds these lines to `.git/info/exclude`:
+`~/.scratch/repos/<repo>/`, a private git repo synced by yadm's push and pull
+hooks, symlinks them back, and adds these lines to `.git/info/exclude`:
 
 ```
 CLAUDE.local.md

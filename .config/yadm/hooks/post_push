@@ -23,4 +23,4 @@ sync_nvim() {
 }
 
 sync_nvim
-"$HOME/.local/bin/scratch-sync" push
+"$HOME/.config/yadm/scratch.sh" push
