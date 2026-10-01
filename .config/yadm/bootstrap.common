@@ -28,8 +28,7 @@ step_nvim_config() {
 }
 
 step_scratch() {
-  "$HOME/.config/yadm/scratch.sh" pull \
-    || echo "scratch clone failed; run ~/.config/yadm/scratch.sh pull once SSH keys are set up" >&2
+  "$HOME/.config/yadm/scratch.sh" pull || scratch_failed=1
 }
 
 step_nvm() {
@@ -79,6 +78,13 @@ step_claude() {
   curl -fsSL https://claude.ai/install.sh | bash
 }
 
+step_vicinae() {
+  if ! have vicinae; then
+    curl -fsSL https://vicinae.com/install.sh | sudo bash
+  fi
+  systemctl --user enable vicinae
+}
+
 step_keyd() {
   sudo install -D -m 644 "$HOME/.config/keyd/default.conf" /etc/keyd/default.conf
   sudo systemctl enable keyd
@@ -117,6 +123,7 @@ common_steps() {
   run go
   run pnpm
   run claude
+  run vicinae
   run keyd
   run keybindings
   run docker_service
@@ -126,5 +133,7 @@ common_steps() {
   printf '\nStill to do by hand:\n'
   printf '  - Set api_key under [settings] in ~/.wakatime.cfg\n'
   printf '  - Set up SSH keys in ~/.ssh\n'
-  printf '  - Run ~/.config/yadm/scratch.sh pull if the scratch clone failed\n'
+  if [ -n "$scratch_failed" ]; then
+    printf '  - Run ~/.config/yadm/scratch.sh pull (the scratch clone failed)\n'
+  fi
 }
