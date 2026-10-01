@@ -1,0 +1,122 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+
+remote="git@gitlab.com:modean/scratch.git"
+store="$HOME/.scratch"
+search_roots=("$HOME/Documents")
+paths=(.scratch .local CLAUDE.local.md)
+excludes=(.scratch .local CLAUDE.local.md .claude/settings.local.json)
+
+usage() {
+  echo "usage: scratch-sync link [repo] | link-all | pull | push" >&2
+  exit 2
+}
+
+repo_name() {
+  local url
+  if url=$(git -C "$1" remote get-url origin 2>/dev/null); then
+    basename "$url" .git
+  else
+    basename "$(dirname "$(git -C "$1" rev-parse --path-format=absolute --git-common-dir)")"
+  fi
+}
+
+link_repo() {
+  local root name dir exclude p link target
+  root=$(git -C "$1" rev-parse --show-toplevel)
+  name=$(repo_name "$root")
+  dir="$store/$name"
+  exclude=$(git -C "$root" rev-parse --path-format=absolute --git-path info/exclude)
+  mkdir -p "$dir" "$(dirname "$exclude")"
+
+  for p in "${paths[@]}"; do
+    link="$root/$p"
+    target="$dir/$p"
+    if [ -L "$link" ]; then
+      continue
+    fi
+    if [ -e "$link" ]; then
+      if [ -e "$target" ]; then
+        echo "skip $link: also in $dir, merge by hand" >&2
+        continue
+      fi
+      mv "$link" "$target"
+    fi
+    if [ ! -e "$target" ]; then
+      case "$p" in
+        *.md) touch "$target" ;;
+        *) mkdir -p "$target" ;;
+      esac
+    fi
+    ln -s "$target" "$link"
+    echo "linked $link"
+  done
+
+  for p in "${excludes[@]}"; do
+    grep -qxF "$p" "$exclude" 2>/dev/null || echo "$p" >>"$exclude"
+  done
+}
+
+link_all() {
+  local gitdir root name
+  if [ ! -d "$store" ]; then
+    return 0
+  fi
+  while IFS= read -r gitdir; do
+    root=$(dirname "$gitdir")
+    name=$(repo_name "$root") || continue
+    if [ -d "$store/$name" ]; then
+      link_repo "$root"
+    fi
+  done < <(find "${search_roots[@]}" -maxdepth 3 -name .git -prune 2>/dev/null)
+}
+
+pull() {
+  if [ -d "$store/.git" ]; then
+    if git -C "$store" rev-parse --abbrev-ref '@{u}' >/dev/null 2>&1; then
+      git -C "$store" pull --quiet --rebase --autostash
+    fi
+  else
+    git clone --quiet "$remote" "$store"
+  fi
+  link_all
+}
+
+push() {
+  if [ ! -d "$store" ]; then
+    return 0
+  fi
+  if [ ! -d "$store/.git" ]; then
+    git -C "$store" init --quiet -b main
+    git -C "$store" remote add origin "$remote"
+  fi
+
+  git -C "$store" add -A
+  if ! git -C "$store" diff --cached --quiet; then
+    git -C "$store" commit --quiet -m "Sync scratch from $(hostname)"
+  fi
+  if ! git -C "$store" rev-parse --verify --quiet HEAD >/dev/null; then
+    return 0
+  fi
+
+  if git -C "$store" rev-parse --abbrev-ref '@{u}' >/dev/null 2>&1; then
+    git -C "$store" pull --quiet --rebase --autostash
+    if [ -n "$(git -C "$store" log '@{u}..HEAD' --oneline)" ]; then
+      printf '\n==> pushing scratch\n'
+      git -C "$store" push --quiet
+    fi
+  else
+    printf '\n==> pushing scratch\n'
+    git -C "$store" push --quiet -u origin HEAD
+  fi
+}
+
+case "${1:-}" in
+  link) link_repo "${2:-.}" ;;
+  link-all) link_all ;;
+  pull) pull ;;
+  push) push ;;
+  *) usage ;;
+esac

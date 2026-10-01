@@ -1,2 +1,3 @@
 #!/bin/sh
 "$HOME/.config/yadm/keybindings.sh"
+"$HOME/.local/bin/scratch-sync" pull

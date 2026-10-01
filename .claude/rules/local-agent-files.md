@@ -32,15 +32,20 @@ committed `CLAUDE.md` silently replaced a personal one.
 
 ## Setting up a repo
 
-Add to `.git/info/exclude`, never to the repo's `.gitignore` and never to the
-global excludes file:
+Run `scratch-sync link` in the repo root. It moves the three personal paths into
+`~/.scratch/<repo>/`, a private git repo synced by yadm's push and pull hooks,
+symlinks them back, and adds these lines to `.git/info/exclude`:
 
 ```
 CLAUDE.local.md
-.local/
-.scratch/
+.local
+.scratch
 .claude/settings.local.json
 ```
+
+The entries have no trailing slash because git sees a symlink as a file, and a
+`.scratch/` pattern only matches directories. Never add them to the repo's
+`.gitignore` or the global excludes file.
 
 `.git/info/exclude` is per-repo, is not committed, and no upstream change can
 alter it. A global excludes file makes one repo's choice apply to every other

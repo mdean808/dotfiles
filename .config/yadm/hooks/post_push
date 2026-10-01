@@ -2,20 +2,25 @@
 
 unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
 
-repo="$HOME/.config/nvim"
+sync_nvim() {
+  repo="$HOME/.config/nvim"
 
-[ -d "$repo/.git" ] || exit 0
-[ "$(git -C "$repo" rev-parse --show-toplevel)" = "$repo" ] || exit 0
+  [ -d "$repo/.git" ] || return 0
+  [ "$(git -C "$repo" rev-parse --show-toplevel)" = "$repo" ] || return 0
 
-git -C "$repo" add -A
+  git -C "$repo" add -A
 
-if ! git -C "$repo" diff --cached --quiet; then
-  git -C "$repo" commit -m "${NVIM_SYNC_MESSAGE:-Sync nvim config}" || exit 0
-fi
+  if ! git -C "$repo" diff --cached --quiet; then
+    git -C "$repo" commit -m "${NVIM_SYNC_MESSAGE:-Sync nvim config}" || return 0
+  fi
 
-if [ -z "$(git -C "$repo" log '@{u}..HEAD' --oneline 2>/dev/null)" ]; then
-  exit 0
-fi
+  if [ -z "$(git -C "$repo" log '@{u}..HEAD' --oneline 2>/dev/null)" ]; then
+    return 0
+  fi
 
-printf '\n==> pushing nvim config\n'
-git -C "$repo" push
+  printf '\n==> pushing nvim config\n'
+  git -C "$repo" push
+}
+
+sync_nvim
+"$HOME/.local/bin/scratch-sync" push
