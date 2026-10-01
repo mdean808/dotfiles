@@ -1,0 +1,2 @@
+#!/bin/sh
+"$HOME/.config/yadm/keybindings.sh"
