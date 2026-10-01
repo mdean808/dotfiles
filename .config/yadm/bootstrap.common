@@ -83,7 +83,7 @@ step_vicinae() {
     curl -fsSL https://vicinae.com/install.sh | sudo bash
     sudo chmod -R a+rX /usr/local/lib/vicinae
   fi
-  systemctl --user enable vicinae
+  systemctl --user enable --now vicinae
 }
 
 step_keyd() {
