@@ -81,6 +81,16 @@ step_nerd_font() {
   rm -rf "$tmp"
 }
 
+step_vicinae_extension() {
+  uuid=vicinae@dagimg-dot
+  if ! gnome-extensions info "$uuid" >/dev/null 2>&1; then
+    gdbus call --session --dest org.gnome.Shell.Extensions \
+      --object-path /org/gnome/Shell/Extensions \
+      --method org.gnome.Shell.Extensions.InstallRemoteExtension "$uuid"
+  fi
+  gnome-extensions enable "$uuid"
+}
+
 step_fd() {
   if have fd; then return 0; fi
   mkdir -p "$HOME/.local/bin"
@@ -94,4 +104,5 @@ run glab
 run docker
 run nerd_font
 run fd
+run vicinae_extension
 common_steps
