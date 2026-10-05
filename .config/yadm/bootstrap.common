@@ -66,6 +66,11 @@ step_go() {
   rm -rf "$tmp"
 }
 
+step_smug() {
+  if [ -x "$HOME/go/bin/smug" ]; then return 0; fi
+  /usr/local/go/bin/go install github.com/ivaaaan/smug@latest
+}
+
 step_pnpm() {
   if [ -x "$HOME/.local/share/pnpm/bin/pnpm" ]; then return 0; fi
   tmp=$(mktemp -d)
@@ -124,6 +129,7 @@ common_steps() {
   run uv
   run bun
   run go
+  run smug
   run pnpm
   run claude
   run vicinae
