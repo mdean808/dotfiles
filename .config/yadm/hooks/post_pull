@@ -1,4 +1,5 @@
 #!/bin/sh
 "$HOME/.config/yadm/keyd-sync.sh"
 "$HOME/.config/yadm/keybindings.sh"
+"$HOME/.config/yadm/workspaces.sh"
 "$HOME/.config/yadm/scratch.sh" pull

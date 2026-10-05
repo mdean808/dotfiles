@@ -8,7 +8,18 @@ step_packages() {
   sudo apt-get install -y \
     zsh git curl wget ca-certificates openssh-client build-essential python3 \
     tmux lazygit zoxide ripgrep fd-find htop fontconfig unzip keyd ghostty \
-    fonts-noto-core fonts-noto-color-emoji fonts-noto-cjk libopengl0
+    fonts-noto-core fonts-noto-color-emoji fonts-noto-cjk libopengl0 \
+    gnome-shell-extensions flatpak snapd
+}
+
+step_slack() {
+  if snap list slack >/dev/null 2>&1; then return 0; fi
+  sudo snap install slack
+}
+
+step_zen() {
+  sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  sudo flatpak install -y --noninteractive flathub app.zen_browser.zen
 }
 
 step_neovim() {
@@ -105,4 +116,6 @@ run docker
 run nerd_font
 run fd
 run vicinae_extension
+run slack
+run zen
 common_steps

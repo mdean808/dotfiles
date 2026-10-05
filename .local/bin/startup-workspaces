@@ -1,0 +1,4 @@
+#!/bin/sh
+slack &
+flatpak run app.zen_browser.zen &
+ghostty --gtk-single-instance=false --class=local.ghostty.startup --fullscreen=true &

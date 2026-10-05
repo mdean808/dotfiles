@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Ghostty (startup)
+Exec=ghostty --gtk-single-instance=false --class=local.ghostty.startup
+Icon=com.mitchellh.ghostty
+StartupWMClass=local.ghostty.startup
+NoDisplay=true
