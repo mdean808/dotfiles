@@ -1,0 +1,14 @@
+session: diffa
+
+root: ~/Documents/diffa
+
+windows:
+  - name: main
+    layout: 0122,239x59,0,0{158x59,0,0[158x39,0,0,5,158x19,0,40,7],80x59,159,0,6}
+    commands:
+      - nvim .
+    panes:
+      - commands:
+          - claude
+      - commands:
+          - pnpm start
