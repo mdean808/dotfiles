@@ -1,11 +1,11 @@
 ---
 name: start-ticket
 description: Start work on a TT Jira ticket. Picks the ticket (a given key, or
-  your next In Progress or To Do ticket by priority), creates its branch,
-  moves it to In Progress in Jira, sets up its .scratch/ directory with a ticket
-  snapshot, briefs you on the ticket, and offers a grilling session. Use when
-  the user says to start, pick up or begin a ticket, or asks what to work on
-  next.
+  your next In Progress or To Do ticket in an active sprint, by priority, once
+  you approve it), creates its branch, moves it to In Progress in Jira, sets
+  up its .scratch/ directory with a ticket snapshot, briefs you on the ticket,
+  and offers a grilling session. Use when the user says to start, pick up or
+  begin a ticket, or asks what to work on next.
 allowed-tools:
   - Read
   - Write
@@ -116,16 +116,23 @@ the ticket. Otherwise run these in order and stop at the first that returns
 anything:
 
 1. `project = TT AND assignee = currentUser() AND status = "In Progress"
-   ORDER BY priority DESC, key ASC`
+   AND sprint in openSprints() ORDER BY priority DESC, key ASC`
 2. `project = TT AND assignee = currentUser() AND status = "To Do"
-   ORDER BY priority DESC, key ASC`
+   AND sprint in openSprints() ORDER BY priority DESC, key ASC`
 
 Take the highest priority, then the lowest number, checking Jira's sort
 yourself. Note why it won for the setup sentences. Match statuses by name:
 In Review shares Jira's "In Progress" category and is not a ticket to start.
 
-Both empty: tell the user no TT ticket in In Progress or To Do is assigned to
-them, and stop.
+Both empty: tell the user no TT ticket in In Progress or To Do in an active
+sprint is assigned to them, and stop.
+
+A ticket picked by search needs the user's approval before any later step
+runs. Ask with AskUserQuestion: the first option is the picked ticket
+(`TT-<n>: <summary>`, with its priority, status and why it won), then up to
+three runners-up from the same search results. Continue with the ticket the
+user chooses. A ticket the user names in "Other" is treated as a named ticket.
+A named ticket skips this approval.
 
 ### 2. Fetch it
 
