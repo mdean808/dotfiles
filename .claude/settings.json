@@ -3,19 +3,6 @@
   "env": {
     "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet"
   },
-  "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "CLAUDE_DIR=\"${CLAUDE_CONFIG_DIR:-$HOME/.claude}\"; cat \"$CLAUDE_DIR/skills/unslop/SKILL.md\" | jq -Rs '{suppressOutput:true,hookSpecificOutput:{hookEventName:\"SessionStart\",additionalContext:.}}'",
-            "statusMessage": "Loading writing skills"
-          }
-        ]
-      }
-    ]
-  },
   "enabledPlugins": {
     "mattpocock-skills@claude-plugins-official": true
   },
@@ -34,5 +21,12 @@
   "autoMemoryEnabled": false,
   "autoDreamEnabled": false,
   "theme": "auto",
-  "preferredNotifChannel": "notifications_disabled"
+  "preferredNotifChannel": "notifications_disabled",
+  "permissions": {
+    "deny": []
+  },
+  "fileSuggestion": {
+    "type": "command",
+    "command": "~/.claude/bin/file-suggestion.sh"
+  }
 }

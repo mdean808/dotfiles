@@ -43,7 +43,6 @@ a walkthrough of what the diff already shows.
 - Run every path relative to the repo root (`git rev-parse --show-toplevel`).
 - The diff is the truth. Tickets, specs and change notes are intent, and they
   go stale. When they disagree with the diff, describe the diff.
-- Apply the `unslop` skill to everything you write.
 
 ## Steps
 
