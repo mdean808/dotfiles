@@ -11,6 +11,7 @@
 !hooks/**
 !output-styles/**
 !rules/**
+!bin/**
 
 settings.local.json
 .credentials.json
