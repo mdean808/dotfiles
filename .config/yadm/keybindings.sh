@@ -4,6 +4,8 @@ command -v gsettings >/dev/null || exit 0
 wm=org.gnome.desktop.wm.keybindings
 gsettings set $wm switch-windows "['<Control>Tab']"
 gsettings set $wm switch-windows-backward "['<Shift><Control>Tab']"
+gsettings set $wm cycle-windows "['<Alt>Escape', '<Shift><Control>j']"
+gsettings set $wm cycle-windows-backward "['<Shift><Alt>Escape', '<Shift><Control>k']"
 gsettings set $wm switch-to-workspace-left "['<Alt><Super>Left', '<Shift><Control>h']"
 gsettings set $wm switch-to-workspace-right "['<Alt><Super>Right', '<Shift><Control>l']"
 gsettings set $wm switch-applications "[]"
