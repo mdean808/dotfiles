@@ -3,7 +3,7 @@ session: strata
 root: ~/Documents/rockmass-data-aggregation
 
 windows:
-  - name: main
+  - name: dev
     layout: 319b,239x59,0,0{164x59,0,0[164x41,0,0,0,164x17,0,42{82x17,0,42,2,81x17,83,42,3}],74x59,165,0,1}
     commands:
       - nvim .
