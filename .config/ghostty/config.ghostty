@@ -5,10 +5,10 @@ resize-overlay = never
 keybind = ctrl+t=new_tab
 keybind = ctrl+shift+backslash=new_split:right
 keybind = ctrl+shift+minus=new_split:down
-keybind = ctrl+shift+h=goto_split:left
-keybind = ctrl+shift+l=goto_split:right
-keybind = ctrl+shift+k=goto_split:up
-keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+h=unbind
+keybind = ctrl+shift+l=unbind
+keybind = ctrl+shift+k=unbind
+keybind = ctrl+shift+j=unbind
 keybind = ctrl+shift+arrow_left=resize_split:left,30
 keybind = ctrl+shift+arrow_right=resize_split:right,30
 keybind = ctrl+shift+arrow_up=resize_split:up,30
