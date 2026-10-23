@@ -13,3 +13,4 @@ application/xhtml+xml=app.zen_browser.zen.desktop;
 text/html=app.zen_browser.zen.desktop;
 x-scheme-handler/https=app.zen_browser.zen.desktop;
 x-scheme-handler/mailto=app.zen_browser.zen.desktop;
+application/octet-stream=net.meshlab.MeshLab.desktop;

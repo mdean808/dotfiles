@@ -1,6 +1,13 @@
 {
+  "fileSuggestion": {
+    "type": "command",
+    "command": "~/.claude/bin/file-suggestion.sh"
+  },
   "env": {
     "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet"
+  },
+  "permissions": {
+    "deny": []
   },
   "model": "opus",
   "hooks": {
@@ -14,10 +21,22 @@
           }
         ]
       }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "AskUserQuestion",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Do not use AskUserQuestion. Ask your questions as plain text in your reply, with context for each one, numbered, with your suggestion marked and explained why. Do not over-explain. Keep thinsg brief.' >&2; exit 2"
+          }
+        ]
+      }
     ]
   },
   "enabledPlugins": {
-    "mattpocock-skills@claude-plugins-official": true
+    "mattpocock-skills@claude-plugins-official": true,
+    "frontend-design@anthropic-plugin-directory": true
   },
   "extraKnownMarketplaces": {},
   "modelSettings": {
@@ -34,12 +53,5 @@
   "autoMemoryEnabled": false,
   "autoDreamEnabled": false,
   "theme": "auto",
-  "preferredNotifChannel": "notifications_disabled",
-  "permissions": {
-    "deny": []
-  },
-  "fileSuggestion": {
-    "type": "command",
-    "command": "~/.claude/bin/file-suggestion.sh"
-  }
+  "preferredNotifChannel": "notifications_disabled"
 }

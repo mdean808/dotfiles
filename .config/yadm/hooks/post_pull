@@ -2,4 +2,4 @@
 "$HOME/.config/yadm/keyd-sync.sh"
 "$HOME/.config/yadm/keybindings.sh"
 "$HOME/.config/yadm/workspaces.sh"
-"$HOME/.config/yadm/scratch.sh" pull
+yadm config --get-all local.class | grep -qx headless || "$HOME/.config/yadm/scratch.sh" pull

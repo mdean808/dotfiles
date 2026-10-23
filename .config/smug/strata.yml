@@ -16,3 +16,4 @@ windows:
       - root: dat-agg-sys
         commands:
           - ./devtools.sh start && ./devtools.sh web-shell
+          - python manage.py migrate && python manage.py runserver 0.0.0.0:8000

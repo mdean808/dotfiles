@@ -22,9 +22,12 @@ step_nvim_config() {
   if [ ! -d "$HOME/.config/nvim" ]; then
     git clone https://github.com/mdean808/nvim-config "$HOME/.config/nvim"
   fi
-  if [ "$(git -C "$HOME/.config/nvim" remote get-url origin 2>/dev/null)" = https://github.com/mdean808/nvim-config ]; then
-    git -C "$HOME/.config/nvim" remote set-url origin git@github.com:mdean808/nvim-config.git
-  fi
+  case "$(git -C "$HOME/.config/nvim" remote get-url origin 2>/dev/null)" in
+    https://github.com/mdean808/nvim-config)
+      git -C "$HOME/.config/nvim" remote set-url origin git@github.com:mdean808/nvim-config.git ;;
+    git@github.com:mdean808/nvim-config.git) ;;
+    *) printf 'warning: ~/.config/nvim is not mdean808/nvim-config, leaving it in place\n' >&2 ;;
+  esac
 }
 
 step_scratch() {
