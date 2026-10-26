@@ -86,20 +86,9 @@ When in doubt: delete the comment.
 - Don't ask what the feature can't exist without, or what the user already
   stated.
 
-## UI Copy
+## Creating UI
 
-- Option descriptions and helper text are labels, not explanations. Say
-  what the option does in one short phrase, starting with a verb ("Downloads
-  as separate files"). Don't write full conversational sentences, address the
-  user ("you choose", "your browser"), or describe mechanics they can't act
-  on ("in this browser", "built in memory").
-- Only mention a limit or exception if it changes what the user will get,
-  and give it as one short clause after the main phrase.
-- Before writing a description, check whether the label already says it.
-  If it does, leave the description out.
-- Check every claim in the copy against the code that implements it
-  (threshold, scope, which case it applies to). Short copy that's wrong is
-  worse than long copy.
+- Avoid creating layout shifts when adding new features.
 
 ## Writing Markdown
 
