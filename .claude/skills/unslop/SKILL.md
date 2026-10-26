@@ -7,6 +7,8 @@ description: Cut AI tells from any writing.
 
 Edit text to remove AI patterns. Scan for the patterns below, then rewrite. Preserve meaning and match the intended tone.
 
+UI strings (labels, hints, placeholders, errors, tooltips, empty states, settings descriptions, button text) follow the ux-copy skill instead of these rules.
+
 ## Patterns to detect and fix
 
 Rule numbers are stable ids that other skills cite. A removed rule leaves a gap.
