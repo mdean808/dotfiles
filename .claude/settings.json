@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'Do not use AskUserQuestion. Ask your questions as plain text in your reply, with context for each one, numbered, with your suggestion marked and explained why. Do not over-explain. Keep thinsg brief.' >&2; exit 2"
+            "command": "~/.claude/hooks/ask-gate.sh"
           }
         ]
       }
