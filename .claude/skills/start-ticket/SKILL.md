@@ -70,7 +70,7 @@ branch: <branch>
 ---
 
 <Setup: why this ticket was picked, whether the branch was created or checked
-out, what happened in the tracker, and the ticket.md path, new or reused.>
+out, what happened in the tracker, and the ticket file's path, new or reused.>
 
 Start a grilling session?
 ```
@@ -165,14 +165,20 @@ The ticket does not exist: say so and stop.
 
 ### 3. Choose the slug
 
-The branch and scratch directory share one slug. First match wins, checking
-the `<KEY>-<n>` key and then the legacy key:
+The branch and the ticket's scratch files share one slug. First match wins,
+checking the `<KEY>-<n>` key and then the legacy key:
 
 1. An existing branch: `git branch -a --list '*<KEY>-<n>-*' '*<key>-<n>-*'`.
    If several match, ask which one.
 2. An existing scratch directory:
    `find .scratch -maxdepth 1 -type d -iname '<key>-<n>-*'`.
-3. New: 3 to 6 lowercase kebab-case words naming the change.
+3. An `issues/` file in an epic's directory whose frontmatter names the key:
+   `grep -rliE '^(issue|linear|legacy|jira): *<key>-<n> *$' .scratch/*/issues/`.
+   The slug is the file name without its key, number or `draft-` prefix.
+4. New: 3 to 6 lowercase kebab-case words naming the change.
+
+Note which of 2 and 3 matched, if either: step 6 uses it. Both matching
+means the ticket was set up twice; ask which to keep.
 
 Ignore Linear's suggested `gitBranchName`; it does not follow the repo's
 naming rule.
@@ -203,9 +209,24 @@ it for the setup sentences and carry on.
 ### 6. Write the ticket snapshot
 
 Confirm `.scratch` is listed in
-`$(git rev-parse --git-common-dir)/info/exclude` and add it if missing. Reuse
-the step 3 directory under its current name, or create
-`.scratch/<KEY>-<n>-<slug>/`.
+`$(git rev-parse --git-common-dir)/info/exclude` and add it if missing. The
+layout follows the global `scratch-workflow.md` rule.
+
+**A ticket in an epic** (step 3 matched an `issues/` file) keeps its files in
+the epic's directory, and its `issues/` file is its ticket file. Write no
+separate snapshot.
+
+- If the file is not yet named `<KEY>-<n>-<slug>.md` (an `NN-` or `draft-`
+  name), rename it and every file named after it in the epic's other
+  subdirectories, and rewrite any `blocked-by` that points at its old number
+  or name. Tell the user what was renamed.
+- Set its frontmatter `issue:` to the key, and `legacy:` when there is one.
+  Leave the rest as it is.
+- If the issue's `updatedAt` is later than the file's last change, mention
+  that the tracker may have moved on.
+
+**A standalone ticket** reuses the step 3 directory under its current name,
+or creates `.scratch/<KEY>-<n>-<slug>/`, and its ticket file is `ticket.md`.
 
 An existing `ticket.md` stays as it is; if the issue's `updatedAt` is later
 than its snapshot date, mention that it may be stale. A `ticket.md` taken
@@ -248,8 +269,7 @@ status: needs-triage
 Drop the `legacy:` line when there is no legacy key.
 
 Other skills append conversation under `## Comments`, so keep that heading
-free. The rest of the directory layout follows
-`.local/docs/agents/issue-tracker.md`.
+free.
 
 ### 7. Send the brief
 
@@ -258,6 +278,16 @@ Reply with the brief from the top of this skill and end your turn.
 ### 8. Grill, if the user says yes
 
 When the user answers yes, invoke `mattpocock-skills:grilling` (`grill-me` is
-user-invoked only and calls it) with the ticket key and the `ticket.md` path.
-Spec and issue files from the session go under the ticket's scratch
-directory, as `.local/docs/agents/issue-tracker.md` describes.
+user-invoked only and calls it) with the ticket key and the ticket file's path.
+
+When the user confirms a shared understanding, write the session's output as
+the global `scratch-workflow.md` rule lays out. Never write a spec.
+
+- **Decisions**: `decisions.md` beside `ticket.md`, or
+  `decisions/<KEY>-<n>-<slug>.md` in an epic. Record each settled decision
+  with its reason, the constraints the code must keep, and the test list.
+  Quote the user only where they typed something other than a plain yes.
+- **Plan**: `plan.md`, or `plans/<KEY>-<n>-<slug>.md` in an epic. Write thin
+  vertical slices with blocking edges, and only when the work needs more than
+  one slice. Offer `/to-tickets` instead if the user wants tracker
+  sub-issues.

@@ -1,10 +1,10 @@
 ---
 name: mr-desc
 description: Write a GitLab merge request description for the current branch's
-  ticket into .scratch/<ticket>/mr.md, built from the branch diff, commits
-  and the ticket's scratch notes. Use when the user asks for an MR, merge
-  request or PR description (or "desc"), an MR write-up, or to get a branch
-  ready for review.
+  ticket into .scratch/<ticket>/ (mr.md, or mrs/ when it exists), built
+  from the branch diff, commits and the ticket's scratch notes. Use when the
+  user asks for an MR, merge request or PR description (or "desc"), an MR
+  write-up, or to get a branch ready for review.
 allowed-tools:
   - Read
   - Write
@@ -15,91 +15,61 @@ allowed-tools:
   - Bash(git diff *)
   - Bash(git rev-parse *)
   - Bash(find *)
+  - Bash(grep *)
   - Bash(ls *)
   - ToolSearch
   - AskUserQuestion
-  - Skill
-  - mcp__claude_ai_Linear__get_issue
-  - mcp__claude_ai_Linear__list_issues
-  - mcp__claude_ai_Linear__list_projects
 ---
 
 # /mr-desc
 
-Arguments: `$ARGUMENTS`
+Arguments: ``
 
-## The result
+Write the MR description, ready to paste into GitLab. The reader is a
+teammate who wants to know what changed and that it is tested. The diff
+shows how; never repeat it.
 
-`.scratch/<ticket dir>/mr.md`, ready to paste into GitLab. The reply names the
-file and flags what the MR carries beyond the ticket. It does not repeat the
-description.
+## Rules
 
-The reader is a teammate opening the MR. They want to know what changed and
-that it is tested. They do not want the history of how the work was done, or
-a walkthrough of what the diff already shows.
-
-## Ground rules
-
-- Read-only everywhere except `mr.md`. No commits, no pushes, no
-  `glab mr create`, no tracker writes.
-- Read the "Issue tracker" table in `CLAUDE.local.md` at the repo root first.
-  It gives the tracker, `<KEY>` and the legacy key. This skill supports
-  Linear. Any other tracker, or no table: say so and stop.
-- Run every path relative to the repo root (`git rev-parse --show-toplevel`).
-- The diff is the truth. Tickets, specs and change notes are intent, and they
-  go stale. When they disagree with the diff, describe the diff.
+- Write only the output file. No commits, pushes, MRs or tracker writes.
+- Take the tracker and `<KEY>` from the "Issue tracker" table in
+  `CLAUDE.local.md`. Not Linear, or no table: say so and stop.
+- Run paths from `git rev-parse --show-toplevel`.
+- When the diff and the notes disagree, describe the diff.
 
 ## Steps
 
-### 1. Find the ticket
+1. **Ticket.** Take the key from the arguments, else the branch name, else
+   ask. Resolve a legacy key to its `<KEY>` issue as `CLAUDE.local.md`
+   says. Find the ticket's files as the global `scratch-workflow.md` rule
+   says: a directory from
+   `find .scratch -maxdepth 1 -type d -iname '<key>-<n>-*'`, else an epic's
+   `issues/` file from
+   `grep -rliE '^(issue|linear): *<key>-<n> *$' .scratch/*/issues/`, then
+   both again with the legacy key. None: ask. Never guess one.
 
-A key in the arguments (`<KEY>-123`, `<key>-123`, `123`) wins. Otherwise take
-it from `git branch --show-current`. No key either way: ask for one.
+   A standalone ticket's output file is `mr.md` in its directory. A ticket
+   in an epic writes `mrs/<name>.md` in the epic's directory, where `<name>`
+   is its `issues/` file's name.
+2. **Gather.** Read `git log main..HEAD`, `git diff main...HEAD` (every
+   hunk), `git status`, and the ticket's scratch files (in an epic: its
+   `issues/`, `decisions/` and `plans/` files, and its section of
+   `changes.md`). No ticket file: fetch the issue with `get_issue`.
+   Uncommitted changes are left out of the description.
+3. **Tests.** Don't run them. Ask with AskUserQuestion: "All green",
+   "Some failing" or "Not run yet".
+4. **Write** to the template below. Drop empty sections, headings included.
+5. **Check** every sentence against a hunk, a results file or the answer
+   to step 3. Cut what you can't point to. If the output file exists, ask
+   before replacing it.
+6. **Reply** as below, and nothing else.
 
-A legacy key (`TT-123`, from the arguments or an old branch name) is resolved
-to its `<KEY>` issue as `CLAUDE.local.md` says. The MR title uses the `<KEY>`
-key, so Linear links the MR.
-
-The ticket directory is
-`find .scratch -maxdepth 1 -type d -iname '<key>-<n>-*'`, then the same
-search with the legacy key. None: ask for the slug. Do not create a directory
-under a guessed name.
-
-### 2. Gather
-
-Read all of these that exist:
-
-- `git log main..HEAD --format='%h %s%n%b'`
-- `git diff main...HEAD --stat`, then the full diff. Read every hunk.
-- `git status`. Uncommitted changes are not in the MR. Note them for the reply
-  and describe only what is committed.
-- In the ticket directory: `ticket.md`, `spec.md`, `changes.md`,
-  `results.md`, `issues/*.md`, and any benchmark results.
-- An existing `mr.md`: see step 4.
-
-No `ticket.md`, or one taken from the legacy tracker: fetch the issue with
-`get_issue` (`includeRelations: true`, fields `title, description, labels,
-relations`). Load the tool schemas with ToolSearch first.
-
-Sort every commit into one of two groups: the ticket's work, and anything
-else (a rules tweak, an unrelated fix). Anything else still ships with the MR,
-so it still gets described. Flag it in the reply.
-
-### 3. Ask about the tests
-
-Do not run the test suite. Ask with AskUserQuestion whether all tests pass,
-with the options "All green", "Some failing" and "Not run yet". The answer
-decides the last sentence of Testing.
-
-### 4. Write
-
-Follow the template and the rules under it. Leave out any section with
-nothing in it, heading included.
+## Template
 
 ````markdown
 # <KEY>-<n> <What the MR does>
 
-<Summary.>
+<Summary>
 
 ## Changes
 
@@ -107,7 +77,7 @@ nothing in it, heading included.
 
 ## Results
 
-<Measurements, when the work has them.>
+<table>
 
 ## Database
 
@@ -115,110 +85,84 @@ nothing in it, heading included.
 
 ## Testing
 
-<Two or three sentences.>
+<sentence>
 
 ## Future work
 
-<What is still left.>
+<sentence>
 ````
 
-**Title.** `<KEY>-<n>` and a short phrase for what the MR does, sentence case.
-Use the commit subject when it already says this. For a bug, name the fix
-("Fix Profile project dropdown for masquerading superusers"), not the
-symptom.
+**Title.** The key and what the MR does, sentence case. A bug names the
+fix: `GRO-12 Fix the Profile project dropdown for masquerading superusers`.
 
-**Summary.** One sentence saying what the MR does, in terms a user or caller
-would notice. Stop at the change itself; the reader infers its consequences,
-such as a saved setting surviving a refresh. Add a second sentence only for
-measured evidence that it works or is safe ("Response bodies are
-byte-for-byte identical before and after on every benchmarked case.").
-
-**Changes.** A short list of what the MR achieves, at the level a reviewer
-would describe it out loud. The diff shows how.
-
-- One bullet per goal: something a user, caller or operator would notice.
-  A goal that spans backend and frontend is one bullet.
-- One line, one clause. Open with an imperative verb: Add, Fix, Stop.
-- Name the change, not the mechanism. No components, functions, fields or
-  call paths unless the change is to that interface (a new endpoint, a
-  renamed flag); put that interface in backticks.
-- For a bug fix, name the fix: "Fix saving the active project while
-  masquerading". Not the cause, not the code that does it now.
-- Usually two to four bullets. More than five means you are listing
-  implementation steps; merge them into the goal they serve.
-- No subheadings.
-- Commits outside the ticket go in a final `Also:` bullet.
-- Tests go under Testing.
-
-**Results.** Only when there are measurements: benchmarks, query counts,
-timings, sizes. Give the dataset in one sentence, then one table per metric:
+**Summary.** One sentence on what a user would notice, and the flag if one
+gates it. A second only for measured proof.
 
 ```markdown
-| endpoint                    | baseline | final | change |
-| --------------------------- | -------: | ----: | -----: |
-| `GET /reports/api/window/`  |    4,268 |    30 | -99.3% |
+Bad:  Project admins can now version frameworks, which means past
+      assessments stay accurate after a formula changes.
+Good: Project admins can turn RMC frameworks on or off and keep editing one
+      after windows are assessed with it, behind flag TT-1164.
 ```
 
-Copy numbers from the results files; never compute or round them yourself
-beyond the change column (one decimal place). Pad columns so the raw markdown
-lines up.
+**Changes.** One bullet per feature, named the way a reviewer would sum it
+up out loud. One sentence, starting with a verb. At most five. Nothing the
+diff or ticket already shows: no endpoints, no fields, no rules for edge
+cases. Commits outside the ticket go in a final `Also:` bullet.
 
-**Database.** Only when the diff adds a migration or changes a model's
-fields, constraints, indexes or row-level security. One bullet per migration:
-its name and what it changes. Add a sentence when a migration backfills or
-rewrites data, is not reversible, or has to be deployed in a particular order
-with the code.
+```markdown
+Bad:
+- Turn custom frameworks on or off per project, and archive one with
+  assessed windows instead of deleting it. Restore keeps its on or off
+  setting.
+- Turn built-in RMR89, Q, Q' and GSI on or off per project
+  (`GET`/`PATCH api/rmc-frameworks/built-in/`).
+- Fix the Profile project dropdown: `get_active_project` now reads the
+  masqueraded user's memberships.
 
-**Testing.** A summary, never a list of test files. Say which kinds of test
-cover the changes ("Covered by Django and Cypress tests."). Add one sentence when running the tests needs a
-step beyond the usual, such as reseeding the E2E database. End with the
-answer from step 3:
+Good:
+- Turn custom frameworks on or off per project, and archive one with
+  assessed windows instead of deleting it.
+- Turn built-in RMR89, Q, Q' and GSI on or off per project.
+- Fix saving the active project while masquerading.
+```
 
-- All green: "All tests pass."
-- Some failing: "<n> tests fail: <which>." Ask the user for which if you
-  don't know.
-- Not run yet: no sentence.
+**Results.** Only with measurements in a results file. One sentence on the
+dataset, then one table per metric. Copy the numbers; compute only the
+change column, to one decimal place.
 
-**Future work.** Only work someone is expected to pick up: a follow-up ticket
-by key, or a limit the MR leaves in the problem it solves (for example, an
-endpoint still too slow at scale). Leave out code that was deliberately left
-alone, adjacent issues nobody plans to fix, and decisions recorded in the
-spec. When in doubt, leave the section out.
+```markdown
+| endpoint                   | baseline | final | change |
+| -------------------------- | -------: | ----: | -----: |
+| `GET /reports/api/window/` |    4,268 |    30 | -99.3% |
+```
 
-**Writing.**
+**Database.** One bullet per migration: its name and what it changes. Add
+one sentence only if it backfills data, can't be reversed, or must deploy
+in a set order.
 
-- Wrap prose at 80 characters. Tables and headings stay on one line.
-- Write only what the reader can't infer. Cut any clause that follows from
-  the rest of the sentence, and any mention of what stays the same unless a
-  reviewer would expect it to change.
-- Use the usual developer term over a paraphrase: "revert the select", not
-  "put the select back".
-- Write a feature flag's key as "flag TT-820" or "flag GRO-77", so it reads
-  as a flag and not a ticket. Flags keep the key they were created with.
-- Use the domain terms in `.local/CONTEXT.md` when it exists.
-- No implementation history: no "first tried X", no reverted work, no
-  process notes from `changes.md`.
-- No file-by-file walkthrough; the diff has that.
-- Leave out the checklist from `.gitlab/merge_request_templates/Default.md`.
+**Testing.** Which kinds of test cover it, then the step 3 answer: "All
+tests pass.", "<n> tests fail: <which>.", or nothing. Never list files.
 
-### 5. Save
+```markdown
+Covered by Django API tests and Cypress component tests. All tests pass.
+```
 
-Write `.scratch/<ticket dir>/mr.md`. When one exists already, compare it with
-your draft and ask before replacing it; the user may have edited it by hand.
+**Future work.** Only a follow-up ticket by key, or a limit the MR leaves
+in the problem it solves. In doubt, leave it out.
 
-Before saving, check every claim in the draft against the diff. Drop or
-rewrite any sentence you cannot point to a hunk, a results file or the
-user's answer in step 3 for.
+**Writing.** Wrap at 80 characters. Write a flag as "flag GRO-77". Use the
+terms in `CONTEXT.md`. Never write: implementation history, decisions made
+while building, copy changes, what stayed the same, file walkthroughs, or
+the GitLab template's checklist.
 
-### 6. Reply
+## Reply
 
 ````markdown
-Wrote `.scratch/<ticket dir>/mr.md`.
+Wrote `<output file>`.
 
-<Only when they apply, one bullet each:>
-- Commits outside the ticket: <sha subject>, described in the `Also:` bullet.
-- Uncommitted changes, left out of the description: <files>.
+- Commits outside the ticket: <sha subject>, in the `Also:` bullet.
+- Uncommitted changes, left out: <files>.
 ````
 
-Nothing else: no notes on where the spec and diff disagree, no list of
-unconfirmed claims, no summary of the description.
+Include a bullet only when it applies.
