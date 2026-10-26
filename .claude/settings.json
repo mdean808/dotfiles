@@ -7,7 +7,10 @@
     "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet"
   },
   "permissions": {
-    "deny": []
+    "deny": [],
+    "additionalDirectories": [
+      "~/.scratch"
+    ]
   },
   "model": "opus",
   "hooks": {
@@ -18,17 +21,6 @@
             "type": "command",
             "command": "CLAUDE_DIR=\"${CLAUDE_CONFIG_DIR:-$HOME/.claude}\"; cat \"$CLAUDE_DIR/skills/unslop/SKILL.md\" | jq -Rs '{suppressOutput:true,hookSpecificOutput:{hookEventName:\"SessionStart\",additionalContext:.}}'",
             "statusMessage": "Loading writing skills"
-          }
-        ]
-      }
-    ],
-    "PreToolUse": [
-      {
-        "matcher": "AskUserQuestion",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/ask-gate.sh"
           }
         ]
       }
