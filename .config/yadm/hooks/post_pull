@@ -1,5 +1,19 @@
 #!/bin/sh
+
+unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+
+sync_nvim() {
+  repo="$HOME/.config/nvim"
+
+  [ -d "$repo/.git" ] || return 0
+  [ "$(git -C "$repo" rev-parse --show-toplevel)" = "$repo" ] || return 0
+
+  printf '\n==> pulling nvim config\n'
+  git -C "$repo" pull --rebase --autostash
+}
+
 "$HOME/.config/yadm/keyd-sync.sh"
 "$HOME/.config/yadm/keybindings.sh"
 "$HOME/.config/yadm/workspaces.sh"
+sync_nvim
 yadm config --get-all local.class | grep -qx headless || "$HOME/.config/yadm/scratch.sh" pull
