@@ -23,6 +23,9 @@ one where they differ.
   source." beats "Files that match none of the lists count as source."
 - Address the task, not the user. "Enter a label." rather than "You'll want to
   enter a label here."
+- Drop "your", "yet" and "currently" unless they change the meaning.
+- Cut what the action already implies. A copy is separate from its original.
+- Say each fact once per screen. If another string shows it, leave it out.
 - Check every claim against the code: thresholds, units, scope, which case it
   applies to. Wrong copy is worse than missing copy.
 
@@ -69,3 +72,7 @@ These come from rewrites the user approved.
 | Diffa marks each hunk Skim, Read or Scrutinise so you can filter the summaries. These rules decide which. | Diffa marks each hunk with Skim, Read or Scrutinise to help filter summaries. Use the rules below to tweak the categorization. |
 | 38 files and 9 trivial hunks. Summaries run in batches. | 38 files and 9 trivial hunks. Generate summaries in batches. |
 | Without a risk flag, file role and changed lines decide between skim and read. The review reloads when you leave settings. | (deleted) |
+| Copy frameworks from your other projects in this organization. Each copy is edited separately from its original. Window results aren't copied. | Copy frameworks from your other projects in this organization. Window results aren't copied. |
+| This project has a framework with this name. The copy gets a number added. | This project already has a framework with this name |
+| Your other projects in this organization have no custom frameworks. | Other projects in this organization do not have custom frameworks. |
+| You don't have access to any other projects in this organization. | (merged with the no-frameworks empty state) |

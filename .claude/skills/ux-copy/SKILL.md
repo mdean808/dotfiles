@@ -21,6 +21,9 @@ unslop rules do not apply to UI strings.
    record the element type, the file and line, and what it does, read from the
    code (limits, units, which cases it covers). Done when every string in
    scope has a verified behaviour.
+
+   If two empty, error or status states lead to the same next action,
+   propose merging them instead of rewording each.
 2. **Draft.** Write a proposal for each string that breaks the guide, using the
    verified behaviour. Wording the user supplied is used as given, after an
    accuracy check.
