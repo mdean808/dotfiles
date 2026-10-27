@@ -21,6 +21,7 @@ export LC_ALL=en_US.UTF-8
 alias vim="nvim"
 alias vi="nvim"
 [[ -n $CLAUDECODE ]] || alias cd="z"
+alias strata-remote="remote-dev -p 8000 -p 4173 morgan-gai-desktop.tailf2acf8.ts.net strata"
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
