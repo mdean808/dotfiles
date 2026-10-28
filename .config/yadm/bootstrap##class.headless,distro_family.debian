@@ -12,11 +12,28 @@ step_packages() {
     tmux lazygit zoxide ripgrep fd-find htop unzip locales
 }
 
+step_sparse() {
+  yadm sparse-checkout set --no-cone '/*' \
+    '!/.config/autostart/' \
+    '!/.config/ghostty/' \
+    '!/.config/keyd/' \
+    '!/.config/mimeapps.list' \
+    '!/.config/smug/' \
+    '!/.config/vicinae/' \
+    '!/.config/yadm/keybindings.sh' \
+    '!/.config/yadm/keyd-sync.sh' \
+    '!/.config/yadm/workspaces.sh' \
+    '!/.local/bin/remote-dev' \
+    '!/.local/bin/startup-workspaces' \
+    '!/.local/share/applications/'
+}
+
 step_locale() {
   if locale -a | grep -qix 'en_US.utf8'; then return 0; fi
   sudo locale-gen en_US.UTF-8
 }
 
+run sparse
 run packages
 run locale
 run neovim

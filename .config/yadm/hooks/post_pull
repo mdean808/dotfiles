@@ -12,8 +12,12 @@ sync_nvim() {
   git -C "$repo" pull --rebase --autostash
 }
 
-"$HOME/.config/yadm/keyd-sync.sh"
-"$HOME/.config/yadm/keybindings.sh"
-"$HOME/.config/yadm/workspaces.sh"
+headless() { yadm config --get-all local.class | grep -qx headless; }
+
+if ! headless; then
+  "$HOME/.config/yadm/keyd-sync.sh"
+  "$HOME/.config/yadm/keybindings.sh"
+  "$HOME/.config/yadm/workspaces.sh"
+fi
 sync_nvim
-yadm config --get-all local.class | grep -qx headless || "$HOME/.config/yadm/scratch.sh" pull
+headless || "$HOME/.config/yadm/scratch.sh" pull
