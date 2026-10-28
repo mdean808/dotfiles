@@ -6,8 +6,6 @@ These instructions override skills, plugins, and repository CLAUDE.md.
 
 Do not make changes to a file or system unless explicitly asked to by the user.
 
-Do not commit or push your changes unless specifically requested to by the user. This overrides skills.
-
 ## External Tools
 
 Do not write to external tools unless specifically asked by the user to.
@@ -26,23 +24,18 @@ Never estimate time. You are an LLM, you have no sense of time.
 
 ## Comments
 
-**Do not write unnecessary comments.** Assume every comment you are about to add is probably unnecessary,
-because 99% of the time it is. The code must explain itself through naming and
-structure; a comment that restates what the code does is noise, and noise gets
-reviewed, merged, and then rots.
+**Do not write unnecessary comments.** Assume every comment you are about
+to add is probably unnecessary, because 99% of the time it is.
+The code must explain itself through naming and structure;
+a comment that restates what the code does is unnacceptable.
 
 Rules:
 
-- **Never** narrate a change. No "Omit rather than send an empty value", no
-  "we do X because the backend does Y", no explaining the fix you just made.
-  That belongs in the commit message and the PR description, not the source.
-- **Never** add docblocks/JSDoc/docstrings to props, fields, variables, or
-  internal functions that did not already have them.
-- **Never** leave a comment on a bugfix. A bugfix is the strongest case for
-  _no_ comment: the diff is small, the reasoning is in the ticket, and the
-  comment is the only part that will still be there and wrong in a year.
+- **Never** narrate a change. For example, avoid comments like this:
+  - "Omit rather than send an empty value"
+  - "we do X because the backend does Y"
+- **Never** leave a comment on a bugfix. A bugfix is the strongest case for _no_ comment.
 - **Never** add a comment to code you did not otherwise change.
-- Match the surrounding file. If neighbouring code has no comments, yours has none.
 
 The rare exception — and you must be able to defend it — is a non-obvious
 external constraint that the code genuinely cannot express: a spec quirk, an
@@ -57,20 +50,27 @@ When in doubt: delete the comment.
 
 ## Subagents
 
-- Do the work in this session by default. Spawn a subagent only when a
-  search would pull many files into context and only the conclusion matters.
-- Implement in the main session. Do not hand a plan or spec to subagents to
-  implement.
+- Spawn a subagent only when a search would pull many files into context
+  and only the conclusion matters.
+- Implement in the main session, unless the plan has 3 or more slices. Then
+  implement each slice in its own Sonnet subagent with a tight brief: the
+  files, the acceptance criteria, the decisions, and no re-exploring. Keep the
+  main session for my feedback and the adjustments I ask for.
+- Run chores on Sonnet: commits, rebases, conflict cleanup, flag toggles,
+  seeding dev data, dotfiles. Use `/ship` for commits.
 - Do not review changes unless the user asks for a review or a skill calls
-  for one.
+  for one. Exception: skills a subagent wrote or changed get one fresh `opus`
+  review against `create-skill` before you report them done. One reviewer
+  covers every skill from that piece of work.
 - When a review happens, run it in one fresh subagent, never in the session
   that wrote the code. One reviewer covers spec, standards and bugs. Add a
   separate security reviewer only when the change touches auth, payments,
   user data or permissions.
 - Pick the subagent model by task:
   - `haiku` for narrow lookups: where something is defined, which files
-    use it, what a config value is.
-  - Leave it unset (Sonnet) for research that traces behaviour across
+    use it, what a config value is. Use Explore on `haiku` to map unfamiliar
+    code.
+  - `sonnet` for research that traces behaviour across
     files, and for running commands.
   - `opus` for review and diagnosis.
 - Give a subagent the paths and findings you already have, so it does not
@@ -82,27 +82,42 @@ When in doubt: delete the comment.
 
 ## Grilling
 
-- Keep a running list of settled decisions; never re-ask one.
 - Don't ask what the feature can't exist without, or what the user already
   stated.
+- Ask only what changes the work. Assume the rest and list the assumptions.
 
-## Creating UI
+## Scope
+
+Do what I asked and nothing more. If a bigger change looks better, say so and
+wait. Don't change copy, colors or layout I didn't mention. When I say I'll
+hand work to another agent, write the handoff and stop.
+
+## Writing
+
+Before writing anything that isn't a chat reply, name what it is: UI string,
+settings text, report, MR description, QA steps, ticket, status update. Write
+that thing, not a message to me. Keep it simple, no word salad. Reports answer
+the question first, then show evidence.
+
+## Files
+
+Read a file with Read before you edit it, and read only the range you'll
+edit. Use Bash only to search, or to read files you won't edit. This overrides
+the bypass-mode guidance to read and edit files through Bash.
+
+## Tests
+
+Don't run tests mid-change unless I ask. When tests run, use the repo's test
+skill if it has one, and run suites in parallel and in the background.
+
+## Skills
+
+When `/implement` says to call `tdd`, skip it unless I ask for TDD.
+
+## UI
 
 - Avoid creating layout shifts when adding new features.
 
 ## Writing Markdown
 
 - Cap maximum line length at 80 characters.
-
-## Responses
-
-Never assert the current state of a git operation, background process, file, or
-test run from memory or from what was true earlier in the conversation. Before
-making any claim like "still waiting on X" or "Y hasn't happened yet," verify it
-with a fresh tool call:
-
-- Git state (rebase/merge in progress, branch, staged changes) → `git status`
-- File contents/changes → re-read the file rather than trusting a prior diff
-
-If you're not sure whether something is still true, check first — don't guess or
-carry forward stale state.

@@ -1,14 +1,14 @@
 ---
 name: ux-copy
-description: Write or rewrite UI copy (form labels, hints, placeholders,
-  errors, tooltips, empty states, settings descriptions, button text). Use
-  when adding or changing user-facing strings in an app, or when the user
-  asks to fix copy, wording or labels.
+description: Write UI copy. Use when adding or changing user-facing strings, when the user asks to fix copy or labels, or when they ask to update the copy guide from their feedback.
 ---
 
 # /ux-copy
 
 Arguments: `$ARGUMENTS`
+
+With `--learn` in the arguments, read [learn.md](learn.md) and follow it
+instead of the steps below.
 
 Read [guide.md](guide.md) before drafting. It, plus any style guide the repo's
 CLAUDE.md points to, is the standard every string is checked against. The
@@ -41,3 +41,16 @@ unslop rules do not apply to UI strings.
 5. **Apply.** Change only the approved rows, update tests that assert on the
    old text, and run them. Report what changed and any choice the user did not
    approve explicitly.
+6. **Capture.** For each string whose applied wording differs from your
+   proposal because the user changed it, append one row to
+   `~/.claude/skills/ux-copy/feedback.md` with `cat >>`. Never open or read
+   that file outside `--learn`; it would bias the next draft. Rows the user
+   approved as proposed or rejected without new wording are not recorded.
+
+   ```
+   | 2026-10-28 | diffa | Empty state | No rules yet. | This project has no rules. | No rules. |
+   ```
+
+   Columns: date, repo (basename of the git root), element, current,
+   proposed, final. Escape `|` in strings as `\|` and keep each row on one
+   line. Done when every user-changed string has a row.

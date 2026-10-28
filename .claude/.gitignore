@@ -16,3 +16,5 @@
 settings.local.json
 .credentials.json
 plugins/**
+skills/.trash/
+skills/synced/

@@ -1,10 +1,6 @@
 ---
 name: mr-desc
-description: Write a GitLab merge request description for the current branch's
-  ticket into .scratch/<ticket>/ (mr.md, or mrs/ when it exists), built
-  from the branch diff, commits and the ticket's scratch notes. Use when the
-  user asks for an MR, merge request or PR description (or "desc"), an MR
-  write-up, or to get a branch ready for review.
+description: Write an MR description. Use when the user asks for an MR, merge request or PR description.
 allowed-tools:
   - Read
   - Write
@@ -23,7 +19,7 @@ allowed-tools:
 
 # /mr-desc
 
-Arguments: ``
+Arguments: `$ARGUMENTS`
 
 Write the MR description, ready to paste into GitLab. The reader is a
 teammate who wants to know what changed and that it is tested. The diff
@@ -60,8 +56,9 @@ shows how; never repeat it.
    "Some failing" or "Not run yet".
 4. **Write** to the template below. Drop empty sections, headings included.
 5. **Check** every sentence against a hunk, a results file or the answer
-   to step 3. Cut what you can't point to. If the output file exists, ask
-   before replacing it.
+   to step 3. Cut what you can't point to. Cut anything from the scratch
+   notes that is not for the team: agent assumptions, private details,
+   secrets. If the output file exists, ask before replacing it.
 6. **Reply** as below, and nothing else.
 
 ## Template

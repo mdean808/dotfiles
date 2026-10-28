@@ -1,12 +1,6 @@
 ---
 name: start-ticket
-description: Start work on a ticket from the repo's issue tracker. Picks the
-  ticket (a given key, or your next In Progress or Todo ticket in the current
-  sprint or cycle, by priority, once you approve it), creates its branch,
-  moves it to In Progress, sets up its .scratch/ directory with a ticket
-  snapshot, briefs you on the ticket, and offers a grilling session. Use when
-  the user says to start, pick up or begin a ticket, or asks what to work on
-  next.
+description: Start work on a ticket. Use when the user asks to start or pick up a ticket, or what to work on next.
 allowed-tools:
   - Read
   - Write

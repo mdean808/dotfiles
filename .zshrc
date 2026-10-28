@@ -57,4 +57,4 @@ export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME/bin:$PATH"
 
 # zoxide
-eval "$(zoxide init zsh)"
+[[ -n $CLAUDECODE ]] || eval "$(zoxide init zsh)"
