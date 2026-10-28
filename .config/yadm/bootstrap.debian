@@ -1,0 +1,106 @@
+#!/bin/sh
+
+step_packages() {
+  sudo apt-get update
+  sudo apt-get install -y \
+    zsh git curl wget ca-certificates openssh-client build-essential python3 \
+    tmux lazygit zoxide ripgrep fd-find htop fontconfig unzip keyd ghostty \
+    fonts-noto-core fonts-noto-color-emoji fonts-noto-cjk libopengl0 \
+    gnome-shell-extensions flatpak snapd
+}
+
+step_slack() {
+  if snap list slack >/dev/null 2>&1; then return 0; fi
+  sudo snap install slack
+}
+
+step_zen() {
+  sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  sudo flatpak install -y --noninteractive flathub app.zen_browser.zen
+}
+
+step_neovim() {
+  if have nvim; then return 0; fi
+  case "$(uname -m)" in
+    x86_64) asset=nvim-linux-x86_64 ;;
+    aarch64 | arm64) asset=nvim-linux-arm64 ;;
+    *) echo "no neovim build for $(uname -m)" >&2; return 1 ;;
+  esac
+  tmp=$(mktemp -d)
+  curl -fsSL -o "$tmp/nvim.tar.gz" \
+    "https://github.com/neovim/neovim/releases/download/stable/$asset.tar.gz"
+  sudo tar -C /opt -xzf "$tmp/nvim.tar.gz"
+  sudo ln -sfn "/opt/$asset/bin/nvim" /usr/local/bin/nvim
+  rm -rf "$tmp"
+}
+
+step_gh() {
+  if have gh; then return 0; fi
+  (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
+  	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
+  	&& out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+  	&& cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
+  	&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
+  	&& sudo mkdir -p -m 755 /etc/apt/sources.list.d \
+  	&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+  	&& sudo apt update \
+  	&& sudo apt install gh -y
+}
+
+step_glab() {
+  if have glab; then return 0; fi
+  case "$(dpkg --print-architecture)" in
+    amd64) asset=amd64 ;;
+    arm64) asset=arm64 ;;
+    *) echo "no glab build for $(dpkg --print-architecture)" >&2; return 1 ;;
+  esac
+  ver=$(curl -fsSL "https://gitlab.com/api/v4/projects/gitlab-org%2Fcli/releases/permalink/latest" \
+    | tr ',' '\n' | grep '"tag_name"' | cut -d'"' -f4 | sed 's/^v//')
+  enc=$(echo "$ver" | sed 's/\./%2E/g')
+  tmp=$(mktemp -d)
+  curl -fsSL -o "$tmp/glab.deb" \
+    "https://gitlab.com/api/v4/projects/gitlab-org%2Fcli/packages/generic/glab/$enc/glab_${enc}_linux_${asset}%2Edeb"
+  sudo apt-get install -y "$tmp/glab.deb"
+  rm -rf "$tmp"
+}
+
+step_docker() {
+  if have docker; then return 0; fi
+  distro=$(. /etc/os-release && if [ -n "$UBUNTU_CODENAME" ]; then echo ubuntu; else echo debian; fi)
+  codename=$(. /etc/os-release && echo "${UBUNTU_CODENAME:-${DEBIAN_CODENAME:-$VERSION_CODENAME}}")
+  sudo install -m 0755 -d /etc/apt/keyrings
+  sudo curl -fsSL "https://download.docker.com/linux/$distro/gpg" -o /etc/apt/keyrings/docker.asc
+  sudo chmod a+r /etc/apt/keyrings/docker.asc
+  printf 'Types: deb\nURIs: https://download.docker.com/linux/%s\nSuites: %s\nComponents: stable\nArchitectures: %s\nSigned-By: /etc/apt/keyrings/docker.asc\n' \
+    "$distro" "$codename" "$(dpkg --print-architecture)" \
+    | sudo tee /etc/apt/sources.list.d/docker.sources >/dev/null
+  sudo apt-get update
+  sudo apt-get install -y \
+    docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+}
+
+step_nerd_font() {
+  if fc-list | grep -qi 'FiraCode Nerd Font'; then return 0; fi
+  tmp=$(mktemp -d)
+  curl -fsSL -o "$tmp/FiraCode.zip" \
+    https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
+  mkdir -p "$HOME/.local/share/fonts/FiraCode"
+  unzip -o -q "$tmp/FiraCode.zip" -d "$HOME/.local/share/fonts/FiraCode"
+  rm -rf "$tmp"
+}
+
+step_vicinae_extension() {
+  uuid=vicinae@dagimg-dot
+  if ! gnome-extensions info "$uuid" >/dev/null 2>&1; then
+    gdbus call --session --dest org.gnome.Shell.Extensions \
+      --object-path /org/gnome/Shell/Extensions \
+      --method org.gnome.Shell.Extensions.InstallRemoteExtension "$uuid"
+  fi
+  gnome-extensions enable "$uuid"
+}
+
+step_fd() {
+  if have fd; then return 0; fi
+  mkdir -p "$HOME/.local/bin"
+  ln -sfn "$(command -v fdfind)" "$HOME/.local/bin/fd"
+}

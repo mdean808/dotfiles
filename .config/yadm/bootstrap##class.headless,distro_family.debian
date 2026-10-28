@@ -1,0 +1,43 @@
+#!/bin/sh
+set -e
+
+dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+. "$dir/bootstrap.common"
+. "$dir/bootstrap.debian"
+
+step_packages() {
+  sudo apt-get update
+  sudo apt-get install -y \
+    zsh git curl wget ca-certificates openssh-client build-essential python3 \
+    tmux lazygit zoxide ripgrep fd-find htop unzip locales
+}
+
+step_locale() {
+  if locale -a | grep -qix 'en_US.utf8'; then return 0; fi
+  sudo locale-gen en_US.UTF-8
+}
+
+run packages
+run locale
+run neovim
+run gh
+run glab
+run docker
+run fd
+run omz
+run zsh_defer
+run nvim_config
+run nvm
+run node
+run uv
+run bun
+run go
+run smug
+run pnpm
+run claude
+run docker_service
+run login_shell
+printf '\nBootstrap complete. Log out and back in for the login shell and docker group to take effect.\n'
+printf '\nStill to do by hand:\n'
+printf '  - Set api_key under [settings] in ~/.wakatime.cfg\n'
+printf '  - Add an SSH key for GitHub to push the nvim config\n'
