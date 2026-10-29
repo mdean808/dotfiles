@@ -15,4 +15,3 @@ text/html=app.zen_browser.zen.desktop;
 x-scheme-handler/https=app.zen_browser.zen.desktop;
 x-scheme-handler/mailto=app.zen_browser.zen.desktop;
 application/octet-stream=net.meshlab.MeshLab.desktop;
-x-scheme-handler/t3code=com.t3tools.T3Code.desktop;
