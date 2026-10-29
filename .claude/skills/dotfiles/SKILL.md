@@ -38,10 +38,11 @@ push.
    - Define `step_<name>` so it returns early when already done. Bootstrap
      reruns, under `set -e`.
    - Both distros: `.config/yadm/bootstrap.common`, plus `run <name>` in
-     `common_steps`.
+     `common_steps`. The headless bootstrap doesn't call `common_steps`, so
+     see the headless bullet below.
    - Debian or Ubuntu only: `.config/yadm/bootstrap.debian`, plus
      `run <name>` in `.config/yadm/bootstrap##distro_family.debian`.
-   - Arch only: `.config/yadm/bootstrap##distro.arch`. A package goes in the
+   - Arch only: `.config/yadm/bootstrap##distro_family.arch`. A package goes in the
      `pacman` list in its `step_packages`.
    - Packages: the apt list in `bootstrap.debian` and the pacman list in the
      arch file, each under that distro's package name.

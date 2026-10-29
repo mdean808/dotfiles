@@ -47,6 +47,7 @@ run zsh_defer
 run nvim_config
 run nvm
 run node
+run t3
 run uv
 run bun
 run go

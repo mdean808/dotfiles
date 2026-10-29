@@ -31,7 +31,7 @@ step_nvim_config() {
 }
 
 step_scratch() {
-  "$HOME/.config/yadm/scratch.sh" pull || scratch_failed=1
+  GIT_SSH_COMMAND='ssh -o BatchMode=yes' "$HOME/.config/yadm/scratch.sh" pull || scratch_failed=1
 }
 
 step_nvm() {
@@ -44,13 +44,17 @@ step_node() {
   bash -c '. "$HOME/.nvm/nvm.sh" --no-use && nvm install node'
 }
 
+step_t3() {
+  bash -c '. "$HOME/.nvm/nvm.sh" && { command -v t3 >/dev/null || npm install -g t3; }'
+}
+
 step_uv() {
   if have uv || [ -x "$HOME/.local/bin/uv" ]; then return 0; fi
   curl -LsSf https://astral.sh/uv/install.sh | UV_NO_MODIFY_PATH=1 sh
 }
 
 step_bun() {
-  if have bun; then return 0; fi
+  if have bun || [ -x "$HOME/.bun/bin/bun" ]; then return 0; fi
   curl -fsSL https://bun.sh/install | bash
 }
 
@@ -82,7 +86,7 @@ step_pnpm() {
 }
 
 step_claude() {
-  if have claude; then return 0; fi
+  if have claude || [ -x "$HOME/.local/bin/claude" ]; then return 0; fi
   curl -fsSL https://claude.ai/install.sh | bash
 }
 
@@ -124,6 +128,7 @@ common_steps() {
   run scratch
   run nvm
   run node
+  run t3
   run uv
   run bun
   run go

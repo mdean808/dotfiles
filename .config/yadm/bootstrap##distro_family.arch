@@ -4,11 +4,15 @@ set -e
 . "$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)/bootstrap.common"
 
 step_packages() {
-  sudo pacman -S --needed --noconfirm \
+  sudo pacman -Syu --needed --noconfirm \
     zsh git curl wget unzip openssh base-devel python \
     neovim tmux lazygit github-cli glab ghostty zoxide ripgrep fd htop jq keyd \
     docker docker-buildx docker-compose flatpak \
     ttf-firacode-nerd noto-fonts noto-fonts-emoji noto-fonts-cjk
+  if [ ! -d "/usr/lib/modules/$(uname -r)" ]; then
+    printf '\nThe kernel was upgraded. Reboot, then run yadm bootstrap again.\n' >&2
+    exit 1
+  fi
 }
 
 step_slack() {
@@ -30,6 +34,7 @@ step_sparse() {
 
 manual_steps() {
   printf '  - Bind in your desktop: Ctrl+Alt+T ghostty +new-window, Ctrl+Q close window, Ctrl+Tab switch windows\n'
+  printf '  - Set the machine class for git identity: yadm config local.class personal && yadm alt\n'
 }
 
 run sparse
