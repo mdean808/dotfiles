@@ -1,5 +1,9 @@
 [
   {
+    "key": "mod+t",
+    "command": "chat.new"
+  },
+  {
     "key": "mod+b",
     "command": "sidebar.toggle"
   },
@@ -30,7 +34,7 @@
     "when": "!terminalFocus"
   },
   {
-    "key": "mod+t",
+    "key": "mod+shift+t",
     "command": "terminal.toggle"
   },
   {
@@ -66,10 +70,6 @@
     "key": "mod+w",
     "command": "rightPanel.close",
     "when": "!terminalFocus"
-  },
-  {
-    "key": "mod+shift+t",
-    "command": "view.reopenClosed"
   },
   {
     "key": "mod+d",
