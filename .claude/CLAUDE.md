@@ -53,32 +53,16 @@ When in doubt: delete the comment.
 - Spawn a subagent only when a search would pull many files into context
   and only the conclusion matters.
 - Implement in the main session, unless the plan has 3 or more slices. Then
-  implement each slice in its own Sonnet subagent with a tight brief: the
-  files, the acceptance criteria, the decisions, and no re-exploring. Keep the
-  main session for my feedback and the adjustments I ask for.
-- Run chores on Sonnet: commits, rebases, conflict cleanup, flag toggles,
-  seeding dev data, dotfiles. Use `/ship` for commits.
+  implement each slice in its own subagent with a tight brief: the files, the
+  acceptance criteria, the decisions, and no re-exploring. Keep the main
+  session for my feedback and the adjustments I ask for.
 - Do not review changes unless the user asks for a review or a skill calls
-  for one. Exception: skills a subagent wrote or changed get one fresh `opus`
-  review against `create-skill` before you report them done. One reviewer
-  covers every skill from that piece of work.
-- When a review happens, run it in one fresh subagent, never in the session
-  that wrote the code. One reviewer covers spec, standards and bugs. Add a
-  separate security reviewer only when the change touches auth, payments,
-  user data or permissions.
-- Pick the subagent model by task:
-  - `haiku` for narrow lookups: where something is defined, which files
-    use it, what a config value is. Use Explore on `haiku` to map unfamiliar
-    code.
-  - `sonnet` for research that traces behaviour across
-    files, and for running commands.
-  - `opus` for review and diagnosis.
-- Give a subagent the paths and findings you already have, so it does not
-  rediscover them.
-- Ask subagents to report conclusions with file paths and line numbers, not
-  file contents.
-- Do not ask Explore for a "very thorough" search unless the question spans
-  the whole repo.
+  for one. When a review happens, run it in one fresh subagent, never in the
+  session that wrote the code. One reviewer covers spec, standards and bugs.
+  Add a separate security reviewer only when the change touches auth,
+  payments, user data or permissions.
+- Give a subagent the paths and findings you already have. Ask it to report
+  conclusions with file paths and line numbers, not file contents.
 
 ## Grilling
 
@@ -109,6 +93,11 @@ the bypass-mode guidance to read and edit files through Bash.
 
 Don't run tests mid-change unless I ask. When tests run, use the repo's test
 skill if it has one, and run suites in parallel and in the background.
+
+## Commits
+
+Before committing, format and lint the changed files. Commit only; push only
+when I say push.
 
 ## Skills
 

@@ -3,9 +3,6 @@
     "type": "command",
     "command": "~/.claude/bin/file-suggestion.sh"
   },
-  "env": {
-    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet"
-  },
   "permissions": {
     "deny": [],
     "additionalDirectories": [
@@ -13,19 +10,6 @@
     ]
   },
   "model": "opus",
-  "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "CLAUDE_DIR=\"${CLAUDE_CONFIG_DIR:-$HOME/.claude}\"; cat \"$CLAUDE_DIR/skills/unslop/SKILL.md\" | jq -Rs '{suppressOutput:true,hookSpecificOutput:{hookEventName:\"SessionStart\",additionalContext:.}}'",
-            "statusMessage": "Loading writing skills"
-          }
-        ]
-      }
-    ]
-  },
   "enabledPlugins": {
     "mattpocock-skills@claude-plugins-official": true,
     "frontend-design@anthropic-plugin-directory": true
