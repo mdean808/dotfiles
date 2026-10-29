@@ -25,8 +25,6 @@ allowed-tools:
 
 # /start-ticket
 
-Arguments: `$ARGUMENTS`
-
 ## The result: a ticket brief
 
 The user runs this skill to learn what a ticket is about before working on

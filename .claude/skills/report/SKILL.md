@@ -1,6 +1,6 @@
 ---
 name: report
-description: Write a research findings report. Use when the user asks for a report or write-up of findings.
+description: Write up findings you already have as a short report. Use when the user asks for a report or write-up of findings, not for new research.
 allowed-tools:
   - Read
   - Write
@@ -8,8 +8,6 @@ allowed-tools:
 ---
 
 # /report
-
-Arguments: `$ARGUMENTS` (the question the report answers)
 
 Write findings as a report that answers the question and nothing else.
 `mattpocock-skills:research` gathers and cites the facts. This skill sets the
@@ -26,7 +24,9 @@ shape of the report written from them.
 
 1. Restate the question in one line. If the findings don't answer it, the
    answer says so and names what is missing.
-2. Write to `.scratch/<feature>/report.md`. If a report exists, write
+2. Write to `report.md` in the ticket or feature's `.scratch/` directory,
+   found as `~/.claude/rules/scratch-workflow.md` says, or a new
+   `.scratch/<feature-slug>/`. If a report exists, write
    `report-v2.md` and so on, and leave the old one.
 3. Fill the template. Done when every number in the answer is in the table.
 4. Reply with the answer in one or two lines and the path. Never repeat the
@@ -62,5 +62,3 @@ shape of the report written from them.
 Bad:  Run `bench.sh` to reproduce. See README for setup.
 Good: (no such line)
 ```
-
-Apply the unslop skill.

@@ -11,14 +11,13 @@ allowed-tools:
 
 # /handoff
 
-Arguments: `$ARGUMENTS` (what the other agent should produce)
-
 Write a brief another agent can start from cold, then stop. The user hands it
 over.
 
 ## Rules
 
-- Write only `handoff.md`. No code, spec, plan, subagent or tracker write.
+- Write only the handoff file. No code, spec, plan, subagent or tracker
+  write.
 - Stop after writing. Don't start the deliverable, not even its first step.
 - Record only decisions the user made. An open question goes under "Open".
 - The reader can't see this conversation. Never write "as discussed".
@@ -28,8 +27,10 @@ over.
 1. Use the `.scratch/` directory for the current ticket or feature, found as
    `~/.claude/rules/scratch-workflow.md` says. If there is none, make
    `.scratch/<feature-slug>/`.
-2. Write `handoff.md` from the template. Link files by path, never paste
-   their contents.
+2. Write the template to `handoff.md`, or to
+   `handoffs/<KEY>-<n>-<slug>.md` in an epic directory. If the file exists,
+   add `-v2`, `-v3` and so on, and leave the old one. Link files by path,
+   never paste their contents.
 3. Reply with the path and one line naming what the agent will produce.
    Done when nothing but that reply follows the file.
 
@@ -50,7 +51,7 @@ status: ready-for-agent
 - <decision>. Why: <reason>
 
 ## Constraints
-- <what must hold: scope, branch, security, no commits>
+- <what must hold: scope, branch, security>
 
 ## Deliverable
 <What to produce, where to write it, and what done looks like.>
@@ -66,4 +67,5 @@ Drop `issue:` when there is no ticket, and any heading with nothing under it.
 - "Hand off the spec" means the agent writes the spec. The deliverable is
   "write the spec", and you don't write it.
 - The agent won't see the user's standing rules unless the constraints list
-  them: no commits or pushes, and the tracker is read-only.
+  them. Copy the ones that bear on the work from `~/.claude/CLAUDE.md` and
+  `~/.claude/rules/`, such as the read-only tracker.

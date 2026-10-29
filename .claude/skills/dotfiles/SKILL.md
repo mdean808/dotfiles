@@ -1,8 +1,7 @@
 ---
 name: dotfiles
-description: Track, wire into bootstrap, commit and push home-directory dotfiles with yadm. Use when the user asks to add something to yadm, or to commit or push to yadm.
+description: Track dotfiles with yadm and push them. Use when the user asks to add something to yadm, or to commit or push to yadm.
 model: sonnet
-context: fork
 allowed-tools:
   - Read
   - Edit
@@ -11,8 +10,6 @@ allowed-tools:
 ---
 
 # /dotfiles
-
-Arguments: `$ARGUMENTS` (the files to track)
 
 Track the file with yadm, wire it into the bootstrap so a fresh machine
 reproduces it, then commit and push. A request to commit to yadm includes the
@@ -70,10 +67,6 @@ push.
   `yadm ls-files -o --exclude-standard <dir>`.
 - `.config/yadm/bootstrap` is a symlink yadm generates for this machine.
   Edit the `bootstrap##...` file it points at.
-- `bootstrap.debian` and `bootstrap##class.headless,...` are sourced by the
-  tracked bootstrap but may still be untracked. A machine that pulls without
-  them fails at bootstrap. Check with
-  `yadm ls-files -o --exclude-standard .config/yadm`.
 - `~/.claude/.gitignore` ignores everything except `skills/**`, `agents/**`,
   `rules/**`, `bin/**`, `commands/**`, `hooks/**`, `output-styles/**`,
   `CLAUDE.md`, `settings.json` and `keybindings.json`. A new file elsewhere
@@ -81,8 +74,6 @@ push.
   explicit `yadm add`.
 - `yadm push` runs `post_push`, which commits and pushes `~/.config/nvim`
   and `~/.scratch`. Their output is expected.
-- Bootstrap must tell the user to run `scratch.sh pull` only when the
-  scratch step failed. Keep any "still to do" line conditional.
 
 ## Report
 

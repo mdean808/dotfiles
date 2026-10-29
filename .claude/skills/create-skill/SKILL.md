@@ -16,8 +16,6 @@ allowed-tools:
 
 # /create-skill
 
-Arguments: `$ARGUMENTS` (what the skill should do, or the skill to revise)
-
 A skill is worth writing only for what the agent would get wrong without
 it. Every line costs context on every run, so each one has to name a
 convention, a command, an edge case or a mistake the agent would make.
@@ -76,11 +74,11 @@ It then costs no context and never fires on its own.
 
 ## 3. Write the body
 
-Open with `# /<name>`, an `Arguments:` line in the form mr-desc uses when
-the skill takes any, and one or two sentences that state the main idea.
-Claude Code substitutes the arguments variable everywhere in the body, so
-write it on that line only. Then add the
-sections the skill needs, in this order:
+Open with `# /<name>` and one or two sentences that state the main idea. Add
+no `Arguments:` line; Claude Code passes whatever the user typed after the
+command to the skill. Where a step depends on an argument, name it in that
+step and give its default. Then add the sections the skill needs, in this
+order:
 
 - **Rules**: what the skill may write or change, what it leaves to the
   user (commits, pushes, tracker and GitLab writes), and when to stop and

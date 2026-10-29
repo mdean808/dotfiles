@@ -5,8 +5,6 @@ description: Write UI copy. Use when adding or changing user-facing strings, whe
 
 # /ux-copy
 
-Arguments: `$ARGUMENTS`
-
 With `--learn` in the arguments, read [learn.md](learn.md) and follow it
 instead of the steps below.
 

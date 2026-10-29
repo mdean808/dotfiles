@@ -19,8 +19,6 @@ allowed-tools:
 
 # /mr-desc
 
-Arguments: `$ARGUMENTS`
-
 Write the MR description, ready to paste into GitLab. The reader is a
 teammate who wants to know what changed and that it is tested. The diff
 shows how; never repeat it.
