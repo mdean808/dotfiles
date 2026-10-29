@@ -1,7 +1,6 @@
 ---
 name: dotfiles
 description: Track dotfiles with yadm and push them. Use when the user asks to add something to yadm, or to commit or push to yadm.
-model: sonnet
 disable-model-invocation: true
 allowed-tools:
   - Read
