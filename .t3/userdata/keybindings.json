@@ -30,7 +30,7 @@
     "when": "!terminalFocus"
   },
   {
-    "key": "mod+j",
+    "key": "mod+t",
     "command": "terminal.toggle"
   },
   {
@@ -41,11 +41,6 @@
     "key": "mod+shift+b",
     "command": "threadPanel.toggle",
     "when": "!terminalFocus"
-  },
-  {
-    "key": "mod+t",
-    "command": "rightPanel.new",
-    "when": "rightPanelOpen && !terminalFocus"
   },
   {
     "key": "mod+d",
@@ -279,7 +274,7 @@
   },
   {
     "key": "mod+shift+p",
-    "command": "thread.pin",
+    "command": "commandPalette.toggle",
     "when": "!terminalFocus"
   },
   {
