@@ -5,9 +5,7 @@
   },
   "permissions": {
     "deny": [],
-    "additionalDirectories": [
-      "~/.scratch"
-    ]
+    "additionalDirectories": ["~/.scratch"]
   },
   "model": "opus",
   "enabledPlugins": {
@@ -29,5 +27,6 @@
   "autoMemoryEnabled": false,
   "autoDreamEnabled": false,
   "theme": "auto",
-  "preferredNotifChannel": "notifications_disabled"
+  "preferredNotifChannel": "notifications_disabled",
+  "agentPushNotifEnabled": true
 }

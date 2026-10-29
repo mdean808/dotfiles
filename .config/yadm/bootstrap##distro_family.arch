@@ -1,0 +1,39 @@
+#!/bin/sh
+set -e
+
+. "$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)/bootstrap.common"
+
+step_packages() {
+  sudo pacman -S --needed --noconfirm \
+    zsh git curl wget unzip openssh base-devel python \
+    neovim tmux lazygit github-cli glab ghostty zoxide ripgrep fd htop jq keyd \
+    docker docker-buildx docker-compose flatpak \
+    ttf-firacode-nerd noto-fonts noto-fonts-emoji noto-fonts-cjk
+}
+
+step_slack() {
+  sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  sudo flatpak install -y --noninteractive flathub com.slack.Slack
+}
+
+step_sparse() {
+  yadm sparse-checkout set --no-cone '/*' \
+    '!/.config/autostart/startup-workspaces.desktop' \
+    '!/.config/vicinae/settings.json' \
+    '!/.config/yadm/bootstrap##*debian' \
+    '!/.config/yadm/bootstrap.debian' \
+    '!/.config/yadm/keybindings.sh' \
+    '!/.config/yadm/workspaces.sh' \
+    '!/.local/bin/startup-workspaces' \
+    '!/.local/share/applications/local.ghostty.startup.desktop'
+}
+
+manual_steps() {
+  printf '  - Bind in your desktop: Ctrl+Alt+T ghostty +new-window, Ctrl+Q close window, Ctrl+Tab switch windows\n'
+}
+
+run sparse
+run packages
+run zen
+run slack
+common_steps

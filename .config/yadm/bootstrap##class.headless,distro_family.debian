@@ -20,6 +20,7 @@ step_sparse() {
     '!/.config/mimeapps.list' \
     '!/.config/smug/' \
     '!/.config/vicinae/' \
+    '!/.config/yadm/bootstrap##*arch' \
     '!/.config/yadm/keybindings.sh' \
     '!/.config/yadm/keyd-sync.sh' \
     '!/.config/yadm/workspaces.sh' \

@@ -14,9 +14,20 @@ step_slack() {
   sudo snap install slack
 }
 
-step_zen() {
-  sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-  sudo flatpak install -y --noninteractive flathub app.zen_browser.zen
+step_vicinae() {
+  if ! have vicinae; then
+    curl -fsSL https://vicinae.com/install.sh | sudo bash
+    sudo chmod -R a+rX /usr/local/lib/vicinae
+  fi
+  systemctl --user enable --now vicinae
+}
+
+step_keybindings() { "$HOME/.config/yadm/keybindings.sh"; }
+
+step_workspaces() { "$HOME/.config/yadm/workspaces.sh"; }
+
+manual_steps() {
+  printf '  - Open Slack, fullscreen it (View > Toggle Full Screen), and quit it so it reopens fullscreen\n'
 }
 
 step_neovim() {

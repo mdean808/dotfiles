@@ -15,4 +15,7 @@ run fd
 run vicinae_extension
 run slack
 run zen
+run vicinae
+run keybindings
+run workspaces
 common_steps

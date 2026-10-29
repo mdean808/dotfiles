@@ -15,9 +15,9 @@ sync_nvim() {
 headless() { yadm config --get-all local.class | grep -qx headless; }
 
 if ! headless; then
-  "$HOME/.config/yadm/keyd-sync.sh"
-  "$HOME/.config/yadm/keybindings.sh"
-  "$HOME/.config/yadm/workspaces.sh"
+  for script in keyd-sync keybindings workspaces; do
+    [ -x "$HOME/.config/yadm/$script.sh" ] && "$HOME/.config/yadm/$script.sh"
+  done
 fi
 sync_nvim
 headless || "$HOME/.config/yadm/scratch.sh" pull
