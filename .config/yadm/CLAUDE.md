@@ -48,9 +48,16 @@ matches this machine. Edit the `bootstrap##...` file, never the symlink.
 - Color only when stdout is a terminal and `NO_COLOR` is unset. In a
   terminal, the bootstrap asks for the sudo password once up front.
 - `desktop_only` wraps `run` and skips the step on `headless`.
-- `step_ssh` checks SSH access to GitHub and GitLab. In a terminal it
-  offers to create a key and waits while you add it. `nvim_remote` and
-  `scratch` need it.
+  `work_only` wraps `run` and skips it unless the class is `work`.
+- `step_ssh` checks SSH access to GitHub, and to GitLab on `work`. In a
+  terminal it offers to create a key and waits while you add it.
+  `nvim_remote` and `scratch` need it.
+- A step for every machine goes in `bootstrap.common` with a `run` line in
+  `common_steps`. A Debian-only step goes in `bootstrap.debian`, with a
+  `run` line in each Debian bootstrap that needs it. An Arch-only step goes
+  in the Arch file.
+- Packages: the apt list in `bootstrap.debian`'s `step_packages`, the
+  headless file's own apt list, and the pacman list in the Arch file.
 - A distro file sources `bootstrap.common` (and `bootstrap.debian`), may
   override a step such as `step_packages` or `manual_steps`, runs its own
   steps, then ends with `common_steps`. `manual_steps` adds items with
@@ -66,18 +73,17 @@ matches this machine. Edit the `bootstrap##...` file, never the symlink.
 
 `yadm config --get-all local.class` lists the classes (this machine:
 `headless`, `personal`). The bootstrap and hooks check for `headless` to
-skip desktop work. Scratch runs on every class.
+skip desktop work, and for `work` to run scratch.
 
 ## Hooks and scratch
 
-The hooks print the same `==> name: what` header and status line as the
-bootstrap.
+The hooks source `lib.sh` and print the same step lines as the bootstrap.
 
 - `hooks/post_pull`: on desktops, runs `keyd-sync.sh`, `keybindings.sh` and
-  `workspaces.sh` if present; pulls `~/.config/nvim`; runs
+  `workspaces.sh` if present; pulls `~/.config/nvim`; on `work`, runs
   `scratch.sh pull`.
 - `hooks/post_push`: commits and pushes `~/.config/nvim` (only if its origin
-  is `mdean808/nvim-config`), listing the files it commits; runs
+  is `mdean808/nvim-config`), listing the files it commits; on `work`, runs
   `scratch.sh push`.
 - `scratch.sh` clones `git@gitlab.com:modean/scratch.git` into `~/.scratch`,
   links `scratch-sync` into `~/.local/bin`, and passes its arguments to it.

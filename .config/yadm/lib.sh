@@ -115,6 +115,14 @@ desktop_only() {
   fi
 }
 
+work_only() {
+  if is_class work; then
+    run "$@"
+  else
+    result off "$1" "$2" 'work machines only'
+  fi
+}
+
 finish() {
   printf '\n'
   awk -F '\t' -v bold="$_bold" -v dim="$_dim" -v red="$_red" \

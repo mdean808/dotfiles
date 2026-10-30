@@ -35,24 +35,13 @@ push.
 2. Wire it into the bootstrap when it needs a program, a service, a system
    path or a setting applied. A plain config that a tracked program already
    reads needs only the add.
-   - Define `step_<name>` so it returns early when already done. Bootstrap
-     reruns, under `set -e`.
-   - Both distros: `.config/yadm/bootstrap.common`, plus `run <name>` in
-     `common_steps`. The headless bootstrap doesn't call `common_steps`, so
-     see the headless bullet below.
-   - Debian or Ubuntu only: `.config/yadm/bootstrap.debian`, plus
-     `run <name>` in `.config/yadm/bootstrap##distro_family.debian`.
-   - Arch only: `.config/yadm/bootstrap##distro_family.arch`. A package goes in the
-     `pacman` list in its `step_packages`.
-   - Packages: the apt list in `bootstrap.debian` and the pacman list in the
-     arch file, each under that distro's package name.
-   - Also needed on the headless server: `run <name>` in
-     `.config/yadm/bootstrap##class.headless,distro_family.debian`. Its
-     `step_packages` has its own apt list.
-   - A file copied into place on every pull, like `keyd-sync.sh`, also gets
-     a call in `.config/yadm/hooks/post_pull`.
-   - Done when the name is in the run list of every bootstrap that should
-     install it, and `sh -n` passes on each edited script.
+   - Read `~/.config/yadm/CLAUDE.md` first. It describes the bootstrap
+     files, how steps are written, the package lists and which machine
+     classes run what.
+   - A file that must be reapplied on every pull also gets a step in
+     `.config/yadm/hooks/post_pull`.
+   - Done when every bootstrap that should install it runs the step, and
+     the script check that `CLAUDE.md` names passes on each edited script.
 3. `yadm add` the file and every bootstrap, hook or script you edited,
    including untracked helpers they source.
 4. Read `yadm log --oneline -10` for the message style: imperative, no
@@ -73,12 +62,11 @@ push.
   `CLAUDE.md`, `settings.json` and `keybindings.json`. A new file elsewhere
   under `~/.claude/` needs a `!` line there first. Skills still need an
   explicit `yadm add`.
-- `yadm push` runs `post_push`, which commits and pushes `~/.config/nvim`
-  and `~/.scratch`. Their output is expected.
+- `yadm pull` and `yadm push` run the hooks in `.config/yadm/hooks/`.
+  Their output is expected.
 
 ## Report
 
-- Files added, and the bootstraps each went into (Ubuntu, Arch, headless),
-  or why none.
+- Files added, and the bootstraps each went into, or why none.
 - Files skipped, including other changes left out of the commit, and why.
 - Commit hash and the push result.

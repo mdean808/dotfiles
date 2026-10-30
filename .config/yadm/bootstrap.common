@@ -30,8 +30,13 @@ step_nvim_config() {
   git clone "$nvim_https" "$HOME/.config/nvim"
 }
 
+ssh_hosts() {
+  printf 'github.com\n'
+  if is_class work; then printf 'gitlab.com\n'; fi
+}
+
 ssh_denied() {
-  for _host in github.com gitlab.com; do
+  for _host in $(ssh_hosts); do
     ssh -T -o BatchMode=yes -o ConnectTimeout=10 \
       -o StrictHostKeyChecking=accept-new "git@$_host" </dev/null 2>&1 \
       | grep -qE 'successfully authenticated|Welcome to GitLab' \
@@ -40,12 +45,16 @@ ssh_denied() {
 }
 
 ssh_todo() {
-  todo 'Add your SSH key at https://github.com/settings/keys and https://gitlab.com/-/user_settings/ssh_keys, then run yadm bootstrap again'
+  if is_class work; then
+    todo 'Add your SSH key at https://github.com/settings/keys and https://gitlab.com/-/user_settings/ssh_keys, then run yadm bootstrap again'
+  else
+    todo 'Add your SSH key at https://github.com/settings/keys, then run yadm bootstrap again'
+  fi
 }
 
 step_ssh() {
   _denied=$(ssh_denied)
-  if [ -z "$_denied" ]; then already 'GitHub and GitLab accept your key'; fi
+  if [ -z "$_denied" ]; then already "your key works on $(ssh_hosts | paste -sd ',' - | sed 's/,/ and /')"; fi
   printf 'No SSH access to %s\n' "$_denied"
   if [ ! -t 0 ]; then
     ssh_todo
@@ -198,9 +207,9 @@ common_steps() {
   run omz 'install oh-my-zsh'
   run zsh_defer 'install zsh-defer for lazy-loading zsh plugins'
   run nvim_config 'clone the Neovim config into ~/.config/nvim'
-  run ssh 'check SSH access to GitHub and GitLab'
+  run ssh 'check SSH access to your git hosts'
   run nvim_remote 'switch the Neovim config remote to SSH so pushes work' nvim_config ssh
-  run scratch 'clone the scratch notes into ~/.scratch and link scratch-sync' ssh
+  work_only scratch 'clone the scratch notes into ~/.scratch and link scratch-sync' ssh
   run nvm 'install nvm, the Node version manager'
   run node 'install the latest Node.js with nvm' nvm
   run t3 'install T3 Code with npm' node

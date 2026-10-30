@@ -36,5 +36,5 @@ step_scratch() { "$HOME/.config/yadm/scratch.sh" push; }
 
 title 'yadm post-push'
 run nvim 'commit and push the Neovim config'
-run scratch 'push the scratch notes'
+work_only scratch 'push the scratch notes'
 printf '\n'
