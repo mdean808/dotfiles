@@ -2,27 +2,36 @@
 
 unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
 
+. "$HOME/.config/yadm/lib.sh"
+
 store="$HOME/.scratch"
 remote=git@gitlab.com:modean/scratch.git
 link="$HOME/.local/bin/scratch-sync"
+action=${1:?usage: scratch.sh pull|push}
 
-if [ ! -d "$store/.git" ]; then
-  printf 'Cloning %s into ~/.scratch\n' "$remote"
-  if ! git clone --quiet "$remote" "$store"; then
-    printf 'Could not clone %s. Check SSH access with: ssh -T git@gitlab.com\n' "$remote" >&2
-    exit 1
-  fi
-fi
+step_clone() {
+  if [ -d "$store/.git" ]; then already '~/.scratch exists'; fi
+  git clone --quiet "$remote" "$store" ||
+    fail "could not clone $remote, check SSH access with: ssh -T git@gitlab.com"
+}
 
-if [ ! -x "$store/bin/scratch-sync" ]; then
-  printf 'scratch-sync is missing from ~/.scratch, pulling\n'
-  git -C "$store" pull --quiet --rebase --autostash || exit 1
-fi
+step_tools() {
+  if [ -x "$store/bin/scratch-sync" ]; then already 'scratch-sync is in ~/.scratch'; fi
+  git -C "$store" pull --quiet --rebase --autostash
+  if [ ! -x "$store/bin/scratch-sync" ]; then fail 'scratch-sync is still missing after the pull'; fi
+}
 
-if [ "$(readlink "$link")" != "$store/bin/scratch-sync" ]; then
+step_link() {
+  if [ "$(readlink "$link")" = "$store/bin/scratch-sync" ]; then already 'already linked'; fi
   mkdir -p "$HOME/.local/bin"
   ln -sfn "$store/bin/scratch-sync" "$link"
-  printf 'Linked ~/.local/bin/scratch-sync\n'
-fi
+}
 
-exec "$store/bin/scratch-sync" "$@"
+step_sync() { "$store/bin/scratch-sync" "$action"; }
+
+title "scratch $action"
+run clone 'clone the scratch notes into ~/.scratch'
+run tools 'pull scratch-sync if it is missing' clone
+run link 'link scratch-sync into ~/.local/bin' tools
+run sync "$action the scratch notes with scratch-sync" link
+finish
