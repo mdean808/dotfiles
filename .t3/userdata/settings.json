@@ -1,4 +1,9 @@
 {
+  "storageCleanup": {
+    "worktreeSettledAfterDays": 2,
+    "worktreeOnMerge": true,
+    "worktreeOnDelete": true
+  },
   "projectSettingsFolded": true,
   "idleCompaction": "onReturn"
 }

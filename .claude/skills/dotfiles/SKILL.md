@@ -1,6 +1,6 @@
 ---
 name: dotfiles
-description: Track dotfiles with yadm and push them. Use when the user asks to add something to yadm, or to commit or push to yadm.
+description: Track dotfiles with yadm, then pull, commit every change and push. Use when the user asks to add something to yadm, or to commit, sync or push to yadm.
 disable-model-invocation: true
 allowed-tools:
   - Read
@@ -11,28 +11,32 @@ allowed-tools:
 
 # /dotfiles
 
-Track the file with yadm, wire it into the bootstrap so a fresh machine
-reproduces it, then commit and push. A request to commit to yadm includes the
-push.
+Pull, track any new file and wire it into the bootstrap so a fresh machine
+reproduces it, then commit every change to tracked files and push. A request
+to commit to yadm includes the pull and the push.
 
 ## Rules
 
-- Never `yadm add -A`, `-u` or `.`. `$HOME` holds hundreds of untracked files
-  and unfinished edits. Add and commit by explicit path.
+- Commit every change to tracked files, not only the ones this session made.
+  Stage them with `yadm add -u`.
+- Never `yadm add -A` or `.`. `$HOME` holds hundreds of untracked files. Add
+  untracked files only by explicit path, and only the ones the user asked to
+  track or that a bootstrap edit needs.
 - Never add secrets or machine-local files: `~/.claude/settings.local.json`,
   `~/.claude/.credentials.json`, `~/.wakatime.cfg`, `~/.ssh`, shell history.
   A file that differs per machine becomes a `##class.<name>` or
-  `##distro.<name>` alternate, as `.gitconfig` does.
-- Pass paths to `yadm commit`, so changes the user left staged or modified
-  elsewhere stay out.
+  `##distro.<name>` alternate, as `.gitconfig` does. If a tracked file's diff
+  adds a secret, stop and ask.
 - Never amend, force-push or pass `--no-verify`. If the push is rejected,
-  stop and report.
+  pull again and retry once, then stop and report.
 
 ## Steps
 
-1. Find what to track from the arguments or the conversation.
-   `yadm ls-files <path>` shows whether a file is tracked.
-2. Wire it into the bootstrap when it needs a program, a service, a system
+1. Pull: `yadm pull --rebase --autostash`. If it conflicts, follow
+   [Conflicts](#conflicts) before going on.
+2. Find what new file to track, if any, from the arguments or the
+   conversation. `yadm ls-files <path>` shows whether a file is tracked.
+3. Wire it into the bootstrap when it needs a program, a service, a system
    path or a setting applied. A plain config that a tracked program already
    reads needs only the add.
    - Read `~/.config/yadm/CLAUDE.md` first. It describes the bootstrap
@@ -42,14 +46,38 @@ push.
      `.config/yadm/hooks/post_pull`.
    - Done when every bootstrap that should install it runs the step, and
      the script check that `CLAUDE.md` names passes on each edited script.
-3. `yadm add` the file and every bootstrap, hook or script you edited,
-   including untracked helpers they source.
-4. Read `yadm log --oneline -10` for the message style: imperative, no
-   ticket key, about what changed. Run `yadm commit <paths> -m` with the
-   paths from step 3. End the message with the session's attribution lines,
+4. `yadm add` the new file and every untracked helper the bootstrap edits
+   source. Then `yadm add -u`.
+5. Read `yadm diff --cached --stat` and the diff of any file you didn't
+   change yourself, so the message covers every change and no secret slips
+   in.
+6. Read `yadm log --oneline -10` for the message style: imperative, no
+   ticket key, about what changed. Run `yadm commit -m` with a message that
+   covers all staged changes. End it with the session's attribution lines,
    if it gives any.
-5. `yadm push`. Done when the push succeeds and `yadm status -sb` shows the
-   branch up to date.
+7. `yadm push`. Done when the push succeeds and `yadm status -sb` shows the
+   branch up to date with no modified tracked files.
+
+## Conflicts
+
+A conflict comes from the rebase of unpushed commits, or from the autostash
+reapplying local changes (`yadm stash list` then still holds the entry).
+
+1. List the files: `yadm diff --name-only --diff-filter=U`.
+2. Resolve a file yourself when both sides changed different things that
+   can coexist: separate entries in a list, independent settings, unrelated
+   hunks. Keep both sides, remove the markers, `yadm add` it.
+3. Ask the user, with `AskUserQuestion`, when:
+   - both sides changed the same setting or line to different values,
+   - one side deleted or renamed a file the other changed,
+   - the file is binary or generated,
+   - you can't tell which side is meant to win.
+   Show each side's version of the conflicting lines in the question.
+4. Finish the rebase with `yadm rebase --continue`. After an autostash
+   conflict, `yadm stash drop` once every file is resolved.
+5. Before going on, `yadm diff --check` shows no markers left.
+
+If the user wants to abandon the pull, `yadm rebase --abort` and stop.
 
 ## Gotchas
 
@@ -67,6 +95,9 @@ push.
 
 ## Report
 
+- Whether the pull brought changes, and each conflict: how it was resolved
+  or what the user chose.
+- Files committed, marking the ones this session didn't change.
 - Files added, and the bootstraps each went into, or why none.
-- Files skipped, including other changes left out of the commit, and why.
+- Untracked files left out, and why.
 - Commit hash and the push result.
