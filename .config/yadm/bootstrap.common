@@ -1,65 +1,121 @@
 #!/bin/sh
 
-have() { command -v "$1" >/dev/null 2>&1; }
+. "$HOME/.config/yadm/lib.sh"
 
-run() {
-  printf '\n==> %s\n' "$1"
-  "step_$1"
-}
+_classes=$(yadm config --get-all local.class 2>/dev/null | paste -sd ',' - | sed 's/,/, /g')
+title 'yadm bootstrap' "$(uname -n) · ${_classes:-no class}" \
+  "$(basename "$(readlink -f "$0")")"
+
+if [ -t 0 ] && ! sudo -n true 2>/dev/null; then
+  sudo -v -p "  ${_bold}sudo${_reset} password for %u: "
+  printf '\n'
+fi
+
+nvim_https=https://github.com/mdean808/nvim-config
+nvim_ssh=git@github.com:mdean808/nvim-config.git
 
 step_omz() {
-  if [ -d "$HOME/.oh-my-zsh" ]; then return 0; fi
+  if [ -d "$HOME/.oh-my-zsh" ]; then already '~/.oh-my-zsh exists'; fi
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" \
     "" --unattended --keep-zshrc
 }
 
 step_zsh_defer() {
-  if [ -d "$HOME/.zsh/zsh-defer" ]; then return 0; fi
+  if [ -d "$HOME/.zsh/zsh-defer" ]; then already '~/.zsh/zsh-defer exists'; fi
   git clone --depth 1 https://github.com/romkatv/zsh-defer.git "$HOME/.zsh/zsh-defer"
 }
 
 step_nvim_config() {
-  if [ ! -d "$HOME/.config/nvim" ]; then
-    git clone https://github.com/mdean808/nvim-config "$HOME/.config/nvim"
+  if [ -d "$HOME/.config/nvim" ]; then already '~/.config/nvim exists'; fi
+  git clone "$nvim_https" "$HOME/.config/nvim"
+}
+
+ssh_denied() {
+  for _host in github.com gitlab.com; do
+    ssh -T -o BatchMode=yes -o ConnectTimeout=10 \
+      -o StrictHostKeyChecking=accept-new "git@$_host" </dev/null 2>&1 \
+      | grep -qE 'successfully authenticated|Welcome to GitLab' \
+      || printf '%s ' "$_host"
+  done
+}
+
+ssh_todo() {
+  todo 'Add your SSH key at https://github.com/settings/keys and https://gitlab.com/-/user_settings/ssh_keys, then run yadm bootstrap again'
+}
+
+step_ssh() {
+  _denied=$(ssh_denied)
+  if [ -z "$_denied" ]; then already 'GitHub and GitLab accept your key'; fi
+  printf 'No SSH access to %s\n' "$_denied"
+  if [ ! -t 0 ]; then
+    ssh_todo
+    fail "no SSH access to $_denied(not a terminal, so no prompt)"
   fi
+  if ! ls "$HOME"/.ssh/id_*.pub >/dev/null 2>&1; then
+    ask 'No SSH key in ~/.ssh. Create one now? [Y/n]'
+    case "$_answer" in [nN]*) ssh_todo; fail 'no SSH key' ;; esac
+    mkdir -p -m 700 "$HOME/.ssh"
+    ssh-keygen -t ed25519 -C "$(id -un)@$(uname -n)" -f "$HOME/.ssh/id_ed25519"
+  fi
+  while [ -n "$_denied" ]; do
+    printf '\nAdd this public key:\n\n'
+    cat "$HOME"/.ssh/id_*.pub
+    printf '\n'
+    case "$_denied" in *github.com*) printf 'GitHub  https://github.com/settings/ssh/new\n' ;; esac
+    case "$_denied" in *gitlab.com*) printf 'GitLab  https://gitlab.com/-/user_settings/ssh_keys\n' ;; esac
+    printf '\n'
+    ask 'Press Enter to test again, or type s to skip:'
+    case "$_answer" in [sS]*) ssh_todo; fail "no SSH access to $_denied" ;; esac
+    _denied=$(ssh_denied)
+    if [ -n "$_denied" ]; then printf 'Still no SSH access to %s\n' "$_denied"; fi
+  done
+}
+
+step_nvim_remote() {
   case "$(git -C "$HOME/.config/nvim" remote get-url origin 2>/dev/null)" in
-    https://github.com/mdean808/nvim-config)
-      git -C "$HOME/.config/nvim" remote set-url origin git@github.com:mdean808/nvim-config.git ;;
-    git@github.com:mdean808/nvim-config.git) ;;
-    *) printf 'warning: ~/.config/nvim is not mdean808/nvim-config, leaving it in place\n' >&2 ;;
+    "$nvim_ssh") already 'origin is already SSH' ;;
+    "$nvim_https") git -C "$HOME/.config/nvim" remote set-url origin "$nvim_ssh" ;;
+    *) skip '~/.config/nvim is not mdean808/nvim-config, left as is' ;;
   esac
 }
 
 step_scratch() {
-  GIT_SSH_COMMAND='ssh -o BatchMode=yes' "$HOME/.config/yadm/scratch.sh" pull || scratch_failed=1
+  GIT_SSH_COMMAND='ssh -o BatchMode=yes' "$HOME/.config/yadm/scratch.sh" pull
 }
 
 step_nvm() {
-  if [ -d "$HOME/.nvm" ]; then return 0; fi
+  if [ -d "$HOME/.nvm" ]; then already '~/.nvm exists'; fi
   PROFILE=/dev/null bash -c 'curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash'
 }
 
 step_node() {
-  if [ -n "$(ls -A "$HOME/.nvm/versions/node" 2>/dev/null)" ]; then return 0; fi
+  if [ -n "$(ls -A "$HOME/.nvm/versions/node" 2>/dev/null)" ]; then
+    already "Node $(ls "$HOME/.nvm/versions/node" | tail -n 1) is installed"
+  fi
   bash -c '. "$HOME/.nvm/nvm.sh" --no-use && nvm install node'
 }
 
 step_t3() {
-  bash -c '. "$HOME/.nvm/nvm.sh" && { command -v t3 >/dev/null || npm install -g t3; }'
+  if bash -c '. "$HOME/.nvm/nvm.sh" && command -v t3' >/dev/null 2>&1; then
+    already 't3 is installed'
+  fi
+  bash -c '. "$HOME/.nvm/nvm.sh" && npm install -g t3'
 }
 
 step_uv() {
-  if have uv || [ -x "$HOME/.local/bin/uv" ]; then return 0; fi
+  if have uv || [ -x "$HOME/.local/bin/uv" ]; then already 'uv is installed'; fi
   curl -LsSf https://astral.sh/uv/install.sh | UV_NO_MODIFY_PATH=1 sh
 }
 
 step_bun() {
-  if have bun || [ -x "$HOME/.bun/bin/bun" ]; then return 0; fi
+  if have bun || [ -x "$HOME/.bun/bin/bun" ]; then already 'bun is installed'; fi
   curl -fsSL https://bun.sh/install | bash
 }
 
 step_go() {
-  if [ -x /usr/local/go/bin/go ]; then return 0; fi
+  if [ -x /usr/local/go/bin/go ]; then
+    already "$(/usr/local/go/bin/go env GOVERSION) is installed"
+  fi
   case "$(uname -m)" in
     x86_64) arch=amd64 ;;
     aarch64 | arm64) arch=arm64 ;;
@@ -74,47 +130,64 @@ step_go() {
 }
 
 step_smug() {
-  if [ -x "$HOME/go/bin/smug" ]; then return 0; fi
+  if [ -x "$HOME/go/bin/smug" ]; then already 'smug is installed'; fi
   /usr/local/go/bin/go install github.com/ivaaaan/smug@latest
 }
 
 step_pnpm() {
-  if [ -x "$HOME/.local/share/pnpm/bin/pnpm" ]; then return 0; fi
+  if [ -x "$HOME/.local/share/pnpm/bin/pnpm" ]; then already 'pnpm is installed'; fi
   tmp=$(mktemp -d)
   curl -fsSL https://get.pnpm.io/install.sh | SHELL="$(command -v zsh)" ZDOTDIR="$tmp" sh -
   rm -rf "$tmp"
 }
 
 step_claude() {
-  if have claude || [ -x "$HOME/.local/bin/claude" ]; then return 0; fi
+  if have claude || [ -x "$HOME/.local/bin/claude" ]; then already 'claude is installed'; fi
   curl -fsSL https://claude.ai/install.sh | bash
 }
 
 step_zen() {
+  if flatpak info app.zen_browser.zen >/dev/null 2>&1; then already 'Zen is installed'; fi
   sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
   sudo flatpak install -y --noninteractive flathub app.zen_browser.zen
 }
 
 step_keyd() {
+  if cmp -s "$HOME/.config/keyd/default.conf" /etc/keyd/default.conf \
+    && systemctl is-enabled --quiet keyd; then
+    already 'config is current and keyd is enabled'
+  fi
   sudo install -D -m 644 "$HOME/.config/keyd/default.conf" /etc/keyd/default.conf
   sudo systemctl enable keyd
   sudo systemctl restart keyd
 }
 
 step_docker_service() {
+  _me=$(id -un)
+  _in_group=no
+  if id -nG "$_me" | tr ' ' '\n' | grep -qx docker; then _in_group=yes; fi
+  if [ "$_in_group" = yes ] && systemctl is-enabled --quiet docker \
+    && systemctl is-active --quiet docker; then
+    already 'docker is running and you are in the docker group'
+  fi
   sudo systemctl enable --now docker
-  if id -nG "$(id -un)" | tr ' ' '\n' | grep -qx docker; then return 0; fi
-  sudo usermod -aG docker "$(id -un)"
+  if [ "$_in_group" = no ]; then
+    sudo usermod -aG docker "$_me"
+    todo 'Log out and back in to use docker without sudo'
+  fi
 }
 
 step_login_shell() {
   _zsh=$(command -v zsh)
   _me=$(id -un)
-  if [ "$(getent passwd "$_me" | cut -d: -f7)" = "$_zsh" ]; then return 0; fi
+  if [ "$(getent passwd "$_me" | cut -d: -f7)" = "$_zsh" ]; then
+    already "login shell is $_zsh"
+  fi
   if ! grep -qxF "$_zsh" /etc/shells; then
     echo "$_zsh" | sudo tee -a /etc/shells >/dev/null
   fi
   sudo chsh -s "$_zsh" "$_me"
+  todo 'Log out and back in to start zsh as your login shell'
 }
 
 step_font_cache() { fc-cache -f; }
@@ -122,29 +195,28 @@ step_font_cache() { fc-cache -f; }
 manual_steps() { :; }
 
 common_steps() {
-  run omz
-  run zsh_defer
-  run nvim_config
-  run scratch
-  run nvm
-  run node
-  run t3
-  run uv
-  run bun
-  run go
-  run smug
-  run pnpm
-  run claude
-  run keyd
-  run docker_service
-  run login_shell
-  run font_cache
-  printf '\nBootstrap complete. Log out and back in for the login shell and docker group to take effect.\n'
-  printf '\nStill to do by hand:\n'
-  printf '  - Set api_key under [settings] in ~/.wakatime.cfg\n'
-  printf '  - Set up SSH keys in ~/.ssh\n'
+  run omz 'install oh-my-zsh'
+  run zsh_defer 'install zsh-defer for lazy-loading zsh plugins'
+  run nvim_config 'clone the Neovim config into ~/.config/nvim'
+  run ssh 'check SSH access to GitHub and GitLab'
+  run nvim_remote 'switch the Neovim config remote to SSH so pushes work' nvim_config ssh
+  run scratch 'clone the scratch notes into ~/.scratch and link scratch-sync' ssh
+  run nvm 'install nvm, the Node version manager'
+  run node 'install the latest Node.js with nvm' nvm
+  run t3 'install T3 Code with npm' node
+  run uv 'install uv for Python'
+  run bun 'install Bun'
+  run go 'install Go into /usr/local/go'
+  run smug 'install smug for tmux sessions' go
+  run pnpm 'install pnpm'
+  run claude 'install Claude Code'
+  desktop_only keyd 'install the keyd config and enable keyd'
+  run docker_service 'start docker and add you to the docker group' docker packages
+  run login_shell 'make zsh your login shell'
+  desktop_only font_cache 'rebuild the font cache'
   manual_steps
-  if [ -n "$scratch_failed" ]; then
-    printf '  - Run ~/.config/yadm/scratch.sh pull (the scratch clone failed)\n'
+  if ! grep -Eqs '^[[:space:]]*api_key[[:space:]]*=[[:space:]]*[^[:space:]]' "$HOME/.wakatime.cfg"; then
+    todo 'Set api_key under [settings] in ~/.wakatime.cfg'
   fi
+  finish
 }

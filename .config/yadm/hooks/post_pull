@@ -2,22 +2,35 @@
 
 unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
 
-sync_nvim() {
-  repo="$HOME/.config/nvim"
+. "$HOME/.config/yadm/lib.sh"
 
-  [ -d "$repo/.git" ] || return 0
-  [ "$(git -C "$repo" rev-parse --show-toplevel)" = "$repo" ] || return 0
+nvim="$HOME/.config/nvim"
 
-  printf '\n==> pulling nvim config\n'
-  git -C "$repo" pull --rebase --autostash
+desktop_script() {
+  if [ ! -x "$HOME/.config/yadm/$1.sh" ]; then skip "$1.sh is not on this machine"; fi
+  "$HOME/.config/yadm/$1.sh"
 }
 
-headless() { yadm config --get-all local.class | grep -qx headless; }
+step_keyd_sync() { desktop_script keyd-sync; }
+step_keybindings() { desktop_script keybindings; }
+step_workspaces() { desktop_script workspaces; }
 
-if ! headless; then
-  for script in keyd-sync keybindings workspaces; do
-    [ -x "$HOME/.config/yadm/$script.sh" ] && "$HOME/.config/yadm/$script.sh"
-  done
-fi
-sync_nvim
-headless || "$HOME/.config/yadm/scratch.sh" pull
+step_nvim() {
+  if [ ! -d "$nvim/.git" ] || [ "$(git -C "$nvim" rev-parse --show-toplevel)" != "$nvim" ]; then
+    skip '~/.config/nvim is not a git repo'
+  fi
+  _before=$(git -C "$nvim" rev-parse HEAD)
+  git -C "$nvim" pull --quiet --rebase --autostash
+  if [ "$(git -C "$nvim" rev-parse HEAD)" = "$_before" ]; then already 'up to date'; fi
+  note "$(git -C "$nvim" rev-list --count "$_before..HEAD") new commits"
+}
+
+step_scratch() { "$HOME/.config/yadm/scratch.sh" pull; }
+
+title 'yadm post-pull'
+desktop_only keyd_sync 'copy the keyd config to /etc/keyd if it changed'
+desktop_only keybindings 'apply GNOME keybindings'
+desktop_only workspaces 'pin apps to GNOME workspaces'
+run nvim 'pull the Neovim config'
+run scratch 'pull the scratch notes'
+printf '\n'

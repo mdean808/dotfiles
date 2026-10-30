@@ -1,13 +1,11 @@
 #!/bin/sh
-set -e
 
 dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 . "$dir/bootstrap.common"
 . "$dir/bootstrap.debian"
 
 step_packages() {
-  sudo apt-get update
-  sudo apt-get install -y \
+  apt_install \
     zsh git curl wget ca-certificates openssh-client build-essential python3 \
     tmux lazygit zoxide ripgrep fd-find htop unzip jq locales
 }
@@ -30,33 +28,16 @@ step_sparse() {
 }
 
 step_locale() {
-  if locale -a | grep -qix 'en_US.utf8'; then return 0; fi
+  if locale -a | grep -qix 'en_US.utf8'; then already 'en_US.UTF-8 is generated'; fi
   sudo locale-gen en_US.UTF-8
 }
 
-run sparse
-run packages
-run locale
-run neovim
-run gh
-run glab
-run docker
-run fd
-run omz
-run zsh_defer
-run nvim_config
-run nvm
-run node
-run t3
-run uv
-run bun
-run go
-run smug
-run pnpm
-run claude
-run docker_service
-run login_shell
-printf '\nBootstrap complete. Log out and back in for the login shell and docker group to take effect.\n'
-printf '\nStill to do by hand:\n'
-printf '  - Set api_key under [settings] in ~/.wakatime.cfg\n'
-printf '  - Add an SSH key for GitHub to push the nvim config\n'
+run sparse 'drop desktop-only files from the yadm checkout'
+run packages 'install apt packages'
+run locale 'generate the en_US.UTF-8 locale'
+run neovim 'install Neovim into /opt'
+run gh 'install the GitHub CLI'
+run glab 'install the GitLab CLI'
+run docker 'install Docker from the Docker apt repo'
+run fd 'link fdfind as fd'
+common_steps

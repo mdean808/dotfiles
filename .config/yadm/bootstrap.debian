@@ -1,8 +1,19 @@
 #!/bin/sh
 
-step_packages() {
+apt_install() {
+  _missing=
+  for _pkg in "$@"; do
+    dpkg-query -W -f='${Status}' "$_pkg" 2>/dev/null | grep -q 'ok installed' \
+      || _missing="$_missing $_pkg"
+  done
+  if [ -z "$_missing" ]; then already "all $# packages are installed"; fi
+  printf 'Installing:%s\n' "$_missing"
   sudo apt-get update
-  sudo apt-get install -y \
+  sudo apt-get install -y $_missing
+}
+
+step_packages() {
+  apt_install \
     zsh git curl wget ca-certificates openssh-client build-essential python3 \
     tmux lazygit zoxide ripgrep fd-find htop fontconfig unzip jq keyd ghostty \
     fonts-noto-core fonts-noto-color-emoji fonts-noto-cjk libopengl0 \
@@ -10,11 +21,14 @@ step_packages() {
 }
 
 step_slack() {
-  if snap list slack >/dev/null 2>&1; then return 0; fi
+  if snap list slack >/dev/null 2>&1; then already 'Slack is installed'; fi
   sudo snap install slack
 }
 
 step_vicinae() {
+  if have vicinae && systemctl --user is-enabled --quiet vicinae; then
+    already 'vicinae is installed and enabled'
+  fi
   if ! have vicinae; then
     curl -fsSL https://vicinae.com/install.sh | sudo bash
     sudo chmod -R a+rX /usr/local/lib/vicinae
@@ -27,11 +41,11 @@ step_keybindings() { "$HOME/.config/yadm/keybindings.sh"; }
 step_workspaces() { "$HOME/.config/yadm/workspaces.sh"; }
 
 manual_steps() {
-  printf '  - Open Slack, fullscreen it (View > Toggle Full Screen), and quit it so it reopens fullscreen\n'
+  todo 'Open Slack, fullscreen it (View > Toggle Full Screen), and quit it so it reopens fullscreen'
 }
 
 step_neovim() {
-  if have nvim; then return 0; fi
+  if have nvim; then already "$(nvim --version | head -n 1) is installed"; fi
   case "$(uname -m)" in
     x86_64) asset=nvim-linux-x86_64 ;;
     aarch64 | arm64) asset=nvim-linux-arm64 ;;
@@ -46,7 +60,7 @@ step_neovim() {
 }
 
 step_gh() {
-  if have gh; then return 0; fi
+  if have gh; then already 'gh is installed'; fi
   (type -p wget >/dev/null || (sudo apt update && sudo apt install wget -y)) \
   	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
   	&& out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg \
@@ -59,7 +73,7 @@ step_gh() {
 }
 
 step_glab() {
-  if have glab; then return 0; fi
+  if have glab; then already 'glab is installed'; fi
   case "$(dpkg --print-architecture)" in
     amd64) asset=amd64 ;;
     arm64) asset=arm64 ;;
@@ -76,7 +90,7 @@ step_glab() {
 }
 
 step_docker() {
-  if have docker; then return 0; fi
+  if have docker; then already 'docker is installed'; fi
   distro=$(. /etc/os-release && if [ -n "$UBUNTU_CODENAME" ]; then echo ubuntu; else echo debian; fi)
   codename=$(. /etc/os-release && echo "${UBUNTU_CODENAME:-${DEBIAN_CODENAME:-$VERSION_CODENAME}}")
   sudo install -m 0755 -d /etc/apt/keyrings
@@ -91,7 +105,7 @@ step_docker() {
 }
 
 step_nerd_font() {
-  if fc-list | grep -qi 'FiraCode Nerd Font'; then return 0; fi
+  if fc-list | grep -qi 'FiraCode Nerd Font'; then already 'FiraCode Nerd Font is installed'; fi
   tmp=$(mktemp -d)
   curl -fsSL -o "$tmp/FiraCode.zip" \
     https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraCode.zip
@@ -102,6 +116,9 @@ step_nerd_font() {
 
 step_vicinae_extension() {
   uuid=vicinae@dagimg-dot
+  if gnome-extensions list --enabled | grep -qx "$uuid"; then
+    already "$uuid is enabled"
+  fi
   if ! gnome-extensions info "$uuid" >/dev/null 2>&1; then
     gdbus call --session --dest org.gnome.Shell.Extensions \
       --object-path /org/gnome/Shell/Extensions \
@@ -111,7 +128,7 @@ step_vicinae_extension() {
 }
 
 step_fd() {
-  if have fd; then return 0; fi
+  if have fd; then already 'fd is on PATH'; fi
   mkdir -p "$HOME/.local/bin"
   ln -sfn "$(command -v fdfind)" "$HOME/.local/bin/fd"
 }

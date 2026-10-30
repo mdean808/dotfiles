@@ -25,20 +25,36 @@ matches this machine. Edit the `bootstrap##...` file, never the symlink.
 
 | File | Role |
 | --- | --- |
-| `bootstrap.common` | `have`, `run`, shared `step_*` and `common_steps` |
-| `bootstrap.debian` | Debian/Ubuntu `step_*` (apt repos, packages, fd) |
+| `lib.sh` | Runner and output styling, shared with the hooks |
+| `bootstrap.common` | Sources `lib.sh`; shared `step_*`, `common_steps` |
+| `bootstrap.debian` | Debian/Ubuntu `step_*` and `apt_install` |
 | `bootstrap##distro_family.debian` | Ubuntu desktop run list |
 | `bootstrap##distro_family.arch` | Arch run list and its own pacman list |
 | `bootstrap##class.headless,distro_family.debian` | Headless server |
 
-- `run <name>` prints a header and calls `step_<name>`. Every step must
-  return early when already done: bootstraps rerun under `set -e`.
+- `run <name> '<what it does>' [needs...]` runs `step_<name>` in a
+  `set -e` subshell and prints one line: `✓` done, dim `✓` already done,
+  `–` skipped, `○` not for this machine, `✗` failed. Step output streams
+  under a `│` gutter; a step with no output collapses to its result line.
+  A failed step doesn't stop the run. A step whose `needs` didn't finish
+  is skipped. `finish` prints counts, failures, skips and the to-do list,
+  and exits 1 if any step failed.
+- Inside a step: `already '<why>'` ends it as already done, `skip '<why>'`
+  ends it as skipped, `fail '<why>'` fails it with a reason, `stop '<why>'`
+  fails it and ends the whole run, `note '<text>'` adds detail to a done
+  line, `todo '<text>'` adds a to-do item, and `ask '<prompt>'` reads
+  `$_answer` from the terminal. Every step must call `already` when there
+  is nothing to do, so a rerun reads as all done.
+- Color only when stdout is a terminal and `NO_COLOR` is unset. In a
+  terminal, the bootstrap asks for the sudo password once up front.
+- `desktop_only` wraps `run` and skips the step on `headless`.
+- `step_ssh` checks SSH access to GitHub and GitLab. In a terminal it
+  offers to create a key and waits while you add it. `nvim_remote` and
+  `scratch` need it.
 - A distro file sources `bootstrap.common` (and `bootstrap.debian`), may
-  override a step such as `step_packages` or `manual_steps`, then ends with
-  `common_steps`.
-- The headless file does not call `common_steps`. It inlines its own run
-  list and skips desktop and scratch steps (keyd, fonts, `scratch`). A shared
-  step it needs must be added to its list by hand.
+  override a step such as `step_packages` or `manual_steps`, runs its own
+  steps, then ends with `common_steps`. `manual_steps` adds items with
+  `todo`.
 - Each bootstrap sets `yadm sparse-checkout` to drop files that don't apply
   to that machine class. On headless, `keybindings.sh`, `keyd-sync.sh` and
   `workspaces.sh` are tracked but absent from disk.
@@ -49,15 +65,20 @@ matches this machine. Edit the `bootstrap##...` file, never the symlink.
 ## Machine classes
 
 `yadm config --get-all local.class` lists the classes (this machine:
-`headless`, `personal`). The hooks check for `headless` to skip desktop work.
+`headless`, `personal`). The bootstrap and hooks check for `headless` to
+skip desktop work. Scratch runs on every class.
 
 ## Hooks and scratch
 
+The hooks print the same `==> name: what` header and status line as the
+bootstrap.
+
 - `hooks/post_pull`: on desktops, runs `keyd-sync.sh`, `keybindings.sh` and
-  `workspaces.sh` if present; pulls `~/.config/nvim`; on desktops, runs
+  `workspaces.sh` if present; pulls `~/.config/nvim`; runs
   `scratch.sh pull`.
 - `hooks/post_push`: commits and pushes `~/.config/nvim` (only if its origin
-  is `mdean808/nvim-config`); on desktops, runs `scratch.sh push`.
+  is `mdean808/nvim-config`), listing the files it commits; runs
+  `scratch.sh push`.
 - `scratch.sh` clones `git@gitlab.com:modean/scratch.git` into `~/.scratch`,
   links `scratch-sync` into `~/.local/bin`, and passes its arguments to it.
 - Hooks and `scratch.sh` unset `GIT_DIR`, `GIT_WORK_TREE` and

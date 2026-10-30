@@ -1,21 +1,20 @@
 #!/bin/sh
-set -e
 
 dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 . "$dir/bootstrap.common"
 . "$dir/bootstrap.debian"
 
-run packages
-run neovim
-run gh
-run glab
-run docker
-run nerd_font
-run fd
-run vicinae_extension
-run slack
-run zen
-run vicinae
-run keybindings
-run workspaces
+run packages 'install apt packages'
+run neovim 'install Neovim into /opt'
+run gh 'install the GitHub CLI'
+run glab 'install the GitLab CLI'
+run docker 'install Docker from the Docker apt repo'
+run nerd_font 'install FiraCode Nerd Font'
+run fd 'link fdfind as fd'
+run vicinae_extension 'install and enable the vicinae GNOME extension'
+run slack 'install Slack'
+run zen 'install Zen browser'
+run vicinae 'install vicinae and start its user service'
+run keybindings 'apply GNOME keybindings'
+run workspaces 'pin apps to GNOME workspaces'
 common_steps

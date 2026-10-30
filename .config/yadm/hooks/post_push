@@ -2,31 +2,39 @@
 
 unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
 
-sync_nvim() {
-  repo="$HOME/.config/nvim"
+. "$HOME/.config/yadm/lib.sh"
 
-  [ -d "$repo" ] || return 0
-  case "$(git -C "$repo" remote get-url origin 2>/dev/null)" in
+nvim="$HOME/.config/nvim"
+
+step_nvim() {
+  if [ ! -d "$nvim" ]; then skip '~/.config/nvim does not exist'; fi
+  case "$(git -C "$nvim" remote get-url origin 2>/dev/null)" in
     git@github.com:mdean808/nvim-config.git | https://github.com/mdean808/nvim-config) ;;
-    *)
-      printf '\nwarning: ~/.config/nvim is not mdean808/nvim-config, skipping nvim sync\n' >&2
-      return 0 ;;
+    *) skip '~/.config/nvim is not mdean808/nvim-config' ;;
   esac
-  [ "$(git -C "$repo" rev-parse --show-toplevel)" = "$repo" ] || return 0
-
-  git -C "$repo" add -A
-
-  if ! git -C "$repo" diff --cached --quiet; then
-    git -C "$repo" commit -m "${NVIM_SYNC_MESSAGE:-Sync nvim config}" || return 0
+  if [ "$(git -C "$nvim" rev-parse --show-toplevel)" != "$nvim" ]; then
+    skip '~/.config/nvim is not a git repo'
   fi
 
-  if [ -z "$(git -C "$repo" log '@{u}..HEAD' --oneline 2>/dev/null)" ]; then
-    return 0
+  git -C "$nvim" add -A
+  if ! git -C "$nvim" diff --cached --quiet; then
+    printf 'Committing:\n'
+    git -C "$nvim" status --short
+    git -C "$nvim" commit --quiet -m "${NVIM_SYNC_MESSAGE:-Sync nvim config}"
   fi
 
-  printf '\n==> pushing nvim config\n'
-  git -C "$repo" push
+  if ! git -C "$nvim" rev-parse --verify --quiet '@{u}' >/dev/null; then
+    skip 'the current branch has no upstream'
+  fi
+  _ahead=$(git -C "$nvim" rev-list --count '@{u}..HEAD')
+  if [ "$_ahead" -eq 0 ]; then already 'nothing to push'; fi
+  git -C "$nvim" push --quiet
+  note "pushed $_ahead commits"
 }
 
-sync_nvim
-yadm config --get-all local.class | grep -qx headless || "$HOME/.config/yadm/scratch.sh" push
+step_scratch() { "$HOME/.config/yadm/scratch.sh" push; }
+
+title 'yadm post-push'
+run nvim 'commit and push the Neovim config'
+run scratch 'push the scratch notes'
+printf '\n'
