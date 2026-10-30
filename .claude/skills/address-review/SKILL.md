@@ -68,7 +68,9 @@ problem and wrong about the fix.
    Draft reply: <text> (reply only)
    ```
 
-   End with a table: number, location, summary, verdict. The user
+   End with a table: number, location, summary, verdict, resolvable,
+   taken from the fetch output's headers. State push status only from
+   the `head:` line. The user
    approves, changes or drops items. In a later round, items already
    settled stay settled unless their thread has new notes.
 

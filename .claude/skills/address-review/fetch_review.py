@@ -205,7 +205,9 @@ def main():
     mr = get(f"projects/:id/merge_requests/{iid}")
     discussions = get_all(f"projects/:id/merge_requests/{iid}/discussions")
 
-    print(f"# MR !{iid} {mr['title']}\n\nhead: {mr['sha']}  you: {me}")
+    local = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
+    pushed = "matches local HEAD" if local == mr["sha"] else f"local HEAD {local} not pushed"
+    print(f"# MR !{iid} {mr['title']}\n\nhead: {mr['sha']} ({pushed})  you: {me}")
     if args.since:
         print(f"since: {args.since}")
 
@@ -220,10 +222,13 @@ def main():
             continue
 
         if "for review status" in first["body"]:
+            if first.get("resolvable") and first.get("resolved"):
+                continue
             findings = re.sub(r"\*\*Actionable comments posted: \d+\*\*|^-{3,}$", "", clean(first["body"]), flags=re.M).strip()
             replies = notes[1:]
             if findings or replies:
-                print(f"\n## Review body {first['created_at']} (nitpicks, outside-diff, duplicates)\n")
+                resolvable = "resolvable" if first.get("resolvable") else "not resolvable"
+                print(f"\n## Review body {first['created_at']} · {resolvable} (nitpicks, outside-diff, duplicates)\n")
                 if findings:
                     print(findings + "\n")
                 print_notes(replies, me)
