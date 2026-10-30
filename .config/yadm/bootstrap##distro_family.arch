@@ -28,7 +28,8 @@ step_sparse() {
     '!/.config/yadm/keybindings.sh' \
     '!/.config/yadm/workspaces.sh' \
     '!/.local/bin/startup-workspaces' \
-    '!/.local/share/applications/local.ghostty.startup.desktop'
+    '!/.local/share/applications/local.ghostty.startup.desktop' \
+    '!/.local/share/gnome-shell/extensions/split-new-window@mdean808/'
 }
 
 manual_steps() {

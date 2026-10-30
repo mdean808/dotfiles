@@ -23,8 +23,11 @@ ta=org.gnome.shell.extensions.tiling-assistant
 if gsettings list-schemas | grep -qx $ta; then
   gsettings set $ta tile-left-half "['<Super>Left', '<Super>KP_4', '<Super>h']"
   gsettings set $ta tile-right-half "['<Super>Right', '<Super>KP_6', '<Super>l']"
-  gsettings set $ta tile-maximize "['<Super>Up', '<Super>KP_5', '<Super>k']"
-  gsettings set $ta restore-window "['<Super>Down', '<Super>j']"
+  gsettings set $ta tile-top-half "['<Super>KP_8', '<Super>k']"
+  gsettings set $ta tile-bottom-half "['<Super>KP_2', '<Super>j']"
+  gsettings set $ta tile-maximize "['<Super>Up', '<Super>KP_5']"
+  gsettings set $ta restore-window "['<Super>Down']"
+  gsettings set $ta enable-tiling-popup false
   gsettings set $mutter toggle-tiled-left "[]"
   gsettings set $mutter toggle-tiled-right "[]"
 else

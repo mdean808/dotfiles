@@ -24,7 +24,8 @@ step_sparse() {
     '!/.config/yadm/workspaces.sh' \
     '!/.local/bin/remote-dev' \
     '!/.local/bin/startup-workspaces' \
-    '!/.local/share/applications/'
+    '!/.local/share/applications/' \
+    '!/.local/share/gnome-shell/extensions/split-new-window@mdean808/'
 }
 
 step_locale() {

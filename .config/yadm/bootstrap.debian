@@ -127,6 +127,15 @@ step_vicinae_extension() {
   gnome-extensions enable "$uuid"
 }
 
+step_split_window() {
+  uuid=split-new-window@mdean808
+  _enabled=$(gsettings get org.gnome.shell enabled-extensions)
+  case "$_enabled" in *"'$uuid'"*) already "$uuid is enabled" ;; esac
+  gsettings set org.gnome.shell enabled-extensions \
+    "$(printf '%s' "$_enabled" | sed -e "s/^@as \[\]$/[]/" -e "s/]$/, '$uuid']/" -e "s/^\[, /[/")"
+  todo 'Log out and back in to load the Split New Window extension'
+}
+
 step_fd() {
   if have fd; then already 'fd is on PATH'; fi
   mkdir -p "$HOME/.local/bin"

@@ -16,5 +16,6 @@ run slack 'install Slack'
 run zen 'install Zen browser'
 run vicinae 'install vicinae and start its user service'
 run keybindings 'apply GNOME keybindings'
+run split_window 'enable the Split New Window GNOME extension'
 run workspaces 'pin apps to GNOME workspaces'
 common_steps
