@@ -29,7 +29,7 @@ matches this machine. Edit the `bootstrap##...` file, never the symlink.
 | `bootstrap.common` | Sources `lib.sh`; shared `step_*`, `common_steps` |
 | `bootstrap.debian` | Debian/Ubuntu `step_*` and `apt_install` |
 | `bootstrap##distro_family.debian` | Ubuntu desktop run list |
-| `bootstrap##distro_family.arch` | Arch run list and its own pacman list |
+| `bootstrap##class.headless,distro_family.arch` | Headless Arch server |
 | `bootstrap##class.headless,distro_family.debian` | Headless server |
 
 - `run <name> '<what it does>' [needs...]` runs `step_<name>` in a

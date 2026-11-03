@@ -1,0 +1,40 @@
+#!/bin/sh
+
+. "$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)/bootstrap.common"
+
+step_packages() {
+  sudo pacman -Syu --needed --noconfirm \
+    zsh git curl wget unzip openssh base-devel python \
+    neovim tmux lazygit github-cli glab zoxide ripgrep fd htop jq \
+    docker docker-buildx docker-compose
+  if [ ! -d "/usr/lib/modules/$(uname -r)" ]; then
+    stop 'the kernel was upgraded. Reboot, then run yadm bootstrap again'
+  fi
+}
+
+step_sparse() {
+  yadm sparse-checkout set --no-cone '/*' \
+    '!/.config/autostart/' \
+    '!/.config/ghostty/' \
+    '!/.config/keyd/' \
+    '!/.config/mimeapps.list' \
+    '!/.config/smug/' \
+    '!/.config/vicinae/' \
+    '!/.config/yadm/bootstrap##*debian' \
+    '!/.config/yadm/bootstrap.debian' \
+    '!/.config/yadm/keybindings.sh' \
+    '!/.config/yadm/keyd-sync.sh' \
+    '!/.config/yadm/workspaces.sh' \
+    '!/.local/bin/remote-dev' \
+    '!/.local/bin/startup-workspaces' \
+    '!/.local/share/applications/' \
+    '!/.local/share/gnome-shell/extensions/split-new-window@mdean808/'
+}
+
+manual_steps() {
+  todo 'Set the machine class for git identity: yadm config --add local.class personal && yadm alt'
+}
+
+run sparse 'drop Debian-only and desktop-only files from the yadm checkout'
+run packages 'upgrade the system and install pacman packages'
+common_steps
