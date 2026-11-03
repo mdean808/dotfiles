@@ -1,55 +1,39 @@
 ---
 name: mr-desc
 description: Write an MR description. Use when the user asks for an MR, merge request or PR description.
-allowed-tools:
-  - Read
-  - Write
-  - Bash(git status *)
-  - Bash(git branch *)
-  - Bash(git log *)
-  - Bash(git show *)
-  - Bash(git diff *)
-  - Bash(git rev-parse *)
-  - Bash(find *)
-  - Bash(grep *)
-  - Bash(ls *)
-  - ToolSearch
-  - AskUserQuestion
 ---
 
-# /mr-desc
+# mr-desc
 
-Write the MR description, ready to paste into GitLab. The reader is a
-teammate who wants to know what changed and that it is tested. The diff
-shows how; never repeat it.
+Write an MR description. The reader is a teammate who wants to know what changed.
+The git diff shows exactly what changed; do not repeat it.
 
 ## Rules
 
 - Write only the output file. No commits, pushes, MRs or tracker writes.
 - Take the tracker and `<KEY>` from the "Issue tracker" table in
-  `CLAUDE.local.md`. Not Linear, or no table: say so and stop.
+  `CLAUDE.local.md`.
 - Run paths from `git rev-parse --show-toplevel`.
-- When the diff and the notes disagree, describe the diff.
+- When the diff and notes or documentation disagree, defer to the diff.
 
 ## Steps
 
-1. **Ticket.** Take the key from the arguments, else the branch name, else
-   ask. Resolve a legacy key to its `<KEY>` issue as `CLAUDE.local.md`
-   says. Find the ticket's files as the global `scratch-workflow.md` rule
+1. **Ticket.** Take the key from the branch name, or ask
+   Find the ticket's files as the global `scratch-workflow.md` rule
    says: a directory from
    `find .scratch -maxdepth 1 -type d -iname '<key>-<n>-*'`, else an epic's
    `issues/` file from
-   `grep -rliE '^(issue|linear): *<key>-<n> *$' .scratch/*/issues/`, then
-   both again with the legacy key. None: ask. Never guess one.
+   `grep -rliE '^(issue|linear): *<key>-<n> *$' .scratch/*/issues/`.
+   None: ask. Never guess one.
 
    A standalone ticket's output file is `mr.md` in its directory. A ticket
    in an epic writes `mrs/<name>.md` in the epic's directory, where `<name>`
    is its `issues/` file's name.
+
 2. **Gather.** Read `git log main..HEAD`, `git diff main...HEAD` (every
    hunk), `git status`, and the ticket's scratch files (in an epic: its
    `issues/`, `decisions/` and `plans/` files, and its section of
    `changes.md`). No ticket file: fetch the issue with `get_issue`.
-   Uncommitted changes are left out of the description.
 3. **Tests.** Don't run them. Ask with AskUserQuestion: "All green",
    "Some failing" or "Not run yet".
 4. **Write** to the template below. Drop empty sections, headings included.
@@ -61,7 +45,7 @@ shows how; never repeat it.
 
 ## Template
 
-````markdown
+```markdown
 # <KEY>-<n> <What the MR does>
 
 <Summary>
@@ -82,10 +66,12 @@ shows how; never repeat it.
 
 <sentence>
 
-## Future work
+## Merge request checklist
 
-<sentence>
-````
+[x] Code meets completion criteria for this change
+[x] Cypress tests have been run and passed locally (or in CI)
+[x] If this MR adds a migration or touches a flagged data path: ./devtools.sh lint-migrations passes, and the migration checklist is complete
+```
 
 **Title.** The key and what the MR does, sentence case. A bug names the
 fix: `GRO-12 Fix the Profile project dropdown for masquerading superusers`.
@@ -94,10 +80,10 @@ fix: `GRO-12 Fix the Profile project dropdown for masquerading superusers`.
 gates it. A second only for measured proof.
 
 ```markdown
-Bad:  Project admins can now version frameworks, which means past
-      assessments stay accurate after a formula changes.
+Bad: Project admins can now version frameworks, which means past
+assessments stay accurate after a formula changes.
 Good: Project admins can turn RMC frameworks on or off and keep editing one
-      after windows are assessed with it, behind flag TT-1164.
+after windows are assessed with it, behind flag TT-1164.
 ```
 
 **Changes.** One bullet per feature, named the way a reviewer would sum it
@@ -107,6 +93,7 @@ cases. Commits outside the ticket go in a final `Also:` bullet.
 
 ```markdown
 Bad:
+
 - Turn custom frameworks on or off per project, and archive one with
   assessed windows instead of deleting it. Restore keeps its on or off
   setting.
@@ -116,6 +103,7 @@ Bad:
   masqueraded user's memberships.
 
 Good:
+
 - Turn custom frameworks on or off per project, and archive one with
   assessed windows instead of deleting it.
 - Turn built-in RMR89, Q, Q' and GSI on or off per project.
@@ -143,9 +131,6 @@ tests pass.", "<n> tests fail: <which>.", or nothing. Never list files.
 Covered by Django API tests and Cypress component tests. All tests pass.
 ```
 
-**Future work.** Only a follow-up ticket by key, or a limit the MR leaves
-in the problem it solves. In doubt, leave it out.
-
 **Writing.** Wrap at 80 characters. Write a flag as "flag GRO-77". Use the
 terms in `CONTEXT.md`. Never write: implementation history, decisions made
 while building, copy changes, what stayed the same, file walkthroughs, or
@@ -153,11 +138,11 @@ the GitLab template's checklist.
 
 ## Reply
 
-````markdown
+```markdown
 Wrote `<output file>`.
 
 - Commits outside the ticket: <sha subject>, in the `Also:` bullet.
 - Uncommitted changes, left out: <files>.
-````
+```
 
 Include a bullet only when it applies.

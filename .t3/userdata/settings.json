@@ -4,6 +4,38 @@
     "worktreeOnMerge": true,
     "worktreeOnDelete": true
   },
+  "projectScriptOverrides": {
+    "313b2023-a076-4363-a0a0-9ca1379c2761": [
+      {
+        "id": "worktree-setup",
+        "name": "Worktree Setup",
+        "command": "scratch-sync link\ncd dat-agg-sys && for s in 1 2 3 4 5 6 7 8 9; do\n  ./devtools.sh worktree-init \"$s\" && break\ndone",
+        "icon": "play",
+        "runOnWorktreeCreate": true,
+        "async": false
+      }
+    ]
+  },
+  "projectSettingsOverrides": {
+    "313b2023-a076-4363-a0a0-9ca1379c2761": {
+      "defaultProjectScripts": [
+        {
+          "id": "worktree-setup",
+          "name": "Worktree Setup",
+          "command": "scratch-sync link\ncd dat-agg-sys && for s in 1 2 3 4 5 6 7 8 9; do\n  ./devtools.sh worktree-init \"$s\" && break\ndone",
+          "icon": "play",
+          "runOnWorktreeCreate": true,
+          "async": false
+        }
+      ]
+    }
+  },
   "projectSettingsFolded": true,
-  "idleCompaction": "onReturn"
+  "idleCompaction": "onReturn",
+  "providerInstances": {
+    "codex": {
+      "driver": "codex",
+      "enabled": false
+    }
+  }
 }

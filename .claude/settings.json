@@ -38,5 +38,106 @@
   "autoDreamEnabled": false,
   "theme": "auto",
   "preferredNotifChannel": "notifications_disabled",
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"node\" \"/home/morgan/.claude/agent-flow/hook.js\"",
+            "timeout": 2
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"node\" \"/home/morgan/.claude/agent-flow/hook.js\"",
+            "timeout": 2
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"node\" \"/home/morgan/.claude/agent-flow/hook.js\"",
+            "timeout": 2
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"node\" \"/home/morgan/.claude/agent-flow/hook.js\"",
+            "timeout": 2
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"node\" \"/home/morgan/.claude/agent-flow/hook.js\"",
+            "timeout": 2
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"node\" \"/home/morgan/.claude/agent-flow/hook.js\"",
+            "timeout": 2
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"node\" \"/home/morgan/.claude/agent-flow/hook.js\"",
+            "timeout": 2
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"node\" \"/home/morgan/.claude/agent-flow/hook.js\"",
+            "timeout": 2
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"node\" \"/home/morgan/.claude/agent-flow/hook.js\"",
+            "timeout": 2
+          }
+        ]
+      }
+    ]
+  }
 }

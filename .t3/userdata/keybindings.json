@@ -1,6 +1,11 @@
 [
   {
     "key": "mod+t",
+    "command": "rightPanel.new",
+    "when": "rightPanelOpen && !terminalFocus"
+  },
+  {
+    "key": "mod+t",
     "command": "chat.new"
   },
   {

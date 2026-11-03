@@ -1,29 +1,9 @@
 ---
 name: start-ticket
 description: Start work on a ticket. Use when the user asks to start or pick up a ticket, or what to work on next.
-allowed-tools:
-  - Read
-  - Write
-  - Bash(git status *)
-  - Bash(git branch *)
-  - Bash(git fetch *)
-  - Bash(git switch *)
-  - Bash(git rev-parse *)
-  - Bash(find *)
-  - Bash(mkdir *)
-  - ToolSearch
-  - AskUserQuestion
-  - Skill
-  - mcp__claude_ai_Linear__get_issue
-  - mcp__claude_ai_Linear__list_issues
-  - mcp__claude_ai_Linear__list_comments
-  - mcp__claude_ai_Linear__list_cycles
-  - mcp__claude_ai_Linear__list_projects
-  - mcp__claude_ai_Linear__get_user
-  - mcp__claude_ai_Linear__save_issue
 ---
 
-# /start-ticket
+# start-ticket
 
 ## The result: a ticket brief
 
@@ -42,21 +22,27 @@ branch: <branch>
 <One or two short sentences: what is wrong or missing.>
 
 **Conditions**
+
 - <a role, flag or data setup the problem needs>
 
 **Steps to reproduce**
+
 1. <step>
 
 **Expected**
+
 - <one outcome per bullet>
 
 **Actual**
+
 - <one symptom per bullet>
 
 **Acceptance criteria**
+
 - <criterion>
 
 **Related**
+
 - <KEY-xxx (<relation>): what it adds, in one line>
 
 ---
