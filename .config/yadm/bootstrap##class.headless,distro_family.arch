@@ -3,6 +3,14 @@
 . "$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)/bootstrap.common"
 
 step_packages() {
+  _lock=/var/lib/pacman/db.lck
+  if [ -e "$_lock" ] && pgrep -x pacman >/dev/null; then
+    echo 'waiting for another pacman to finish'
+    while [ -e "$_lock" ] && pgrep -x pacman >/dev/null; do sleep 2; done
+  fi
+  if [ -e "$_lock" ]; then
+    fail "no pacman is running but $_lock exists. Remove it with sudo rm $_lock"
+  fi
   sudo pacman -Syu --needed --noconfirm \
     zsh git curl wget unzip openssh base-devel python \
     neovim tmux lazygit github-cli glab zoxide ripgrep fd htop jq \
@@ -32,6 +40,7 @@ step_sparse() {
 }
 
 manual_steps() {
+  if is_class personal || is_class work; then return 0; fi
   todo 'Set the machine class for git identity: yadm config --add local.class personal && yadm alt'
 }
 

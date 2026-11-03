@@ -204,7 +204,7 @@ step_font_cache() { fc-cache -f; }
 manual_steps() { :; }
 
 common_steps() {
-  run omz 'install oh-my-zsh'
+  run omz 'install oh-my-zsh' packages
   run zsh_defer 'install zsh-defer for lazy-loading zsh plugins'
   run nvim_config 'clone the Neovim config into ~/.config/nvim'
   run ssh 'check SSH access to your git hosts'
@@ -214,14 +214,14 @@ common_steps() {
   run node 'install the latest Node.js with nvm' nvm
   run t3 'install T3 Code with npm' node
   run uv 'install uv for Python'
-  run bun 'install Bun'
+  run bun 'install Bun' packages
   run go 'install Go into /usr/local/go'
   run smug 'install smug for tmux sessions' go
   run pnpm 'install pnpm'
   run claude 'install Claude Code'
   desktop_only keyd 'install the keyd config and enable keyd'
   run docker_service 'start docker and add you to the docker group' docker packages
-  run login_shell 'make zsh your login shell'
+  run login_shell 'make zsh your login shell' packages
   desktop_only font_cache 'rebuild the font cache'
   manual_steps
   if ! grep -Eqs '^[[:space:]]*api_key[[:space:]]*=[[:space:]]*[^[:space:]]' "$HOME/.wakatime.cfg"; then
