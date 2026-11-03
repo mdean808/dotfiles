@@ -5,40 +5,9 @@
   },
   "permissions": {
     "deny": [],
-    "additionalDirectories": [
-      "~/.scratch"
-    ]
+    "additionalDirectories": ["~/.scratch"]
   },
   "model": "opus",
-  "enabledPlugins": {
-    "mattpocock-skills@claude-plugins-official": true,
-    "frontend-design@anthropic-plugin-directory": true,
-    "mattpocock-skills@mattpocock": true
-  },
-  "extraKnownMarketplaces": {
-    "mattpocock": {
-      "source": {
-        "source": "github",
-        "repo": "mattpocock/skills"
-      }
-    }
-  },
-  "modelSettings": {
-    "claude-sonnet-5": {
-      "effortLevel": "high"
-    },
-    "claude-opus-5": {
-      "effortLevel": "high"
-    },
-    "claude-opus-5-5": {
-      "effortLevel": "medium"
-    }
-  },
-  "autoMemoryEnabled": false,
-  "autoDreamEnabled": false,
-  "theme": "auto",
-  "preferredNotifChannel": "notifications_disabled",
-  "agentPushNotifEnabled": true,
   "hooks": {
     "SessionStart": [
       {
@@ -139,5 +108,25 @@
         ]
       }
     ]
-  }
+  },
+  "enabledPlugins": {
+    "frontend-design@anthropic-plugin-directory": true
+  },
+  "extraKnownMarketplaces": {},
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "high"
+    },
+    "claude-opus-5": {
+      "effortLevel": "high"
+    },
+    "claude-opus-5-5": {
+      "effortLevel": "medium"
+    }
+  },
+  "autoMemoryEnabled": false,
+  "autoDreamEnabled": false,
+  "theme": "auto",
+  "preferredNotifChannel": "notifications_disabled",
+  "agentPushNotifEnabled": true
 }
