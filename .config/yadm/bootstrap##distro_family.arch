@@ -1,0 +1,53 @@
+#!/bin/sh
+
+. "$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)/bootstrap.common"
+
+step_packages() {
+  _lock=/var/lib/pacman/db.lck
+  if [ -e "$_lock" ] && pgrep -x pacman >/dev/null; then
+    echo 'waiting for another pacman to finish'
+    while [ -e "$_lock" ] && pgrep -x pacman >/dev/null; do sleep 2; done
+  fi
+  if [ -e "$_lock" ]; then
+    fail "no pacman is running but $_lock exists. Remove it with sudo rm $_lock"
+  fi
+  sudo pacman -Syu --needed --noconfirm \
+    zsh git curl wget unzip openssh base-devel python \
+    neovim tmux lazygit github-cli glab zoxide ripgrep fd htop jq \
+    docker docker-buildx docker-compose \
+    keyd ghostty fontconfig flatpak ttf-firacode-nerd \
+    noto-fonts noto-fonts-emoji noto-fonts-cjk
+  if [ ! -d "/usr/lib/modules/$(uname -r)" ]; then
+    stop 'the kernel was upgraded. Reboot, then run yadm bootstrap again'
+  fi
+}
+
+step_sparse() {
+  yadm sparse-checkout set --no-cone '/*' \
+    '!/.config/autostart/' \
+    '!/.config/vicinae/' \
+    '!/.config/yadm/bootstrap##*debian' \
+    '!/.config/yadm/bootstrap.debian' \
+    '!/.config/yadm/keybindings.sh' \
+    '!/.config/yadm/workspaces.sh' \
+    '!/.local/bin/startup-workspaces' \
+    '!/.local/share/applications/local.ghostty.startup.desktop' \
+    '!/.local/share/gnome-shell/extensions/split-new-window@mdean808/'
+}
+
+step_slack() {
+  if flatpak info com.slack.Slack >/dev/null 2>&1; then already 'Slack is installed'; fi
+  sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+  sudo flatpak install -y --noninteractive flathub com.slack.Slack
+}
+
+manual_steps() {
+  if is_class personal || is_class work; then return 0; fi
+  todo 'Set the machine class for git identity: yadm config --add local.class personal && yadm alt'
+}
+
+run sparse 'drop Debian-only and GNOME-only files from the yadm checkout'
+run packages 'upgrade the system and install pacman packages'
+run zen 'install Zen browser' packages
+run slack 'install Slack' packages
+common_steps

@@ -14,7 +14,7 @@ step_packages() {
   sudo pacman -Syu --needed --noconfirm \
     zsh git curl wget unzip openssh base-devel python \
     neovim tmux lazygit github-cli glab zoxide ripgrep fd htop jq \
-    docker docker-buildx docker-compose
+    ghostty-terminfo docker docker-buildx docker-compose
   if [ ! -d "/usr/lib/modules/$(uname -r)" ]; then
     stop 'the kernel was upgraded. Reboot, then run yadm bootstrap again'
   fi
