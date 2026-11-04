@@ -14,8 +14,8 @@ step_packages() {
   sudo pacman -Syu --needed --noconfirm \
     zsh git curl wget unzip openssh base-devel python \
     neovim tmux lazygit github-cli glab zoxide ripgrep fd htop jq \
-    docker docker-buildx docker-compose \
-    keyd ghostty fontconfig flatpak ttf-firacode-nerd \
+    docker docker-buildx docker-compose go uv bun pnpm \
+    keyd ghostty fontconfig ttf-firacode-nerd \
     noto-fonts noto-fonts-emoji noto-fonts-cjk
   if [ ! -d "/usr/lib/modules/$(uname -r)" ]; then
     stop 'the kernel was upgraded. Reboot, then run yadm bootstrap again'
@@ -35,10 +35,34 @@ step_sparse() {
     '!/.local/share/gnome-shell/extensions/split-new-window@mdean808/'
 }
 
-step_slack() {
-  if flatpak info com.slack.Slack >/dev/null 2>&1; then already 'Slack is installed'; fi
-  sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-  sudo flatpak install -y --noninteractive flathub com.slack.Slack
+aur_packages='zen-browser-bin slack-desktop'
+
+step_yay() {
+  if have yay; then already "$(yay --version | cut -d' ' -f1-2) is installed"; fi
+  tmp=$(mktemp -d)
+  git clone --depth 1 https://aur.archlinux.org/yay-bin.git "$tmp/yay-bin"
+  (cd "$tmp/yay-bin" && makepkg -si --noconfirm)
+  rm -rf "$tmp"
+}
+
+step_aur() {
+  if pacman -Q $aur_packages >/dev/null 2>&1; then already 'all AUR packages are installed'; fi
+  yay -S --needed --noconfirm $aur_packages
+}
+
+step_go() {
+  if have go; then already "$(go env GOVERSION) is installed by pacman"; fi
+  fail 'go is missing. It comes from the packages step'
+}
+
+step_smug() {
+  if [ -x "$HOME/go/bin/smug" ]; then already 'smug is installed'; fi
+  go install github.com/ivaaaan/smug@latest
+}
+
+step_pnpm() {
+  if have pnpm; then already 'pnpm is installed by pacman'; fi
+  fail 'pnpm is missing. It comes from the packages step'
 }
 
 manual_steps() {
@@ -48,6 +72,6 @@ manual_steps() {
 
 run sparse 'drop Debian-only and GNOME-only files from the yadm checkout'
 run packages 'upgrade the system and install pacman packages'
-run zen 'install Zen browser' packages
-run slack 'install Slack' packages
+run yay 'install yay from the AUR' packages
+run aur 'install Zen and Slack from the AUR' yay
 common_steps
