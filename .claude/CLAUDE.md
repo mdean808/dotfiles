@@ -110,3 +110,10 @@ When `/implement` says to call `tdd`, skip it unless I ask for TDD.
 ## Writing Markdown
 
 - Cap maximum line length at 80 characters.
+
+## Verify, don't hedge
+
+Check every claim an answer depends on before replying, including related
+things found along the way. Don't write "I haven't checked" or "probably"
+about something read-only access could confirm. If checking needs a write
+or restart, say what wasn't checked.
