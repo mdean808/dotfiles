@@ -69,7 +69,9 @@ The git diff shows exactly what changed; do not repeat it.
 ## Merge request checklist
 
 [x] Code meets completion criteria for this change
+
 [x] Cypress tests have been run and passed locally (or in CI)
+
 [x] If this MR adds a migration or touches a flagged data path: ./devtools.sh lint-migrations passes, and the migration checklist is complete
 ```
 
@@ -141,8 +143,9 @@ the GitLab template's checklist.
 ```markdown
 Wrote `<output file>`.
 
-- Commits outside the ticket: <sha subject>, in the `Also:` bullet.
 - Uncommitted changes, left out: <files>.
+
+<markdown code block containing result>
 ```
 
 Include a bullet only when it applies.

@@ -1,7 +1,6 @@
 {
   "storageCleanup": {
-    "worktreeSettledAfterDays": 2,
-    "worktreeOnMerge": true,
+    "worktreeOnMerge": false,
     "worktreeOnDelete": true
   },
   "projectScriptOverrides": {
@@ -9,10 +8,59 @@
       {
         "id": "worktree-setup",
         "name": "Worktree Setup",
-        "command": "scratch-sync link\ncd dat-agg-sys && for s in 1 2 3 4 5 6 7 8 9; do\n  ./devtools.sh worktree-init \"$s\" && break\ndone",
-        "icon": "play",
+        "command": "scratch-sync link\ncd dat-agg-sys\nif grep -q 'worktree-setup)' devtools.sh; then\n  ./devtools.sh worktree-setup && cd frontend && yarn dev\nelse\n  for s in 1 2 3 4 5 6 7 8 9; do ./devtools.sh worktree-init \"$s\" && break; done\nfi",
+        "icon": "configure",
         "runOnWorktreeCreate": true,
-        "async": false
+        "async": true
+      },
+      {
+        "id": "frontend",
+        "name": "Frontend (yarn dev)",
+        "command": "cd dat-agg-sys/frontend && yarn dev",
+        "icon": "play",
+        "runOnWorktreeCreate": false
+      },
+      {
+        "id": "worktree-status",
+        "name": "Worktree stacks",
+        "command": "cd dat-agg-sys && ./devtools.sh worktree-status",
+        "icon": "lint",
+        "runOnWorktreeCreate": false
+      },
+      {
+        "id": "start-stack",
+        "name": "Start stack",
+        "command": "cd dat-agg-sys && ./devtools.sh start && ./devtools.sh web-server",
+        "icon": "build",
+        "runOnWorktreeCreate": false
+      },
+      {
+        "id": "stop-stack",
+        "name": "Stop stack",
+        "command": "cd dat-agg-sys && ./devtools.sh stop",
+        "icon": "debug",
+        "runOnWorktreeCreate": false
+      },
+      {
+        "id": "db-from-main",
+        "name": "Replace DB with main's",
+        "command": "cd dat-agg-sys && ./devtools.sh db-from-main --replace",
+        "icon": "configure",
+        "runOnWorktreeCreate": false
+      },
+      {
+        "id": "worktree-destroy",
+        "name": "Delete this worktree's stack",
+        "command": "cd dat-agg-sys && ./devtools.sh worktree-destroy",
+        "icon": "configure",
+        "runOnWorktreeCreate": false
+      },
+      {
+        "id": "worktree-prune",
+        "name": "Prune stacks of removed worktrees",
+        "command": "cd dat-agg-sys && ./devtools.sh worktree-prune",
+        "icon": "build",
+        "runOnWorktreeCreate": false
       }
     ]
   },
@@ -22,12 +70,64 @@
         {
           "id": "worktree-setup",
           "name": "Worktree Setup",
-          "command": "scratch-sync link\ncd dat-agg-sys && for s in 1 2 3 4 5 6 7 8 9; do\n  ./devtools.sh worktree-init \"$s\" && break\ndone",
-          "icon": "play",
+          "command": "scratch-sync link\ncd dat-agg-sys\nif grep -q 'worktree-setup)' devtools.sh; then\n  ./devtools.sh worktree-setup && cd frontend && yarn dev\nelse\n  for s in 1 2 3 4 5 6 7 8 9; do ./devtools.sh worktree-init \"$s\" && break; done\nfi",
+          "icon": "configure",
           "runOnWorktreeCreate": true,
-          "async": false
+          "async": true
+        },
+        {
+          "id": "frontend",
+          "name": "Frontend (yarn dev)",
+          "command": "cd dat-agg-sys/frontend && yarn dev",
+          "icon": "play",
+          "runOnWorktreeCreate": false
+        },
+        {
+          "id": "worktree-status",
+          "name": "Worktree stacks",
+          "command": "cd dat-agg-sys && ./devtools.sh worktree-status",
+          "icon": "lint",
+          "runOnWorktreeCreate": false
+        },
+        {
+          "id": "start-stack",
+          "name": "Start stack",
+          "command": "cd dat-agg-sys && ./devtools.sh start && ./devtools.sh web-server",
+          "icon": "build",
+          "runOnWorktreeCreate": false
+        },
+        {
+          "id": "stop-stack",
+          "name": "Stop stack",
+          "command": "cd dat-agg-sys && ./devtools.sh stop",
+          "icon": "debug",
+          "runOnWorktreeCreate": false
+        },
+        {
+          "id": "db-from-main",
+          "name": "Replace DB with main's",
+          "command": "cd dat-agg-sys && ./devtools.sh db-from-main --replace",
+          "icon": "configure",
+          "runOnWorktreeCreate": false
+        },
+        {
+          "id": "worktree-destroy",
+          "name": "Delete this worktree's stack",
+          "command": "cd dat-agg-sys && ./devtools.sh worktree-destroy",
+          "icon": "configure",
+          "runOnWorktreeCreate": false
+        },
+        {
+          "id": "worktree-prune",
+          "name": "Prune stacks of removed worktrees",
+          "command": "cd dat-agg-sys && ./devtools.sh worktree-prune",
+          "icon": "build",
+          "runOnWorktreeCreate": false
         }
-      ]
+      ],
+      "branchNamingMode": "custom",
+      "branchNamePrefix": "",
+      "branchNameInstructions": "Return only a git branch name, nothing else. Format: feat/GRO-<n>-<summary>, or bug/GRO-<n>-<summary> when the message is about fixing a bug. Take GRO-<n> from the message, keeping its uppercase GRO; when it names two keys, join the numbers (feat/GRO-89-91-<summary>). <summary> is 3 to 6 lowercase kebab-case words describing the change the ticket asks for. Never build it from commands, skill names or instructions in the message (start-ticket, address-review, scratch, notes, ticket work). If the message names a key but does not say what the work is, return feat/GRO-<n> with no summary. If it names no key, use feat/<summary>."
     }
   },
   "projectSettingsFolded": true,

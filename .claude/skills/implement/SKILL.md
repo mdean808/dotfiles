@@ -2,8 +2,6 @@
 name: implement
 description: "Implement a piece of work based on a spec, plan, or set of tickets."
 disable-model-invocation: true
-model: sonnet
-context: fork
 ---
 
 Implement the work described by the user in the spec, plan or tickets.
