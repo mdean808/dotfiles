@@ -81,6 +81,7 @@ The run lists are in the table under Machines. The shared files are:
   terminal, the bootstrap asks for the sudo password once up front.
 - `desktop_only` wraps `run` and skips the step on `headless`.
   `work_only` wraps `run` and skips it unless the class is `work`.
+  `personal_only` wraps `run` and skips it unless the class is `personal`.
 - `step_ssh` checks SSH access to GitHub, and to GitLab on `work`. In a
   terminal it offers to create a key and waits while you add it.
   `nvim_remote` and `scratch` need it.

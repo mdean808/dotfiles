@@ -123,6 +123,14 @@ work_only() {
   fi
 }
 
+personal_only() {
+  if is_class personal; then
+    run "$@"
+  else
+    result off "$1" "$2" 'personal machines only'
+  fi
+}
+
 finish() {
   printf '\n'
   awk -F '\t' -v bold="$_bold" -v dim="$_dim" -v red="$_red" \

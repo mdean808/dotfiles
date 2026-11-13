@@ -23,7 +23,7 @@ step_packages() {
 }
 
 step_sparse() {
-  yadm sparse-checkout set --no-cone '/*' \
+  set -- '/*' \
     '!/.config/autostart/' \
     '!/.config/vicinae/' \
     '!/.config/yadm/bootstrap##*debian' \
@@ -33,6 +33,8 @@ step_sparse() {
     '!/.local/bin/startup-workspaces' \
     '!/.local/share/applications/local.ghostty.startup.desktop' \
     '!/.local/share/gnome-shell/extensions/split-new-window@mdean808/'
+  is_class personal || set -- "$@" '!/.config/vesktop/'
+  yadm sparse-checkout set --no-cone "$@"
 }
 
 step_git_filters() {
@@ -92,15 +94,21 @@ step_zen_theme() {
   todo 'Restart Zen to load the DMS colors'
 }
 
+step_vesktop() {
+  if pacman -Q vesktop-bin >/dev/null 2>&1; then already 'vesktop-bin is installed'; fi
+  yay -S --needed --noconfirm vesktop-bin
+}
+
 manual_steps() {
   if is_class personal || is_class work; then return 0; fi
   todo 'Set the machine class for git identity: yadm config --add local.class personal && yadm alt'
 }
 
-run sparse 'drop Debian-only and GNOME-only files from the yadm checkout'
+run sparse 'drop Debian-only, GNOME-only and class-specific files from the yadm checkout'
 run git_filters 'set the yadm clean filter for the Spicetify config'
 run packages 'upgrade the system and install pacman packages'
 run yay 'install yay from the AUR' packages
 run aur 'install Zen, Slack and Spicetify from the AUR' yay
+personal_only vesktop 'install Vesktop from the AUR' yay
 run zen_theme 'point Zen at the DMS colors' aur
 common_steps
