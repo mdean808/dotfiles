@@ -15,7 +15,7 @@ step_packages() {
     zsh git curl wget unzip openssh base-devel python \
     neovim tmux lazygit github-cli glab zoxide ripgrep fd htop jq \
     docker docker-buildx docker-compose go uv bun pnpm \
-    keyd ghostty fontconfig ttf-firacode-nerd \
+    keyd ghostty fontconfig ttf-firacode-nerd spotify-launcher \
     noto-fonts noto-fonts-emoji noto-fonts-cjk
   if [ ! -d "/usr/lib/modules/$(uname -r)" ]; then
     stop 'the kernel was upgraded. Reboot, then run yadm bootstrap again'
@@ -35,7 +35,15 @@ step_sparse() {
     '!/.local/share/gnome-shell/extensions/split-new-window@mdean808/'
 }
 
-aur_packages='zen-browser-bin slack-desktop'
+step_git_filters() {
+  _clean="sed '/^; DO NOT CHANGE/,\$d'"
+  if [ "$(yadm config filter.spicetify.clean)" = "$_clean" ]; then
+    already 'the spicetify clean filter is set'
+  fi
+  yadm config filter.spicetify.clean "$_clean"
+}
+
+aur_packages='zen-browser-bin slack-desktop spicetify-cli'
 
 step_yay() {
   if have yay; then already "$(yay --version | cut -d' ' -f1-2) is installed"; fi
@@ -90,8 +98,9 @@ manual_steps() {
 }
 
 run sparse 'drop Debian-only and GNOME-only files from the yadm checkout'
+run git_filters 'set the yadm clean filter for the Spicetify config'
 run packages 'upgrade the system and install pacman packages'
 run yay 'install yay from the AUR' packages
-run aur 'install Zen and Slack from the AUR' yay
+run aur 'install Zen, Slack and Spicetify from the AUR' yay
 run zen_theme 'point Zen at the DMS colors' aur
 common_steps

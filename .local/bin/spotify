@@ -1,0 +1,9 @@
+#!/bin/sh
+app="$HOME/.local/share/spotify-launcher/install/usr/share/spotify"
+
+spotify-launcher --no-exec
+if [ -f "$app/Apps/xpui.spa" ] && [ -f "$HOME/.config/spotify/prefs" ] \
+  && command -v spicetify >/dev/null; then
+  spicetify backup apply -n >/dev/null 2>&1
+fi
+exec spotify-launcher --skip-update "$@"

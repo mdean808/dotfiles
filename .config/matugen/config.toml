@@ -28,3 +28,8 @@ post_hook = 'pkill -USR2 -x ghostty || true'
 input_path = '~/.config/matugen/templates/papirus.txt'
 output_path = '~/.cache/matugen/papirus-primary.txt'
 post_hook = '~/.config/matugen/hooks/papirus-folders.py "{{colors.primary.default.hex}}"'
+
+[templates.spicetify]
+input_path = '~/.config/matugen/templates/spicetify.ini'
+output_path = '~/.config/spicetify/Themes/DMS/color.ini'
+post_hook = 'spicetify refresh >/dev/null 2>&1 || true'
