@@ -5,7 +5,9 @@
   },
   "permissions": {
     "deny": [],
-    "additionalDirectories": ["~/.scratch"]
+    "additionalDirectories": [
+      "~/.scratch"
+    ]
   },
   "model": "opus",
   "enabledPlugins": {
@@ -23,6 +25,7 @@
       "effortLevel": "medium"
     }
   },
+  "tui": "fullscreen",
   "autoMemoryEnabled": false,
   "autoDreamEnabled": false,
   "theme": "auto",

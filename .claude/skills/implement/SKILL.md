@@ -3,6 +3,7 @@ name: implement
 description: "Implement a piece of work based on a spec, plan, or set of tickets."
 disable-model-invocation: true
 model: sonnet
+context: fork
 hooks:
   PostToolUse:
     - hooks:
