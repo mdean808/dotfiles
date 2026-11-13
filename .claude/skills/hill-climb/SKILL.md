@@ -226,8 +226,8 @@ own model and effort, and `role: "review"`. Each grader gets:
 1. Run the harness yourself on the round's commit.
 2. If the correctness check fails, the round is rejected.
 3. Launch the reviewer graders, if any, each with its persona first, the
-   diff since `best.commit` and the benchmark result. Each returns PASS or FAIL with reasons, plus
-   feedback.
+   diff since `best.commit` and the benchmark result. Each returns PASS or
+   FAIL with reasons, plus feedback.
 
 Write every report to `rounds/<n>.md`.
 
