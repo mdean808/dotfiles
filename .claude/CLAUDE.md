@@ -52,17 +52,8 @@ When in doubt: delete the comment.
 
 - Spawn a subagent only when a search would pull many files into context
   and only the conclusion matters.
-- Implement in the main session, unless the plan has 3 or more slices. Then
-  implement each slice in its own subagent with a tight brief: the files, the
-  acceptance criteria, the decisions, and no re-exploring. Keep the main
-  session for my feedback and the adjustments I ask for.
-- Do not review changes unless the user asks for a review or a skill calls
-  for one. When a review happens, run it in one fresh subagent, never in the
-  session that wrote the code. One reviewer covers spec, standards and bugs.
-  Add a separate security reviewer only when the change touches auth,
-  payments, user data or permissions.
-- Give a subagent the paths and findings you already have. Ask it to report
-  conclusions with file paths and line numbers, not file contents.
+- Ask subagents to report conclusions with file paths and line numbers,
+  not file contents.
 
 ## Grilling
 
