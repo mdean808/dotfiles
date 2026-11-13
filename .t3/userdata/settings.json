@@ -1,6 +1,5 @@
 {
   "storageCleanup": {
-    "worktreeOnMerge": false,
     "worktreeOnDelete": true
   },
   "projectScriptOverrides": {
@@ -132,6 +131,8 @@
   },
   "projectSettingsFolded": true,
   "idleCompaction": "onReturn",
+  "snoozeLimitedThreads": true,
+  "autoResumeLimitedThreads": true,
   "providerInstances": {
     "codex": {
       "driver": "codex",
