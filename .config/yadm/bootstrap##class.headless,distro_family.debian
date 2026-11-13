@@ -13,14 +13,22 @@ step_packages() {
 step_sparse() {
   yadm sparse-checkout set --no-cone '/*' \
     '!/.config/autostart/' \
+    '!/.config/dms/' \
+    '!/.config/dsearch/' \
+    '!/.config/environment.d/' \
+    '!/.config/fontconfig/' \
     '!/.config/ghostty/' \
+    '!/.config/hypr/' \
+    '!/.config/hyprfm/' \
     '!/.config/keyd/' \
+    '!/.config/MangoHud/' \
     '!/.config/matugen/' \
     '!/.config/mimeapps.list' \
     '!/.config/smug/' \
     '!/.config/spicetify/' \
     '!/.config/vesktop/' \
     '!/.config/vicinae/' \
+    '!/.config/xdg-terminals.list' \
     '!/.config/yadm/bootstrap##*arch' \
     '!/.config/yadm/keybindings.sh' \
     '!/.config/yadm/keyd-sync.sh' \

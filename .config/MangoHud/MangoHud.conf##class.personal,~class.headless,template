@@ -1,0 +1,15 @@
+position=top-left
+font_size=18
+background_alpha=0.4
+toggle_hud=Shift_R+F12
+
+fps
+hide_engine_names
+frame_timing
+gpu_stats
+gpu_temp
+cpu_stats
+cpu_temp
+
+output_folder={{ env.HOME }}/mangohud-logs
+log_interval=0

@@ -16,10 +16,32 @@ step_packages() {
     neovim tmux lazygit github-cli glab zoxide ripgrep fd htop jq \
     docker docker-buildx docker-compose go uv bun pnpm \
     keyd ghostty fontconfig ttf-firacode-nerd spotify-launcher \
-    noto-fonts noto-fonts-emoji noto-fonts-cjk
+    noto-fonts noto-fonts-emoji noto-fonts-cjk \
+    hyprland uwsm greetd dux-shell quickshell accountsservice kmscon \
+    hyprpolkitagent xdg-desktop-portal-hyprland udisks2 gvfs \
+    hyprshot hyprpicker gpu-screen-recorder pipewire-pulse wireplumber playerctl \
+    matugen adw-gtk-theme papirus-icon-theme ttc-iosevka \
+    yazi btop loupe zathura poppler mpv \
+    yadm pacman-contrib cpupower
   if [ ! -d "/usr/lib/modules/$(uname -r)" ]; then
     stop 'the kernel was upgraded. Reboot, then run yadm bootstrap again'
   fi
+}
+
+step_multilib() {
+  if grep -qx '\[multilib\]' /etc/pacman.conf; then already 'the multilib repo is enabled'; fi
+  sudo sed -i '/^#\[multilib\]$/{s/^#//;n;s/^#//}' /etc/pacman.conf
+  grep -qx '\[multilib\]' /etc/pacman.conf || fail 'no commented [multilib] section in /etc/pacman.conf to enable'
+  sudo pacman -Sy
+}
+
+step_steam() {
+  if pacman -Q steam mangohud >/dev/null 2>&1; then already 'Steam and MangoHud are installed'; fi
+  _lib32=
+  for _driver in nvidia-utils vulkan-radeon vulkan-intel; do
+    if pacman -Q "$_driver" >/dev/null 2>&1; then _lib32="$_lib32 lib32-$_driver"; fi
+  done
+  sudo pacman -S --needed --noconfirm steam mangohud $_lib32
 }
 
 step_sparse() {
@@ -45,7 +67,7 @@ step_git_filters() {
   yadm gitconfig filter.spicetify.clean "$_clean"
 }
 
-aur_packages='zen-browser-bin slack-desktop spicetify-cli'
+aur_packages='zen-browser-bin slack-desktop spicetify-cli dux-greeter-bin dux-search-bin hyprfm-git papirus-folders'
 
 step_yay() {
   if have yay; then already "$(yay --version | cut -d' ' -f1-2) is installed"; fi
@@ -58,6 +80,12 @@ step_yay() {
 step_aur() {
   if pacman -Q $aur_packages >/dev/null 2>&1; then already 'all AUR packages are installed'; fi
   yay -S --needed --noconfirm $aur_packages
+}
+
+step_apple_fonts() {
+  if pacman -Q apple-fonts >/dev/null 2>&1; then already 'apple-fonts is installed'; fi
+  # AUR checksums lag Apple's unversioned downloads: https://aur.archlinux.org/packages/apple-fonts
+  yay -S --needed --noconfirm --mflags --skipinteg apple-fonts
 }
 
 step_go() {
@@ -99,6 +127,129 @@ step_vesktop() {
   yay -S --needed --noconfirm vesktop-bin
 }
 
+step_dms_hypr() {
+  _dir="$HOME/.config/hypr/dms"
+  _missing=
+  for _name in colors cursor layout outputs windowrules binds; do
+    [ -e "$_dir/$_name.lua" ] || _missing="$_missing $_name"
+  done
+  if [ -z "$_missing" ] && [ -e "$_dir/input.lua" ]; then
+    already 'the DMS Hyprland files exist'
+  fi
+  for _name in $_missing; do
+    DMS_PRIVESC=sudo dms setup "$_name" </dev/null
+  done
+  mkdir -p "$_dir"
+  [ -e "$_dir/input.lua" ] || : >"$_dir/input.lua"
+}
+
+step_greeter() {
+  if grep -q dms-greeter /etc/greetd/config.toml 2>/dev/null \
+    && systemctl is-enabled --quiet greetd; then
+    already 'greetd runs the DMS greeter'
+  fi
+  DMS_PRIVESC=sudo dms-greeter enable -y
+  sudo systemctl enable greetd
+  todo 'Reboot to log in through the DMS greeter'
+}
+
+step_greeter_sync() {
+  [ -f "$HOME/.local/state/dms/session.json" ] || skip 'log in to Hyprland once so DMS writes its state'
+  if dms-greeter status 2>/dev/null | grep -q 'All checks passed'; then
+    already 'the greeter has the DMS theme and settings'
+  fi
+  DMS_PRIVESC=sudo dms-greeter sync </dev/null
+}
+
+step_kmscon() {
+  _conf=/etc/kmscon/kmscon.conf
+  _kmscon=/usr/lib/systemd/system/kmsconvt@.service
+  _getty=/usr/lib/systemd/system/getty@.service
+  if printf '%s\n' font-name=Iosevka font-size=18 | cmp -s - "$_conf" \
+    && [ "$(readlink /etc/systemd/system/autovt@.service)" = "$_kmscon" ] \
+    && [ "$(readlink /etc/systemd/system/autovt@tty1.service)" = "$_getty" ]; then
+    already 'kmscon runs on the text consoles, with getty on tty1'
+  fi
+  sudo mkdir -p /etc/kmscon
+  printf '%s\n' font-name=Iosevka font-size=18 | sudo tee "$_conf" >/dev/null
+  sudo ln -sfn "$_kmscon" /etc/systemd/system/autovt@.service
+  sudo ln -sfn "$_getty" /etc/systemd/system/autovt@tty1.service
+  sudo systemctl daemon-reload
+}
+
+step_cpupower() {
+  _conf=/etc/default/cpupower-service.conf
+  _line="GOVERNOR='performance'"
+  if grep -qx "$_line" "$_conf" && systemctl is-enabled --quiet cpupower; then
+    already 'the CPU governor is set to performance'
+  fi
+  sudo sed -i "s/^#*[[:space:]]*GOVERNOR=.*/$_line/" "$_conf"
+  grep -qx "$_line" "$_conf" || fail "no GOVERNOR line in $_conf to set"
+  sudo systemctl enable --now cpupower
+}
+
+step_papirus_sudoers() {
+  _rule=/etc/sudoers.d/papirus-folders
+  _tmp=$(mktemp)
+  printf '%s ALL=(root) NOPASSWD: /usr/bin/papirus-folders\n' "$(id -un)" >"$_tmp"
+  if sudo cmp -s "$_tmp" "$_rule"; then
+    rm -f "$_tmp"
+    already 'papirus-folders runs without a password'
+  fi
+  sudo visudo -cf "$_tmp" || { rm -f "$_tmp"; fail 'visudo rejected the papirus-folders rule'; }
+  sudo install -m 0440 -o root -g root "$_tmp" "$_rule"
+  rm -f "$_tmp"
+}
+
+step_user_services() {
+  _wants="$HOME/.config/systemd/user/hyprland-session.target.wants/dms.service"
+  _disabled=
+  for _unit in dsearch.service hyprpolkitagent.service ssh-agent.socket; do
+    systemctl --user is-enabled --quiet "$_unit" || _disabled="$_disabled $_unit"
+  done
+  if [ -e "$_wants" ] && [ -z "$_disabled" ]; then
+    already 'the DMS, dsearch, polkit agent and ssh-agent user units are enabled'
+  fi
+  [ -e "$_wants" ] || systemctl --user add-wants hyprland-session.target dms.service
+  [ -z "$_disabled" ] || systemctl --user enable $_disabled
+}
+
+gtk_keys='gtk-theme icon-theme color-scheme font-name monospace-font-name'
+
+gtk_value() {
+  case $1 in
+    gtk-theme) echo adw-gtk3-dark ;;
+    icon-theme) echo Papirus-Dark ;;
+    color-scheme) echo prefer-dark ;;
+    font-name) echo 'SF Pro 11' ;;
+    monospace-font-name) echo 'Iosevka 11' ;;
+  esac
+}
+
+gtk_is_set() {
+  [ "$(gsettings get org.gnome.desktop.interface "$1")" = "'$(gtk_value "$1")'" ]
+}
+
+step_gtk() {
+  _stale=
+  for _key in $gtk_keys; do
+    gtk_is_set "$_key" || _stale="$_stale $_key"
+  done
+  [ -n "$_stale" ] || already 'the GTK theme, icons, dark scheme and fonts are set'
+  for _key in $_stale; do
+    gsettings set org.gnome.desktop.interface "$_key" "$(gtk_value "$_key")"
+  done
+  for _key in $gtk_keys; do
+    gtk_is_set "$_key" || fail 'gsettings did not save; is a D-Bus session running?'
+  done
+}
+
+step_uosc() {
+  if [ -d "$HOME/.config/mpv/scripts/uosc" ]; then already 'uosc is installed'; fi
+  _installer=$(curl -fsSL https://raw.githubusercontent.com/tomasklaen/uosc/HEAD/installers/unix.sh)
+  bash -c "$_installer"
+}
+
 manual_steps() {
   if is_class personal || is_class work; then return 0; fi
   todo 'Set the machine class for git identity: yadm config --add local.class personal && yadm alt'
@@ -107,8 +258,20 @@ manual_steps() {
 run sparse 'drop Debian-only, GNOME-only and class-specific files from the yadm checkout'
 run git_filters 'set the yadm clean filter for the Spicetify config'
 run packages 'upgrade the system and install pacman packages'
+personal_only multilib 'enable the multilib repo for Steam' packages
+personal_only steam 'install Steam and MangoHud' multilib
 run yay 'install yay from the AUR' packages
-run aur 'install Zen, Slack and Spicetify from the AUR' yay
+run aur 'install Zen, Slack, Spicetify, the DMS greeter and search, HyprFM and papirus-folders from the AUR' yay
+run apple_fonts 'install the Apple fonts from the AUR, skipping its stale checksums' yay
 personal_only vesktop 'install Vesktop from the AUR' yay
+run dms_hypr 'deploy the DMS Hyprland files that hyprland.lua loads' packages
+run greeter 'point greetd at the DMS greeter and enable it' aur
+run kmscon 'run kmscon on the text consoles with Iosevka, keeping getty on tty1' packages
+run cpupower 'set the performance CPU governor' packages
+run papirus_sudoers 'let the matugen hook set the Papirus folder color without a password' aur
+run user_services 'enable the DMS, dsearch, polkit agent and ssh-agent user units' packages aur
+run gtk 'set the GTK theme, icons, dark scheme and fonts' packages apple_fonts
+run uosc 'install the uosc interface for mpv' packages
 run zen_theme 'point Zen at the DMS colors' aur
+run greeter_sync 'sync the DMS theme and settings to the greeter' greeter
 common_steps
