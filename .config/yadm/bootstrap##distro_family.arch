@@ -127,6 +127,12 @@ step_vesktop() {
   yay -S --needed --noconfirm vesktop-bin
 }
 
+step_millennium() {
+  if pacman -Q millennium-git >/dev/null 2>&1; then already 'millennium-git is installed'; fi
+  yay -S --needed --noconfirm millennium-git
+  todo 'Install the Adwaita theme in Steam → Millennium → Themes; matugen writes its colors to Quick CSS'
+}
+
 step_dms_hypr() {
   _dir="$HOME/.config/hypr/dms"
   _missing=
@@ -264,6 +270,7 @@ run yay 'install yay from the AUR' packages
 run aur 'install Zen, Slack, Spicetify, the DMS greeter and search, HyprFM and papirus-folders from the AUR' yay
 run apple_fonts 'install the Apple fonts from the AUR, skipping its stale checksums' yay
 personal_only vesktop 'install Vesktop from the AUR' yay
+personal_only millennium 'install the Millennium Steam modding framework from the AUR' steam yay
 run dms_hypr 'deploy the DMS Hyprland files that hyprland.lua loads' packages
 run greeter 'point greetd at the DMS greeter and enable it' aur
 run kmscon 'run kmscon on the text consoles with Iosevka, keeping getty on tty1' packages

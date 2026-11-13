@@ -199,6 +199,26 @@ step_login_shell() {
   todo 'Log out and back in to start zsh as your login shell'
 }
 
+step_hid_apple() {
+  _conf=/etc/modprobe.d/hid_apple.conf
+  _line='options hid_apple fnmode=2'
+  _live=/sys/module/hid_apple/parameters/fnmode
+  _conf_ok=no
+  [ "$(cat "$_conf" 2>/dev/null)" = "$_line" ] && _conf_ok=yes
+  if [ "$_conf_ok" = yes ] && { [ ! -e "$_live" ] || [ "$(cat "$_live")" = 2 ]; }; then
+    already 'hid_apple sends F1-F12 first'
+  fi
+  if [ "$_conf_ok" = no ]; then
+    printf '%s\n' "$_line" | sudo tee "$_conf" >/dev/null
+    if have mkinitcpio; then
+      sudo mkinitcpio -P
+    elif have update-initramfs; then
+      sudo update-initramfs -u
+    fi
+  fi
+  [ ! -e "$_live" ] || echo 2 | sudo tee "$_live" >/dev/null
+}
+
 step_font_cache() { fc-cache -f; }
 
 manual_steps() { :; }
@@ -220,6 +240,7 @@ common_steps() {
   run pnpm 'install pnpm'
   run claude 'install Claude Code'
   desktop_only keyd 'install the keyd config and enable keyd'
+  run hid_apple 'make keyboards with an Apple USB ID send F1-F12 first'
   run docker_service 'start docker and add you to the docker group' docker packages
   run login_shell 'make zsh your login shell' packages
   desktop_only font_cache 'rebuild the font cache'
