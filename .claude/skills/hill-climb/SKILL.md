@@ -38,7 +38,8 @@ in. `<slug>` is a short kebab-case name for the target, such as
       "metric": { "name": "", "unit": "", "direction": "higher" | "lower",
                   "noise": 0 },
       "goal": 9.5,
-      "graders": [ { "id": "g1", "model": "", "effort": "" } ],
+      "graders": [ { "id": "g1", "model": "", "effort": "",
+                     "persona": "" } ],
       "implementer": { "model": "", "effort": "" },
       "howToRun": "commands to start the app or run the benchmark",
       "inspect": "screens, paths, queries or commands graders look at",
@@ -77,11 +78,18 @@ models it lists as options.
    - For a benchmark, the benchmark sets the score. Graders act as reviewers:
      each passes or fails the change for correctness and for gaming the
      benchmark, and gives feedback. Zero graders is allowed.
-6. **Implementer.** Which model and effort level. There is always exactly
+6. **Grader personas.** Who each grader judges as, so their opinions differ,
+   such as a developer, a tunnelling manager, a mining engineer or a
+   company owner. Each grader gets a different persona.
+   - For each label, draft a persona of 3–5 lines: the role, what they need
+     from the target, what they notice first, and what makes them mark it
+     down. Show the drafts and get approval.
+   - Skipping personas is allowed. Graders then judge as neutral experts.
+7. **Implementer.** Which model and effort level. There is always exactly
    one implementer.
-7. **Hard stop.** A date and time. The loop stops then even if the goal
+8. **Hard stop.** A date and time. The loop stops then even if the goal
    isn't met. Ask for the timezone if it's unclear.
-8. **When usage runs out.**
+9. **When usage runs out.**
    - **Continue after reset** (default): wait for the limit to reset, then
      carry on.
    - **Stop**: end the loop and write the report.
@@ -202,6 +210,10 @@ When it finishes:
 **Rubric targets.** Launch one task per grader, in parallel, each with its
 own model and effort, and `role: "review"`. Each grader gets:
 
+- its persona as the first lines of the task text: "You are <persona>.
+  Judge everything as this person would." The persona shapes what the
+  grader notices, how strictly it applies each criterion, and its feedback.
+  The rubric still sets the score;
 - `rubric.md`, `inspect`, and how to run the app;
 - for UI, the instruction to open and screenshot every listed screen and
   state with the preview tools, and to score what renders, not the code;
@@ -213,8 +225,8 @@ own model and effort, and `role: "review"`. Each grader gets:
 
 1. Run the harness yourself on the round's commit.
 2. If the correctness check fails, the round is rejected.
-3. Launch the reviewer graders, if any, with the diff since `best.commit`
-   and the benchmark result. Each returns PASS or FAIL with reasons, plus
+3. Launch the reviewer graders, if any, each with its persona first, the
+   diff since `best.commit` and the benchmark result. Each returns PASS or FAIL with reasons, plus
    feedback.
 
 Write every report to `rounds/<n>.md`.
