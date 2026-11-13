@@ -1,0 +1,30 @@
+[config]
+
+[templates.hyprfm]
+input_path = '~/.config/matugen/templates/hyprfm.toml'
+output_path = '~/.config/hyprfm/themes/matugen.toml'
+
+[templates.yazi]
+input_path = '~/.config/matugen/templates/yazi.toml'
+output_path = '~/.config/yazi/theme.toml'
+
+
+[templates.tmux]
+input_path = '~/.config/matugen/templates/tmux.conf'
+output_path = '~/.config/tmux/matugen.conf'
+post_hook = 'tmux source-file ~/.config/tmux/tmux.conf >/dev/null 2>&1 || true'
+
+[templates.nvim]
+input_path = '~/.config/matugen/templates/nvim.lua'
+output_path = '~/.local/share/nvim/matugen-palette.lua'
+post_hook = '~/.config/matugen/hooks/reload-nvim.sh'
+
+[templates.ghostty]
+input_path = '~/.config/matugen/templates/ghostty.conf'
+output_path = '~/.config/ghostty/matugen.ghostty'
+post_hook = 'pkill -USR2 -x ghostty || true'
+
+[templates.papirus]
+input_path = '~/.config/matugen/templates/papirus.txt'
+output_path = '~/.cache/matugen/papirus-primary.txt'
+post_hook = '~/.config/matugen/hooks/papirus-folders.py "{{colors.primary.default.hex}}"'

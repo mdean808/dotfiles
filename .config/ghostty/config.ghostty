@@ -38,3 +38,5 @@ keybind = ctrl+9=last_tab
 
 window-padding-y = 0
 window-padding-balance = true
+
+config-file = ?matugen.ghostty

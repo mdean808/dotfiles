@@ -21,9 +21,11 @@ while IFS= read -r line; do
   [[ $y != " " ]] && ((modified++))
 done <<< "$status"
 
-out="$branch"
-((staged)) && out+=" #[fg=#c3e88d]+$staged"
-((modified)) && out+=" #[fg=#ffc777]~$modified"
-((untracked)) && out+=" #[fg=#ff757f]?$untracked"
+read -r bg surface purple green yellow red <<< "$(tmux display-message -p '#{@thm_bg} #{@thm_surface} #{@thm_purple} #{@thm_green} #{@thm_yellow} #{@thm_red}')"
 
-printf '#[fg=#2f334d,bg=#1e2030]#[fg=#c099ff,bg=#2f334d] %s#[fg=#2f334d,bg=#1e2030] ' "$out"
+out="$branch"
+((staged)) && out+=" #[fg=$green]+$staged"
+((modified)) && out+=" #[fg=$yellow]~$modified"
+((untracked)) && out+=" #[fg=$red]?$untracked"
+
+printf "#[fg=$surface,bg=$bg]#[fg=$purple,bg=$surface] %s#[fg=$surface,bg=$bg] " "$out"
