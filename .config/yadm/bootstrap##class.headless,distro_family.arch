@@ -25,8 +25,11 @@ step_sparse() {
     '!/.config/autostart/' \
     '!/.config/ghostty/' \
     '!/.config/keyd/' \
+    '!/.config/matugen/' \
     '!/.config/mimeapps.list' \
     '!/.config/smug/' \
+    '!/.config/spicetify/' \
+    '!/.config/vesktop/' \
     '!/.config/vicinae/' \
     '!/.config/yadm/bootstrap##*debian' \
     '!/.config/yadm/bootstrap.debian' \
@@ -34,6 +37,7 @@ step_sparse() {
     '!/.config/yadm/keyd-sync.sh' \
     '!/.config/yadm/workspaces.sh' \
     '!/.local/bin/remote-dev' \
+    '!/.local/bin/spotify' \
     '!/.local/bin/startup-workspaces' \
     '!/.local/share/applications/' \
     '!/.local/share/gnome-shell/extensions/split-new-window@mdean808/'
