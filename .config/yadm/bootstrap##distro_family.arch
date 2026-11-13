@@ -65,6 +65,25 @@ step_pnpm() {
   fail 'pnpm is missing. It comes from the packages step'
 }
 
+step_zen_theme() {
+  _colors="$HOME/.config/dms/zen.css"
+  _ini="$HOME/.config/zen/profiles.ini"
+  [ -f "$_colors" ] || skip 'DMS has not written dms/zen.css yet'
+  [ -f "$_ini" ] || skip 'open Zen once so it creates a profile'
+  _profile=$(awk -F= '/^\[Install/ { i = 1 } i && $1 == "Default" { print $2; exit }' "$_ini")
+  [ -n "$_profile" ] || fail "no default profile in $_ini"
+  _dir="$HOME/.config/zen/$_profile"
+  _pref='user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);'
+  if [ "$(readlink "$_dir/chrome/userChrome.css")" = "$_colors" ] \
+    && grep -qxF "$_pref" "$_dir/user.js" 2>/dev/null; then
+    already 'Zen loads the DMS colors'
+  fi
+  mkdir -p "$_dir/chrome"
+  ln -sfn "$_colors" "$_dir/chrome/userChrome.css"
+  grep -qxF "$_pref" "$_dir/user.js" 2>/dev/null || printf '%s\n' "$_pref" >>"$_dir/user.js"
+  todo 'Restart Zen to load the DMS colors'
+}
+
 manual_steps() {
   if is_class personal || is_class work; then return 0; fi
   todo 'Set the machine class for git identity: yadm config --add local.class personal && yadm alt'
@@ -74,4 +93,5 @@ run sparse 'drop Debian-only and GNOME-only files from the yadm checkout'
 run packages 'upgrade the system and install pacman packages'
 run yay 'install yay from the AUR' packages
 run aur 'install Zen and Slack from the AUR' yay
+run zen_theme 'point Zen at the DMS colors' aur
 common_steps
