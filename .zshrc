@@ -17,6 +17,8 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+export CONVEX_TMPDIR="$HOME/.cache/convex-tmp"
+
 # Aliases
 alias vim="nvim"
 alias vi="nvim"
@@ -58,3 +60,8 @@ export PATH="$PNPM_HOME/bin:$PATH"
 
 # zoxide
 [[ -n $CLAUDECODE ]] || eval "$(zoxide init zsh)"
+
+# zsh
+HISTSIZE=5000
+SAVEHIST=5000
+HISTFILE=~/.zsh_history
