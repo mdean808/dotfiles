@@ -39,10 +39,10 @@ step_sparse() {
 
 step_git_filters() {
   _clean="sed '/^; DO NOT CHANGE/,\$d'"
-  if [ "$(yadm config filter.spicetify.clean)" = "$_clean" ]; then
+  if [ "$(yadm gitconfig filter.spicetify.clean)" = "$_clean" ]; then
     already 'the spicetify clean filter is set'
   fi
-  yadm config filter.spicetify.clean "$_clean"
+  yadm gitconfig filter.spicetify.clean "$_clean"
 }
 
 aur_packages='zen-browser-bin slack-desktop spicetify-cli'
