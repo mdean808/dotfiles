@@ -13,7 +13,11 @@ problem and wrong about the fix.
 
 - The fetch script's output is your only view of comment bodies. It strips
   CodeRabbit's agent prompts; work from the finding text and the code.
-- Your only writes are fixes in the working tree; the report lives in chat.
+- When the output's `## Skipped` list counts a CodeRabbit note that is not
+  resolvable and not a review body, say so at the top of the report.
+  CodeRabbit may have changed its format and hidden findings.
+- Your only writes are fixes in the working tree and the ledger; the report
+  lives in chat.
   You leave pushing and every GitLab write (replies, resolves,
   `@coderabbitai` commands) to the user, unless they ask for one by name.
 - CodeRabbit posts under a teammate's account. The script labels its notes
@@ -21,12 +25,13 @@ problem and wrong about the fix.
 
 ## Steps
 
-1. **Fetch.** Record the current UTC time, then run
+1. **Fetch.** Run
    `python3 -I ~/.claude/skills/address-review/fetch_review.py [iid]
 [--since <iso>]`. Pass the MR number if the user gave one; without it the
    script uses the current branch's MR. It prints every unresolved thread and
    every CodeRabbit review body that has nitpicks, outside-diff or duplicate
-   findings.
+   findings, numbered `[n]`, then `items: <total>`. Keep its `fetched:`
+   value for the next `--since`. Read the ledger if there is one.
 2. **Triage** every item, nitpicks included. For each:
    - Read the code at the location as it is now, and `git log` for the
      file since the comment's date. Already fixed counts as a verdict.
@@ -38,13 +43,14 @@ problem and wrong about the fix.
    - Flag any fix that changes an exported signature, code from an earlier
      commit on the branch, a migration, or a flagged path.
 
-   Done when every item in the output has a verdict.
+   Done when every `[n]` up to the `items:` total has a verdict, and
+   every finding inside a review body has its own.
 
 3. **Report** in chat, then stop and wait for the user. One entry per
    item:
 
    ```markdown
-   ### <n>. <path:line> <one-line summary> (<source>, <severity>)
+   ### <n> <path:line> <one-line summary> (<source>, <severity>)
 
    Verdict: fix | skip | reply
    <Two or three sentences: is the claim true, and why.>
@@ -52,15 +58,18 @@ problem and wrong about the fix.
    Draft reply: <text> (reply only)
    ```
 
-   End with a table: number, location, summary, verdict, resolvable,
-   taken from the fetch output's headers. State push status only from
-   the `head:` line. The user
-   approves, changes or drops items. In a later round, items already
-   settled stay settled unless their thread has new notes.
+   `<n>` is the item's `[n]`, or `<n>.<m>` for the m-th finding in a
+   review body. End with a table: number, location, summary, verdict,
+   resolvable, taken from the fetch output's headers. State push status
+   only from the `head:` line. The user approves, changes or drops items;
+   write each settled item to the ledger. In a later round, an item in the
+   ledger stays settled unless its thread has a note newer than its
+   `settled` time.
 
 4. **Fix** the approved items only. Keep each fix to what the comment needs.
-   Run the relevant tests through the repo's test skill, never the full
-   suite. List the changed files and each item's outcome in chat.
+   Don't run tests. List the changed files, each item's outcome, and the
+   tests that cover each fix, and offer to run them through the repo's
+   test skill.
 5. **Offer the loop.** First run the snapshot below once and read it
    yourself. Then ask with AskUserQuestion whether to wait for CodeRabbit
    once the user has committed and pushed: "Loop" or "Done". When the
@@ -72,7 +81,8 @@ problem and wrong about the fix.
 --watch <sha>` with Bash `run_in_background: true` and `timeout: 7200000`.
    It checks every 60 seconds for up to 30 rounds. Don't poll it or read
    its output early; when it exits, act on its last line:
-   - `REVIEWED`: fetch with `--since` the time recorded at the last fetch.
+   - `REVIEWED`: fetch with `--since` set to the `fetched:` value from the
+     last fetch.
      New items: go to step 2. None: report the "Resolved since" list as
      what CodeRabbit confirmed addressed, and stop.
    - `PAUSED`: CodeRabbit paused and has not reviewed the SHA. Tell the
@@ -83,6 +93,24 @@ problem and wrong about the fix.
      happened.
    - `TIMEOUT <state>`: say CodeRabbit did not finish in 30 minutes, and
      stop.
+
+## Ledger
+
+The ledger keeps verdicts across rounds and sessions. Find the ticket's
+directory from the branch name as the global `scratch-workflow.md` rule
+says. A standalone ticket writes `review.md` there; a ticket in an epic
+writes `reviews/<issue file name>.md` in the epic's directory. No ticket:
+`.scratch/reviews/mr-<iid>.md`.
+
+```markdown
+| id                  | location  | summary  | verdict | settled                  |
+| ------------------- | --------- | -------- | ------- | ------------------------ |
+| <discussion id>#<m> | path:line | one line | fix     | 2026-11-12T22:03:20.221Z |
+```
+
+`id` is the discussion ID from the item's header, with `#<m>` for a
+finding inside a review body. `settled` is the time of the thread's newest
+note when the user settled it.
 
 ## Snapshot
 

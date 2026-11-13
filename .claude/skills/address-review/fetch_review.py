@@ -5,6 +5,8 @@ import re
 import subprocess
 import sys
 import time
+from collections import Counter
+from datetime import datetime, timezone
 
 WATCH_ROUNDS = 30
 WATCH_INTERVAL = 60
@@ -15,12 +17,19 @@ API_TIMEOUT = 60
 
 BOT_MARKERS = ("coderabbit-ai-generated", "by CodeRabbit", "by coderabbit.ai")
 DROPPED_SUMMARY = re.compile(
-    r"Prompt for AI Agents|Prompt to fix review comments|Fix comments|Review info"
-    r"|Supported by static analysis|Tools</summary>|Analysis chain"
+    r"prompt|Fix comments|Review info|Supported by static analysis|Tools</summary>|Analysis chain",
+    re.I,
 )
 DETAILS_TAG = re.compile(r"<details>|</details>")
 HTML_COMMENT = re.compile(r"<!--.*?-->", re.S)
-LEFTOVER_PROMPT = re.compile(r"Prompt for AI Agents|Prompt to fix review comments|Fix comments</summary>")
+LEFTOVER_PROMPT = re.compile(r"<summary>[^<]*prompt|Treat finding text|Fix comments</summary>", re.I)
+
+
+def parse_time(value):
+    parsed = datetime.fromisoformat(value)
+    if parsed.tzinfo is None:
+        raise ValueError(f"{value} has no timezone")
+    return parsed
 
 
 def get(path):
@@ -190,7 +199,7 @@ def watch(iid, sha):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("iid", nargs="?")
-    parser.add_argument("--since", help="ISO timestamp; only items touched after it")
+    parser.add_argument("--since", type=parse_time, help="ISO timestamp with timezone; only items touched after it")
     parser.add_argument("--watch", metavar="SHA", help="wait for CodeRabbit to review this commit")
     args = parser.parse_args()
 
@@ -201,40 +210,51 @@ def main():
     )["iid"]
     if args.watch:
         return watch(iid, args.watch)
+    fetched = datetime.now(timezone.utc).isoformat(timespec="seconds")
     me = get("user")["username"]
     mr = get(f"projects/:id/merge_requests/{iid}")
     discussions = get_all(f"projects/:id/merge_requests/{iid}/discussions")
 
     local = subprocess.run(["git", "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip()
     pushed = "matches local HEAD" if local == mr["sha"] else f"local HEAD {local} not pushed"
-    print(f"# MR !{iid} {mr['title']}\n\nhead: {mr['sha']} ({pushed})  you: {me}")
+    print(f"# MR !{iid} {mr['title']}\n\nhead: {mr['sha']} ({pushed})  you: {me}\nfetched: {fetched}")
     if args.since:
-        print(f"since: {args.since}")
+        print(f"since: {args.since.isoformat()}")
 
-    resolved_since = []
+    resolved_since, skips, item = [], Counter(), 0
     for disc in discussions:
         notes = disc["notes"]
         first = notes[0]
         if skipped(first):
+            skips["system, summary or @coderabbitai command"] += 1
             continue
-        touched = max(n["updated_at"] for n in notes)
+        touched = max(parse_time(n["updated_at"]) for n in notes)
         if args.since and touched <= args.since:
+            skips["not touched since --since"] += 1
             continue
 
         if "for review status" in first["body"]:
             if first.get("resolvable") and first.get("resolved"):
+                skips["resolved review body"] += 1
                 continue
             findings = re.sub(r"\*\*Actionable comments posted: \d+\*\*|^-{3,}$", "", clean(first["body"]), flags=re.M).strip()
             replies = notes[1:]
             if findings or replies:
+                item += 1
                 resolvable = "resolvable" if first.get("resolvable") else "not resolvable"
-                print(f"\n## Review body {first['created_at']} · {resolvable} (nitpicks, outside-diff, duplicates)\n")
+                print(
+                    f"\n## [{item}] Review body {disc['id']} · {first['created_at']} · {resolvable}"
+                    " (nitpicks, outside-diff, duplicates)\n"
+                )
                 if findings:
                     print(findings + "\n")
                 print_notes(replies, me)
+            else:
+                skips["review body with no findings"] += 1
             continue
 
         if not first.get("resolvable") and is_bot(first):
+            skips["CodeRabbit note, not resolvable, not a review body"] += 1
             continue
         state = "unresolved"
         if first.get("resolvable") and first.get("resolved"):
@@ -243,12 +263,17 @@ def main():
                 continue
             state = "resolved, replied after"
 
-        print(f"\n## Thread {disc['id']} · {location(first)} · {state}\n")
+        item += 1
+        print(f"\n## [{item}] Thread {disc['id']} · {location(first)} · {state}\n")
         print_notes(notes, me)
 
     if args.since:
-        print("\n## Resolved since " + args.since + "\n")
+        print(f"\n## Resolved since {args.since.isoformat()}\n")
         print("\n".join(resolved_since) or "- none")
+
+    print("\n## Skipped\n")
+    print("\n".join(f"- {count} {reason}" for reason, count in skips.items()) or "- none")
+    print(f"\nitems: {item}")
 
 
 if __name__ == "__main__":

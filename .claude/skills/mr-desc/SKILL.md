@@ -18,7 +18,7 @@ The git diff shows exactly what changed; do not repeat it.
 
 ## Steps
 
-1. **Ticket.** Take the key from the branch name, or ask
+1. **Ticket.** Take the key from the branch name, or ask.
    Find the ticket's files as the global `scratch-workflow.md` rule
    says: a directory from
    `find .scratch -maxdepth 1 -type d -iname '<key>-<n>-*'`, else an epic's
@@ -41,7 +41,11 @@ The git diff shows exactly what changed; do not repeat it.
    to step 3. Cut what you can't point to. Cut anything from the scratch
    notes that is not for the team: agent assumptions, private details,
    secrets. If the output file exists, ask before replacing it.
-6. **Reply** as below, and nothing else.
+6. **Read it back.** Read the title, summary and each bullet as if saying
+   them to a teammate at their desk. Rewrite any sentence you'd run out of
+   breath on, any sentence joined with a semicolon, and any run of
+   sentences with the same length and shape.
+7. **Reply** as below, and nothing else.
 
 ## Template
 
@@ -78,20 +82,29 @@ The git diff shows exactly what changed; do not repeat it.
 **Title.** The key and what the MR does, sentence case. A bug names the
 fix: `GRO-12 Fix the Profile project dropdown for masquerading superusers`.
 
-**Summary.** One sentence on what a user would notice, and the flag if one
-gates it. A second only for measured proof.
+**Summary.** A short paragraph of two or three sentences. Start with the
+problem the ticket describes, in its words. Then say what a user will
+notice now, and end with the flag if one gates it. Add a sentence only for
+measured proof. If the ticket states no problem, skip it; never invent a
+reason. Let sentence length vary, and never join clauses with a semicolon.
 
 ```markdown
-Bad: Project admins can now version frameworks, which means past
-assessments stay accurate after a formula changes.
-Good: Project admins can turn RMC frameworks on or off and keep editing one
-after windows are assessed with it, behind flag TT-1164.
+Bad: Project Overview no longer shows the report settings card, and Edit
+Project calls the group Report Content; a Rock Mass Classification
+Frameworks card takes its place behind flag TT-1164.
+
+Good: Report settings sat on Project Overview under the label Report
+Aesthetic, which users found unclear and out of place. They now live only
+in Edit Project, as Report Content. Behind flag TT-1164, the project's RMC
+frameworks take the card's place.
 ```
 
 **Changes.** One bullet per feature, named the way a reviewer would sum it
-up out loud. One sentence, starting with a verb. At most five. Nothing the
-diff or ticket already shows: no endpoints, no fields, no rules for edge
-cases. Commits outside the ticket go in a final `Also:` bullet.
+up out loud. Start with a verb. One idea per bullet; a few words is fine.
+Name the main screen a change touches, not every one. At most five.
+Nothing the diff or ticket already shows: no endpoints, no fields, no
+rules for edge cases. Commits outside the ticket go in a final `Also:`
+bullet, however big they are.
 
 ```markdown
 Bad:
@@ -110,6 +123,17 @@ Good:
   assessed windows instead of deleting it.
 - Turn built-in RMR89, Q, Q' and GSI on or off per project.
 - Fix saving the active project while masquerading.
+```
+
+```markdown
+Bad:
+
+- Speed up selecting, filtering and searching on long capture lists in All
+  Data, Browse by location, the Add Data modal and the upload page.
+
+Good:
+
+- Also: speed up long capture lists, such as All Data's.
 ```
 
 **Results.** Only with measurements in a results file. One sentence on the
@@ -133,10 +157,13 @@ tests pass.", "<n> tests fail: <which>.", or nothing. Never list files.
 Covered by Django API tests and Cypress component tests. All tests pass.
 ```
 
+**Checklist.** Tick the Cypress line only when the step 3 answer is "All
+green"; otherwise leave it `[ ]`.
+
 **Writing.** Wrap at 80 characters. Write a flag as "flag GRO-77". Use the
-terms in `CONTEXT.md`. Never write: implementation history, decisions made
-while building, copy changes, what stayed the same, file walkthroughs, or
-the GitLab template's checklist.
+terms in `.local/CONTEXT.md`. Never write: implementation history,
+decisions made while building, copy changes, what stayed the same, or file
+walkthroughs.
 
 ## Reply
 
