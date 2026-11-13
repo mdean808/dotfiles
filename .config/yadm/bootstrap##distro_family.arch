@@ -130,7 +130,7 @@ step_vesktop() {
 step_millennium() {
   if pacman -Q millennium-git >/dev/null 2>&1; then already 'millennium-git is installed'; fi
   yay -S --needed --noconfirm millennium-git
-  todo 'Install the Adwaita theme in Steam → Millennium → Themes; matugen writes its colors to Quick CSS'
+  todo 'Restart Steam after the next matugen run to load the Quick CSS colors'
 }
 
 step_dms_hypr() {
