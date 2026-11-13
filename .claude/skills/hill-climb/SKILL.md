@@ -53,7 +53,9 @@ in. `<slug>` is a short kebab-case name for the target, such as
       "phase": "setup" | "implementing" | "grading" | "done" | "stopped",
       "openTasks": { "<taskId>": "implementer" | "g1" },
       "steering": [ "user steering messages, verbatim, in order" ],
-      "status": "setup" | "running" | "done" | "stopped"
+      "startAt": "ISO 8601 with offset, or null to start now",
+      "scheduledTaskId": "",
+      "status": "setup" | "scheduled" | "running" | "done" | "stopped"
     }
 
 Write `state.json` before launching any task and after every result. A
@@ -93,6 +95,8 @@ models it lists as options.
    - **Continue after reset** (default): wait for the limit to reset, then
      carry on.
    - **Stop**: end the loop and write the report.
+10. **Start time.** Now (default), or a date and time. It must be before
+    the hard stop.
 
 If the user picks **Continue after reset**, check that
 `~/.t3/userdata/settings.json` contains `"autoResumeLimitedThreads": true`.
@@ -132,14 +136,29 @@ Build the benchmark before anything else:
 
 Show the rubric or benchmark to the user and get approval.
 
+### Scheduled start
+
+If `startAt` is null, go straight to [Baseline and go](#baseline-and-go).
+
+Otherwise:
+
+1. Call `schedule_task` with `schedule: {type: "once", runAt: <startAt>}`,
+   `bindToCurrentThread: true`, title `hill-climb <slug>`, and the prompt:
+   "Use the hill-climb skill. Start the scheduled hill-climb in
+   `.scratch/hill-climb-<slug>/`: run Baseline and go, then the loop. Ask
+   no questions."
+2. Record `scheduledTaskId`, and set `status: scheduled`.
+3. Tell the user setup is done, the next run time `schedule_task` returned,
+   and that the loop starts on its own then. If T3 is closed at that time,
+   the start runs when T3 next opens. End the turn.
+
 ### Baseline and go
 
 1. Create `branch` from the current commit, and record `baseCommit`.
 2. Grade the base commit as round 0, the same way as any round. Record it
    as `best`.
-3. Show the user the round-0 scores and a summary of every setting, and
-   say: "From here the loop runs on its own. Send a message to steer it, or
-   say stop."
+3. Post the round-0 scores and a summary of every setting, and say: "From
+   here the loop runs on its own. Send a message to steer it, or say stop."
 4. Set `status: running`, `phase: implementing`, `round: 1`, and start the
    loop. Do not wait for a reply.
 
@@ -160,7 +179,9 @@ result wakes the thread.
 **On every wake**, before anything else:
 
 1. Read `state.json`. If `status` is `done` or `stopped`, reply in one line
-   and end the turn.
+   and end the turn. If `status` is `scheduled` and this is the scheduled
+   start, go to [Baseline and go](#baseline-and-go). A user message before
+   the start is steering, handled as below.
 2. Check the time with `date`. If it is past `stopAt`, go to
    [Finish](#finish) with reason "hard stop".
 3. If the wake is a user message, handle it as described in
@@ -283,6 +304,10 @@ Tasks already running finish as they are. Steering takes effect from the
 next launch.
 
 ### Finish
+
+If `status` is `scheduled`, the loop never started: delete the scheduled
+start with `delete_scheduled_task`, set `status: stopped`, reply in one
+line, and stop here. Otherwise:
 
 1. Cancel every task in `openTasks` with `task_cancel`.
 2. Run `git reset --hard <best.commit>` on `branch`, so the branch ends on
