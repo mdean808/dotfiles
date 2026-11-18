@@ -2,10 +2,6 @@
 
 These instructions override skills, plugins, and repository CLAUDE.md.
 
-## Making Changes
-
-Do not make changes to a file or system unless explicitly asked to by the user.
-
 ## External Tools
 
 Do not write to external tools unless specifically asked by the user to.
