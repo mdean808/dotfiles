@@ -117,5 +117,7 @@
     "dms_settings_search": {
       "trigger": "?"
     }
-  }
+  },
+  "dankLauncherV2IncludeFilesInAll": true,
+  "dankLauncherV2IncludeFoldersInAll": true
 }
