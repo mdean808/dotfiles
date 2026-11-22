@@ -75,6 +75,7 @@ step_git_filters() {
   yadm gitconfig filter.heroic.clean "$heroic_clean"
   yadm gitconfig filter.heroic.smudge "$heroic_smudge"
   if grep -qF @HOME@ "$heroic_config" 2>/dev/null; then
+    rm "$heroic_config"
     yadm checkout -- "$heroic_config"
   fi
 }
