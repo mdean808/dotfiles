@@ -55,16 +55,20 @@ step_sparse() {
     '!/.local/bin/startup-workspaces' \
     '!/.local/share/applications/local.ghostty.startup.desktop' \
     '!/.local/share/gnome-shell/extensions/split-new-window@mdean808/'
-  is_class personal || set -- "$@" '!/.config/vesktop/'
+  is_class personal || set -- "$@" '!/.config/vesktop/' '!/.config/heroic/'
   yadm sparse-checkout set --no-cone "$@"
 }
 
+spicetify_clean="sed '/^; DO NOT CHANGE/,\$d'"
+heroic_clean="sed 's/\"steamGridDbApiKey\": \"[^\"]*\"/\"steamGridDbApiKey\": \"\"/'"
+
 step_git_filters() {
-  _clean="sed '/^; DO NOT CHANGE/,\$d'"
-  if [ "$(yadm gitconfig filter.spicetify.clean)" = "$_clean" ]; then
-    already 'the spicetify clean filter is set'
+  if [ "$(yadm gitconfig filter.spicetify.clean)" = "$spicetify_clean" ] \
+    && [ "$(yadm gitconfig filter.heroic.clean)" = "$heroic_clean" ]; then
+    already 'the Spicetify and Heroic clean filters are set'
   fi
-  yadm gitconfig filter.spicetify.clean "$_clean"
+  yadm gitconfig filter.spicetify.clean "$spicetify_clean"
+  yadm gitconfig filter.heroic.clean "$heroic_clean"
 }
 
 aur_packages='zen-browser-bin slack-desktop spicetify-cli dux-greeter-bin dux-search-bin hyprfm-git papirus-folders'
@@ -125,6 +129,12 @@ step_zen_theme() {
 step_vesktop() {
   if pacman -Q vesktop-bin >/dev/null 2>&1; then already 'vesktop-bin is installed'; fi
   yay -S --needed --noconfirm vesktop-bin
+}
+
+step_heroic() {
+  if pacman -Q heroic-games-launcher-bin >/dev/null 2>&1; then already 'heroic-games-launcher-bin is installed'; fi
+  yay -S --needed --noconfirm heroic-games-launcher-bin
+  todo 'Set the SteamGridDB API key in Heroic, since yadm strips it'
 }
 
 step_dms_hypr() {
@@ -264,6 +274,7 @@ run yay 'install yay from the AUR' packages
 run aur 'install Zen, Slack, Spicetify, the DMS greeter and search, HyprFM and papirus-folders from the AUR' yay
 run apple_fonts 'install the Apple fonts from the AUR, skipping its stale checksums' yay
 personal_only vesktop 'install Vesktop from the AUR' yay
+personal_only heroic 'install Heroic Games Launcher from the AUR' yay
 run dms_hypr 'deploy the DMS Hyprland files that hyprland.lua loads' packages
 run greeter 'point greetd at the DMS greeter and enable it' aur
 run kmscon 'run kmscon on the text consoles with Iosevka, keeping getty on tty1' packages

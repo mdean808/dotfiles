@@ -1,0 +1,11 @@
+#!/bin/sh
+
+for _path in .config/dms/plugins .config/dms/themes .config/dms/plugin_settings.json; do
+  [ -e "$HOME/$_path" ] || continue
+  git add -- "$HOME/$_path" || exit 1
+  if git diff --cached -U0 -- "$HOME/$_path" | grep -iqE '^\+.*(api_?key|token|secret|password)'; then
+    printf 'yadm pre_commit: %s may hold a secret. Check it and commit again.\n' "$_path" >&2
+    git reset --quiet -- "$HOME/$_path"
+    exit 1
+  fi
+done

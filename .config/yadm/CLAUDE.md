@@ -109,8 +109,13 @@ desktop work, and for `work` to run scratch.
 
 ## Hooks and scratch
 
-The hooks source `lib.sh` and print the same step lines as the bootstrap.
+The pull and push hooks source `lib.sh` and print the same step lines as
+the bootstrap.
 
+- `hooks/pre_commit`: stages `~/.config/dms/plugins`, `~/.config/dms/themes`
+  and `~/.config/dms/plugin_settings.json` when they exist, so DMS plugins
+  and themes are tracked without a `yadm add`. It aborts the commit if the
+  staged lines name a key, token, secret or password.
 - `hooks/post_pull`: on desktops, runs `keyd-sync.sh`, `keybindings.sh` and
   `workspaces.sh` if present; pulls `~/.config/nvim`; on `work`, runs
   `scratch.sh pull`.

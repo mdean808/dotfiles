@@ -37,6 +37,7 @@ step_sparse() {
     '!/.config/smug/' \
     '!/.config/spicetify/' \
     '!/.config/vesktop/' \
+    '!/.config/heroic/' \
     '!/.config/vicinae/' \
     '!/.config/xdg-terminals.list' \
     '!/.config/yadm/bootstrap##*debian' \
