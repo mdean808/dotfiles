@@ -15,7 +15,7 @@
     "customWinePaths": [],
     "defaultInstallPath": "/mnt/games/HeroicGamesLibrary",
     "libraryTopSection": "disabled",
-    "defaultSteamPath": "/home/morgan/.local/share/Steam",
+    "defaultSteamPath": "@HOME@/.local/share/Steam",
     "defaultWinePrefix": "/mnt/games/HeroicGamesLibrary/Prefixes",
     "defaultWinePrefixDir": "/mnt/games/HeroicGamesLibrary/Prefixes",
     "hideChangelogsOnStartup": false,
@@ -30,7 +30,7 @@
     "wineCrossoverBottle": "Heroic",
     "winePrefix": "/mnt/games/HeroicGamesLibrary/Prefixes/shared",
     "wineVersion": {
-      "bin": "/home/morgan/.config/heroic/tools/proton/Proton-CachyOS-latest/proton",
+      "bin": "@HOME@/.config/heroic/tools/proton/Proton-CachyOS-latest/proton",
       "name": "Proton-CachyOS-latest",
       "type": "proton"
     },

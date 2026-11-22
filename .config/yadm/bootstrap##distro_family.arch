@@ -60,15 +60,23 @@ step_sparse() {
 }
 
 spicetify_clean="sed '/^; DO NOT CHANGE/,\$d'"
-heroic_clean="sed 's/\"steamGridDbApiKey\": \"[^\"]*\"/\"steamGridDbApiKey\": \"\"/'"
+heroic_clean="sed -e 's/\"steamGridDbApiKey\": \"[^\"]*\"/\"steamGridDbApiKey\": \"\"/' -e \"s|\$HOME|@HOME@|g\""
+heroic_smudge="sed \"s|@HOME@|\$HOME|g\""
+heroic_config="$HOME/.config/heroic/config.json"
 
 step_git_filters() {
   if [ "$(yadm gitconfig filter.spicetify.clean)" = "$spicetify_clean" ] \
-    && [ "$(yadm gitconfig filter.heroic.clean)" = "$heroic_clean" ]; then
-    already 'the Spicetify and Heroic clean filters are set'
+    && [ "$(yadm gitconfig filter.heroic.clean)" = "$heroic_clean" ] \
+    && [ "$(yadm gitconfig filter.heroic.smudge)" = "$heroic_smudge" ] \
+    && ! grep -qF @HOME@ "$heroic_config" 2>/dev/null; then
+    already 'the Spicetify and Heroic filters are set'
   fi
   yadm gitconfig filter.spicetify.clean "$spicetify_clean"
   yadm gitconfig filter.heroic.clean "$heroic_clean"
+  yadm gitconfig filter.heroic.smudge "$heroic_smudge"
+  if grep -qF @HOME@ "$heroic_config" 2>/dev/null; then
+    yadm checkout -- "$heroic_config"
+  fi
 }
 
 aur_packages='zen-browser-bin slack-desktop spicetify-cli dux-greeter-bin dux-search-bin hyprfm-git papirus-folders'
