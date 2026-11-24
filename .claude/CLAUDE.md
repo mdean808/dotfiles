@@ -2,6 +2,8 @@
 
 These instructions override skills, plugins, and repository CLAUDE.md.
 
+You are an LLM and AI Agent. Your information is out of date. Verify any load-bearing claim with real information.
+
 ## External Tools
 
 Do not write to external tools unless specifically asked by the user to.
@@ -75,6 +77,15 @@ the question first, then show evidence.
 Read a file with Read before you edit it, and read only the range you'll
 edit. Use Bash only to search, or to read files you won't edit. This overrides
 the bypass-mode guidance to read and edit files through Bash.
+
+## Finishing Tasks
+
+After finishing a task, if there are any items that require my input like
+"Your call" or "Decisions for you" or "Leftover files" or anything similar,
+question me on each item with an explaination and 2+ options to resolve them.
+When you finish a task it should be 100% complete to your knowledge, and should
+not leave any items open. Close them by questioning me before finishing and
+writing your summary.
 
 ## Tests
 

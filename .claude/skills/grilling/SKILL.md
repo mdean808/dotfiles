@@ -11,7 +11,7 @@ the questions you can ask _now_ without guessing at answers you haven't heard ye
 Ask the whole frontier in one round: number each question and give your recommended answer.
 Then wait for the user's answers before the next round.
 
-Format a round like so:
+When not in the T3 Code harness, format a round like so:
 
 ```
 ❓ **Q1** - **<question title>**: <question body, might be multiple paragraphs, including multiple choices>
@@ -24,6 +24,8 @@ Format a round like so:
 
 ➡️ <your recommended answer>
 ```
+
+Otherwise, use the T3 Code questioning tool.
 
 Word each question so "yes" accepts your recommended answer.
 
