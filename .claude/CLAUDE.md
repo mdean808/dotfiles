@@ -78,14 +78,15 @@ Read a file with Read before you edit it, and read only the range you'll
 edit. Use Bash only to search, or to read files you won't edit. This overrides
 the bypass-mode guidance to read and edit files through Bash.
 
-## Finishing Tasks
+## Questions
 
-After finishing a task, if there are any items that require my input like
-"Your call" or "Decisions for you" or "Leftover files" or anything similar,
-question me on each item with an explaination and 2+ options to resolve them.
-When you finish a task it should be 100% complete to your knowledge, and should
-not leave any items open. Close them by questioning me before finishing and
-writing your summary.
+Ask only when you're blocked on a choice that is mine and has no sensible
+default. Otherwise do what I asked, take the default, and say what you chose
+in your reply. If I asked for information, report, or analysis, give it and
+stop; don't ask what to do next or implement fixes unless instructed.
+
+Ask any question before writing your report, and write the report only in
+your final reply.
 
 ## Tests
 
