@@ -22,9 +22,22 @@ session writes two files:
   code must keep (security, scoping, data integrity, flags), plus the test
   list. It is kept current: when feedback reverses a decision, edit or strike
   the entry in the same step. Never leave a stale one.
+  Nothing else goes in it. A constraint the user didn't settle is not a
+  constraint. Findings, research and observations go where facts go (below).
 - **Plan**: thin vertical slices, each testable on its own, with blocking
   edges. It is disposable. Nobody checks the code against it, and it is not
   updated as the work drifts.
+
+### Where facts go
+
+A fact is something you checked: a file's layout, a code path, a measured
+behaviour, a format from a cited source. Each states its source.
+
+- A fact one slice depends on goes in that slice of the plan.
+- A fact about the problem as a whole goes under `## Findings` in the
+  ticket file (`ticket.md`, or the epic's `issues/` file), after the tracker
+  snapshot. The snapshot above it stays verbatim.
+- A fact the ticket doesn't need goes nowhere. Say it in chat if it matters.
 
 Skills that ask for a spec (`/implement-spec`, `/to-tickets`) take the
 decisions file as the spec. `/to-tickets` writes its slices into the plan, not
@@ -129,7 +142,9 @@ Every file opens with frontmatter:
 
 - Conversation appends under a `## Comments` heading at the bottom.
 - Only text the user typed may be attributed to them, quoted verbatim. Your own
-  reading goes under `## Agent assumptions (unconfirmed)`.
+  reading of what they want goes under `## Agent assumptions (unconfirmed)`
+  in the ticket file, never in the decisions file. A fact you checked is not
+  an assumption; it goes where facts go.
 
 ## Change notes
 

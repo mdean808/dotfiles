@@ -265,6 +265,9 @@ the global `scratch-workflow.md` rule lays out. Never write a spec.
   `decisions/<KEY>-<n>-<slug>.md` in an epic. Record each settled decision
   with its reason, the constraints the code must keep, and the test list.
   Quote the user only where they typed something other than a plain yes.
+  Nothing else. Facts found during grilling go in the plan slice that needs
+  them, or under `## Findings` in the ticket file, as `scratch-workflow.md`
+  says.
 - **Plan**: `plan.md`, or `plans/<KEY>-<n>-<slug>.md` in an epic. Write thin
   vertical slices with blocking edges, and only when the work needs more than
   one slice. Offer `/to-tickets` instead if the user wants tracker
