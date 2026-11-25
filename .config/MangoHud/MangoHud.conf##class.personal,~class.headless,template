@@ -10,6 +10,8 @@ gpu_stats
 gpu_temp
 cpu_stats
 cpu_temp
+ram
+procmem
 
 output_folder={{ env.HOME }}/mangohud-logs
 log_interval=0
