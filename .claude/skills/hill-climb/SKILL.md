@@ -287,17 +287,18 @@ no new round", so the final pass runs even after it.
 1. **Inventory and structure.** Launch one task with the implementer's
    model, `role: "review"`:
    - Compare `map-baseline.md` with `map.md` and with the code at the
-     last commit. Every baseline entry that is gone, and that no
-     `rounds/*/implementer.md` lists as removed on purpose, is a blocker.
-     Write `rounds/final/inventory.md`.
+     last commit. List every baseline entry that is gone, and say for
+     each whether a `rounds/*/implementer.md` lists it as removed on
+     purpose, with the round and its reason. Write
+     `rounds/final/inventory.md`. It is a record, not findings.
    - Review the diff from `baseCommit` for structure: duplicated
      components or logic that should share one, components that should
      be reused from elsewhere in the repo, dead code left by the run, and
      files that do several jobs. Write `rounds/final/structure.md`, with
      findings in the reviewer format.
-2. **Cleanup.** Launch one implementer task, as in a round, with both
-   files as its findings: restore unexplained removals, then fix the
-   structure findings without changing behaviour. Commit message
+2. **Cleanup.** Launch one implementer task, as in a round, with
+   `structure.md` as its findings: fix them without changing behaviour.
+   It restores nothing that `inventory.md` lists. Commit message
    `hill-climb(<slug>): final`.
 3. Go to [Finish](#finish).
 
@@ -314,7 +315,8 @@ line, and stop. Otherwise:
 2. Write `report.md`:
    - why the loop ended, and the last commit;
    - per round: commit, findings by severity, fixed and regressed;
-   - every feature removed, on purpose or not;
+   - every feature removed, on purpose or not, from
+     `rounds/final/inventory.md`;
    - open blocker and major findings, with their file paths;
    - what tests ran and their result in the last round;
    - data the run wrote outside the branch, such as seeded or changed
