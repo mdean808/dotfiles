@@ -10,7 +10,8 @@ The git diff shows exactly what changed; do not repeat it.
 
 ## Rules
 
-- Write only the output file. No commits, pushes, MRs or tracker writes.
+- Write no files. No commits, pushes, MRs or tracker writes. The
+  description goes in the reply only.
 - Take the tracker and `<KEY>` from the "Issue tracker" table in
   `CLAUDE.local.md`.
 - Run paths from `git rev-parse --show-toplevel`.
@@ -26,10 +27,6 @@ The git diff shows exactly what changed; do not repeat it.
    `grep -rliE '^(issue|linear): *<key>-<n> *$' .scratch/*/issues/`.
    None: ask. Never guess one.
 
-   A standalone ticket's output file is `mr.md` in its directory. A ticket
-   in an epic writes `mrs/<name>.md` in the epic's directory, where `<name>`
-   is its `issues/` file's name.
-
 2. **Gather.** Read `git log main..HEAD`, `git diff main...HEAD` (every
    hunk), `git status`, and the ticket's scratch files (in an epic: its
    `issues/`, `decisions/` and `plans/` files, and its section of
@@ -40,7 +37,7 @@ The git diff shows exactly what changed; do not repeat it.
 5. **Check** every sentence against a hunk, a results file or the answer
    to step 3. Cut what you can't point to. Cut anything from the scratch
    notes that is not for the team: agent assumptions, private details,
-   secrets. If the output file exists, ask before replacing it.
+   secrets.
 6. **Read it back.** Read the title, summary and each bullet as if saying
    them to a teammate at their desk. Rewrite any sentence you'd run out of
    breath on, any sentence joined with a semicolon, and any run of
@@ -167,12 +164,12 @@ walkthroughs.
 
 ## Reply
 
+The description in a fenced code block tagged `markdown`, so it copies as
+raw text. Use a four-backtick fence if the description contains a
+three-backtick one.
+
+Above the block, only when it applies:
+
 ```markdown
-Wrote `<output file>`.
-
 - Uncommitted changes, left out: <files>.
-
-<markdown code block containing result>
 ```
-
-Include a bullet only when it applies.
