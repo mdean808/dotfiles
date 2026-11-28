@@ -114,7 +114,9 @@ the bootstrap.
 
 - `hooks/pre_commit`: stages `~/.config/dms/plugins`, `~/.config/dms/themes`
   and `~/.config/dms/plugin_settings.json` when they exist, so DMS plugins
-  and themes are tracked without a `yadm add`. It aborts the commit if the
+  and themes are tracked without a `yadm add`. It skips plugins that are
+  git clones; the Arch bootstrap's `step_dms_plugins` clones those. It
+  aborts the commit if the
   staged lines name a key, token, secret or password.
 - `hooks/post_pull`: on desktops, runs `keyd-sync.sh`, `keybindings.sh` and
   `workspaces.sh` if present; pulls `~/.config/nvim`; on `work`, runs

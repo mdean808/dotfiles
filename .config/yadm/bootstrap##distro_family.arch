@@ -162,6 +162,24 @@ step_dms_hypr() {
   [ -e "$_dir/input.lua" ] || : >"$_dir/input.lua"
 }
 
+step_dms_plugins() {
+  _dir="$HOME/.config/dms/plugins"
+  _cloned=
+  while read -r _name _url; do
+    [ -e "$_dir/$_name/.git" ] && continue
+    rmdir "$_dir/$_name" 2>/dev/null || :
+    git clone --quiet "$_url" "$_dir/$_name"
+    _cloned="$_cloned $_name"
+  done <<EOF
+calculator https://github.com/rochacbruno/DankCalculator
+commandRunner https://github.com/devnullvoid/dms-command-runner
+dmsAirDrop https://github.com/Kratospidey/dms-airdrop
+emojiLauncher https://github.com/devnullvoid/dms-emoji-launcher
+EOF
+  [ -n "$_cloned" ] || already 'the DMS plugins are cloned'
+  note "cloned$_cloned"
+}
+
 step_greeter() {
   if grep -q dms-greeter /etc/greetd/config.toml 2>/dev/null \
     && systemctl is-enabled --quiet greetd; then
@@ -285,6 +303,7 @@ run apple_fonts 'install the Apple fonts from the AUR, skipping its stale checks
 personal_only vesktop 'install Vesktop from the AUR' yay
 personal_only heroic 'install Heroic Games Launcher from the AUR' yay
 run dms_hypr 'deploy the DMS Hyprland files that hyprland.lua loads' packages
+run dms_plugins 'clone the DMS plugins that come from git' packages
 run greeter 'point greetd at the DMS greeter and enable it' aur
 run kmscon 'run kmscon on the text consoles with Iosevka, keeping getty on tty1' packages
 run cpupower 'set the performance CPU governor' packages
