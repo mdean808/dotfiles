@@ -36,7 +36,10 @@ and it was often written by a model too. Don't touch text outside that area.
    its limits and units, what happens next, and the words the rest of the
    product already uses for the same things. If you can't check a claim,
    leave it out. Wrong copy is worse than missing copy.
-3. **Read real examples.** Before drafting each kind of text, read 5 to 10
+3. **Cut what's already there.** Before rewriting existing text, read each
+   line against checks 3 and 4 in [review.md](review.md). Delete every line
+   that fails. Then rewrite only what's left.
+4. **Read real examples.** Before drafting each kind of text, read 5 to 10
    examples of it:
    - `grep -i '<word>' examples/<element>.tsv | head -20`, with a word
      from the meaning, such as `delete`, `date` or `connect`. The files are
@@ -52,18 +55,19 @@ and it was often written by a model too. Don't touch text outside that area.
    The TSV rows mix GOV.UK and Firefox. Firefox uses Title Case and some
    of its marketing strings are cute ("Oops!", "Poof"). Where the two
    disagree, follow GOV.UK.
-4. **Draft.** Use the pattern for that kind of text from
+5. **Draft.** Use the pattern for that kind of text from
    [patterns.md](patterns.md), and match the examples' length and plain
    words. Say each thing once, fully, in the order the reader needs it.
-5. **Review.** Do the separate read in [review.md](review.md). If you can
-   start a subagent, give it only the draft and `review.md`, not the code
-   or your notes. A reader who doesn't know what you meant is the one who
-   finds the unclear "it". Otherwise, do the review yourself as a separate
-   pass, one sentence at a time.
-6. **Check against [tells.md](tells.md)** and rewrite each match.
+6. **Review.** Do the separate read in [review.md](review.md), then check
+   the draft against [tells.md](tells.md). If you can start a subagent,
+   give it only the draft, `review.md` and `tells.md`, not the code or your
+   notes. A reader who doesn't know what you meant is the one who finds the
+   unclear "it". Otherwise, do both checks yourself as a separate pass, one
+   sentence at a time.
 
 ## Output
 
 For UI strings, show a table of each string with its current and proposed
-text, then apply what the user approves. For a README or docs, write the
+text, with "Delete" as the proposed text for each line you cut. Then apply
+what the user approves. For a README or docs, write the
 file and list what you cut and why in a sentence each.

@@ -128,39 +128,32 @@ Ask with `AskUserQuestion`, several questions per call. Don't ask what the
 user already said. Call `orchestrator_capabilities` first, and offer only
 models it lists.
 
-1. **Target and scope.** What to improve, and which routes, screens,
-   paths or operations are in scope.
-2. **Core jobs.** The 3–6 real tasks a user does with the target, each
-   with what a correct result looks like. For example: "register two
-   scans with Auto align; the reported error is under 5 cm and the scans
-   visibly overlap". Reviewers spend most of their effort here. Draft
-   them from the code and `CONTEXT.md` if the user doesn't list them, and
-   get approval.
-3. **Scores.** Which core jobs get a score, and of which kind (see
+1. **Target and scope.** What to improve, what is in-scope.
+2. **Scores.** Which core jobs get a score, and of which kind (see
    [Scores](#scores)). For a command: the command, its direction and an
    optional target. For a rubric: an optional target; draft the 0, 5 and
    10 anchors from the job's correct result and get approval. No scores
    is allowed. Run each command 3 times on the current commit: if it
    fails, fix it with the user; if the values differ, show the spread and
    agree on `runs`.
-4. **How to run it.** How to start the app or run the code, the login,
+3. **How to run it.** How to start the app or run the code, the login,
    and the data reviewers should use. If data has to be seeded, seed it
    now, and give each reviewer its own project or copy where the app
    allows, so reviewers don't change each other's state.
-5. **Must not change.** Behaviour, APIs, schemas or files that are out of
+4. **Must not change.** Behaviour, APIs, schemas or files that are out of
    bounds.
-6. **Reviewers.** How many (2–3 is usual), and the model, effort and lens
+5. **Reviewers.** How many (2 by default), and the model, effort and lens
    for each. A lens is 3–5 lines: who the reviewer is, what they need,
    what they notice first and what they mark down. Draft the lenses and
    get approval. Skipping lenses is allowed; reviewers then judge as
    neutral experts.
-7. **Implementer.** Model and effort. There is always exactly one.
-8. **Stop time.** A date and time. Ask for the timezone if unclear.
-9. **When usage runs out.**
+6. **Implementer.** Model and effort. Never more than one implementer.
+7. **Stop time.** A date and time. Ask for the timezone if unclear.
+8. **When usage runs out.**
    - **Continue after reset** (default): wait for the 5-hour limit to
      reset and carry on. A weekly limit ends the loop.
    - **Stop**: any usage limit ends the loop.
-10. **Start time.** Now (default), or a date and time before the stop.
+9. **Start time.** Now (default), or a date and time before the stop.
 
 If the user picks **Continue after reset**, check that
 `~/.t3/userdata/settings.json` contains `"autoResumeLimitedThreads": true`.
@@ -426,7 +419,7 @@ line, and stop. Otherwise:
    your result file. Don't commit. Don't save to shared data unless a
    core job needs it, and undo what you can afterwards."
 2. "Read `context.md` and `map.md`. Run `git diff <previous> <commit>
-   --stat` to see what this round touched."
+--stat` to see what this round touched."
 3. Where to spend effort, in order:
    1. Every finding in your previous file: is it fixed, still open, or
       worse?
@@ -439,6 +432,7 @@ line, and stop. Otherwise:
    After doing a core job that has a rubric score, rate it 0–10 against
    its anchors in `context.md`. Rate what you saw, not the change since
    last round. Ignore command scores; the orchestrator runs them.
+
 4. How to check what the browser tools can't drive:
    - Read the code behind each screen you review, to learn its states,
      handlers and side effects, so you know what to test.

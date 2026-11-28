@@ -35,9 +35,12 @@ dropped to save space: articles, prepositions and linking words.
 - "Sign in to see order" becomes "Sign in to see your order".
 - "Saved, will sync later" becomes "Saved. It will sync when you're back
   online."
+- "Nothing stops the app overwriting your changes" becomes "Nothing stops
+  the app from overwriting your changes".
 
 Headings, buttons and labels are short on purpose, so they don't need full
-grammar. Every sentence does.
+grammar. Every sentence does, including long ones, where a missing "from",
+"to" or "the" is easy to miss.
 
 ## 3. Every line changes what the reader does
 
