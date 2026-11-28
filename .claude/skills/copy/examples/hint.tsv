@@ -1,0 +1,36 @@
+text	context	source
+Do not include personal or financial information like your National Insurance number or credit card details.	character-count example	alphagov/govuk-design-system@d3b6145:src/components/character-count/default/index.njk
+Select all options that are relevant to you.	checkboxes example	alphagov/govuk-design-system@d3b6145:src/components/checkboxes/conditional-reveal/index.njk
+Select all that apply.	checkboxes example	alphagov/govuk-design-system@d3b6145:src/components/checkboxes/default/index.njk
+If you have dual nationality, select all options that are relevant to you.	checkboxes example	alphagov/govuk-design-system@d3b6145:src/components/checkboxes/error/index.njk
+including English, Scottish, Welsh and Northern Irish	checkboxes example	alphagov/govuk-design-system@d3b6145:src/components/checkboxes/error/index.njk
+Select all countries that apply	checkboxes example	alphagov/govuk-design-system@d3b6145:src/components/checkboxes/with-none-option/index.njk
+For example, 31 3 1980	date-input example	alphagov/govuk-design-system@d3b6145:src/components/date-input/date-of-birth/index.njk
+For example, 27 3 2007	date-input example	alphagov/govuk-design-system@d3b6145:src/components/date-input/default/index.njk
+It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.	error-message example	alphagov/govuk-design-system@d3b6145:src/components/error-message/label/index.njk
+Select one option.	radios example	alphagov/govuk-design-system@d3b6145:src/components/radios/conditional-reveal/index.njk
+You’ll need an account to prove your identity and complete your Self Assessment.	radios example	alphagov/govuk-design-system@d3b6145:src/components/radios/hint/index.njk
+You’ll have a user ID if you’ve registered for Self Assessment or filed a tax return online before.	radios example	alphagov/govuk-design-system@d3b6145:src/components/radios/hint/index.njk
+You’ll have an account if you’ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity.	radios example	alphagov/govuk-design-system@d3b6145:src/components/radios/hint/index.njk
+This includes changing your last name or spelling your name differently.	radios example	alphagov/govuk-design-system@d3b6145:src/components/radios/inline/index.njk
+This can be different to where you went before	select example	alphagov/govuk-design-system@d3b6145:src/components/select/with-hint/index.njk
+The name you’ll use on promotional material	text-input example	alphagov/govuk-design-system@d3b6145:src/components/text-input/error/index.njk
+Must be between 6 and 8 digits long	text-input example	alphagov/govuk-design-system@d3b6145:src/components/text-input/number-input/index.njk
+Do not include personal or financial information, like your National Insurance number or credit card details.	textarea example	alphagov/govuk-design-system@d3b6145:src/components/textarea/default/index.njk
+This example shows an around a with the class of govuk-label--l	labels-legends-headings example	alphagov/govuk-design-system@d3b6145:src/get-started/labels-legends-headings/label-h1/index.njk
+This example shows a with the class of govuk-label--m	labels-legends-headings example	alphagov/govuk-design-system@d3b6145:src/get-started/labels-legends-headings/label-m-s/index.njk
+This example shows a with the class of govuk-label--s	labels-legends-headings example	alphagov/govuk-design-system@d3b6145:src/get-started/labels-legends-headings/label-m-s/index.njk
+This example shows an inside a with the class of govuk-fieldset__legend--l.	labels-legends-headings example	alphagov/govuk-design-system@d3b6145:src/get-started/labels-legends-headings/legend-h1/index.njk
+This example shows a with the class of govuk-fieldset__legend--m.	labels-legends-headings example	alphagov/govuk-design-system@d3b6145:src/get-started/labels-legends-headings/legend-m-s/index.njk
+This example shows a with the class of govuk-fieldset__legend--s.	labels-legends-headings example	alphagov/govuk-design-system@d3b6145:src/get-started/labels-legends-headings/legend-m-s/index.njk
+We'll contact you to arrange payment	bank-details example	alphagov/govuk-design-system@d3b6145:src/patterns/bank-details/branch/index.njk
+Must be 6 digits long	bank-details example	alphagov/govuk-design-system@d3b6145:src/patterns/bank-details/default/index.njk
+You can find it on your card, statement or passbook	bank-details example	alphagov/govuk-design-system@d3b6145:src/patterns/bank-details/default/index.njk
+Must be between 8 and 11 characters long. You can ask your bank or check your bank statement	bank-details example	alphagov/govuk-design-system@d3b6145:src/patterns/bank-details/international/index.njk
+You can ask your bank or check your bank statement	bank-details example	alphagov/govuk-design-system@d3b6145:src/patterns/bank-details/international/index.njk
+We’ll only use this to send you a receipt	email-addresses example	alphagov/govuk-design-system@d3b6145:src/patterns/email-addresses/default/index.njk
+For example, 31 3 1980. If you prefer not to say, continue without entering any information.	equality-information example	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/date-of-birth/index.njk
+For example eating, washing, walking or going shopping.	equality-information example	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/disability-impact/index.njk
+Including Church of England, Catholic, Protestant and all other Christian denominations.	equality-information example	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/religion/index.njk
+For example, 502135326	question-pages example	alphagov/govuk-design-system@d3b6145:src/patterns/question-pages/passport/index.njk
+For international numbers include the country code	telephone-numbers example	alphagov/govuk-design-system@d3b6145:src/patterns/telephone-numbers/international/index.njk

@@ -1,0 +1,223 @@
+text	context	source
+Job description must be 350 characters or less	character-count example	alphagov/govuk-design-system@d3b6145:src/components/character-count/error/index.njk
+Select if you are British, Irish or a citizen of a different country	checkboxes example	alphagov/govuk-design-system@d3b6145:src/components/checkboxes/error/index.njk
+Select countries you will be travelling to, or select ‘No, I will not be travelling to any of these countries’	checkboxes example	alphagov/govuk-design-system@d3b6145:src/components/checkboxes/with-none-option-in-error/index.njk
+The date your passport was issued must be in the past	date-input example	alphagov/govuk-design-system@d3b6145:src/components/date-input/error/index.njk
+The date your passport was issued must include a year	date-input example	alphagov/govuk-design-system@d3b6145:src/components/date-input/error-single/index.njk
+Enter a National Insurance number in the correct format	error-message example	alphagov/govuk-design-system@d3b6145:src/components/error-message/label/index.njk
+Passport issue date must include a year	error-summary example	alphagov/govuk-design-system@d3b6145:src/components/error-summary/full-page-example/index.njk
+Enter your full name	error-summary example	alphagov/govuk-design-system@d3b6145:src/components/error-summary/linking/index.njk
+The CSV must be smaller than 2MB	file-upload example	alphagov/govuk-design-system@d3b6145:src/components/file-upload/error/index.njk
+Email address cannot be blank	radios example	alphagov/govuk-design-system@d3b6145:src/components/radios/conditional-reveal-error/index.njk
+Select the country where you live	radios example	alphagov/govuk-design-system@d3b6145:src/components/radios/error/index.njk
+Enter an event name	text-input example	alphagov/govuk-design-system@d3b6145:src/components/text-input/error/index.njk
+Enter a cost per item, in pounds	text-input example	alphagov/govuk-design-system@d3b6145:src/components/text-input/input-prefix-suffix-error/index.njk
+Enter more detail	textarea example	alphagov/govuk-design-system@d3b6145:src/components/textarea/error/index.njk
+Enter a real postcode	addresses example	alphagov/govuk-design-system@d3b6145:src/patterns/addresses/error/index.njk
+Enter a valid sort code like 309430	bank-details example	alphagov/govuk-design-system@d3b6145:src/patterns/bank-details/error/index.njk
+The security code has expired. New code sent.	confirm-a-phone-number example	alphagov/govuk-design-system@d3b6145:src/patterns/confirm-a-phone-number/error-expired/index.njk
+Enter a correct security code	confirm-a-phone-number example	alphagov/govuk-design-system@d3b6145:src/patterns/confirm-a-phone-number/error-incorrect/index.njk
+Enter an email address in the correct format, like name@example.com	email-addresses example	alphagov/govuk-design-system@d3b6145:src/patterns/email-addresses/error/index.njk
+Enter your date of birth or leave blank	equality-information example	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/error-date-of-birth/index.njk
+Select an ethnic group or ‘Prefer not to say’	equality-information example	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/error-ethnicity/index.njk
+Select whether you've completed this section	task-list-pages example	alphagov/govuk-design-system@d3b6145:src/patterns/task-list-pages/have-you-completed-this-section-error/index.njk
+Enter a UK telephone number	telephone-numbers example	alphagov/govuk-design-system@d3b6145:src/patterns/telephone-numbers/error-empty-field/index.njk
+Update failed. Download the latest version	update-failed	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutDialog.ftl
+Unable to check for updates due to internal error. Updates available at	update-internal-error	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutDialog.ftl
+An entry for { $loginTitle } with that username already exists. Go to existing entry?	about-logins-error-message-duplicate-login-with-link	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+An error occurred while trying to save this password.	about-logins-error-message-default	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Import Error	about-logins-import-dialog-error-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Multiple Conflicting Values for One Login	about-logins-import-dialog-error-conflicting-values-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+For example: multiple usernames, passwords, URLs, etc. for one login.	about-logins-import-dialog-error-conflicting-values-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+File Format Issue	about-logins-import-dialog-error-file-format-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Incorrect or missing column headers. Make sure the file includes columns for username, password and URL.	about-logins-import-dialog-error-file-format-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Unable to Read File	about-logins-import-dialog-error-file-permission-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+{ -brand-short-name } does not have permission to read the file. Try changing the file permissions.	about-logins-import-dialog-error-file-permission-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Unable to Parse File	about-logins-import-dialog-error-unable-to-read-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Make sure you selected a CSV or TSV file.	about-logins-import-dialog-error-unable-to-read-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+No logins have been imported	about-logins-import-dialog-error-no-logins-imported	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Learn more	about-logins-import-dialog-error-learn-more	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Try Import Again…	about-logins-import-dialog-error-try-import-again	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Cancel	about-logins-import-dialog-error-cancel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Error: Missing field	about-logins-import-report-row-description-error	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Error: Multiple values for { $field }	about-logins-import-report-row-description-error-multiple-values	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Error: Missing { $field }	about-logins-import-report-row-description-error-missing-field	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+There was an error when trying to save to { -pocket-brand-name }.	pocket-panel-saved-error-generic	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPocket.ftl
+Tags are limited to 25 characters	pocket-panel-saved-error-tag-length	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPocket.ftl
+Only links can be saved	pocket-panel-saved-error-only-links	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPocket.ftl
+Page Not Saved	pocket-panel-saved-error-not-saved	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPocket.ftl
+You must be connected to the Internet in order to save to { -pocket-brand-name }. Please connect to the Internet and try again.	pocket-panel-saved-error-no-internet	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPocket.ftl
+There was an error while trying to remove this page.	pocket-panel-saved-error-remove	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPocket.ftl
+Errors	errors-tab	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPolicies.ftl
+Policy Errors	policy-errors	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPolicies.ftl
+Welcome Humans!	error-title-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRobots.ftl
+We have come to visit you in peace and with goodwill!	error-short-desc-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRobots.ftl
+Robots may not injure a human being or, through inaction, allow a human being to come to harm.	error-long-desc1	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRobots.ftl
+Robots have seen things you people wouldn’t believe.	error-long-desc2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRobots.ftl
+Robots are Your Plastic Pal Who’s Fun To Be With.	error-long-desc3	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRobots.ftl
+Robots have shiny metal posteriors which should not be bitten.	error-long-desc4	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRobots.ftl
+And they have a plan.	error-trailer-desc-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRobots.ftl
+Try Again	error-try-again	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRobots.ftl
+Please do not press this button again.	error-try-again.label2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRobots.ftl
+Sorry. We’re having trouble getting your pages back.	restore-page-error-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutSessionRestore.ftl
+Connection failure	identity-connection-failure	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+We’re having trouble syncing	firefoxview-tabpickup-sync-error-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+{ -brand-short-name } can’t reach the syncing service right now. Try again in a few moments.	firefoxview-tabpickup-generic-sync-error-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Try again	firefoxview-tabpickup-sync-error-primarybutton	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Oops, something went wrong loading this content.	newtab-error-fallback-info	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Refresh page to try again.	newtab-error-fallback-refresh-link	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Please enter a valid card number	autofill-card-invalid-number	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/formAutofill.ftl
+Pairing unsuccessful.	fxa-qrcode-error-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/fxaPairDevice.ftl
+Try again.	fxa-qrcode-error-body	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/fxaPairDevice.ftl
+{ -brand-short-name } can’t update your languages right now. Check that you are connected to the internet or try again.	browser-languages-error	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/languages.ftl
+Invalid Hostname Entered	permissions-invalid-uri-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Please enter a valid hostname	permissions-invalid-uri-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Error saving Update settings	update-setting-write-failure-title2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Please sign in to reconnect { $email }	sync-signedin-login-failure	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+There was an error sending the report. Please try again later.	protections-panel-sendreportview-error	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+{ $sitename } has been reported as a deceptive site . You can report a detection problem or ignore the risk and go to this unsafe site.	safeb-blocked-phishing-page-error-desc-override	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+{ $sitename } has been reported as a deceptive site . You can report a detection problem .	safeb-blocked-phishing-page-error-desc-no-override	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+{ $sitename } has been reported as containing malicious software . You can ignore the risk and go to this unsafe site.	safeb-blocked-malware-page-error-desc-override-sumo	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+{ $sitename } has been reported as containing malicious software .	safeb-blocked-malware-page-error-desc-no-override-sumo	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+{ $sitename } has been reported as containing harmful software . You can ignore the risk and go to this unsafe site.	safeb-blocked-unwanted-page-error-desc-override	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+{ $sitename } has been reported as containing harmful software .	safeb-blocked-unwanted-page-error-desc-no-override	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+{ $sitename } has been reported as containing a potentially harmful application . You can ignore the risk and go to this unsafe site.	safeb-blocked-harmful-page-error-desc-override	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+{ $sitename } has been reported as containing a potentially harmful application .	safeb-blocked-harmful-page-error-desc-no-override	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+Out of order.	screenshots-request-error-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Sorry! We couldn’t save your shot. Please try again later.	screenshots-request-error-details	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+We can’t connect to your screenshots.	screenshots-connection-error-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Please check your Internet connection. If you are able to connect to the Internet, there may be a temporary problem with the { -screenshots-brand-name } service.	screenshots-connection-error-details	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+We couldn’t save your shot because there is a problem with the { -screenshots-brand-name } service. Please try again later.	screenshots-login-error-details	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+We can’t screenshot this page.	screenshots-unshootable-page-error-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+This isn’t a standard Web page, so you can’t take a screenshot of it.	screenshots-unshootable-page-error-details	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Your selection is too small	screenshots-empty-selection-error-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+{ -screenshots-brand-name } is disabled in Private Browsing Mode	screenshots-private-window-error-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Sorry for the inconvenience. We are working on this feature for future releases.	screenshots-private-window-error-details	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Whoa! { -screenshots-brand-name } went haywire.	screenshots-generic-error-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+We’re not sure what just happened. Care to try again or take a shot of a different page?	screenshots-generic-error-details	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Install Error	opensearch-error-duplicate-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/search.ftl
+{ -brand-short-name } could not install the search plugin from “{ $location-url }” because an engine with the same name already exists.	opensearch-error-duplicate-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/search.ftl
+Invalid Format	opensearch-error-format-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/search.ftl
+{ -brand-short-name } could not install the search engine from: { $location-url }	opensearch-error-format-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/search.ftl
+Download Error	opensearch-error-download-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/search.ftl
+There has been an error translating this page.	translation-notification-error-translating.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/translationNotification.ftl
+Failed	submit-crash-button-failure-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/crashreporter/aboutcrashes.ftl
+Invalid combination	shortcuts-invalid	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Sorry, but there was an error loading the release notes.	release-notes-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Changes not saved	profiles-flush-fail-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+An unexpected error has prevented your changes from being saved.	profiles-flush-failed	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+Unable to set default	profiles-cannot-set-as-default-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+The default profile cannot be changed for { -brand-short-name }.	profiles-cannot-set-as-default-message	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+Invalid profile name	profiles-invalid-profile-name-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+The profile name “{ $name }” is not allowed.	profiles-invalid-profile-name	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+Error	profiles-delete-profile-failed-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+There was an error while attempting to delete this profile.	profiles-delete-profile-failed-message	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+Failed to load article from page	about-reader-load-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutReader.ftl
+Failed to unregister this Service Worker.	unregister-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutServiceWorkers.ftl
+Failure Log	graphics-failure-log-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Blocklisted; failure code { $failureCode }	unknown-failure	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+An error occurred while fetching symbols. Check that you are connected to the Internet and try again.	about-telemetry-error-fetching-symbols	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+SDP Parsing Errors	about-webrtc-sdp-parsing-errors-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+There was an error sending the report for { $addon-name } .	abuse-report-messagebar-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+The report for { $addon-name } wasn’t sent because another report was submitted recently.	abuse-report-messagebar-error-recent-submit	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+We were unable to find the certificate information, or the certificate is corrupted. Please try again.	certificate-viewer-error-message	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/certviewer.ftl
+Something went wrong.	certificate-viewer-error-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/certviewer.ftl
+Invalid URL	url-classifier-search-error-invalid-url	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+No features selected	url-classifier-search-error-no-features	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+cannot update	url-classifier-cannot-update	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+update error ({ $error })	url-classifier-update-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+download error ({ $error })	url-classifier-download-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+Policy is missing a required ‘{ $directive }’ directive	csp-error-missing-directive	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/cspErrors.ftl
+‘{ $directive }’ directive contains a forbidden { $keyword } keyword	csp-error-illegal-keyword	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/cspErrors.ftl
+‘{ $directive }’ directive contains a forbidden { $scheme }: protocol source	csp-error-illegal-protocol	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/cspErrors.ftl
+{ $scheme }: protocol requires a host in ‘{ $directive }’ directives	csp-error-missing-host	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/cspErrors.ftl
+‘{ $directive }’ must include the source { $source }	csp-error-missing-source	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/cspErrors.ftl
+{ $scheme }: wildcard sources in ‘{ $directive }’ directives must include at least one non-generic sub-domain (e.g., *.example.com rather than *.com)	csp-error-illegal-host-wildcard	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/cspErrors.ftl
+{ -brand-short-name } installation failed.	install-failed-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/run-from-dmg.ftl
+{ -brand-short-name } failed to install but will continue to run.	install-failed-message	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/run-from-dmg.ftl
+Video loading stopped.	videocontrols-error-aborted	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+Video playback aborted due to a network error.	videocontrols-error-network	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+Video can’t be played because the file is corrupt.	videocontrols-error-decode	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+Video format or MIME type is not supported.	videocontrols-error-src-not-supported	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+No video with supported format and MIME type found.	videocontrols-error-no-source	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+Video playback aborted due to an unknown error.	videocontrols-error-generic	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+Open Site in New Window	open-in-new-window-for-csp-or-xfo-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+{ -brand-short-name } Can’t Open This Page	csp-xfo-error-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Software is Preventing { -brand-short-name } From Safely Connecting to This Site	certerror-mitm-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Problem loading page	neterror-page-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Warning: Potential Security Risk Ahead	certerror-page-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Did Not Connect: Potential Security Issue	certerror-sts-page-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Blocked Page	neterror-blocked-by-policy-page-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Log in to network	neterror-captive-portal-page-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Server Not Found	neterror-dns-not-found-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Advanced…	neterror-advanced-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Copy text to clipboard	neterror-copy-to-clipboard-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Learn more…	neterror-learn-more-link	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Open Network Login Page	neterror-open-portal-login-page-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Accept the Risk and Continue	neterror-override-exception-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Restore default settings	neterror-pref-reset-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Go Back	neterror-return-to-previous-page-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Go Back (Recommended)	neterror-return-to-previous-page-recommended-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+View Certificate	neterror-view-certificate-link	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+It looks like your network security settings might be causing this. Do you want the default settings to be restored?	neterror-pref-reset	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Report errors like this to help { -vendor-short-name } identify and block malicious sites	neterror-error-reporting-automatic	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+{ -brand-short-name } can’t load this page for some reason.	neterror-generic-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+The site could be temporarily unavailable or too busy. Try again in a few moments.	neterror-load-error-try-again	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+If you are unable to load any pages, check your computer’s network connection.	neterror-load-error-connection	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+If your computer or network is protected by a firewall or proxy, make sure that { -brand-short-name } is permitted to access the web.	neterror-load-error-firewall	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+You must log in to this network before you can access the internet.	neterror-captive-portal	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Did you mean to go to { $hostAndPath } ?	neterror-dns-not-found-with-suggestion	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+If you entered the right address, you can:	neterror-dns-not-found-hint-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Try again later	neterror-dns-not-found-hint-try-again	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Check your network connection	neterror-dns-not-found-hint-check-network	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Check that { -brand-short-name } has permission to access the web (you might be connected but behind a firewall)	neterror-dns-not-found-hint-firewall	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Check the file name for capitalization or other typing errors.	neterror-file-not-found-filename	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Check to see if the file was moved, renamed or deleted.	neterror-file-not-found-moved	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+It may have been removed, moved, or file permissions may be preventing access.	neterror-access-denied	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+You might need to install other software to open this address.	neterror-unknown-protocol	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+This problem can sometimes be caused by disabling or refusing to accept cookies.	neterror-redirect-loop	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Check to make sure your system has the Personal Security Manager installed.	neterror-unknown-socket-type-psm-installed	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+This might be due to a non-standard configuration on the server.	neterror-unknown-socket-type-server-config	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+The requested document is not available in { -brand-short-name }’s cache.	neterror-not-cached-intro	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+As a security precaution, { -brand-short-name } does not automatically re-request sensitive documents.	neterror-not-cached-sensitive	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Click Try Again to re-request the document from the website.	neterror-not-cached-try-again	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Press “Try Again” to switch to online mode and reload the page.	neterror-net-offline	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Check the proxy settings to make sure that they are correct.	neterror-proxy-resolve-failure-settings	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Check to make sure your computer has a working network connection.	neterror-proxy-resolve-failure-connection	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Contact your network administrator to make sure the proxy server is working.	neterror-proxy-connect-failure-contact-admin	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Please contact the website owners to inform them of this problem.	neterror-content-encoding-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+The page you are trying to view cannot be shown because the authenticity of the received data could not be verified.	neterror-nss-failure-not-verified	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+{ -brand-short-name } detected a potential security threat and did not continue to { $hostname } . If you visit this site, attackers could try to steal information like your passwords, emails, or credit card details.	certerror-intro	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+{ -brand-short-name } detected a potential security threat and did not continue to { $hostname } because this website requires a secure connection.	certerror-sts-intro	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+{ -brand-short-name } detected an issue and did not continue to { $hostname } . The website is either misconfigured or your computer clock is set to the wrong time.	certerror-expired-cert-intro	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+{ $hostname } is most likely a safe site, but a secure connection could not be established. This issue is caused by { $mitm } , which is either software on your computer or your network.	certerror-mitm	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+The page you are trying to view cannot be shown because an error in the data transmission was detected.	neterror-corrupted-content-intro	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Advanced info: SSL_ERROR_UNSUPPORTED_VERSION	neterror-sslv3-used	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+{ $hostname } uses security technology that is outdated and vulnerable to attack. An attacker could easily reveal information which you thought to be safe. The website administrator will need to fix the server first before you can visit the site.	neterror-inadequate-security-intro	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Error code: NS_ERROR_NET_INADEQUATE_SECURITY	neterror-inadequate-security-code	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Your computer thinks it is { DATETIME($now, dateStyle: "medium") }, which prevents { -brand-short-name } from connecting securely. To visit { $hostname } , update your computer clock in your system settings to the current date, time, and time zone, and then refresh { $hostname } .	neterror-clock-skew-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+The page you are trying to view cannot be shown because an error in the network protocol was detected.	neterror-network-protocol-error-intro	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+It’s likely the website’s certificate is expired, which prevents { -brand-short-name } from connecting securely. If you visit this site, attackers could try to steal information like your passwords, emails, or credit card details.	certerror-expired-cert-second-para	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+It’s likely the website’s certificate is expired, which prevents { -brand-short-name } from connecting securely.	certerror-expired-cert-sts-second-para	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+What can you do about it?	certerror-what-can-you-do-about-it-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+The issue is most likely with the website, and there is nothing you can do to resolve it.	certerror-unknown-issuer-what-can-you-do-about-it-website	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+If you are on a corporate network or using antivirus software, you can reach out to the support teams for assistance. You can also notify the website’s administrator about the problem.	certerror-unknown-issuer-what-can-you-do-about-it-contact-admin	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Your computer clock is set to { DATETIME($now, dateStyle: "medium") }. Make sure your computer is set to the correct date, time, and time zone in your system settings, and then refresh { $hostname } .	certerror-expired-cert-what-can-you-do-about-it-clock	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+If your clock is already set to the right time, the website is likely misconfigured, and there is nothing you can do to resolve the issue. You can notify the website’s administrator about the problem.	certerror-expired-cert-what-can-you-do-about-it-contact-website	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+The issue is most likely with the website, and there is nothing you can do to resolve it. You can notify the website’s administrator about the problem.	certerror-bad-cert-domain-what-can-you-do-about-it	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+If your antivirus software includes a feature that scans encrypted connections (often called “web scanning” or “https scanning”), you can disable that feature. If that doesn’t work, you can remove and reinstall the antivirus software.	certerror-mitm-what-can-you-do-about-it-antivirus	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+If you are on a corporate network, you can contact your IT department.	certerror-mitm-what-can-you-do-about-it-corporate	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+If you are not familiar with { $mitm } , then this could be an attack and you should not continue to the site.	certerror-mitm-what-can-you-do-about-it-attack	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+If you are not familiar with { $mitm } , then this could be an attack, and there is nothing you can do to access the site.	certerror-mitm-what-can-you-do-about-it-attack-sts	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+{ $hostname } has a security policy called HTTP Strict Transport Security (HSTS), which means that { -brand-short-name } can only connect to it securely. You can’t add an exception to visit this site.	certerror-what-should-i-do-bad-sts-cert-explanation	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/netError.ftl
+Couldn’t remove the principal	xp-java-remove-principal-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/nsserrors.ftl
+Couldn’t delete the privilege	xp-java-delete-privilege-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/nsserrors.ftl
+This principal doesn’t have a certificate	xp-java-cert-not-exists-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/nsserrors.ftl
+Couldn’t initialize Fortezza personalities.	xp-sec-fortezza-person-error	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/nsserrors.ftl
+Unable to change Primary Password.	failed-pp-change	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/preferences/preferences.ftl
+Password Change Failed	pw-change-failed-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/preferences/preferences.ftl
+Scale must be a number between 10 and 200.	printui-error-invalid-scale	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printUI.ftl
+Please enter a valid margin for the selected paper size.	printui-error-invalid-margin	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printUI.ftl
+Copies must be a number between 1 and 10000.	printui-error-invalid-copies	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printUI.ftl
+Range must be a number between 1 and { $numPages }.	printui-error-invalid-range	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printUI.ftl
+The “from” page number must be smaller than the “to” page number.	printui-error-invalid-start-overflow	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printUI.ftl

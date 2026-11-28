@@ -1,0 +1,24 @@
+{
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "bt-launcher": {
+    "enabled": true
+  },
+  "emojiLauncher": {
+    "enabled": true,
+    "trigger": "emoji"
+  },
+  "commandRunner": {
+    "enabled": true,
+    "history": [
+      "top"
+    ],
+    "terminal": "ghostty",
+    "execFlag": "-e"
+  },
+  "dmsAirDrop": {
+    "enabled": true
+  }
+}

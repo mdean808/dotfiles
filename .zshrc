@@ -1,3 +1,4 @@
+if [ "$TMUX" = "" ]; then tmux new \; set-option destroy-unattached; fi
 # zsh-defer
 source $HOME/.zsh/zsh-defer/zsh-defer.plugin.zsh
 

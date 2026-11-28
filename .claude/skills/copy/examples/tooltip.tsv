@@ -1,0 +1,197 @@
+text	context	source
+Make sure this matches the exact address of the website where you log in.	login-item-tooltip-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+{ NUMBER($mem, maxFractionalUnits: 2) } MB	about-unloads-memory-in-mb-tooltip.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutUnloads.ftl
+Open application menu	appmenu-menu-button-closed2.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Close application menu	appmenu-menu-button-opened2.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Show more tabs from this device	appmenu-remote-tabs-showmore.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Record a performance profile	profiler-popup-button-idle.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+The profiler is recording a profile	profiler-popup-button-recording.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+The profiler is capturing a profile	profiler-popup-button-capturing.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Open install message panel	urlbar-services-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Change whether you can receive notifications from the site	urlbar-web-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open MIDI panel	urlbar-midi-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Manage use of DRM software	urlbar-eme-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open Web Authentication panel	urlbar-web-authn-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Manage canvas extraction permission	urlbar-canvas-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Manage sharing your microphone with the site	urlbar-web-rtc-share-microphone-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open message panel	urlbar-default-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open location request panel	urlbar-geolocation-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open virtual reality permission panel	urlbar-xr-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open browsing activity permission panel	urlbar-storage-access-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Translate this page	urlbar-translate-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Manage sharing your windows or screen with the site	urlbar-web-rtc-share-screen-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open offline storage message panel	urlbar-indexed-db-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open save password message panel	urlbar-password-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Manage page translation	urlbar-translated-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Manage plug-in use	urlbar-plugins-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Manage sharing your camera and/or microphone with the site	urlbar-web-rtc-share-devices-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Manage sharing other speakers with the site	urlbar-web-rtc-share-speaker-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open autoplay panel	urlbar-autoplay-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Store data in Persistent Storage	urlbar-persistent-storage-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open add-on installation message panel	urlbar-addons-notification-anchor.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have blocked location information for this website.	urlbar-geolocation-blocked.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have blocked virtual reality device access for this website.	urlbar-xr-blocked.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have blocked notifications for this website.	urlbar-web-notifications-blocked.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have blocked your camera for this website.	urlbar-camera-blocked.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have blocked your microphone for this website.	urlbar-microphone-blocked.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have blocked this website from sharing your screen.	urlbar-screen-blocked.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have blocked persistent storage for this website.	urlbar-persistent-storage-blocked.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have blocked pop-ups for this website.	urlbar-popup-blocked.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have blocked autoplay media with sound for this website.	urlbar-autoplay-media-blocked.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have blocked canvas data extraction for this website.	urlbar-canvas-blocked.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have blocked MIDI access for this website.	urlbar-midi-blocked.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have blocked add-on installation for this website.	urlbar-install-blocked.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Edit this bookmark ({ $shortcut })	urlbar-star-edit-bookmark.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Bookmark this page ({ $shortcut })	urlbar-star-add-bookmark.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Change search settings	search-one-offs-change-settings-compact-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ $engineName } ({ $alias })	search-one-offs-engine-with-alias.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Add search engine “{ $engineName }”	search-one-offs-add-engine.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Bookmarks ({ $restrict })	search-one-offs-bookmarks.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Tabs ({ $restrict })	search-one-offs-tabs.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+History ({ $restrict })	search-one-offs-history.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Actions ({ $restrict })	search-one-offs-actions.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Minimize	browser-window-minimize-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Maximize	browser-window-maximize-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Restore Down	browser-window-restore-down-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Close	browser-window-close-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Import bookmarks from another browser to { -brand-short-name }.	browser-import-button2.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Camera	popup-select-camera-icon.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Microphone	popup-select-microphone-icon.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Speakers	popup-select-speaker-icon.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Browser is under remote control (reason: { $component })	urlbar-remote-control-notification-anchor2.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You have granted this website additional permissions.	urlbar-permissions-granted.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Go to the address in the Location Bar	urlbar-go-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Page actions	urlbar-page-action-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Show more bookmarks	bookmarks-toolbar-chevron.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Save to { -pocket-brand-name }	save-to-pocket-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Guess correct text encoding from page content	repair-text-encoding-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Manage your add-ons and themes ({ $shortcut })	toolbar-addons-themes-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ PLATFORM() -> [macos] Open settings ({ $shortcut }) *[other] Open settings }	toolbar-settings-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Email a link to this page	toolbar-button-email-link.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Save this page ({ $shortcut })	toolbar-button-save-page.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open a file ({ $shortcut })	toolbar-button-open-file.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Show tabs from other devices	toolbar-button-synced-tabs.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open a new private browsing window ({ $shortcut })	toolbar-button-new-private-window.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+More tools…	navbar-overflow.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Print this page… ({ $shortcut })	navbar-print.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ -brand-short-name } Home Page	navbar-home.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+View history, saved bookmarks, and more	navbar-library.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+List all tabs	tabs-toolbar-list-all-tabs.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Extensions	unified-extensions-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ PLATFORM() -> [macos] Pull down to show history *[other] Right-click or pull down to show history }	navbar-tooltip-instruction.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+Go back one page ({ $shortcut })	main-context-menu-back-2.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+{ main-context-menu-back-2.tooltiptext }	navbar-tooltip-back-2.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+Go forward one page ({ $shortcut })	main-context-menu-forward-2.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+{ main-context-menu-forward-2.tooltiptext }	navbar-tooltip-forward-2.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+{ -fxaccount-brand-name(capitalization: "sentence") }	toolbar-button-fxaccount.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+Bookmark page	main-context-menu-bookmark-page.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+Bookmark page ({ $shortcut })	main-context-menu-bookmark-page-with-shortcut.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+Edit bookmark	main-context-menu-edit-bookmark.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+Edit bookmark ({ $shortcut })	main-context-menu-edit-bookmark-with-shortcut.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+Touch	customize-mode-uidensity-menu-touch.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/customizeMode.ftl
+Normal	customize-mode-uidensity-menu-normal.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/customizeMode.ftl
+Compact (not supported)	customize-mode-uidensity-menu-compact-unsupported.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/customizeMode.ftl
+Cancel	downloads-cmd-cancel.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+{ PLATFORM() -> [macos] Show in Finder *[other] Show in Folder }	downloads-cmd-show-button-2.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+Retry	downloads-cmd-retry.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+Remove File	downloads-cmd-remove-file.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+Remove File or Allow Download	downloads-cmd-choose-unblock.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+Open or Remove File	downloads-cmd-choose-open.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+Clears completed, canceled and failed downloads	downloads-clear-downloads-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+Show all the bookmarks folders	bookmark-overlay-folders-expander.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/editBookmarkOverlay.ftl
+{ bookmark-overlay-folders-expander.tooltiptext }	bookmark-overlay-folders-expander.tooltiptextdown	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/editBookmarkOverlay.ftl
+Hide	bookmark-overlay-folders-expander.tooltiptextup	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/editBookmarkOverlay.ftl
+Show all tags	bookmark-overlay-tags-expander.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/editBookmarkOverlay.ftl
+{ bookmark-overlay-tags-expander.tooltiptext }	bookmark-overlay-tags-expander.tooltiptextdown	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/editBookmarkOverlay.ftl
+{ -firefoxview-brand-name }	toolbar-button-firefox-view.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Open menu	newtab-menu-section-tooltip.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Remove	newtab-dismiss-button-tooltip.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Open context menu for { $title }	newtab-menu-content-tooltip.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Edit this site	newtab-menu-topsites-placeholder-tooltip.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Use this colorway.	mr2-onboarding-theme-tooltip.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+Explore { $colorwayName } colorways.	mr2-onboarding-colorway-tooltip.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+Explore default themes.	mr2-onboarding-default-theme-tooltip.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+Organize your bookmarks	places-organize-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/places.ftl
+Change your view	places-view-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/places.ftl
+Import and backup your bookmarks	places-maintenance-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/places.ftl
+Go back	places-back-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/places.ftl
+Go forward	places-forward-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/places.ftl
+This option silently authenticates you to proxies when you have saved credentials for them. You will be prompted if authentication fails.	connection-proxy-autologin.tooltip	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/connection.ftl
+Use the default URL for resolving DNS over HTTPS	connection-dns-over-https-url-item-default.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/connection.ftl
+Enter your preferred URL for resolving DNS over HTTPS	connection-dns-over-https-url-custom.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/connection.ftl
+More from { -vendor-short-name }	more-from-moz-category.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+{ pane-general-title }	category-general.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ pane-home-title }	category-home.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ pane-search-title }	category-search.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ pane-privacy-title }	category-privacy.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ pane-sync-title3 }	category-sync3.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ -brand-short-name } Experiments	category-experimental.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Automatically change website backgrounds and content based on your system settings and { -brand-short-name } theme.	preferences-web-appearance-choice-tooltip-auto.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Use a light appearance for website backgrounds and content.	preferences-web-appearance-choice-tooltip-light.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Use a dark appearance for website backgrounds and content.	preferences-web-appearance-choice-tooltip-dark.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Change profile picture	sync-profile-picture.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+A list of what’s open on all synced devices	sync-engine-tabs.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Usernames and passwords you’ve saved	sync-engine-logins-passwords.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Postal addresses you’ve saved (desktop only)	sync-engine-addresses.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Names, numbers and expiry dates (desktop only)	sync-engine-creditcards.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Extensions and themes for Firefox desktop	sync-engine-addons.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+General, Privacy, and Security settings you’ve changed	sync-engine-settings.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+More information	content-blocking-expand-section.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+View monitored email addresses on { -monitor-brand-short-name }	monitor-emails-tooltip.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+View known data breaches on { -monitor-brand-short-name }	monitor-breaches-tooltip.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+View exposed passwords on { -monitor-brand-short-name }	monitor-passwords-tooltip.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Social Media Trackers	bar-tooltip-social.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+{ $count -> [one] { $count } social media tracker ({ $percentage }%) *[other] { $count } social media trackers ({ $percentage }%) }	bar-tooltip-social.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Cross-Site Tracking Cookies	bar-tooltip-cookie.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+{ $count -> [one] { $count } cross-site tracking cookie ({ $percentage }%) *[other] { $count } cross-site tracking cookies ({ $percentage }%) }	bar-tooltip-cookie.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Tracking Content	bar-tooltip-tracker.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+{ $count -> [one] { $count } tracking content ({ $percentage }%) *[other] { $count } tracking content ({ $percentage }%) }	bar-tooltip-tracker.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Fingerprinters	bar-tooltip-fingerprinter.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+{ $count -> [one] { $count } fingerprinter ({ $percentage }%) *[other] { $count } fingerprinters ({ $percentage }%) }	bar-tooltip-fingerprinter.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Cryptominers	bar-tooltip-cryptominer.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+{ $count -> [one] { $count } cryptominer ({ $percentage }%) *[other] { $count } cryptominers ({ $percentage }%) }	bar-tooltip-cryptominer.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Blocking these could break elements of some websites. Without trackers, some buttons, forms, and login fields might not work.	protections-panel-not-blocking-why-etp-on-tooltip	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+All trackers on this site have been loaded because protections are turned off.	protections-panel-not-blocking-why-etp-off-tooltip	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Tracker partially unblocked	protections-panel-shim-allowed-indicator.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Take a screenshot	screenshot-toolbarbutton.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Download screenshot	screenshots-download-button-tooltip	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Copy screenshot to clipboard	screenshots-copy-button-tooltip	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Submit search	searchbar-submit.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/search.ftl
+Search	searchbar-icon.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/search.ftl
+Close sidebar	sidebar-close-button.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sidebarMenu.ftl
+Your camera and microphone are being shared. Click to control sharing.	webrtc-indicator-sharing-camera-and-microphone.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Your camera is being shared. Click to control sharing.	webrtc-indicator-sharing-camera.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Your microphone is being shared. Click to control sharing.	webrtc-indicator-sharing-microphone.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+An application is being shared. Click to control sharing.	webrtc-indicator-sharing-application.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Your screen is being shared. Click to control sharing.	webrtc-indicator-sharing-screen.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+A window is being shared. Click to control sharing.	webrtc-indicator-sharing-window.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+A tab is being shared. Click to control sharing.	webrtc-indicator-sharing-browser.tooltiptext	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Automatically install updates only if that’s the default	detail-update-default.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Automatically install updates	detail-update-automatic.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Don’t automatically install updates	detail-update-manual.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Enable in Private Browsing	detail-private-browsing-on.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Disable in Private Browsing	detail-private-browsing-off.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Check for updates for this add-on	detail-check-for-updates.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+{ PLATFORM() -> [windows] Change this add-on’s options *[other] Change this add-on’s preferences }	detail-show-preferences.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Close this notification	alert-close.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/alert.ftl
+Settings	alert-settings-title.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/alert.ftl
+Close this message	close-notification-message.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/notification.ftl
+Find the next occurrence of the phrase	findbar-next.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/main-window/findbar.ftl
+Find the previous occurrence of the phrase	findbar-previous.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/main-window/findbar.ftl
+Close find bar	findbar-find-button-close.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/main-window/findbar.ftl
+Highlight all occurrences of the phrase	findbar-highlight-all2.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/main-window/findbar.ftl
+Search with case sensitivity	findbar-case-sensitive.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/main-window/findbar.ftl
+Distinguish between accented letters and their base letters (for example, when searching for “resume”, “résumé” will not be matched)	findbar-match-diacritics.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/main-window/findbar.ftl
+Search whole words only	findbar-entire-word.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/main-window/findbar.ftl
+Left header	header-left-tip.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printDialogs.ftl
+Center header	header-center-tip.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printDialogs.ftl
+Right header	header-right-tip.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printDialogs.ftl
+Left footer	footer-left-tip.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printDialogs.ftl
+Center footer	footer-center-tip.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printDialogs.ftl
+Right footer	footer-right-tip.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printDialogs.ftl
+This page cannot be automatically simplified	printpreview-simplify-page-checkbox.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printPreview.ftl
+Change layout for easier reading	printpreview-simplify-page-checkbox-enabled.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printPreview.ftl
+First page	printpreview-homearrow.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printPreview.ftl
+Previous page	printpreview-previousarrow.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printPreview.ftl
+Next page	printpreview-nextarrow.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printPreview.ftl
+Last page	printpreview-endarrow.tooltiptext	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printPreview.ftl

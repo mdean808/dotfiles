@@ -1,0 +1,66 @@
+text	context	source
+Cancel	confirmation-dialog-cancel-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Remove this login?	about-logins-confirm-remove-dialog-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+This action cannot be undone.	confirm-delete-dialog-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Remove	about-logins-confirm-remove-dialog-confirm-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Export logins and passwords	about-logins-confirm-export-dialog-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Your passwords will be saved as readable text (e.g., BadP@ssw0rd) so anyone who can open the exported file can view them.	about-logins-confirm-export-dialog-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Export…	about-logins-confirm-export-dialog-confirm-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Discard unsaved changes?	confirm-discard-changes-dialog-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+All unsaved changes will be lost.	confirm-discard-changes-dialog-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Discard	confirm-discard-changes-dialog-confirm-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Okay, Got It	urlbar-search-tips-confirm	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You are sharing { -brand-short-name }. Other people can see when you switch to a new tab.	sharing-warning-window	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+You are sharing your entire screen. Other people can see when you switch to a new tab.	sharing-warning-screen	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Proceed to Tab	sharing-warning-proceed-to-tab.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Disable sharing protection for this session	sharing-warning-disable-for-session.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ $domain } is now full screen	fullscreen-warning-domain	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+This document is now full screen	fullscreen-warning-no-domain	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ $domain } has control of your pointer. Press Esc to take back control.	pointerlock-warning-domain	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+This document has control of your pointer. Press Esc to take back control.	pointerlock-warning-no-domain	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+🎉 Good to go!	firefoxview-mobile-confirmation-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Now you can grab your { -brand-product-name } tabs from your tablet or phone.	firefoxview-mobile-confirmation-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Are you sure you want to delete every instance of this page from your history?	newtab-confirm-delete-history-p1	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Form Autofill is currently available only for certain countries.	autofill-country-warning-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/formAutofill.ftl
+Confirm before closing multiple tabs	confirm-on-close-multiple-tabs.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Confirm before quitting with { $quitKey }	confirm-on-quit-with-key.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Your color selections are overriding website appearance. Manage colors	preferences-web-appearance-override-warning	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Restart { -brand-short-name } to apply these changes	confirm-browser-language-change-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Apply and Restart	confirm-browser-language-change-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+This setting will apply to all Windows accounts and { -brand-short-name } profiles using this installation of { -brand-short-name }.	update-application-warning-cross-user-setting	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Duplicate Keyword	search-keyword-warning-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+You have chosen a keyword that is currently in use by “{ $name }”. Please select another.	search-keyword-warning-engine	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+You have chosen a keyword that is currently in use by a bookmark. Please select another.	search-keyword-warning-bookmark	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+You are using First Party Isolation (FPI), which overrides some of { -brand-short-name }’s cookie settings.	content-blocking-fpi-incompatibility-warning	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Heads up!	content-blocking-warning-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+This setting may cause some websites to not display content or work correctly. If a site seems broken, you may want to turn off tracking protection for that site to load all content.	content-blocking-and-isolating-etp-warning-description-2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Learn how	content-blocking-warning-learn-how	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Warn you when websites try to install add-ons	permissions-addon-install-warning.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+All history will be cleared.	sanitize-everything-warning	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sanitize.ftl
+All selected items will be cleared.	sanitize-selected-warning	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sanitize.ftl
+Only share screens with sites you trust. Sharing can allow deceptive sites to browse as you and steal your private data.	webrtc-share-screen-warning	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Only share { -brand-short-name } with sites you trust. Sharing can allow deceptive sites to browse as you and steal your private data.	webrtc-share-browser-warning	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Are you sure?	delete-confirm-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/crashreporter/aboutcrashes.ftl
+Show legacy extensions	legacy-warning-show-legacy	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+All add-ons have been disabled by safe mode.	extensions-warning-safe-mode	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Add-on compatibility checking is disabled. You may have incompatible add-ons.	extensions-warning-check-compatibility	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Enable	extensions-warning-check-compatibility-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Enable add-on compatibility checking	extensions-warning-check-compatibility-button.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Add-on update security checking is disabled. You may be compromised by updates.	extensions-warning-update-security	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Enable add-on update security checking	extensions-warning-update-security-button.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+{ $shortcut } is being used as a shortcut in more than one case. Duplicate shortcuts may cause unexpected behavior.	shortcuts-duplicate-warning-message	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Misusing this interface may crash { -brand-short-name }.	about-glean-warning	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutGlean.ftl
+Service Workers are not enabled.	about-service-workers-warning-not-enabled	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutServiceWorkers.ftl
+No Service Workers registered.	about-service-workers-warning-no-service-workers	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutServiceWorkers.ftl
+async wheel input disabled due to unsupported pref: { $preferenceKey }	wheel-warning	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+async touch input disabled due to unsupported pref: { $preferenceKey }	touch-warning	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+NOTE: Slow SQL debugging is enabled. Full SQL strings may be displayed below but they will not be submitted to Telemetry.	about-telemetry-full-sql-warning	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+{ -brand-short-name } crashed in code from this module	third-party-warning-icon.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+Proceed with Caution	about-config-intro-warning-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/config.ftl
+Changing advanced configuration preferences can impact { -brand-short-name } performance or security.	about-config-intro-warning-text	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/config.ftl
+Warn me when I attempt to access these preferences	about-config-intro-warning-checkbox	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/config.ftl
+Accept the Risk and Continue	about-config-intro-warning-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/config.ftl
+Your stored passwords and private keys will not be protected.	pp-empty-warning	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/preferences/preferences.ftl
+Please make sure you remember the Primary Password you have set. If you forget your Primary Password, you will be unable to access any of the information protected by it on this device.	primary-password-warning	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/preferences/preferences.ftl
+Your Primary Password is used to protect sensitive information like logins and passwords.	remove-primary-password-warning1	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/preferences/preferences.ftl
+If you remove your Primary Password your information will not be protected if your computer is compromised.	remove-primary-password-warning2	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/preferences/preferences.ftl

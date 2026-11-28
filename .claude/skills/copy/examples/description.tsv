@@ -1,0 +1,407 @@
+text	context	source
+Downloading update —	update-downloading-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutDialog.ftl
+You are currently on the update channel.	channel-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutDialog.ftl
+Get your passwords on your other devices	fxaccounts-sign-in-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Sort by:	login-list-sort-label-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+No logins found	login-list-intro-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+When you save a password in { -brand-product-name }, it will show up here.	login-list-intro-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Enter your login credentials	login-list-item-subtitle-new-login	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+(no username)	login-list-item-subtitle-missing-username	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Looking for your saved logins? Turn on sync or import them.	about-logins-login-intro-heading-logged-out2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+No synced logins found.	about-logins-login-intro-heading-logged-in	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+If you saved your logins to { -brand-product-name } on a different device, here’s how to get them here:	login-intro-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Create or sign in to your { -fxaccount-brand-name(capitalization: "sentence") } on the device where your logins are saved.	login-intro-instructions-fxa	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Go to Settings > Sync > Turn on syncing… Select the Logins and passwords checkbox.	login-intro-instructions-fxa-settings	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Visit passwords support for more help.	login-intro-instructions-fxa-passwords-help	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+If your logins are saved in another browser, you can import them into { -brand-product-name }	about-logins-intro-browser-only-import	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+If your logins are saved outside of { -brand-product-name }, you can import them from another browser or from a file	about-logins-intro-import2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+To edit your login, enter your Windows login credentials. This helps protect the security of your accounts.	about-logins-edit-login-os-auth-dialog-message-win	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+edit the saved login	about-logins-edit-login-os-auth-dialog-message-macosx	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+To view your password, enter your Windows login credentials. This helps protect the security of your accounts.	about-logins-reveal-password-os-auth-dialog-message-win	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+reveal the saved password	about-logins-reveal-password-os-auth-dialog-message-macosx	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+To copy your password, enter your Windows login credentials. This helps protect the security of your accounts.	about-logins-copy-password-os-auth-dialog-message-win	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+copy the saved password	about-logins-copy-password-os-auth-dialog-message-macosx	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+To export your logins, enter your Windows login credentials. This helps protect the security of your accounts.	about-logins-export-password-os-auth-dialog-message-win	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+export saved logins and passwords	about-logins-export-password-os-auth-dialog-message-macosx	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Please enter your Primary Password to view saved logins & passwords	about-logins-primary-password-notification-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+View detailed Import Summary	about-logins-alert-import-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Passwords were leaked or stolen from this website since you last updated your login details. Change your password to protect your account.	breach-alert-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Logins and passwords imported to { -brand-short-name }.	about-logins-import-report-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Duplicate: Exact match of existing login	about-logins-import-report-row-description-no-change	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Existing login updated	about-logins-import-report-row-description-modified	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+New login added	about-logins-import-report-row-description-added	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+See your recent saves here.	pocket-panel-home-new-user-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPocket.ftl
+The Enterprise Policies service is active but there are no policies enabled.	no-specified-policies-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPolicies.ftl
+The Enterprise Policies service is inactive.	inactive-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPolicies.ftl
+You’re in a Private Window	about-private-browsing-info-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+Search with { $engine } or enter address	about-private-browsing-handoff-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+Private window: { -brand-short-name } clears your search and browsing history when you close all private windows. This doesn’t make you anonymous.	about-private-browsing-info-description-private-window	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+{ -brand-short-name } clears your search and browsing history when you close all private windows, but this doesn’t make you anonymous.	about-private-browsing-info-description-simplified	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+Our dedicated private browsing mobile app clears your history and cookies every time.	about-private-browsing-focus-promo-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+{ PLATFORM() -> [windows] To select a different search engine go to Options *[other] To select a different search engine go to Preferences }	about-private-browsing-search-banner-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+{ PLATFORM() -> [macos] Keep in Dock *[other] Pin to taskbar	about-private-browsing-pin-promo-link-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+An update to { -brand-short-name } started in the background. You’ll need to restart to finish the update.	restart-required-intro	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRestartRequired.ftl
+Your windows and tabs will be quickly restored, but private ones will not.	window-restoration-info	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRestartRequired.ftl
+We are having trouble restoring your last browsing session. Select Restore Session to try again.	restore-page-problem-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutSessionRestore.ftl
+{ -brand-short-name } is ready to go.	welcome-back-page-info	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutSessionRestore.ftl
+Your add-ons and customizations have been removed and your browser settings have been restored to their defaults. If this didn’t fix your issue, learn more about what you can do.	welcome-back-page-info-link	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutSessionRestore.ftl
+Choose { crashed-restore-tab-button } to reload the page.	crashed-single-offer-help-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutTabCrashed.ftl
+Choose { crashed-restore-tab-button } or { crashed-restore-all-button } to reload the page/pages.	crashed-multiple-offer-help-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutTabCrashed.ftl
+Crash reports help us diagnose problems and make { -brand-short-name } better.	crashed-request-help-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutTabCrashed.ftl
+Follow the operating system setting for buttons, menus, and windows.	extension-default-theme-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appExtensionFields.ftl
+A theme with a light color scheme.	extension-firefox-compact-light-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appExtensionFields.ftl
+A theme with a dark color scheme.	extension-firefox-compact-dark-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appExtensionFields.ftl
+Use a colorful appearance for buttons, menus, and windows.	extension-firefox-alpenglow-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appExtensionFields.ftl
+Download the latest version of { -brand-shorter-name }.	appmenu-update-available-message2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+{ -brand-shorter-name } couldn’t update automatically. Download the new version — you won’t lose saved information or customizations.	appmenu-update-manual-message2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Your operating system isn’t compatible with the latest version of { -brand-shorter-name }.	appmenu-update-unsupported-message2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Get the latest version of { -brand-shorter-name }. Open tabs and windows will be restored.	appmenu-update-restart-message2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+A new { -brand-shorter-name } update is available, but it can’t be installed because another copy of { -brand-shorter-name } is running. Close it to continue the update, or choose to update anyway (the other copy may not work correctly until you restart it).	appmenu-update-other-instance-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Manage your add-ons and themes through the application menu.	appmenu-addon-post-install-message3	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Record, analyze, share	profiler-popup-description-title.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Recommended preset for most web app debugging, with low overhead.	profiler-popup-presets-web-developer-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Recommended preset for profiling { -brand-shorter-name }.	profiler-popup-presets-firefox-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Preset for investigating graphics bugs in { -brand-shorter-name }.	profiler-popup-presets-graphics-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Preset for investigating audio and video bugs in { -brand-shorter-name }.	profiler-popup-presets-media-description2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Preset for investigating networking bugs in { -brand-shorter-name }.	profiler-popup-presets-networking-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Preset for investigating power use bugs in { -brand-shorter-name }, with low overhead.	profiler-popup-presets-power-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+More troubleshooting information	appmenu-help-more-troubleshooting-info.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+{ $content-title } — { -brand-full-name }	browser-main-window-window-titles.data-content-title-default	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ $content-title } — { -brand-full-name } Private Browsing	browser-main-window-window-titles.data-content-title-private	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ $content-title }	browser-main-window-mac-window-titles.data-content-title-default	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ $content-title } — Private Browsing	browser-main-window-mac-window-titles.data-content-title-private	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Tip:	urlbar-tip-icon-description.alt	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Site information for { $host }	identity-site-information	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Turn on HTTPS-Only Mode for this site if you want { -brand-short-name } to upgrade the connection when possible.	identity-https-only-info-turn-on2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+If the page seems broken, you may want to turn off HTTPS-Only Mode for this site to reload using insecure HTTP.	identity-https-only-info-turn-off2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Unable to upgrade connection from HTTP.	identity-https-only-info-no-upgrade	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Mozilla does not recognize this certificate issuer. It may have been added from your operating system or by an administrator. Learn More	identity-description-custom-root	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Your connection to this site is not private. Information you submit could be viewed by others (like passwords, messages, credit cards, etc.).	identity-description-insecure	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+The login information you enter on this page is not secure and could be compromised.	identity-description-insecure-login-forms	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Your connection to this website uses weak encryption and is not private.	identity-description-weak-cipher-intro	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Other people can view your information or modify the website’s behavior.	identity-description-weak-cipher-risk	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ -brand-short-name } has blocked parts of this page that are not secure. Learn More	identity-description-active-blocked	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Your connection is not private and information you share with the site could be viewed by others.	identity-description-passive-loaded	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+This website contains content that is not secure (such as images). Learn More	identity-description-passive-loaded-insecure	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Although { -brand-short-name } has blocked some content, there is still content on the page that is not secure (such as images). Learn More	identity-description-passive-loaded-mixed	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+This website contains content that is not secure (such as scripts) and your connection to it is not private.	identity-description-active-loaded	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Information you share with this site could be viewed by others (like passwords, messages, credit cards, etc.).	identity-description-active-loaded-insecure	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Disable protection for now	identity-disable-mixed-content-blocking.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Enable protection	identity-enable-mixed-content-blocking.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+More information	identity-more-info-link-text.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+To use the F12 shortcut, first open DevTools via the Browser Tools menu.	enable-devtools-popup-description2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Bookmarks	bookmarks-sidebar-content.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Some audio or video on this site uses DRM software, which may limit what { -brand-short-name } can let you do with it.	eme-notifications-drm-content-playing	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Manage settings	eme-notifications-drm-content-playing-manage	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Dismiss	eme-notifications-drm-content-playing-dismiss	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Allow pop-ups for { $uriHost }	popups-infobar-allow.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Block pop-ups for { $uriHost }	popups-infobar-block.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Don’t show this message when pop-ups are blocked	popups-infobar-dont-show-message.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open previous tabs? You can restore your previous session from the { -brand-short-name } application menu , under History.	restore-session-startup-suggestion-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ -brand-short-name } automatically sends some data to { -vendor-short-name } so that we can improve your experience.	data-reporting-notification-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+View Image Info	main-context-menu-image-info.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+View Description	main-context-menu-image-desc.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+View Frame Info	main-context-menu-frame-view-info.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+{ -firefox-home-brand-name } is now your homepage	colorway-homepage-reset-success-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorwaycloset.ftl
+Color can change culture. The latest colorways celebrate voices making the world a better place.	colorway-collection-independent-voices-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorways.ftl
+Colors that change culture.	colorway-collection-independent-voices-short-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorways.ftl
+You create opportunities to win and help everyone around you elevate their game.	playmaker-colorway-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorways.ftl
+You see the world differently and your creations stir the emotions of others.	expressionist-colorway-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorways.ftl
+You question the status quo and move others to imagine a better future.	visionary-colorway-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorways.ftl
+You leave the world a better place than you found it and lead others to believe.	activist-colorway-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorways.ftl
+You believe that fortune favors the bold and inspire others to be brave.	dreamer-colorway-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorways.ftl
+You see opportunities everywhere and make an impact on the lives of everyone around you.	innovator-colorway-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorways.ftl
+Part of this page crashed. To let { -brand-product-name } know about this issue and get it fixed faster, please submit a report.	crashed-subframe-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/contentCrash.ftl
+Drag and drop items here to keep them within reach but out of your toolbar…	customize-mode-overflow-list-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/customizeMode.ftl
+Set { -brand-short-name } as your default browser? Get fast, safe, and private browsing whenever you use the web.	default-browser-notification-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/defaultBrowserNotification.ftl
+Keep { -brand-short-name } at your fingertips — make it your default browser and pin it to your taskbar.	default-browser-prompt-message-pin	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/defaultBrowserNotification.ftl
+Keep { -brand-short-name } at your fingertips — make it your default browser and keep it in your Dock.	default-browser-prompt-message-pin-mac	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/defaultBrowserNotification.ftl
+Get speed, safety, and privacy every time you browse.	default-browser-prompt-message-alt	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/defaultBrowserNotification.ftl
+{ PLATFORM() -> [macos] Show in Finder *[other] Show in Folder }	downloads-cmd-show-description-2.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+Show more information	downloads-show-more-information.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+{ $url } attempted to automatically download multiple files. The site could be broken or trying to store spam files on your device.	downloads-blocked-download-detailed-info	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+Quickly grab open tabs from your phone and open them here for maximum flow.	callout-firefox-view-tab-pickup-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+All your closed tabs will magically show up here. Never worry about accidentally closing a site again.	callout-firefox-view-recently-closed-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Choose the shade that speaks to you with colorways. Only in { -brand-product-name }.	callout-firefox-view-colorways-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Color your browser with these iconic shades, inspired by independent voices. Only in { -brand-product-name }.	callout-firefox-view-colorways-reminder-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Access your open tabs from any device. Plus sync your bookmarks, passwords, and more.	continuous-onboarding-firefox-view-tab-pickup-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Fill out forms, add comments, or take notes directly in { -brand-short-name }.	callout-pdfjs-edit-body-a	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Skip the search for free online editors. Fill out forms, add comments, or take notes directly in { -brand-short-name }.	callout-pdfjs-edit-body-b	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Mark up PDFs, then save your changes.	callout-pdfjs-draw-body-a	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+No more printing and scanning. Mark up PDFs, then save your changes.	callout-pdfjs-draw-body-b	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Open pages from other devices.	firefoxview-tabpickup-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+To grab your phone tabs here, first sign in or create an account.	firefoxview-tabpickup-step-signin-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Download { -brand-product-name } for mobile and sign in there.	firefoxview-tabpickup-adddevice-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Allow { -brand-short-name } to share tabs between devices.	firefoxview-tabpickup-synctabs-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+{ -brand-short-name } is not able to sync tabs between devices because your administrator has disabled syncing.	firefoxview-tabpickup-fxa-admin-disabled-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+If you’re using a firewall or proxy, check that { -brand-short-name } has permission to access the web.	firefoxview-tabpickup-network-offline-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+To grab your tabs, you’ll need to allow syncing in { -brand-short-name }.	firefoxview-tabpickup-sync-disconnected-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+To grab your tabs, you’ll need to enter the Primary Password for { -brand-short-name }.	firefoxview-tabpickup-password-locked-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+To view your latest mobile tabs, sign in to { -brand-product-name } on iOS or Android.	firefoxview-mobile-promo-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Reopen pages you’ve closed in this window.	firefoxview-closed-tabs-description2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+{ $intensity } · { $collection }	firefoxview-colorway-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Page Info	menu-tools-page-info.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/menubar.ftl
+More Troubleshooting Information	menu-help-more-troubleshooting-info.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/menubar.ftl
+Select which items to import:	import-items-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/migration.ftl
+macOS requires you to explicitly allow { -brand-short-name } to access Safari’s bookmarks. Click “Continue” and select the “Bookmarks.plist” file in the File Open panel that appears.	import-permissions-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/migration.ftl
+The following items are currently being imported…	import-migrating-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/migration.ftl
+The following profiles are available to import from:	import-select-profile-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/migration.ftl
+The following items were successfully imported:	import-done-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/migration.ftl
+Plus seamlessly hop between devices and add a splash of color to your browser.	firefoxview-cfr-body	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/asrouter.ftl
+Want that open tab on your phone? Grab it. Need that site you just visited? Poof, it’s back with { -firefoxview-brand-name }.	firefoxview-spotlight-promo-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/asrouter.ftl
+Search the web	newtab-search-box-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Our sponsors & your privacy	newtab-menu-show-privacy-info	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Sites you save or visit	newtab-custom-shortcuts-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Exceptional content curated by { -pocket-brand-name }, part of the { -brand-product-name } family	newtab-custom-pocket-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+A selection of recent sites and content	newtab-custom-recent-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Great, you’ve got { -brand-short-name }	return-to-amo-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+Vibrant new colorways. Available for a limited time.	mr2-onboarding-colorway-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+Use this colorway.	mr2-onboarding-theme-description.aria-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+{ -brand-short-name } is an independent browser backed by a non-profit. Together, we’re making the web safer, healthier, and more private.	mr2-onboarding-thank-you-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+It’s our 100th release! Thanks for helping us build a better, healthier internet.	fx100-thank-you-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+It’s our 100th release of { -brand-short-name }. Thank you for helping us build a better, healthier internet.	fx100-upgrade-thank-you-body	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+It’s our 100th release! Thanks for being a part of our community. Keep { -brand-short-name } one click away for the next 100.	fx100-upgrade-thanks-keep-body	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+Content	general-meta-content.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/pageInfo.ftl
+Long Description:	media-long-desc.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/pageInfo.ftl
+Not specified	page-info-not-specified.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/pageInfo.ftl
+This website does not supply ownership information.	page-info-security-no-owner.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/pageInfo.ftl
+Page Info — { $website }	page-info-page.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/pageInfo.ftl
+Frame Info — { $website }	page-info-frame.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/pageInfo.ftl
+Forget the last:	panic-main-timeframe-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panicButton.ftl
+Z > A Sort Order	places-view-sort-descending.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/places.ftl
+Select an item to view and edit its properties	places-details-pane-select-an-item-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/places.ftl
+This web application is hosted at:	app-manager-web-app-info	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/applicationManager.ftl
+This application is located at:	app-manager-local-app-info	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/applicationManager.ftl
+Choose the list { -brand-short-name } uses to block online trackers. Lists provided by Disconnect .	blocklist-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/blocklists.ftl
+Allows some trackers so fewer websites break.	blocklist-item-moz-std-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/blocklists.ftl
+Blocks all detected trackers. Some websites or content may not load properly.	blocklist-item-moz-full-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/blocklists.ftl
+Clearing all cookies and site data stored by { -brand-short-name } may sign you out of websites and remove offline web content. Clearing cache data will not affect your logins.	clear-site-data-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/clearSiteData.ftl
+You may get signed out of websites if cleared	clear-site-data-cookies-info	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/clearSiteData.ftl
+Will require websites to reload images and data	clear-site-data-cache-info	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/clearSiteData.ftl
+Example: .mozilla.org, .net.nz, 192.168.1.0/24	connection-proxy-noproxy-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/connection.ftl
+Connections to localhost, 127.0.0.1/8, and ::1 are never proxied.	connection-proxy-noproxy-localhost-desc-2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/connection.ftl
+Web pages are sometimes offered in more than one language. Choose languages for displaying these web pages, in order of preference	languages-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/languages.ftl
+{ -brand-short-name } will display the first language as your default and will display alternate languages if necessary in the order they appear.	browser-languages-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/languages.ftl
+Check out other { -vendor-short-name } products that work to support a healthy internet.	more-from-moz-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+The mobile browser that puts your privacy first.	more-from-moz-firefox-mobile-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+Discover an added layer of anonymous browsing and protection.	more-from-moz-mozilla-vpn-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+Put your data to work for a better internet for everyone.	more-from-moz-mozilla-rally-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+You’ve turned off protections on these websites.	permissions-exceptions-etp-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+You can specify which websites are always or never allowed to use cookies and site data. Type the exact address of the site you want to manage and then click Block, Allow for Session, or Allow.	permissions-exceptions-cookie-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+You can turn off HTTPS-Only Mode for specific websites. { -brand-short-name } won’t attempt to upgrade the connection to secure HTTPS for those sites. Exceptions do not apply to private windows.	permissions-exceptions-https-only-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+You can specify which websites are allowed to open pop-up windows. Type the exact address of the site you want to allow and then click Allow.	permissions-exceptions-popup-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Logins for the following websites will not be saved	permissions-exceptions-saved-logins-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+You can specify which websites are allowed to install add-ons. Type the exact address of the site you want to allow and then click Allow.	permissions-exceptions-addons-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+You can manage the sites that do not follow your default autoplay settings here.	permissions-site-autoplay-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+The following websites have requested to send you notifications. You can specify which websites are allowed to send you notifications. You can also block new requests asking to allow notifications.	permissions-site-notification-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+This will prevent any websites not listed above from requesting permission to send notifications. Blocking notifications may break some website features.	permissions-site-notification-disable-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+The following websites have requested to access your location. You can specify which websites are allowed to access your location. You can also block new requests asking to access your location.	permissions-site-location-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+This will prevent any websites not listed above from requesting permission to access your location. Blocking access to your location may break some website features.	permissions-site-location-disable-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+The following websites have requested to access your virtual reality devices. You can specify which websites are allowed to access your virtual reality devices. You can also block new requests asking to access your virtual reality devices.	permissions-site-xr-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+This will prevent any websites not listed above from requesting permission to access your virtual reality devices. Blocking access to your virtual reality devices may break some website features.	permissions-site-xr-disable-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+The following websites have requested to access your camera. You can specify which websites are allowed to access your camera. You can also block new requests asking to access your camera.	permissions-site-camera-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+This will prevent any websites not listed above from requesting permission to access your camera. Blocking access to your camera may break some website features.	permissions-site-camera-disable-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+The following websites have requested to access your microphone. You can specify which websites are allowed to access your microphone. You can also block new requests asking to access your microphone.	permissions-site-microphone-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+This will prevent any websites not listed above from requesting permission to access your microphone. Blocking access to your microphone may break some website features.	permissions-site-microphone-disable-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Send websites a “Do Not Track” signal that you don’t want to be tracked	do-not-track-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Only when { -brand-short-name } is set to block known trackers	do-not-track-option-default-content-blocking-known.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Proceed with Caution	pane-experimental-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Changing advanced configuration settings can impact { -brand-short-name } performance or security.	pane-experimental-description2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ $name } controls this setting.	extension-controlling-websites-content-blocking-all-trackers	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Some websites adapt their color scheme based on your preferences. Choose which color scheme you’d like to use for those sites.	preferences-web-appearance-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ preferences-web-appearance-choice-tooltip-auto.title }	preferences-web-appearance-choice-input-auto.aria-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ preferences-web-appearance-choice-tooltip-light.title }	preferences-web-appearance-choice-input-light.aria-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ preferences-web-appearance-choice-tooltip-dark.title }	preferences-web-appearance-choice-input-dark.aria-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Override { -brand-short-name }’s default colors for text, website backgrounds, and links.	preferences-colors-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose your preferred language for displaying pages	choose-language-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose the languages used to display menus, messages, and notifications from { -brand-short-name }.	choose-browser-language-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose how { -brand-short-name } handles the files you download from the web or the applications you use while browsing.	applications-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ $type-description } ({ $type })	applications-type-description-with-type	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+What should { -brand-short-name } do with other files?	applications-handle-new-file-types-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Digital Rights Management (DRM) Content	drm-content-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Play DRM-controlled content	play-drm-content.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Learn more	play-drm-content-learn-more	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Keep { -brand-short-name } up to date for the best performance, stability, and security.	update-application-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Allow { -brand-short-name } to	update-application-allow-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Do you want { -brand-short-name } to continue with this update?	update-in-progress-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+These settings are tailored to your computer’s hardware and operating system.	performance-use-recommended-settings-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Content process limit	performance-limit-content-process-option	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Additional content processes can improve performance when using multiple tabs, but will also use more memory.	performance-limit-content-process-enabled-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Modifying the number of content processes is only possible with multiprocess { -brand-short-name }. Learn how to check if multiprocess is enabled	performance-limit-content-process-blocked-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ $num } (default)	performance-default-content-process-count.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Configure how { -brand-short-name } connects to the internet.	network-proxy-connection-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose what you see when you open your homepage, new windows, and new tabs.	home-new-windows-tabs-description2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ -firefox-home-brand-name } Content	home-prefs-content-header2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose what content you want on your { -firefox-home-brand-name } screen.	home-prefs-content-description2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Exceptional content curated by { $provider }, part of the { -brand-product-name } family	home-prefs-recommended-by-description-new	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Tips and news from { -vendor-short-name } and { -brand-product-name }	home-prefs-snippets-description-new	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+This is your default search engine in the address bar and search bar. You can switch it at any time.	search-engine-default-desc-2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose a different default search engine for Private Windows only	search-engine-default-private-desc-2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose how suggestions from search engines appear.	search-suggestions-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose the alternative search engines that appear below the address bar and search bar when you start to enter a keyword.	search-one-click-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Synchronize your bookmarks, history, tabs, passwords, add-ons, and settings across all your devices.	sync-signedout-description2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Password Change Failed	forms-master-pw-fips-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Manage accounts in your device settings	forms-windows-sso-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+To create a Primary Password, enter your Windows login credentials. This helps protect the security of your accounts.	primary-password-os-auth-dialog-message-win	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+create a Primary Password	primary-password-os-auth-dialog-message-macosx	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ -brand-short-name } will remember your browsing, download, form, and search history.	history-remember-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ -brand-short-name } will use the same settings as private browsing, and will not remember any history as you browse the Web.	history-dontremember-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Type blocked	sitedata-block-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Trackers follow you around online to collect information about your browsing habits and interests. { -brand-short-name } blocks many of these trackers and other malicious scripts.	content-blocking-section-top-level-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Balanced for protection and performance. Pages will load normally.	content-blocking-etp-standard-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Stronger protection, but may cause some sites or content to break.	content-blocking-etp-strict-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose which trackers and scripts to block.	content-blocking-etp-custom-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ -brand-short-name } blocks the following:	content-blocking-etp-blocking-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Tracking content in all windows	content-blocking-all-windows-tracking-content	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Total Cookie Protection contains cookies to the site you’re on, so trackers can’t use them to follow you between sites.	content-blocking-etp-standard-tcp-rollout-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+You will need to reload your tabs to apply these changes.	content-blocking-reload-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Tracking content	content-blocking-tracking-content-label.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+We strive to provide you with choices and collect only what we need to provide and improve { -brand-short-name } for everyone. We always ask permission before receiving personal information.	collection-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+When we offer features that use your data to give you a more personal experience:	privacy-segmentation-section-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ -brand-short-name } is running out of disk space. Website contents may not display properly. You can clear stored data in Settings > Privacy & Security > Cookies and Site Data.	space-alert-over-5gb-message2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ -brand-short-name } is running out of disk space. Website contents may not display properly. Visit “Learn more” to optimize your disk usage for better browsing experience.	space-alert-under-5gb-message2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+HTTPS provides a secure, encrypted connection between { -brand-short-name } and the websites you visit. Most websites support HTTPS, and if HTTPS-Only Mode is enabled, then { -brand-short-name } will upgrade all connections to HTTPS.	httpsonly-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose a Bookmark to be your Home Page. If you choose a folder, the Bookmarks in that folder will be opened in Tabs.	select-bookmark-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/selectBookmark.ftl
+The following websites store cookies and site data on your computer. { -brand-short-name } keeps data from websites with persistent storage until you delete it, and deletes data from websites with non-persistent storage as space is needed.	site-data-settings-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/siteDataSettings.ftl
+Removing cookies and site data may log you out of websites. Are you sure you want to make the changes?	site-data-removing-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/siteDataSettings.ftl
+Removing cookies and site data may log you out of websites. Are you sure you want to remove cookies and site data for { $baseDomain } ?	site-data-removing-single-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/siteDataSettings.ftl
+Translation will not be offered for the following languages	translation-languages-disabled-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/translation.ftl
+Translation will not be offered for the following sites	translation-sites-disabled-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/translation.ftl
+Add bookmarks to this folder to see them displayed on the Bookmarks Toolbar	default-bookmarks-toolbarfolder-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/profile/default-bookmarks.ftl
+Trackers { -brand-short-name } blocked this week	graph-week-summary-private-window	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Protections Dashboard	protection-report-page-content-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+{ -brand-short-name } can protect your privacy behind the scenes while you browse. This is a personalized summary of those protections, including tools to take control of your online security.	protection-report-page-summary	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+{ -brand-short-name } protects your privacy behind the scenes while you browse. This is a personalized summary of those protections, including tools to take control of your online security.	protection-report-page-summary-default	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+{ -brand-short-name } automatically stops companies from secretly following you around the web.	etp-card-content-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+All protections are currently turned off. Choose which trackers to block by managing your { -brand-short-name } protections settings.	protection-report-etp-card-content-custom-not-blocking	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+A graph containing the total number of each type of tracker blocked this week.	graph-legend-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+These cookies follow you from site to site to gather data about what you do online. They are set by third parties such as advertisers and analytics companies. Blocking cross-site tracking cookies reduces the number of ads that follow you around. Learn more	cookie-tab-content	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Websites may load external ads, videos, and other content with tracking code. Blocking tracking content can help sites load faster, but some buttons, forms, and login fields might not work. Learn more	tracker-tab-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Fingerprinters collect settings from your browser and computer to create a profile of you. Using this digital fingerprint, they can track you across different websites. Learn more	fingerprinter-tab-content	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Cryptominers use your system’s computing power to mine digital money. Cryptomining scripts drain your battery, slow down your computer, and can increase your energy bill. Learn more	cryptominer-tab-content	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Use the mobile browser with built-in protection against ad tracking.	mobile-app-card-content	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+{ -brand-product-name } securely stores your passwords in your browser.	passwords-header-content	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Securely store and sync your passwords to all your devices.	lockwise-header-content-logged-in	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Check { -monitor-brand-name } to see if you’ve been part of a known data breach, and get alerts about new breaches.	monitor-header-content-no-account	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+{ -monitor-brand-name } warns you if your info has appeared in a known data breach.	monitor-header-content-signed-in	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+You have no known breaches. If that changes, we will let you know.	monitor-no-breaches-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+After reviewing breach details and taking steps to protect your info, you can mark breaches as resolved.	monitor-breaches-unresolved-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+If your email appears in any new breaches, we will let you know.	monitor-breaches-resolved-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Resolve the rest of your breaches on { -monitor-brand-short-name }.	monitor-partial-breaches-motivation-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+More information about Enhanced Tracking Protection	protections-panel-etp-more-info.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Tracking Content	protections-panel-content-blocking-tracking-protection	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Social Media Trackers	protections-panel-content-blocking-socialblock	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Cryptominers	protections-panel-content-blocking-cryptominers-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Fingerprinters	protections-panel-content-blocking-fingerprinters-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Websites may load external ads, videos, and other content with tracking code. Blocking tracking content can help sites load faster, but some buttons, forms, and login fields might not work.	protections-panel-tracking-content	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Some trackers marked below have been partially unblocked on this page because you interacted with them.	protections-panel-description-shim-allowed	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Manage protection settings	protections-panel-content-blocking-manage-settings.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Report a Broken Site	protections-panel-content-blocking-breakage-report-view.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Blocking certain trackers can cause problems with some websites. Reporting these problems helps make { -brand-short-name } better for everyone. Sending this report will send a URL and information about your browser settings to Mozilla. Learn more	protections-panel-content-blocking-breakage-report-view-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+URL	protections-panel-content-blocking-breakage-report-view-collection-url	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Optional: Describe the problem	protections-panel-content-blocking-breakage-report-view-collection-comments	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Send Report	protections-panel-content-blocking-breakage-report-view-send-report.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Use this special mode of { -brand-short-name } to diagnose issues. Your extensions and customizations will be temporarily disabled.	troubleshoot-mode-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safeMode.ftl
+{ -brand-short-name } closed unexpectedly while starting. This might be caused by add-ons or other problems. You can try to resolve the problem by troubleshooting in Safe Mode.	auto-safe-mode-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safeMode.ftl
+{ -brand-short-name } blocked this page because it may trick you into doing something dangerous like installing software or revealing personal information like passwords or credit cards.	safeb-blocked-phishing-page-short-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+{ -brand-short-name } blocked this page because it might attempt to install malicious software that may steal or delete personal information on your computer.	safeb-blocked-malware-page-short-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+{ -brand-short-name } blocked this page because it might try to trick you into installing programs that harm your browsing experience (for example, by changing your homepage or showing extra ads on sites you visit).	safeb-blocked-unwanted-page-short-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+{ -brand-short-name } blocked this page because it might try to install dangerous apps that steal or delete your information (for example, photos, passwords, messages and credit cards).	safeb-blocked-harmful-page-short-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+Advisory provided by { $advisoryname } .	safeb-palm-advisory-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+Your default search engine has been changed. { $oldEngine } is no longer available as a default search engine in { -brand-short-name }. { $newEngine } is now your default search engine. To change to another default search engine, go to settings. Learn more	removed-search-engine-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/search.ftl
+{ -brand-product-name } will stop syncing your account but won’t delete any of your browsing data on this device.	sync-disconnect-dialog-body	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sync.ftl
+Synced data will remain in your account.	fxa-signout-dialog-body	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sync.ftl
+Send a tab instantly to any device you’re signed in on.	fxa-menu-send-tab-to-device-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sync.ftl
+Want to see your tabs from other devices here?	synced-tabs-sidebar-noclients-subtitle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/syncedTabs.ftl
+View a list of tabs from your other devices.	synced-tabs-sidebar-intro	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/syncedTabs.ftl
+Translating page content…	translation-notification-translating-content.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/translationNotification.ftl
+This will delete all unsubmitted crash reports and cannot be undone.	delete-unsubmitted-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/crashreporter/aboutcrashes.ftl
+This will remove the list of submitted crash reports but will not delete the submitted data. This cannot be undone.	delete-submitted-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/crashreporter/aboutcrashes.ftl
+Show more	addon-detail-description-expand	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Show less	addon-detail-description-collapse	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+The developer of this add-on asks that you help support its continued development by making a small contribution.	detail-contributions-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+This extension does not run while private browsing. Learn more	detail-private-disallowed-description2	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+This extension has access to your online activities while private browsing. Learn more	detail-private-required-description2	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+This extension will be updated when { -brand-short-name } restarts.	install-postponed-message	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+{ $addon } has been removed.	pending-uninstall-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+More Information: Bug { $bug }	label-more-information	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutCompat.ftl
+The Glean SDK is a data collection library used in Mozilla products. This page is for developers and testers who need to configure debugging and logging state in the Glean SDK .	about-glean-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutGlean.ftl
+You’ve enabled HTTPS-Only Mode for enhanced security, and a HTTPS version of { $websiteUrl } is not available.	about-httpsonly-explanation-unavailable2	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutHttpsOnlyError.ftl
+What could be causing this?	about-httpsonly-explanation-question	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutHttpsOnlyError.ftl
+Most likely, the website simply does not support HTTPS.	about-httpsonly-explanation-nosupport	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutHttpsOnlyError.ftl
+It’s also possible that an attacker is involved. If you decide to visit the website, you should not enter any sensitive information like passwords, emails, or credit card details.	about-httpsonly-explanation-risk	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutHttpsOnlyError.ftl
+If you continue, HTTPS-Only Mode will be turned off temporarily for this site.	about-httpsonly-explanation-continue	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutHttpsOnlyError.ftl
+There is a secure version of www.{ $websiteUrl } . You can visit this page instead of { $websiteUrl } .	about-httpsonly-suggestion-box-www-text	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutHttpsOnlyError.ftl
+Messages Sent	about-networking-messages-sent	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutNetworking.ftl
+Messages Received	about-networking-messages-received	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutNetworking.ftl
+Missing something? Some plugins are no longer supported. Learn More.	deprecation-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutPlugins.ftl
+Description	description-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutPlugins.ftl
+License information	plugins-gmp-license-info	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutPlugins.ftl
+Privacy Information	plugins-gmp-privacy-info	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutPlugins.ftl
+This plugin is automatically installed by Mozilla to comply with the WebRTC specification and to enable WebRTC calls with devices that require the H.264 video codec. Visit https://www.openh264.org/ to view the codec source code and learn more about the implementation.	plugins-openh264-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutPlugins.ftl
+This plugin enables playback of encrypted media in compliance with the Encrypted Media Extensions specification. Encrypted media is typically used by sites to protect against copying of premium media content. Visit https://www.w3.org/TR/encrypted-media/ for more information on Encrypted Media Extensions.	plugins-widevine-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutPlugins.ftl
+This page helps you to manage your profiles. Each profile is a separate world which contains separate history, bookmarks, settings and add-ons.	profiles-subtitle	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+Decrease Content Width	about-reader-toolbar-contentwidthminus.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutReader.ftl
+Increase Content Width	about-reader-toolbar-contentwidthplus.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutReader.ftl
+Your profile folder contains a user.js file , which includes preferences that were not created by { -brand-short-name }.	user-js-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+This will not change your settings or remove extensions.	startup-cache-dialog-body2	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Codec Support Information	media-codec-support-info	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+WebGL 1 Driver WSI Info	webgl1-wsiinfo	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+WebGL 2 Driver WSI Info	webgl2-wsiinfo	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Content Process Sandboxing	can-sandbox-content	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Effective Content Process Sandbox Level	effective-content-sandbox-level	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+content	sandbox-proc-type-content	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Looking for more information?	about-telemetry-more-information	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+Session Information	about-telemetry-session-info-section	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+This page shows the information about performance, hardware, usage and customizations collected by Telemetry. This information is submitted to { $telemetryServerOwner } to help improve { -brand-full-name }.	about-telemetry-page-subtitle	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+Telemetry is collecting { about-telemetry-data-type } and upload is { about-telemetry-upload-type } .	about-telemetry-settings-explanation	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+Firefox Origin Telemetry encodes data before it is sent so that { $telemetryServerOwner } can count things, but not know whether or not any given { -brand-product-name } contributed to that count. ( learn more )	about-telemetry-origins-explanation	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+Not recorded	third-party-message-no-duration	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+What’s the issue?	abuse-report-subtitle	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Describe the problem (optional)	abuse-report-submit-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Report for { $addon-name } canceled.	abuse-report-messagebar-aborted	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Sending report for { $addon-name } .	abuse-report-messagebar-submitting	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Thank you for submitting a report. Do you want to remove { $addon-name } ?	abuse-report-messagebar-submitted	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Thank you for submitting a report.	abuse-report-messagebar-submitted-noremove	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Thank you for submitting a report. You’ve removed the extension { $addon-name } .	abuse-report-messagebar-removed-extension	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Thank you for submitting a report. You’ve removed the Site Permissions add-on { $addon-name } .	abuse-report-messagebar-removed-sitepermission	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Thank you for submitting a report. You’ve removed the theme { $addon-name } .	abuse-report-messagebar-removed-theme	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Yes, Remove It	abuse-report-messagebar-action-remove-extension	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+No, I’ll Keep It	abuse-report-messagebar-action-keep-extension	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Retry	abuse-report-messagebar-action-retry	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Public Key Info	certificate-viewer-public-key-info	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/certviewer.ftl
+Authority Info (AIA)	certificate-viewer-authority-info-aia	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/certviewer.ftl
+Changing these preferences can impact { -brand-short-name } performance or security.	about-config-caution-text	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/config.ftl
+Enables support for the experimental CSS Masonry Layout feature. See the explainer for a high level description of the feature. To provide feedback, please comment in this GitHub issue or this bug .	experimental-features-css-masonry-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/featuregates/features.ftl
+This new API provides low-level support for performing computation and graphics rendering using the Graphics Processing Unit (GPU) of the user’s device or computer. The specification is still a work-in-progress. See bug 1602129 for more details.	experimental-features-web-gpu-description2	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/featuregates/features.ftl
+With this feature enabled, { -brand-short-name } supports the JPEG XL (JXL) format. This is an enhanced image file format that supports lossless transition from traditional JPEG files. See bug 1539075 for more details.	experimental-features-media-jxl-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/featuregates/features.ftl
+A side panel for the Page Inspector that shows you information detailing your app’s cross-browser compatibility status. See bug 1584464 for more details.	experimental-features-devtools-compatibility-panel-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/featuregates/features.ftl
+Treat cookies as “SameSite=Lax” by default if no “SameSite” attribute is specified. Developers must opt-in to the current status quo of unrestricted use by explicitly asserting “SameSite=None”.	experimental-features-cookie-samesite-lax-by-default2-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/featuregates/features.ftl
+A cache for the initial about:home document that is loaded by default at startup. The purpose of the cache is to improve startup performance.	experimental-features-abouthome-startup-cache-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/featuregates/features.ftl
+Enables experimental support for Service Workers in the Debugger panel. This feature may slow the Developer Tools down and increase memory consumption.	experimental-features-devtools-serviceworker-debugger-support-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/featuregates/features.ftl
+Add controls to the WebRTC global sharing indicator that allow users to globally mute their microphone and camera feeds.	experimental-features-webrtc-global-mute-toggles-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/featuregates/features.ftl
+Enable Warp, a project to improve JavaScript performance and memory usage.	experimental-features-js-warp-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/featuregates/features.ftl
+Caches all accessibility information from all documents in the { -brand-short-name } main process. This improves performance for screen readers and other applications which use accessibility APIs.	experimental-features-accessibility-cache-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/featuregates/features.ftl
+{ -brand-short-name } stores information about your settings and preferences in your personal profile.	profile-creation-explanation-1	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/createProfileWizard.ftl
+If you are sharing this copy of { -brand-short-name } with other users, you can use profiles to keep each user’s information separate. To do this, each user should create his or her own profile.	profile-creation-explanation-2	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/createProfileWizard.ftl
+If you are the only person using this copy of { -brand-short-name }, you must have at least one profile. If you would like, you can create multiple profiles for yourself to store different sets of settings and preferences. For example, you may want to have separate profiles for business and personal use.	profile-creation-explanation-3	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/createProfileWizard.ftl
+If you create several profiles you can tell them apart by the profile names. You may use the name provided here or use one of your own.	profile-creation-intro	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/createProfileWizard.ftl
+Your user settings, preferences and other user-related data will be stored in:	profile-directory-explanation	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/createProfileWizard.ftl
+You’ll need to choose an application.	permission-dialog-unset-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/handlerDialog.ftl
+Choose an application to open the { $scheme } link.	chooser-dialog-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/handlerDialog.ftl
+Choose other Application	choose-other-app-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/handlerDialog.ftl
+Another copy of { -brand-product-name } has made changes to profiles. You must restart { -brand-short-name } before making more changes.	profile-selection-conflict-message	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/profileSelection.ftl
+{ -brand-short-name } stores information about your settings, preferences, and other user items in your user profile.	profile-manager-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/profileSelection.ftl
+Start fresh to fix performance issues. This will remove your extensions and customizations. You won’t lose essential information like bookmarks and passwords.	refresh-profile-dialog-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/resetProfile.ftl
+Almost done…	refresh-profile-progress-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/resetProfile.ftl
+Complete this one-step installation to help keep { -brand-short-name } up to date and prevent data loss. { -brand-short-name } will be added to your Applications folder and Dock.	prompt-to-install-message	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/run-from-dmg.ftl
+You already have { -brand-short-name } installed. Use the installed application to stay up to date and prevent data loss.	prompt-to-launch-existing-app-message	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/run-from-dmg.ftl
+You have chosen to open:	unknowncontenttype-intro	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/unknownContentType.ftl
+To protect your security, { $hostname } will not allow { -brand-short-name } to display the page if another site has embedded it. To see this page, you need to open it in a new window.	csp-xfo-blocked-long-desc	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Please select a personality to get more info on	xp-sec-fortezza-more-info	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/nsserrors.ftl
+No more information on that personality	xp-sec-fortezza-no-more-info	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/nsserrors.ftl
+Subtitles	pictureinpicture-subtitles-cmd.aria-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/pictureinpicture/pictureinpicture.ftl
+A Primary Password is used to protect some sensitive information, like logins and passwords, on this device. If you create a Primary Password you will be asked to enter it once per session when { -brand-short-name } retrieves saved information protected by the password.	primary-password-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/preferences/preferences.ftl
+You must enter your current password to proceed:	remove-info.value	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/preferences/preferences.ftl
+The Background Update task checks for updates to { -brand-short-name } when { -brand-short-name } is not running. This task is installed automatically by { -brand-short-name }, and is reinstalled when { -brand-short-name } runs. To disable this task, update the browser settings or the { -brand-short-name } enterprise policy setting “BackgroundAppUpdate”.	backgroundupdate-task-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/updates/backgroundupdate.ftl
+The following updates have been installed	history-intro	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/updates/history.ftl

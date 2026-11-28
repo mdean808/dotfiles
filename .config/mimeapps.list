@@ -1,9 +1,9 @@
 [Default Applications]
 x-scheme-handler/bruno=bruno.desktop
-x-scheme-handler/http=app.zen_browser.zen.desktop
-application/xhtml+xml=app.zen_browser.zen.desktop
-text/html=app.zen_browser.zen.desktop
-x-scheme-handler/https=app.zen_browser.zen.desktop
+x-scheme-handler/http=zen.desktop
+application/xhtml+xml=zen.desktop
+text/html=zen.desktop
+x-scheme-handler/https=zen.desktop
 x-scheme-handler/mailto=app.zen_browser.zen.desktop
 x-scheme-handler/claude-cli=claude-code-url-handler.desktop
 x-scheme-handler/t3code=com.t3tools.T3Code.desktop

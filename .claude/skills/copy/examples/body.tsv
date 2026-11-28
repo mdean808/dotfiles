@@ -1,0 +1,72 @@
+text	context	source
+We use some essential cookies to make this service work.	cookie-banner page text	alphagov/govuk-design-system@d3b6145:src/components/cookie-banner/client-side/index.njk
+We’d also like to use analytics cookies so we can understand how you use the service and make improvements.	cookie-banner page text	alphagov/govuk-design-system@d3b6145:src/components/cookie-banner/client-side/index.njk
+You’ve accepted analytics cookies. You can change your cookie settings at any time.	cookie-banner page text	alphagov/govuk-design-system@d3b6145:src/components/cookie-banner/client-side/index.njk
+You’ve rejected analytics cookies. You can change your cookie settings at any time.	cookie-banner page text	alphagov/govuk-design-system@d3b6145:src/components/cookie-banner/client-side/index.njk
+We’d like to set additional cookies so we can remember your settings, understand how people use the service and make improvements.	cookie-banner page text	alphagov/govuk-design-system@d3b6145:src/components/cookie-banner/multiple-cookies/index.njk
+You’ve accepted additional cookies. You can change your cookie settings at any time.	cookie-banner page text	alphagov/govuk-design-system@d3b6145:src/components/cookie-banner/server-side-confirmation/index.njk
+You’ve rejected additional cookies. You can change your cookie settings at any time.	cookie-banner page text	alphagov/govuk-design-system@d3b6145:src/components/cookie-banner/server-side-multiple-messages-confirmation-visible/index.njk
+Contact example@department.gov.uk if you think there’s a problem.	notification-banner page text	alphagov/govuk-design-system@d3b6145:src/components/notification-banner/success/index.njk
+Excerpt from page that matches the search criteria	pagination page text	alphagov/govuk-design-system@d3b6145:src/components/pagination/in-page/index.njk
+To view the skip link component tab to this example, or click inside this example and press tab.	skip-link page text	alphagov/govuk-design-system@d3b6145:src/components/skip-link/default/index.njk
+07700 900457	summary-list page text	alphagov/govuk-design-system@d3b6145:src/components/summary-list/default/index.njk
+sarah.phillips@example.com	summary-list page text	alphagov/govuk-design-system@d3b6145:src/components/summary-list/default/index.njk
+By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.	check-answers page text	alphagov/govuk-design-system@d3b6145:src/patterns/check-answers/default/index.njk
+We’ve sent you a text message with a security code.	confirm-a-phone-number page text	alphagov/govuk-design-system@d3b6145:src/patterns/confirm-a-phone-number/default/index.njk
+Not received a text message?	confirm-a-phone-number page text	alphagov/govuk-design-system@d3b6145:src/patterns/confirm-a-phone-number/default/index.njk
+Text messages sometimes take a few minutes to arrive. If you do not receive the text message, you can request a new one.	confirm-a-phone-number page text	alphagov/govuk-design-system@d3b6145:src/patterns/confirm-a-phone-number/resend/index.njk
+If you cannot access the phone number for this account, contact the Tax Credits Helpline to get help signing in.	confirm-a-phone-number page text	alphagov/govuk-design-system@d3b6145:src/patterns/confirm-a-phone-number/resend/index.njk
+We have sent you a confirmation email.	confirmation-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/confirmation-pages/default/index.njk
+We’ve sent your application to Hackney Electoral Register Office.	confirmation-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/confirmation-pages/default/index.njk
+They will contact you either to confirm your registration, or to ask for more information.	confirmation-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/confirmation-pages/default/index.njk
+What did you think of this service? (takes 30 seconds)	confirmation-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/confirmation-pages/default/index.njk
+If you have a unique reference number, have it with you when you call.	contact-a-department-or-service-team page text	alphagov/govuk-design-system@d3b6145:src/patterns/contact-a-department-or-service-team/all-contact-information/index.njk
+Find out about call charges	contact-a-department-or-service-team page text	alphagov/govuk-design-system@d3b6145:src/patterns/contact-a-department-or-service-team/all-contact-information/index.njk
+49 to 53 Cherry Street London AB1 2DC	contact-a-department-or-service-team page text	alphagov/govuk-design-system@d3b6145:src/patterns/contact-a-department-or-service-team/all-contact-information/index.njk
+You can use Twitter to get general help. We cannot discuss specific cases or individual applications, so please do not give any personal details.	contact-a-department-or-service-team page text	alphagov/govuk-design-system@d3b6145:src/patterns/contact-a-department-or-service-team/all-contact-information/index.njk
+Twitter: @GOVUK	contact-a-department-or-service-team page text	alphagov/govuk-design-system@d3b6145:src/patterns/contact-a-department-or-service-team/all-contact-information/index.njk
+We cannot change your cookie settings at the moment because JavaScript is not running in your browser. To fix this, try:	cookies-page page text	alphagov/govuk-design-system@d3b6145:src/patterns/cookies-page/no-js/index.njk
+Before you finish using the service, we’d like to ask some equality questions.	equality-information page text	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/explainer-screen/index.njk
+If you typed the web address, check it is correct.	page-not-found-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/page-not-found-pages/default/index.njk
+If you pasted the web address, check you copied the entire address.	page-not-found-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/page-not-found-pages/default/index.njk
+If the web address is correct or you selected a link or button, contact the Tax Credits Helpline if you need to speak to someone about your tax credits.	page-not-found-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/page-not-found-pages/default/index.njk
+Try again later.	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/default/index.njk
+We saved your answers. They will be available for 30 days.	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/default/index.njk
+Contact the Tax Credits Helpline if you need to make changes to your claim or speak to someone about your tax credits.	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/default/index.njk
+You can change other VAT details .	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/link-to-another-service/index.njk
+Contact the Income Tax Helpline if you need to speak to someone about your tax calculation.	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/link-to-another-service/index.njk
+We have not saved your answers. When the service is available, you will have to start again.	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/offline-support/index.njk
+Contact the Tax Credits Helpline if you have any questions.	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/offline-support/index.njk
+Telephone: 0808 157 3900	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/offline-support/index.njk
+Textphone: 0808 157 3909	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/offline-support/index.njk
+Outside UK: +44 0808 157 0192	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/offline-support/index.njk
+Opening times: Monday to Friday: 8am to 8pm	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/offline-support/index.njk
+Closed Easter Sunday, Christmas Day, Boxing Day and New Year’s Day.	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/offline-support/index.njk
+Providers do not usually have much flexibility when setting a date and time for interview unless you need adjustments due to a health condition or disability .	question-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/question-pages/explanatory-text/index.njk
+However, if you need flexibility for other reasons you can tell us about it here.	question-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/question-pages/explanatory-text/index.njk
+For example, you have commitments like caring responsibilites or employment.	question-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/question-pages/explanatory-text/index.njk
+Contact your provider if you’re concerned about the interview process.	question-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/question-pages/explanatory-text/index.njk
+You cannot use the online service to renew your tax credits.	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/after-service-closes/index.njk
+Contact the Tax Credits Helpline to renew your tax credits by phone or letter.	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/after-service-closes/index.njk
+You can use the tax credits service to:	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/after-service-closes/index.njk
+You will be able to use the service on Monday 19&nbsp;November&nbsp;2018.	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/available-at-known-date/index.njk
+You will be able to renew your tax credits from Tuesday 24&nbsp;April&nbsp;2018.	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/before-service-opens/index.njk
+You will be able to use the service from 9am on Monday 19&nbsp;November&nbsp;2018.	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/default/index.njk
+You will be able to use the service later.	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/general/index.njk
+The submit an employment intermediary report service has closed.	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/no-replacement-service/index.njk
+Contact us if you need to speak to someone about the service and your reports.	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/no-replacement-service/index.njk
+Opening times: Monday to Friday: 8:30am to 4:30pm	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/no-replacement-service/index.njk
+Universal Credit has replaced tax credits.	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/service-replaced/index.njk
+Contact the Tax Credits Helpline if you need to speak to someone about your tax credits.	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/service-replaced/index.njk
+You can:	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/service-replaced/index.njk
+Use this service to:	start-using-a-service page text	alphagov/govuk-design-system@d3b6145:src/patterns/start-using-a-service/default/index.njk
+Registering takes around 5 minutes.	start-using-a-service page text	alphagov/govuk-design-system@d3b6145:src/patterns/start-using-a-service/default/index.njk
+You can also register by post .	start-using-a-service page text	alphagov/govuk-design-system@d3b6145:src/patterns/start-using-a-service/default/index.njk
+The online service is also available in Welsh (Cymraeg) .	start-using-a-service page text	alphagov/govuk-design-system@d3b6145:src/patterns/start-using-a-service/default/index.njk
+You cannot register for this service if you’re in the UK illegally.	start-using-a-service page text	alphagov/govuk-design-system@d3b6145:src/patterns/start-using-a-service/default/index.njk
+This is a paragraph inside a two-thirds wide column	layout page text	alphagov/govuk-design-system@d3b6145:src/styles/layout/common-two-thirds/index.njk
+This is a paragraph inside a one-third wide column	layout page text	alphagov/govuk-design-system@d3b6145:src/styles/layout/common-two-thirds-one-third/index.njk
+govuk-body	typography page text	alphagov/govuk-design-system@d3b6145:src/styles/typography/body/index.njk
+Jump to HTML example .	typography page text	alphagov/govuk-design-system@d3b6145:src/styles/typography/link/index.njk
+You can buy:	typography page text	alphagov/govuk-design-system@d3b6145:src/styles/typography/list-bullet/index.njk
+You will have to apply the reverse charge if you supply any of these services:	typography page text	alphagov/govuk-design-system@d3b6145:src/styles/typography/list-spaced/index.njk

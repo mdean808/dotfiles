@@ -1,0 +1,15 @@
+{
+  "id": "bt-launcher",
+  "name": "Bluetooth Launcher",
+  "description": "Connect, disconnect, and manage Bluetooth devices from Spotlight",
+  "version": "1.0.0",
+  "author": "Morgan Dean",
+  "icon": "bluetooth",
+  "type": "launcher",
+  "trigger": "bt",
+  "viewMode": "list",
+  "viewModeEnforced": false,
+  "component": "./BTLauncher.qml",
+  "settings": "./BTLauncherSettings.qml",
+  "permissions": ["settings_read", "settings_write"]
+}

@@ -1,0 +1,290 @@
+text	context	source
+Continue	button example	alphagov/govuk-design-system@d3b6145:src/components/button/button-group/index.njk
+Save and continue	button example	alphagov/govuk-design-system@d3b6145:src/components/button/default/index.njk
+Disabled button	button example	alphagov/govuk-design-system@d3b6145:src/components/button/disabled/index.njk
+Confirm and send	button example	alphagov/govuk-design-system@d3b6145:src/components/button/prevent-double-click/index.njk
+Find address	button example	alphagov/govuk-design-system@d3b6145:src/components/button/secondary/index.njk
+Save as draft	button example	alphagov/govuk-design-system@d3b6145:src/components/button/secondary-combo/index.njk
+Start now	button example	alphagov/govuk-design-system@d3b6145:src/components/button/start/index.njk
+Delete account	button example	alphagov/govuk-design-system@d3b6145:src/components/button/warning/index.njk
+Name on the account	bank-details example	alphagov/govuk-design-system@d3b6145:src/patterns/bank-details/default/index.njk
+BIC or SWIFT code	bank-details example	alphagov/govuk-design-system@d3b6145:src/patterns/bank-details/international/index.njk
+Must be between 8 and 11 characters long. You can ask your bank or check your bank statement	bank-details example	alphagov/govuk-design-system@d3b6145:src/patterns/bank-details/international/index.njk
+Back	check-answers example	alphagov/govuk-design-system@d3b6145:src/patterns/check-answers/default/index.njk
+Accept and send	check-answers example	alphagov/govuk-design-system@d3b6145:src/patterns/check-answers/default/index.njk
+Security code	confirm-a-phone-number example	alphagov/govuk-design-system@d3b6145:src/patterns/confirm-a-phone-number/default/index.njk
+Request a new code	confirm-a-phone-number example	alphagov/govuk-design-system@d3b6145:src/patterns/confirm-a-phone-number/resend/index.njk
+Save cookie settings	cookies-page example	alphagov/govuk-design-system@d3b6145:src/patterns/cookies-page/cookies-form/index.njk
+What is your date of birth?	equality-information example	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/date-of-birth/index.njk
+Do you have any physical or mental health conditions or illness lasting or expected to last 12 months or more?	equality-information example	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/disability/index.njk
+Do any of your conditions or illnesses reduce your ability to carry out day to day activities?	equality-information example	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/disability-impact/index.njk
+What is your ethnic group?	equality-information example	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/error-ethnicity/index.njk
+What is your legal marital or registered civil partnership status?	equality-information example	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/marriage-status/index.njk
+Home	start-using-a-service example	alphagov/govuk-design-system@d3b6145:src/patterns/start-using-a-service/default/index.njk
+Section	start-using-a-service example	alphagov/govuk-design-system@d3b6145:src/patterns/start-using-a-service/default/index.njk
+Create New Login	create-login-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Sign in to sync	fxaccounts-sign-in-sync-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Manage account	fxaccounts-avatar-button.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Edit	login-item-edit-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Remove	about-logins-login-item-remove-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Copy	login-item-copy-username-button-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Copied!	login-item-copied-username-button-text	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Save Changes	login-item-save-changes-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Save	login-item-save-new-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Cancel	login-item-cancel-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Log in	master-password-reload-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Export	about-logins-export-file-picker-export-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Import	about-logins-import-file-picker-import-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Show All	pocket-panel-button-show-all	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPocket.ftl
+Activate { -pocket-brand-name } in { -brand-product-name }	pocket-panel-button-activate	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPocket.ftl
+Search the web	about-private-browsing-search-btn.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+Close	about-private-browsing-search-banner-close-button.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+Restart { -brand-short-name }	restart-button-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRestartRequired.ftl
+Restore Session	restore-page-try-again-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutSessionRestore.ftl
+Start New Session	restore-page-close-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutSessionRestore.ftl
+Let’s go!	welcome-back-restore-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutSessionRestore.ftl
+Close Tab	crashed-close-tab-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutTabCrashed.ftl
+Restore This Tab	crashed-restore-tab-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutTabCrashed.ftl
+Restore All Crashed Tabs	crashed-restore-all-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutTabCrashed.ftl
+Unload	about-unloads-button-unload	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutUnloads.ftl
+Unload tab with the highest priority	about-unloads-button-unload.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutUnloads.ftl
+Download	appmenu-update-available2.buttonlabel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Dismiss	appmenu-update-available2.secondarybuttonlabel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Learn more	appmenu-update-unsupported2.buttonlabel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Update and restart	appmenu-update-restart2.buttonlabel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Update { -brand-shorter-name } anyway	appmenu-update-other-instance.buttonlabel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Not Now	appmenu-update-other-instance.secondarybuttonlabel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Okay	appmenu-addon-private-browsing-installed2.buttonlabel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Keep Changes	appmenu-new-tab-controlled-changes.buttonlabel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Manage New Tabs	appmenu-new-tab-controlled-changes.secondarybuttonlabel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Manage Homepage	appmenu-homepage-controlled-changes.secondarybuttonlabel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Keep Tabs Hidden	appmenu-tab-hide-controlled.buttonlabel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+Disable Extension	appmenu-tab-hide-controlled.secondarybuttonlabel	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appMenuNotifications.ftl
+{ -brand-short-name }	appmenu-menu-button-closed2.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Profiler	profiler-popup-button-idle.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Reveal more information	profiler-popup-reveal-description-button.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Edit Settings…	profiler-popup-edit-settings-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Start Recording	profiler-popup-start-recording-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Discard	profiler-popup-discard-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Capture	profiler-popup-capture-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+View site information	urlbar-identity-button.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Import bookmarks…	browser-import-button2.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Enter Reader View	reader-view-enter-button.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Close Reader View	reader-view-close-button.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Exit Full Screen (Esc)	fullscreen-exit-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Exit Full Screen (esc)	fullscreen-exit-mac-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Bookmarks menu	bookmarks-menu-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ $isVisible -> [true] Remove bookmarks menu from toolbar *[other] Add bookmarks menu to toolbar }	bookmarks-tools-menu-button-visibility.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Bookmarks toolbar items	bookmarks-toolbar-placeholder-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Save to { -pocket-brand-name }	save-to-pocket-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Repair text encoding	repair-text-encoding-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Add-ons and themes	toolbar-addons-themes-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Settings	toolbar-settings-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Customize toolbar…	toolbar-overflow-customize-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Email link	toolbar-button-email-link.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Save page	toolbar-button-save-page.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Open file	toolbar-button-open-file.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Synced tabs	toolbar-button-synced-tabs.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+New private window	toolbar-button-new-private-window.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Show me how	restore-session-startup-suggestion-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Choose What I Share	data-reporting-notification-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Extensions	unified-extensions-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ main-context-menu-back-2.aria-label }	toolbar-button-back-2.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+{ main-context-menu-forward-2.aria-label }	toolbar-button-forward-2.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+{ main-context-menu-reload.aria-label }	toolbar-button-reload.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+{ main-context-menu-stop.aria-label }	toolbar-button-stop.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+{ -fxaccount-brand-name(capitalization: "sentence") }	toolbar-button-fxaccount.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browserContext.ftl
+Set colorway	colorway-closet-set-colorway-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorwaycloset.ftl
+Apply	colorway-homepage-reset-apply-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorwaycloset.ftl
+Undo	colorway-homepage-reset-undo-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorwaycloset.ftl
+Hide button when empty	customize-mode-downloads-button-autohide.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/customizeMode.ftl
+Set as default	default-browser-notification-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/defaultBrowserNotification.ftl
+Make primary browser	default-browser-prompt-button-primary-pin	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/defaultBrowserNotification.ftl
+Set as default browser	default-browser-prompt-button-primary-alt	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/defaultBrowserNotification.ftl
+Not now	default-browser-prompt-button-secondary	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/defaultBrowserNotification.ftl
+Cancel Download	downloads-cancel-download.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+Clear Downloads	downloads-clear-downloads-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+New Folder	bookmark-overlay-new-folder-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/editBookmarkOverlay.ftl
+Next	callout-primary-advance-button-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Got it!	callout-primary-complete-button-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Get started	continuous-onboarding-firefox-view-tab-pickup-primary-button-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+{ -firefoxview-brand-name }	toolbar-button-firefox-view.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Get { -brand-product-name } for mobile	firefoxview-tabpickup-adddevice-primarybutton	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Sync open tabs	firefoxview-tabpickup-synctabs-primarybutton	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Try again	firefoxview-tabpickup-network-offline-primarybutton	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Turn on sync in settings	firefoxview-tabpickup-sync-disconnected-primarybutton	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Enter Primary Password	firefoxview-tabpickup-password-locked-primarybutton	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Open { $targetURI } in a new tab	firefoxview-tabs-list-tab-button.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Try colorways	firefoxview-try-colorways-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Change colorway	firefoxview-change-colorway-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Show list	firefoxview-collapse-button-show.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Hide list	firefoxview-collapse-button-hide.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+History	menu-view-history-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/menubar.ftl
+Try it	firefoxview-cfr-primarybutton	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/asrouter.ftl
+See how it works	firefoxview-spotlight-promo-primarybutton	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/asrouter.ftl
+Skip	firefoxview-spotlight-promo-secondarybutton	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/asrouter.ftl
+Customize your New Tab page	newtab-settings-button.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Search	newtab-search-box-search-button.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Delete from History	newtab-topsites-delete-history-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Preview	newtab-topsites-preview-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Add	newtab-topsites-add-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Done	newtab-privacy-modal-button-done	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Manage sponsored content settings	newtab-privacy-modal-button-manage	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Save colorway	mr2-onboarding-colorway-primary-button-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+Start browsing	mr2-onboarding-start-browsing-button-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+{ PLATFORM() -> [macos] Keep { -brand-short-name } in Dock *[other] Pin { -brand-short-name } to taskbar	fx100-thank-you-pin-primary-button-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+Help	help-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/pageInfo.ftl
+Your recent history is cleared.	panic-button-thankyou-msg1	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panelUI.ftl
+Safe browsing!	panic-button-thankyou-msg2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panelUI.ftl
+Thanks!	panic-button-thankyou-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panelUI.ftl
+Open a new clean Window	panic-button-open-new-window	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panicButton.ftl
+Forget!	panic-button-forget-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panicButton.ftl
+Five minutes	panic-button-5min.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panicButton.ftl
+Two hours	panic-button-2hr.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panicButton.ftl
+24 hours	panic-button-day.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panicButton.ftl
+Proceeding will:	panic-button-action-desc	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panicButton.ftl
+Delete Recent Cookies	panic-button-delete-cookies	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panicButton.ftl
+Delete Recent History	panic-button-delete-history	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panicButton.ftl
+Close all Tabs and Windows	panic-button-delete-tabs-and-windows	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/panicButton.ftl
+Organize	places-organize-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/places.ftl
+Views	places-view-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/places.ftl
+Import and Backup	places-maintenance-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/places.ftl
+Add Custom Engine	add-engine-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/addEngine.ftl
+Add Engine	add-engine-dialog.buttonlabelaccept	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/addEngine.ftl
+Clear	clear-site-data-dialog.buttonlabelaccept	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/clearSiteData.ftl
+Add…	autofill-manage-add-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/formAutofill.ftl
+Edit…	autofill-manage-edit-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/formAutofill.ftl
+Join { -rally-short-name }	more-from-moz-button-mozilla-rally-2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+Send an email to your phone instead	more-from-moz-qr-code-box-firefox-mobile-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+Get VPN	more-from-moz-button-mozilla-vpn-2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+Turn Off	permissions-button-off.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Turn Off Temporarily	permissions-button-off-temporarily.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+{ -brand-short-name } Support	help-button-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Extensions & Themes	addons-button-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Keep enabled	containers-disable-alert-cancel-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Remove this Container	containers-remove-ok-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Don’t remove this Container	containers-remove-cancel-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Manage Colors…	preferences-colors-manage-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose…	choose-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Set Alternatives…	manage-browser-languages-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+&Discard	update-in-progress-ok-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+&Continue	update-in-progress-cancel-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Back to Settings	containers-back-button2.aria-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Add New Container	containers-add-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Disconnect…	sync-choose-what-to-sync-dialog3.buttonlabelextra2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Clear History…	history-clear-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Reload All Tabs	content-blocking-reload-tabs-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Exceptions…	permissions-block-popups-exceptions-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+popups	permissions-block-popups-exceptions-button.searchkeywords	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Open Settings	space-alert-over-5gb-settings-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Remove Language	translation-languages-button-remove.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/translation.ftl
+Remove All Languages	translation-languages-button-remove-all.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/translation.ftl
+Remove Site	translation-sites-button-remove.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/translation.ftl
+Remove All Sites	translation-sites-button-remove-all.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/translation.ftl
+Save Passwords	protection-report-passwords-save-passwords-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Manage Passwords	protection-report-passwords-manage-passwords-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Go back	safeb-palm-accept-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+Clear Now	sanitize-button-ok.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sanitize.ftl
+Clearing	sanitize-button-clearing.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sanitize.ftl
+Screenshot	screenshot-toolbarbutton.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Save visible	screenshots-save-visible-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Save full page	screenshots-save-page-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Download screenshot	screenshots-download-button-title.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Copy screenshot to clipboard	screenshots-copy-button-title.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Retry screenshot	screenshots-retry-button-title.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Set Desktop Background	set-desktop-background-accept.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/setDesktopBackground.ftl
+Disconnect	sync-disconnect-dialog-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sync.ftl
+Sign out	fxa-signout-dialog2-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sync.ftl
+Hide Button When Empty	toolbar-context-menu-auto-hide-downloads-button-2.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/toolbarContextMenu.ftl
+Translate	translation-notification-translate-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/translationNotification.ftl
+Show Original	translation-notification-show-original-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/translationNotification.ftl
+Show Translation	translation-notification-show-translation-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/translationNotification.ftl
+Try Again	translation-notification-try-again-button.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/translationNotification.ftl
+Stop Sharing	webrtc-stop-sharing-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Submit All	submit-all-button-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/crashreporter/aboutcrashes.ftl
+Clear All	delete-button-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/crashreporter/aboutcrashes.ftl
+Submit	submit-crash-button-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/crashreporter/aboutcrashes.ftl
+View	view-crash-button-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/crashreporter/aboutcrashes.ftl
+Add-ons Support	help-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+{ -brand-short-name } Settings	addons-settings-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Some extensions could not be verified	show-unsigned-extensions-button.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Show all extensions	show-all-extensions-button.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Contribute	detail-contributions-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Contribute to the development of this add-on	detail-contributions-button.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Show Less	shortcuts-card-collapse-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Add to { -brand-product-name }	install-extension-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Install Theme	install-theme-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Manage	manage-addon-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+More Options	addon-options-button.aria-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Report	report-addon-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Can’t Be Removed Why?	remove-addon-disabled-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Disable	disable-addon-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Enable	enable-addon-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Details	details-addon-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Release Notes	release-notes-addon-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Permissions	permissions-addon-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Try Colorways	theme-colorways-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Change Colorway	theme-colorways-button-colorway-enabled	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Always Activate	always-activate-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Never Activate	never-activate-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Update Now	install-postponed-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Update	install-update-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Tools for all add-ons	addon-page-options-button.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Apply settings and submit ping	controls-button-label-verbose	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutGlean.ftl
+Continue to HTTP Site	about-httpsonly-button-continue-to-site	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutHttpsOnlyError.ftl
+Go Back	about-httpsonly-button-go-back	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutHttpsOnlyError.ftl
+Go to www.{ $websiteUrl }	about-httpsonly-suggestion-box-www-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutHttpsOnlyError.ftl
+Clear DNS Cache	about-networking-dns-clear-cache-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutNetworking.ftl
+Resolve	about-networking-dns-lookup-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutNetworking.ftl
+Unregister	unregister-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutServiceWorkers.ftl
+Restart	restart-button-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Accepting Connections	remote-debugging-accepting-connections	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Terminate GPU Process	gpu-process-kill-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Trigger Device Reset	gpu-device-reset-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Clear saved print settings	support-printing-clear-settings-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Copy raw data to clipboard	third-party-button-copy-to-clipboard	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+Reload with system info	third-party-button-reload	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+Reload with system information	third-party-button-reload.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+Open file location…	third-party-button-open.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+Show detailed information	third-party-button-expand.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+Collapse detailed information	third-party-button-collapse.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+Toggle	about-config-pref-toggle-button.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/config.ftl
+Reset	about-config-pref-reset-button.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/config.ftl
+Delete	about-config-pref-delete-button.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/config.ftl
+Start searching	url-classifier-search-btn	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+Refresh	url-classifier-cache-refresh-btn	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+Set Log Modules	url-classifier-debug-module-btn	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+Set Log File	url-classifier-debug-file-btn	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+Browse…	app-picker-browse-button.buttonlabelextra2	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/appPicker.ftl
+Open Link	permission-dialog-btn-open-link.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/handlerDialog.ftl
+Choose Application	permission-dialog-btn-choose-app.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/handlerDialog.ftl
+More actions	popup-notification-more-actions-button.aria-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/popupnotification.ftl
+OK!	popup-notification-default-button.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/popupnotification.ftl
+Start { -brand-short-name }	profile-selection-button-accept.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/profileSelection.ftl
+Exit	profile-selection-button-cancel.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/profileSelection.ftl
+Create Profile…	profile-selection-new-button.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/profileSelection.ftl
+Rename Profile…	profile-selection-rename-button.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/profileSelection.ftl
+Delete Profile…	profile-selection-delete-button.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/profileSelection.ftl
+Refresh { -brand-short-name }	refresh-profile-dialog-button.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/resetProfile.ftl
+Refresh { -brand-short-name }…	refresh-profile-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/resetProfile.ftl
+Install	prompt-to-install-yes-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/run-from-dmg.ftl
+Don’t Install	prompt-to-install-no-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/run-from-dmg.ftl
+Open existing	prompt-to-launch-existing-app-yes-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/run-from-dmg.ftl
+No thanks	prompt-to-launch-existing-app-no-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/run-from-dmg.ftl
+Closed Captions	videocontrols-closed-caption-button.aria-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+Play	videocontrols-play-button.aria-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+Pause	videocontrols-pause-button.aria-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+Mute	videocontrols-mute-button.aria-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+Unmute	videocontrols-unmute-button.aria-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+Full Screen	videocontrols-enterfullscreen-button.aria-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+Exit Full Screen	videocontrols-exitfullscreen-button.aria-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+Cast to Screen	videocontrols-casting-button-label.aria-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/videocontrols.ftl
+< Back	wizard-win-button-back.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/wizard.ftl
+Next >	wizard-win-button-next.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/wizard.ftl
+Finish	wizard-linux-button-finish.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/wizard.ftl
+First page	printpreview-homearrow-button.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printPreview.ftl
+Previous page	printpreview-previousarrow-button.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printPreview.ftl
+Next page	printpreview-nextarrow-button.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printPreview.ftl
+Last page	printpreview-endarrow-button.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printPreview.ftl
+Print	printui-primary-button	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printUI.ftl
+Update History	close-button-label.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/updates/history.ftl

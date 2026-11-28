@@ -1,0 +1,532 @@
+text	context	source
+Your details	error-summary page text	alphagov/govuk-design-system@d3b6145:src/components/error-summary/linking/index.njk
+Search results	pagination page text	alphagov/govuk-design-system@d3b6145:src/components/pagination/in-page/index.njk
+Past day	tabs page text	alphagov/govuk-design-system@d3b6145:src/components/tabs/default/index.njk
+Past week	tabs page text	alphagov/govuk-design-system@d3b6145:src/components/tabs/default/index.njk
+Past month	tabs page text	alphagov/govuk-design-system@d3b6145:src/components/tabs/default/index.njk
+Past year	tabs page text	alphagov/govuk-design-system@d3b6145:src/components/tabs/default/index.njk
+Bank or building society account details	bank-details page text	alphagov/govuk-design-system@d3b6145:src/patterns/bank-details/default/index.njk
+Check your answers before sending your application	check-answers page text	alphagov/govuk-design-system@d3b6145:src/patterns/check-answers/default/index.njk
+Personal details	check-answers page text	alphagov/govuk-design-system@d3b6145:src/patterns/check-answers/default/index.njk
+Application details	check-answers page text	alphagov/govuk-design-system@d3b6145:src/patterns/check-answers/default/index.njk
+Now send your application	check-answers page text	alphagov/govuk-design-system@d3b6145:src/patterns/check-answers/default/index.njk
+Check your phone	confirm-a-phone-number page text	alphagov/govuk-design-system@d3b6145:src/patterns/confirm-a-phone-number/default/index.njk
+Request a new security code	confirm-a-phone-number page text	alphagov/govuk-design-system@d3b6145:src/patterns/confirm-a-phone-number/resend/index.njk
+What happens next	confirmation-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/confirmation-pages/default/index.njk
+Get help with your application	contact-a-department-or-service-team page text	alphagov/govuk-design-system@d3b6145:src/patterns/contact-a-department-or-service-team/all-contact-information/index.njk
+Talk to an advisor	contact-a-department-or-service-team page text	alphagov/govuk-design-system@d3b6145:src/patterns/contact-a-department-or-service-team/inset-contact-information/index.njk
+Change your cookie settings	cookies-page page text	alphagov/govuk-design-system@d3b6145:src/patterns/cookies-page/cookies-form/index.njk
+We have received your application	equality-information page text	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/explainer-screen/index.njk
+Sex and gender identity	equality-information page text	alphagov/govuk-design-system@d3b6145:src/patterns/equality-information/sex-gender/index.njk
+Page not found	page-not-found-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/page-not-found-pages/default/index.njk
+Sorry, there is a problem with the service	problem-with-the-service-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/problem-with-the-service-pages/default/index.njk
+Passport details	question-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/question-pages/passport/index.njk
+Sorry, the service is unavailable	service-unavailable-pages page text	alphagov/govuk-design-system@d3b6145:src/patterns/service-unavailable-pages/after-service-closes/index.njk
+Service name goes here	start-using-a-service page text	alphagov/govuk-design-system@d3b6145:src/patterns/start-using-a-service/default/index.njk
+Before you start	start-using-a-service page text	alphagov/govuk-design-system@d3b6145:src/patterns/start-using-a-service/default/index.njk
+Do you have a V11 reminder letter printed in your name?	images page text	alphagov/govuk-design-system@d3b6145:src/styles/images/representative/index.njk
+One-third column	layout page text	alphagov/govuk-design-system@d3b6145:src/styles/layout/common-two-thirds-one-third/index.njk
+Two-thirds column	layout page text	alphagov/govuk-design-system@d3b6145:src/styles/layout/common-two-thirds-two-thirds-one-third/index.njk
+govuk-heading-l	typography page text	alphagov/govuk-design-system@d3b6145:src/styles/typography/captions/index.njk
+govuk-heading-m	typography page text	alphagov/govuk-design-system@d3b6145:src/styles/typography/captions/index.njk
+About { -brand-full-name }	aboutDialog-title.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutDialog.ftl
+Logins & Passwords	about-logins-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Open menu	menu.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+New Login	login-list-item-title-new-login	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Breached website	about-logins-list-item-breach-icon.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Vulnerable password	about-logins-list-item-vulnerable-password-icon.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Create New Login	login-item-new-login-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Import Complete	about-logins-alert-import-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Website Breach	about-logins-breach-alert-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Vulnerable Password	about-logins-vulnerable-alert-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Export Logins File	about-logins-export-file-picker-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Import Logins File	about-logins-import-file-picker-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Import Summary	about-logins-import-report-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+Import Summary Report	about-logins-import-report-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+View My Saves	pocket-panel-header-my-saves	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPocket.ftl
+Sign In	pocket-panel-header-sign-in	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPocket.ftl
+Enterprise Policies	about-policies-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPolicies.ftl
+Search with { $engine } or enter address	about-private-browsing-handoff.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+Search or enter address	about-private-browsing-handoff-no-engine.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+{ -focus-brand-name }: Private browsing on-the-go	about-private-browsing-focus-promo-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+Take private browsing to your phone	about-private-browsing-focus-promo-header-b	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+Next-level privacy on mobile	about-private-browsing-focus-promo-header-c	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+{ $engineName } is your default search engine in Private Windows	about-private-browsing-search-banner-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+Private browsing freedom in one click	about-private-browsing-pin-promo-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+No saved cookies or history, right from your desktop. Browse like no one’s watching.	about-private-browsing-pin-promo-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutPrivateBrowsing.ftl
+Restart Required	restart-required-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRestartRequired.ftl
+Restart to Keep Using { -brand-short-name }	restart-required-heading	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRestartRequired.ftl
+Gort! Klaatu barada nikto!	page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutRobots.ftl
+Restore Session	restore-page-tab-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutSessionRestore.ftl
+Restore	restore-page-restore-header.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutSessionRestore.ftl
+Windows and Tabs	restore-page-list-header.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutSessionRestore.ftl
+Success!	welcome-back-tab-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutSessionRestore.ftl
+Tab crash reporter	crashed-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutTabCrashed.ftl
+Gah. Your tab just crashed.	crashed-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutTabCrashed.ftl
+Report this tab	crashed-request-report-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutTabCrashed.ftl
+Report background tabs	crashed-request-auto-submit-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutTabCrashed.ftl
+Tab Unloading	about-unloads-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutUnloads.ftl
+Tabs are first sorted by this value, which derives from some special attributes such as playing a sound, WebRTC, etc.	about-unloads-column-weight.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutUnloads.ftl
+If available, tabs are sorted by this value after being sorted by the base weight. The value derives from tab’s memory usage and the count of processes.	about-unloads-column-sortweight.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutUnloads.ftl
+Tab’s estimated memory usage	about-unloads-column-memory.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutUnloads.ftl
+IDs of the processes hosting tab’s content	about-unloads-column-processes.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutUnloads.ftl
+{ -fxaccount-brand-name(capitalization: "sentence") }	appmenu-fxa-header2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+What’s New	whatsnew-panel-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+{ -profiler-brand-name }	profiler-popup-title.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Recent history	appmenu-recent-history-subheader	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+{ -brand-shorter-name } help	appmenu-help-header.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+Browser tools	appmenu-developer-tools-subheader	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/appmenu.ftl
+{ -brand-full-name }	browser-main-window-window-titles.data-title-default	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ -brand-full-name } Private Browsing	browser-main-window-window-titles.data-title-private	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+{ -brand-full-name } — Private Browsing	browser-main-window-mac-window-titles.data-title-private	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Get help	urlbar-tip-help-icon.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+This time, search with:	search-one-offs-with-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Learn more about Quick actions	quickactions-learn-more.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Connection security for { $host }	identity-header-security-with-host.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Cross-site cookies	identity-permissions-storage-access-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Recent bookmarks	bookmarks-recent-bookmarks-panel-subheader	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Bookmarks toolbar items	bookmarks-toolbar-placeholder.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Recent Activity	library-recent-activity-title.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Remove { $name }?	addon-removal-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Search	navbar-search.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+Choose Your Colorway	colorways-modal-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/colorwaycloset.ftl
+Part of this page crashed. To let { -brand-product-name } know about this issue and get it fixed faster, please submit a report.	crashed-subframe-title.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/contentCrash.ftl
+Drag your favorite items into the toolbar or overflow menu.	customize-mode-menu-and-toolbars-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/customizeMode.ftl
+Overflow Menu	customize-mode-overflow-list-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/customizeMode.ftl
+Title Bar	customize-mode-titlebar.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/customizeMode.ftl
+Make { -brand-short-name } your primary browser?	default-browser-prompt-title-pin	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/defaultBrowserNotification.ftl
+Make { -brand-short-name } your default browser?	default-browser-prompt-title-alt	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/defaultBrowserNotification.ftl
+Downloads	downloads-window.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+Download Details	downloads-details.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+Hop between devices with tab pickup	callout-firefox-view-tab-pickup-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Get back your closed tabs in a snap	callout-firefox-view-recently-closed-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Add a splash of color	callout-firefox-view-colorways-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Explore our latest colorways	callout-firefox-view-colorways-reminder-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Boost your browsing with tab pickup	continuous-onboarding-firefox-view-tab-pickup-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Edit PDFs with our new text tool	callout-pdfjs-edit-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+Sign documents with our new draw tool	callout-pdfjs-draw-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/featureCallout.ftl
+{ -firefoxview-brand-name }	firefoxview-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Tab pickup	firefoxview-tabpickup-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Switch seamlessly between devices	firefoxview-tabpickup-step-signin-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Sync { -brand-product-name } on your phone or tablet	firefoxview-tabpickup-adddevice-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Turn on tab syncing	firefoxview-tabpickup-synctabs-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Your organization has disabled sync	firefoxview-tabpickup-fxa-admin-disabled-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Check your internet connection	firefoxview-tabpickup-network-offline-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Turn on syncing to continue	firefoxview-tabpickup-sync-disconnected-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Enter your Primary Password to view tabs	firefoxview-tabpickup-password-locked-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Grab tabs from your phone or tablet	firefoxview-mobile-promo-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Recently closed	firefoxview-closed-tabs-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/firefoxView.ftl
+Import Wizard	migration-wizard.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/migration.ftl
+Import Settings and Data	import-source-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/migration.ftl
+Items to Import	import-items-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/migration.ftl
+Please give { -brand-short-name } permissions	import-permissions-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/migration.ftl
+Importing…	import-migrating-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/migration.ftl
+Select Profile	import-select-profile-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/migration.ftl
+Get recently closed tabs back with { -firefoxview-brand-name }	firefoxview-cfr-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/asrouter.ftl
+Say hello to { -firefoxview-brand-name }	firefoxview-spotlight-promo-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/asrouter.ftl
+New Tab	newtab-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Personalize new tab	newtab-personalize-icon-label.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Add Search Engine	newtab-topsites-add-search-engine-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+New Shortcut	newtab-topsites-add-shortcut-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Edit Top Site	newtab-topsites-edit-topsites-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Edit Shortcut	newtab-topsites-edit-shortcut-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Title	newtab-topsites-title-label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Enter a title	newtab-topsites-title-input.placeholder	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Your privacy matters.	newtab-privacy-modal-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Top Sites	newtab-section-header-topsites	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Recent activity	newtab-section-header-recent-activity	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Recommended by { $provider }	newtab-section-header-pocket	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Shortcuts	newtab-custom-shortcuts-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Recommended by { -pocket-brand-name }	newtab-custom-pocket-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Now let’s get you { $addon-name } .	return-to-amo-addon-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+Life in color	mr2-onboarding-colorway-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+Thank you for choosing us	mr2-onboarding-thank-you-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+100 Thank-Yous	fx100-upgrade-thanks-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/onboarding.ftl
+Title:	general-title.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/pageInfo.ftl
+Alternate Text	media-alt-header.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/pageInfo.ftl
+Untitled Page:	no-page-title.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/pageInfo.ftl
+Library	places-library2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/places.ftl
+Block Lists	blocklist-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/blocklists.ftl
+Clear Data	clear-site-data-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/clearSiteData.ftl
+Colors	colors-dialog2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/colors.ftl
+Text	colors-text-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/colors.ftl
+Link Colors	colors-links-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/colors.ftl
+Connection Settings { PLATFORM() -> [macos] min-width: 44em *[other] min-width: 49em }	connection-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/connection.ftl
+Add New Container	containers-window-new2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/containers.ftl
+{ $name } Container Settings	containers-window-update-settings2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/containers.ftl
+Fonts	fonts-window.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/fonts.ftl
+Fonts for	fonts-langgroup-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/fonts.ftl
+Proportional	fonts-proportional-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/fonts.ftl
+Saved Addresses	autofill-manage-addresses-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/formAutofill.ftl
+Addresses	autofill-manage-addresses-list-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/formAutofill.ftl
+Saved Credit Cards	autofill-manage-credit-cards-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/formAutofill.ftl
+Credit Cards	autofill-manage-credit-cards-list-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/formAutofill.ftl
+Add New Address	autofill-add-new-address-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/formAutofill.ftl
+Edit Address	autofill-edit-address-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/formAutofill.ftl
+Add New Credit Card	autofill-add-new-card-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/formAutofill.ftl
+Edit Credit Card	autofill-edit-card-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/formAutofill.ftl
+Webpage Language Settings	webpage-languages-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/languages.ftl
+{ -brand-short-name } Language Settings	browser-languages-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/languages.ftl
+More from { -vendor-short-name }	more-from-moz-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+{ -brand-product-name } Mobile	more-from-moz-firefox-mobile-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+{ -mozilla-vpn-brand-name }	more-from-moz-mozilla-vpn-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+{ -rally-brand-name }	more-from-moz-mozilla-rally-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+Download using your mobile device. Point your camera at the QR code. When a link appears, tap it.	more-from-moz-qr-code-box-firefox-mobile-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/moreFromMozilla.ftl
+Exceptions	permissions-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Exceptions for Enhanced Tracking Protection	permissions-exceptions-etp-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Exceptions - Cookies and Site Data	permissions-exceptions-cookie-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Exceptions - HTTPS-Only Mode	permissions-exceptions-https-only-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Allowed Websites - Pop-ups	permissions-exceptions-popup-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Exceptions - Saved Logins	permissions-exceptions-saved-logins-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Allowed Websites - Add-ons Installation	permissions-exceptions-addons-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Settings - Autoplay	permissions-site-autoplay-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Settings - Notification Permissions	permissions-site-notification-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Settings - Location Permissions	permissions-site-location-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Settings - Virtual Reality Permissions	permissions-site-xr-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Settings - Camera Permissions	permissions-site-camera-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Settings - Microphone Permissions	permissions-site-microphone-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/permissions.ftl
+Settings	settings-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+General	pane-general-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Home	pane-home-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Privacy & Security	pane-privacy-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Sync	pane-sync-title3	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ -brand-short-name } Experiments	pane-experimental-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ -brand-short-name } Experiments: Proceed with Caution	pane-experimental-search-results-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Restart { -brand-short-name }	should-restart-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Search Results	search-results-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Startup	startup-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Tabs	tabs-group-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Close All Container Tabs?	containers-disable-alert-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Remove This Container?	containers-remove-alert-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Language and Appearance	language-and-appearance-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Website appearance	preferences-web-appearance-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Zoom	preferences-zoom-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Language	language-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Files and Applications	files-and-applications-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Applications	applications-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ -brand-short-name } Updates	update-application-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Update In Progress	update-in-progress-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Performance	performance-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Browsing	browsing-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Network Settings	network-settings-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+New Windows and Tabs	home-new-windows-tabs-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Web Search	home-prefs-search-header.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Snippets	home-prefs-snippets-header.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Search Bar	search-bar-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Default Search Engine	search-engine-default-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Search Suggestions	search-suggestions-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Search Shortcuts	search-one-click-header2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Container Tabs	containers-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+You are currently syncing these items:	sync-currently-syncing-heading	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose What To Sync	sync-choose-what-to-sync-dialog3.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Device Name	sync-device-name-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Browser Privacy	privacy-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Logins and Passwords	pane-privacy-logins-and-passwords-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ -lockwise-brand-short-name }	pane-privacy-logins-and-passwords-header.searchkeywords	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+You are currently in FIPS mode. FIPS requires a non-empty Primary Password.	forms-primary-pw-fips-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+History	history-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Cookies and Site Data	sitedata-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Address Bar	addressbar-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Includes Total Cookie Protection, our most powerful privacy feature ever	content-blocking-etp-standard-tcp-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Permissions	permissions-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+{ -brand-short-name } Data Collection and Use	collection-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+New features that enhance your browsing	privacy-segmentation-section-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Security	security-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Certificates	certs-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+HTTPS-Only Mode	httpsonly-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Choose Download Folder:	choose-download-folder-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/preferences.ftl
+Set Home Page	select-bookmark-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/selectBookmark.ftl
+Manage Cookies and Site Data	site-data-settings-window.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/siteDataSettings.ftl
+{ site-data-removing-header }	site-data-removing-dialog.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/siteDataSettings.ftl
+Removing Cookies and Site Data	site-data-removing-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/siteDataSettings.ftl
+Exceptions - Translation	translation-window2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/translation.ftl
+Bookmarks	default-bookmarks-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/profile/default-bookmarks.ftl
+Mozilla Firefox	default-bookmarks-firefox-heading	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/profile/default-bookmarks.ftl
+Firefox Nightly Resources	default-bookmarks-nightly-heading	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/profile/default-bookmarks.ftl
+Protections Dashboard	protection-report-webpage-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Enhanced Tracking Protection: Always On	etp-card-title-always	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Enhanced Tracking Protection: OFF	etp-card-title-custom-not-blocking	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Social Media Trackers	social-tab-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Cross-Site Tracking Cookies	cookie-tab-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Tracking Content	tracker-tab-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Fingerprinters	fingerprinter-tab-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Cryptominers	cryptominer-tab-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Block ad trackers across more devices	mobile-app-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Never forget a password again	lockwise-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Manage your passwords	passwords-title-logged-in	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Look out for data breaches	monitor-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Sign up for breach alerts on { -monitor-brand-name }	monitor-sign-up-link.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Good news!	monitor-no-breaches-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Resolve breaches on { -monitor-brand-short-name }	monitor-view-report-link.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Resolve your breaches	monitor-breaches-unresolved-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Manage breaches on { -monitor-brand-short-name }	monitor-manage-breaches-link.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Nice! You’ve resolved all known breaches.	monitor-breaches-resolved-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Great start!	monitor-partial-breaches-motivation-title-start	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Keep it up!	monitor-partial-breaches-motivation-title-middle	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Almost done! Keep it up.	monitor-partial-breaches-motivation-title-end	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protections.ftl
+Enhanced Tracking Protection is ON for this site	protections-panel-etp-on-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Enhanced Tracking Protection is OFF for this site	protections-panel-etp-off-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Site Not Working?	protections-panel-site-not-working-view.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Turn off protections if you’re having issues with:	protections-panel-site-not-working-view-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/protectionsPanel.ftl
+Open { -brand-short-name } in Troubleshoot Mode?	troubleshoot-mode-window.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safeMode.ftl
+Deceptive site ahead	safeb-blocked-phishing-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+Visiting this website may harm your computer	safeb-blocked-malware-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+The site ahead may contain harmful programs	safeb-blocked-unwanted-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+The site ahead may contain malware	safeb-blocked-harmful-page-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/safebrowsing/blockedSite.ftl
+Settings for Clearing History	sanitize-prefs2.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sanitize.ftl
+Clear Recent History	dialog-title.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sanitize.ftl
+Clear All History	dialog-title-everything.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sanitize.ftl
+Link Copied	screenshots-notification-link-copied-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Shot Copied	screenshots-notification-image-copied-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/screenshots.ftl
+Set Desktop Background	set-desktop-background-window.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/setDesktopBackground.ftl
+Disconnect?	sync-disconnect-dialog-title2	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sync.ftl
+Sign out of { -fxaccount-brand-name(capitalization: "sentence") }?	fxa-signout-dialog2-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/sync.ftl
+Synced Tabs	synced-tabs-sidebar-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/syncedTabs.ftl
+Searching image for text…	text-recognition-modal-searching-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/textRecognition.ftl
+Text copied from image	text-recognition-modal-results-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/textRecognition.ftl
+Results for text extraction	text-recognition-modal-accessible-modal-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/textRecognition.ftl
+Titles	search-titles	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/touchbar/touchbar.ftl
+{ -brand-short-name } — Sharing Indicator	webrtc-indicator-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Turn microphone off	webrtc-microphone-unmuted.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Turn microphone on	webrtc-microphone-muted.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Turn camera off	webrtc-camera-unmuted.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Turn camera on	webrtc-camera-muted.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Minimize indicator	webrtc-minimize.title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/webrtcIndicator.ftl
+Crash Reports	crash-reports-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/crashreporter/aboutcrashes.ftl
+Report ID	id-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/crashreporter/aboutcrashes.ftl
+Date Crashed	date-crashed-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/crashreporter/aboutcrashes.ftl
+Date Submitted	date-submitted-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/crashreporter/aboutcrashes.ftl
+About About	about-about-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAbout.ftl
+Add-ons Manager	addons-page-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Search addons.mozilla.org	search-header.placeholder	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Some add-ons have been disabled	disabled-unsigned-heading.value	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Recommendations	addon-category-discover-title.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Extensions	addon-category-extension-title.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Themes	addon-category-theme-title.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Plugins	addon-category-plugin-title.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Dictionaries	addon-category-dictionary-title.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Languages	addon-category-locale-title.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Available Updates	addon-category-available-updates-title.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Recent Updates	addon-category-recent-updates-title.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Site Permissions	addon-category-sitepermission-title.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Select add-on to install	addon-install-from-file-dialog-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Enabled	extension-enabled-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Disabled	extension-disabled-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Saved Themes	theme-disabled-heading2	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Colorways	theme-monochromatic-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Vibrant new colorways from { -brand-product-name }. Available for a limited time.	theme-monochromatic-subheading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Rated { NUMBER($rating, maximumFractionDigits: 1) } out of 5	five-star-rating.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Allowed in private windows	addon-badge-private-browsing-allowed2.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+{ -brand-product-name } only recommends extensions that meet our standards for security and performance	addon-badge-recommended2.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Official extension built by Mozilla. Meets security and performance standards	addon-badge-line3.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+This extension has been reviewed to meet our standards for security and performance	addon-badge-verified2.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Recommended Extensions	recommended-extensions-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Recommended Themes	recommended-themes-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Manage Your Extensions	extension-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Manage Your Themes	theme-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Manage Your Plugins	plugin-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Manage Your Dictionaries	dictionary-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Manage Your Languages	locale-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Manage Your Updates	updates-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Manage Your Site Permissions	sitepermission-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Personalize Your { -brand-short-name }	discover-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Manage Extension Shortcuts	shortcuts-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Find more add-ons	default-heading-search-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+about:compat	text-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutCompat.ftl
+About Glean	about-glean-page-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutGlean.ftl
+HTTPS-Only Mode Alert	about-httpsonly-title-alert	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutHttpsOnlyError.ftl
+Secure Site Not Available	about-httpsonly-title-site-not-available	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutHttpsOnlyError.ftl
+Possible Alternative	about-httpsonly-suggestion-box-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutHttpsOnlyError.ftl
+About Logging	about-logging-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutLogging.ftl
+The Book of Mozilla, 6:27	about-mozilla-title-6-27	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutMozilla.ftl
+About Networking	about-networking-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutNetworking.ftl
+Task Manager	about-performance-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutPerformance.ftl
+Close tab	close-tab.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutPerformance.ftl
+Show in Add-ons Manager	show-addon.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutPerformance.ftl
+Dispatches since load: { $totalDispatches } ({ $totalDuration }ms) Dispatches in the last seconds: { $dispatchesSincePrevious } ({ $durationSincePrevious }ms)	item.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutPerformance.ftl
+About Plugins	title-label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutPlugins.ftl
+Process Manager	about-processes-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProcesses.ftl
+Actions	about-processes-column-action.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProcesses.ftl
+Unload tabs and kill process	about-processes-shutdown-process.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProcesses.ftl
+{ $duration -> [one] Profile all threads of this process for { $duration } second *[other] Profile all threads of this process for { $duration } seconds	about-processes-profile-process.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProcesses.ftl
+Thread id: { $tid }	about-processes-thread-name-and-id.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProcesses.ftl
+Total CPU time: { NUMBER($total, maximumFractionDigits: 0) }{ $unit }	about-processes-cpu.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProcesses.ftl
+Evolution: { $deltaSign }{ NUMBER($delta, maximumFractionDigits:0) }{ $deltaUnit }	about-processes-total-memory-size-changed.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProcesses.ftl
+About Profiles	profiles-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+Restart	profiles-restart-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+Rename Profile	profiles-rename-profile-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+Delete Profile	profiles-delete-profile-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutProfiles.ftl
+Color Scheme Light	about-reader-color-scheme-light.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutReader.ftl
+Color Scheme Dark	about-reader-color-scheme-dark.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutReader.ftl
+Color Scheme Sepia	about-reader-color-scheme-sepia.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutReader.ftl
+Color Scheme Auto	about-reader-color-scheme-auto.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutReader.ftl
+Decrease Font Size	about-reader-toolbar-minus.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutReader.ftl
+Increase Font Size	about-reader-toolbar-plus.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutReader.ftl
+Decrease Line Height	about-reader-toolbar-lineheightminus.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutReader.ftl
+Increase Line Height	about-reader-toolbar-lineheightplus.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutReader.ftl
+About Your Rights	rights-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutRights.ftl
+{ -brand-full-name } Web-Based Information Services	rights-webservices-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutRights.ftl
+About Service Workers	about-service-workers-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutServiceWorkers.ftl
+Registered Service Workers	about-service-workers-main-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutServiceWorkers.ftl
+Origin: { $originTitle }	origin-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutServiceWorkers.ftl
+Troubleshooting Information	page-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Security Software	security-software-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+{ -brand-short-name } Features	features-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Remote Processes	processes-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Application Basics	app-basics-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Environment Variables	environment-variables-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Experimental Features	experimental-features-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Important Modified Preferences	modified-key-prefs-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+user.js Preferences	user-js-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Important Locked Preferences	locked-key-prefs-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Graphics	graphics-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Features	graphics-features-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Diagnostics	graphics-diagnostics-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+GPU #1	graphics-gpu1-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+GPU #2	graphics-gpu2-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Decision Log	graphics-decision-log-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Crash Guard Disabled Features	graphics-crash-guards-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Workarounds	graphics-workarounds-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Places Database	place-database-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Accessibility	a11y-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Library Versions	library-version-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Sandbox	sandbox-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Rejected System Calls	sandbox-sys-call-log-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Diagnose issues	troubleshoot-mode-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Try clearing the startup cache	clear-startup-cache-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Restart { -brand-short-name } to clear startup cache?	startup-cache-dialog-title2	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Media	media-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Output Devices	media-output-devices-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Input Devices	media-input-devices-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Media Capabilities	media-capabilities-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Internationalization & Localization	intl-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Application Settings	intl-app-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Operating System	intl-os-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Remote Debugging (Chromium Protocol)	remote-debugging-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Startup Cache	startup-cache-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Printing	support-printing-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Remote Experiments	support-remote-experiments-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Remote Features	support-remote-features-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutSupport.ftl
+Ping	about-telemetry-archive-ping-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+Telemetry Data	about-telemetry-page-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+Property	about-telemetry-keys-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+Name	about-telemetry-names-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+Value	about-telemetry-values-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+Late Write #{ $lateWriteCount }	about-telemetry-late-writes-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+Stack:	about-telemetry-stack-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+Memory map:	about-telemetry-memory-map-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+timestamp	about-telemetry-time-stamp-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+category	about-telemetry-category-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+method	about-telemetry-method-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+object	about-telemetry-object-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+extra	about-telemetry-extra-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutTelemetry.ftl
+Third-party Module Information	third-party-page-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+List of third-party modules in { -brand-short-name }	third-party-section-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+How many times this module was loaded.	third-party-detail-occurrences.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+How long this module blocked the application.	third-party-detail-duration.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+This type of module is loaded when you use a third-party IME.	third-party-tag-ime.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+This type of module is loaded when you open the system file dialog.	third-party-tag-shellex.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+This module did not block the application because it was loaded in the background.	third-party-tag-background.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+This module is not signed	third-party-unsigned-icon.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+WebRTC Internals	about-webrtc-document-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+save about:webrtc as	about-webrtc-save-page-dialog-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+SDP	about-webrtc-sdp-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+Local SDP	about-webrtc-local-sdp-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+Local SDP (Offer)	about-webrtc-local-sdp-heading-offer	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+Local SDP (Answer)	about-webrtc-local-sdp-heading-answer	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+Remote SDP	about-webrtc-remote-sdp-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+Remote SDP (Offer)	about-webrtc-remote-sdp-heading-offer	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+Remote SDP (Answer)	about-webrtc-remote-sdp-heading-answer	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+SDP History	about-webrtc-sdp-history-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+RTP Stats	about-webrtc-rtp-stats-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+ICE Stats	about-webrtc-ice-stats-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+Session Statistics	about-webrtc-stats-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+Connection Log	about-webrtc-log-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+click to expand this section	about-webrtc-log-show-msg.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+click to collapse this section	about-webrtc-log-hide-msg.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+All Raw Candidates	about-webrtc-raw-candidates-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+User Set WebRTC Preferences	about-webrtc-custom-webrtc-configuration-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+Estimated Bandwidth	about-webrtc-bandwidth-stats-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+Video Frame Statistics - MediaStreamTrack ID: { $track-identifier }	about-webrtc-frame-stats-heading	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutWebrtc.ftl
+Report for { $addon-name }	abuse-report-dialog-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Report This Extension to { -vendor-short-name }	abuse-report-title-extension	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Report This Site Permissions add-on to { -vendor-short-name }	abuse-report-title-sitepermission	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Report This Theme to { -vendor-short-name }	abuse-report-title-theme	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/abuseReports.ftl
+Certificate	certificate-viewer-certificate-section-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/certviewer.ftl
+Certificate for { $firstCertName }	certificate-viewer-tab-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/certviewer.ftl
+This extension has been marked as critical, meaning that clients must reject the certificate if they do not understand it.	certificate-viewer-critical-extension.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/certviewer.ftl
+Advanced Preferences	about-config-page-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/config.ftl
+URL Classifier Information	url-classifier-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+Results	url-classifier-search-result-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+Provider	url-classifier-provider-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+Cache	url-classifier-cache-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+Debug	url-classifier-debug-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/url-classifier.ftl
+This page says	common-dialog-title-null	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/commonDialog.ftl
+{ -brand-short-name }	common-dialog-title-system	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/commonDialog.ftl
+Unknown	common-dialog-title-unknown	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/commonDialog.ftl
+Create Profile Wizard	create-profile-window2.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/createProfileWizard.ftl
+Choose Application	chooser-window.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/handlerDialog.ftl
+Another Application…	choose-other-app-window-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/handlerDialog.ftl
+You’ve launched an older version of { -brand-product-name }	profiledowngrade-window2.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/profileDowngrade.ftl
+{ -brand-short-name } - Choose User Profile	profile-selection-window.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/profileSelection.ftl
+Refresh { -brand-short-name } to its default settings?	refresh-profile-dialog-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/resetProfile.ftl
+Refresh { -brand-short-name }	refresh-profile-progress.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/resetProfile.ftl
+Finish installing { -brand-short-name }?	prompt-to-install-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/run-from-dmg.ftl
+Open existing { -brand-short-name } application?	prompt-to-launch-existing-app-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/run-from-dmg.ftl
+Clear	text-action-search-text-box-clear.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/global/textActions.ftl
+Unable to connect	connectionFailure-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+This address is restricted	deniedPortAccess-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Hmm. We’re having trouble finding that site.	dnsNotFound-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+File not found	fileNotFound-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Access to the file was denied	fileAccessDenied-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Oops.	generic-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Log in to network	captivePortal-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Hmm. That address doesn’t look right.	malformedURI-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+The connection was interrupted	netInterrupt-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Document Expired	notCached-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Offline mode	netOffline-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Content Encoding Error	contentEncodingError-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Unsafe File Type	unsafeContentType-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+The connection was reset	netReset-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+The connection has timed out	netTimeout-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+The address wasn’t understood	unknownProtocolFound-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+The proxy server is refusing connections	proxyConnectFailure-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Unable to find the proxy server	proxyResolveFailure-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+The page isn’t redirecting properly	redirectLoop-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Unexpected response from server	unknownSocketType-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Secure Connection Failed	nssFailure2-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Corrupted Content Error	corruptedContentError-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Unable to Connect Securely	sslv3Used-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Your connection is not secure	inadequateSecurityError-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Blocked Page	blockedByPolicy-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Your Computer Clock is Wrong	clockSkewError-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Network Protocol Error	networkProtocolError-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Warning: Potential Security Risk Ahead	nssBadCert-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Did Not Connect: Potential Security Issue	nssBadCert-sts-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/certError.ftl
+Pause (Spacebar)	pictureinpicture-pause-cmd.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/pictureinpicture/pictureinpicture.ftl
+Play (Spacebar)	pictureinpicture-play-cmd.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/pictureinpicture/pictureinpicture.ftl
+Mute ({ $shortcut })	pictureinpicture-mute-cmd.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/pictureinpicture/pictureinpicture.ftl
+Unmute ({ $shortcut })	pictureinpicture-unmute-cmd.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/pictureinpicture/pictureinpicture.ftl
+Back to tab	pictureinpicture-unpip-cmd.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/pictureinpicture/pictureinpicture.ftl
+Close ({ $shortcut })	pictureinpicture-close-cmd.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/pictureinpicture/pictureinpicture.ftl
+Fullscreen (double-click)	pictureinpicture-fullscreen-cmd.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/pictureinpicture/pictureinpicture.ftl
+Exit fullscreen (double-click)	pictureinpicture-exit-fullscreen-cmd.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/pictureinpicture/pictureinpicture.ftl
+Backward (←)	pictureinpicture-seekbackward-cmd.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/pictureinpicture/pictureinpicture.ftl
+Forward (→)	pictureinpicture-seekforward-cmd.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/pictureinpicture/pictureinpicture.ftl
+Password Change Succeeded	pw-change-success-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/preferences/preferences.ftl
+Primary Password	primary-password-dialog.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/preferences/preferences.ftl
+Remove Primary Password	remove-primary-password.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/preferences/preferences.ftl
+Page Setup	print-setup.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printDialogs.ftl
+Custom…	custom-prompt-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printDialogs.ftl
+Headers & Footers	header-footer-label.value	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printDialogs.ftl
+Print Preview	print-preview-window.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printDialogs.ftl
+Custom Scale	printpreview-custom-scale-prompt-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printPreview.ftl
+Print	printui-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printUI.ftl
+Save As	printui-save-to-pdf-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printUI.ftl
+Print headers and footers	printui-headers-footers-checkbox	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/printing/printUI.ftl
+Software Update	elevation-update-wizard.title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/updates/elevation.ftl
+Update History	history-title	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/updates/history.ftl
+Update Name	name-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/updates/history.ftl
+Install Date	date-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/updates/history.ftl
+Type	type-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/updates/history.ftl
+State	state-header	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/updates/history.ftl

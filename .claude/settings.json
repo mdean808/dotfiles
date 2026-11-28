@@ -11,9 +11,24 @@
   },
   "model": "opus",
   "enabledPlugins": {
-    "frontend-design@anthropic-plugin-directory": true
+    "frontend-design@anthropic-plugin-directory": true,
+    "impeccable@impeccable": true,
+    "hill-climb@hill-climb": true
   },
-  "extraKnownMarketplaces": {},
+  "extraKnownMarketplaces": {
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
+      }
+    },
+    "hill-climb": {
+      "source": {
+        "source": "github",
+        "repo": "Bil0000/Hill-Climb"
+      }
+    }
+  },
   "modelSettings": {
     "claude-sonnet-5": {
       "effortLevel": "high"

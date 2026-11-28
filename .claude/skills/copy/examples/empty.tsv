@@ -1,0 +1,30 @@
+text	context	source
+No logins found	about-logins-login-list-empty-search-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+There are no results matching your search.	about-logins-login-list-empty-search-description	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+No alert	about-logins-list-section-nothing	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/aboutLogins.ftl
+For quick access, place your bookmarks here on the bookmarks toolbar. Manage bookmarks…	bookmarks-toolbar-empty-message	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/browser.ftl
+There are no downloads.	downloads-list-empty.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+No downloads for this session.	downloads-panel-empty.value	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/downloads.ftl
+Separate tags with commas	bookmark-overlay-tags-empty-description.placeholder	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/editBookmarkOverlay.ftl
+Don’t import anything	import-from-nothing.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/migration.ftl
+Start browsing, and we’ll show some of the great articles, videos, and other pages you’ve recently visited or bookmarked here.	newtab-empty-section-highlights	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+You’ve caught up. Check back later for more top stories from { $provider }. Can’t wait? Select a popular topic to find more great stories from around the web.	newtab-empty-section-topstories	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+You are caught up!	newtab-discovery-empty-section-topstories-header	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Check back later for more stories.	newtab-discovery-empty-section-topstories-content	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Try Again	newtab-discovery-empty-section-topstories-try-again-button	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Loading…	newtab-discovery-empty-section-topstories-loading	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Oops! We almost loaded this section, but not quite.	newtab-discovery-empty-section-topstories-timed-out	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/newtab/newtab.ftl
+Cookies and Site Data	clear-site-data-cookies-empty.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/clearSiteData.ftl
+Cached Web Content	clear-site-data-cache-empty.label	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/preferences/clearSiteData.ftl
+Sorry, we couldn’t extract any text. Try a different image. Learn more .	text-recognition-modal-no-results-title	mozilla/gecko-dev@722dd73:browser/locales/en-US/browser/textRecognition.ftl
+You don’t have any add-ons of this type installed	list-empty-installed.value	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+No updates found	list-empty-available-updates.value	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+You haven’t recently updated any add-ons	list-empty-recent-updates.value	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Check For Updates	list-empty-find-updates.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+Learn more about add-ons	list-empty-button.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+This extension doesn’t require any permissions	addon-permissions-empty	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutAddons.ftl
+No third-party modules were detected.	third-party-message-empty	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/about/aboutThirdParty.ftl
+Cookies: SameSite=None requires secure attribute	experimental-features-cookie-samesite-none-requires-secure2.label	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/featuregates/features.ftl
+Cookies with “SameSite=None” attribute require the secure attribute. This feature requires “Cookies: SameSite=Lax by default”.	experimental-features-cookie-samesite-none-requires-secure2-description	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/featuregates/features.ftl
+No Fortezza card selected	xp-sec-fortezza-none-selected	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/neterror/nsserrors.ftl
+You are currently in FIPS mode. FIPS requires a non-empty Primary Password.	pp-change2empty-in-fips-mode	mozilla/gecko-dev@722dd73:toolkit/locales/en-US/toolkit/preferences/preferences.ftl

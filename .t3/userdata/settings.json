@@ -6,6 +6,7 @@
   "idleCompaction": "onReturn",
   "snoozeLimitedThreads": true,
   "autoResumeLimitedThreads": true,
+  "linkedEnvironmentsEnabled": true,
   "providerInstances": {
     "codex": {
       "driver": "codex",
